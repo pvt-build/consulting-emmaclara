@@ -253,19 +253,29 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .rm-uc-title{font-size:12px;font-weight:500;color:var(--ink);margin-bottom:5px;line-height:1.3}
 .rm-uc-chips{display:flex;flex-wrap:wrap;gap:3px}
 
-/* VENTAS — RANKING DE OBJECIONES */
-.rank-wrap{background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:20px}
-.rank-hd{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;flex-wrap:wrap;gap:6px}
-.rank-title{font-size:12px;font-weight:600;color:var(--dark)}
-.rank-reset{font-size:10.5px;color:var(--grey);cursor:pointer;background:none;border:none;font-family:inherit;text-decoration:underline;padding:0}
-.rank-row{display:flex;align-items:center;gap:10px;margin-bottom:8px}
-.rank-row:last-child{margin-bottom:0}
-.rank-n{font-family:'DM Mono',monospace;font-size:10px;color:var(--grey);width:16px;flex-shrink:0}
-.rank-lbl{font-size:11.5px;color:var(--ink);width:190px;flex-shrink:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.rank-track{flex:1;height:8px;background:var(--bg);border-radius:5px;overflow:hidden;border:0.5px solid var(--border)}
-.rank-fill{height:100%;background:var(--red);border-radius:5px;transition:width .3s}
-.rank-val{font-family:'DM Mono',monospace;font-size:10px;color:var(--grey);width:18px;text-align:right;flex-shrink:0}
-.rank-empty{font-size:11.5px;color:var(--grey);line-height:1.6;padding:4px 0}
+/* VENTAS — DIAGRAMA AÍSLA → OFRECE */
+.flow-wrap{display:flex;align-items:center;gap:14px;background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:20px}
+.flow-col{flex:1;min-width:0}
+.flow-col-title{font-family:'DM Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.1em;color:var(--grey);margin-bottom:10px}
+.flow-step{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.flow-step:last-child{margin-bottom:0}
+.flow-n{width:22px;height:22px;border-radius:50%;background:var(--beige);color:var(--grey);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:10.5px;font-weight:600;flex-shrink:0}
+.flow-n.opt{background:var(--dark);color:#fff}
+.flow-txt{font-size:11.5px;color:var(--ink);line-height:1.4}
+.flow-tag{display:inline-block;font-family:'DM Mono',monospace;font-size:9px;color:var(--grey);background:var(--bg);border:0.5px solid var(--border);border-radius:4px;padding:1px 6px;margin-left:5px;vertical-align:middle}
+.flow-arrow{font-size:20px;color:var(--sand);flex-shrink:0}
+
+/* VENTAS — CARD TRAINING (QUIZ) */
+.quiz-card{background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:15px 17px;margin-bottom:10px}
+.quiz-situation{font-size:12.5px;font-weight:600;color:var(--dark);margin-bottom:11px;line-height:1.45}
+.quiz-opts{display:flex;flex-direction:column;gap:7px}
+.quiz-opt{text-align:left;background:var(--bg);border:0.5px solid var(--border);border-radius:9px;padding:10px 13px;font-size:11.5px;color:var(--ink);line-height:1.5;cursor:pointer;font-family:inherit;transition:background .15s,border-color .15s}
+.quiz-opt:hover{border-color:var(--sand)}
+.quiz-card.answered .quiz-opt{cursor:default}
+.quiz-opt.correct{background:var(--teal-lt);border-color:var(--teal);color:var(--teal-dk)}
+.quiz-opt.wrong{background:var(--red-lt);border-color:var(--red);color:var(--red-dk)}
+.quiz-feedback{margin-top:9px;padding:9px 12px;background:var(--beige);border-radius:8px;font-size:11px;color:var(--ink);line-height:1.6;display:none}
+.quiz-card.answered .quiz-feedback{display:block}
 
 /* VENTAS — SUGERENCIAS */
 .sug-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-bottom:20px}
@@ -303,12 +313,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .rp-info{flex:1;min-width:0}
 .rp-title{font-size:13px;font-weight:600;color:var(--dark);line-height:1.3}
 .rp-meta{font-size:10.5px;color:var(--grey);margin-top:2px}
-.rp-freq{display:flex;gap:3px;flex-shrink:0}
-.freq-btn{font-family:'DM Mono',monospace;font-size:9px;padding:4px 7px;border-radius:5px;border:0.5px solid var(--border);background:var(--bg);color:var(--grey);cursor:pointer;white-space:nowrap;transition:background .15s,color .15s,border-color .15s}
-.freq-btn:hover{border-color:var(--sand)}
-.freq-btn.active[data-lvl="1"]{background:var(--teal-lt);color:var(--teal-dk);border-color:var(--teal)}
-.freq-btn.active[data-lvl="2"]{background:var(--gold-lt);color:var(--gold-dk);border-color:var(--gold)}
-.freq-btn.active[data-lvl="3"]{background:var(--red-lt);color:var(--red-dk);border-color:var(--red)}
+.rp-cat{font-family:'DM Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:4px 8px;border-radius:5px;flex-shrink:0;white-space:nowrap}
+.rp-cat.producto{background:var(--teal-lt);color:var(--teal-dk)}
+.rp-cat.decision{background:var(--violet-lt);color:var(--violet)}
+.rp-cat.presupuesto{background:var(--gold-lt);color:var(--gold-dk)}
+.rp-cat.tiempo{background:var(--blue-lt);color:var(--blue-dk)}
 .rp-icon{font-size:10px;color:var(--grey);transition:transform .2s;flex-shrink:0}
 .rp-card.open .rp-icon{transform:rotate(180deg)}
 .rp-body{display:none;padding:0 15px 16px}
@@ -347,8 +356,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   .sug-grid{grid-template-columns:1fr}
   .rank-lbl{width:auto;flex:1;white-space:normal;overflow:visible}
   .rp-hd{flex-wrap:wrap}
-  .rp-freq{width:100%;order:3;margin-top:2px}
   .msg{max-width:92%}
+  .flow-wrap{flex-direction:column;align-items:stretch}
+  .flow-arrow{transform:rotate(90deg);align-self:center}
+  .quiz-opts{gap:8px}
   .eng-table{border:none;background:transparent;border-radius:0;overflow:visible}
   .eng-table thead{display:none}
   .eng-table tbody,.eng-table tr,.eng-table td{display:block;width:100%}
@@ -434,6 +445,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="ov-card"><div class="ov-lbl">Inasistencia citas gratis</div><div class="ov-num red">39%</div><div class="bdg-row"><span class="bdg red">34 de 87 no llegaron</span></div></div>
     <div class="ov-card"><div class="ov-lbl">Cierre en tienda (histórico)</div><div class="ov-num red">5%</div><div class="bdg-row"><span class="bdg violet">→ ver pestaña Ventas</span></div></div>
   </div>
+  <div class="ov-row1">
+    <div class="ov-card"><div class="ov-lbl">Citas de pago hoy</div><div class="ov-num green">40%</div><div class="bdg-row"><span class="bdg green">✓ +50% vs. promedio histórico</span></div></div>
+    <div class="ov-card"><div class="ov-lbl">Meta de cierre en tienda</div><div class="ov-num violet">40%</div><div class="bdg-row"><span class="bdg violet">Mínimo 2 de cada 5 citas</span></div></div>
+    <div class="ov-card"><div class="ov-lbl">Vestidos vendidos en junio</div><div class="ov-num amber">12</div><div class="bdg-row"><span class="bdg grey">$4.3M en ingresos</span></div></div>
+  </div>
 
   <div class="slbl">Modelo de negocio · híbrido tienda + ecommerce</div>
   <div class="ch-split">
@@ -510,7 +526,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
         <text x="675" y="135" text-anchor="middle" font-size="20" fill="#C8C0B8">›</text>
         <rect x="688" y="132" width="56" height="80" rx="7" fill="#3EB489"/>
         <text x="716" y="44" text-anchor="middle" font-size="12" fill="#1E8A5C" font-weight="600">5% cierre</text>
-        <text x="716" y="60" text-anchor="middle" font-size="11" fill="#8A8076">→ meta 20–30%</text>
+        <text x="716" y="60" text-anchor="middle" font-size="11" fill="#8A8076">→ meta 40%</text>
         <text x="716" y="236" text-anchor="middle" font-size="12" fill="#2A2420" font-weight="600">Venta tienda</text>
         <text x="716" y="254" text-anchor="middle" font-size="11" fill="#8A8076">ticket $150–350K</text>
       </svg>
@@ -687,7 +703,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="week-sec">Resultado del evento de colorimetría</div>
       <div class="week-text">3 de 15 asistentes convirtieron (20%) — 4 veces el 5% histórico de tienda, pero quedaron 9 prospectos de alto potencial sin cerrar. Causa raíz: el servicio gratuito entregó todo el valor de una vez, sin dejar nada pendiente que empujara la compra. El 10% de descuento no fue suficiente para cerrarlos.</div>
       <div class="week-sec">Nueva oferta: cuadernillo de cupones de beneficios</div>
-      <div class="week-text">Reemplaza el descuento directo. Agrupa descuentos de negocios socios (Coffee Body, Beauty Plus, etc.) en un paquete de "total look" de alto valor percibido. Detalle en pestaña Recompra.</div>
+      <div class="week-text">Reemplaza el descuento directo. Agrupa descuentos de negocios socios (Kafi Body, Beauty Plus, etc.) en un paquete de "total look" de alto valor percibido. Detalle en pestaña Recompra.</div>
       <div class="week-sec">Sistema de reserva definido: $20.000 CLP, 7 días</div>
       <div class="week-text">La objeción principal en tienda es "necesito ver en otros lugares". Se define el monto final de la reserva en $20.000 CLP (no reembolsable, se descuenta del total si compra) para convertir esa objeción en compromiso.</div>
       <div class="week-sec">Técnica de cierre: la escala del 1 al 10</div>
@@ -754,7 +770,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div><div class="alert-title">Cualquier duda → WhatsApp con Patricio al tiro</div><div class="alert-text">No esperar a la próxima sesión. Un mensaje resuelto en el día vale más que una hora de llamada.</div></div>
   </div>
 
-  <div class="tg-hd">Marjorie — acción esta semana <span class="bdg red" style="margin-left:4px">6 urgentes</span></div>
+  <div class="tg-hd">Pendientes Marjorie — todos son de ella <span class="bdg red" style="margin-left:4px">6 urgentes</span></div>
 
   <div class="task" style="border-color:rgba(226,80,58,.3)">
     <div class="task-ring" style="border-color:var(--red)"></div>
@@ -798,7 +814,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="task-ring" style="border-color:var(--red)"></div>
     <div class="task-body">
       <div class="task-title">Finalizar el cuadernillo de cupones de beneficios</div>
-      <div class="task-desc">Cerrar los descuentos con negocios socios (Coffee Body, Beauty Plus, etc.) para reemplazar el 10% de descuento que no logró cerrar a los 9 prospectos del evento de colorimetría.</div>
+      <div class="task-desc">Cerrar los descuentos con negocios socios (Kafi Body, Beauty Plus, etc.) para reemplazar el 10% de descuento que no logró cerrar a los 9 prospectos del evento de colorimetría.</div>
     </div>
     <span class="bdg red">Urgente</span>
   </div>
@@ -812,25 +828,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <span class="bdg red">Urgente</span>
   </div>
 
-  <div class="tg-hd">Pendientes de Pato <span class="bdg amber" style="margin-left:4px">2</span></div>
 
-  <div class="task">
-    <div class="task-ring" style="border-color:var(--teal)"></div>
-    <div class="task-body">
-      <div class="task-title">Compartir el guion/matriz de cierre + link de roleplay en ChatGPT</div>
-      <div class="task-desc">Enviar a Marjorie el guion actualizado de manejo de objeciones (escala 1–10 + reserva $20.000) y el link del ChatGPT personalizado para practicar roleplay por voz.</div>
-    </div>
-    <span class="bdg teal">✓ Hecho</span>
-  </div>
-
-  <div class="task">
-    <div class="task-ring" style="border-color:var(--teal)"></div>
-    <div class="task-body">
-      <div class="task-title">Construir el módulo de Ventas y la pestaña Recompra</div>
-      <div class="task-desc">16 roleplays de cierre (objeciones de decisión + objeciones de producto corregidas) + ranking de objeciones + marco de señales de cierre + pestaña Recompra con reseñas, cuadernillo y vestido a medida. Disponible en este panel.</div>
-    </div>
-    <span class="bdg teal">✓ Hecho</span>
-  </div>
 </div>
 
 
@@ -840,8 +838,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="problem-card" style="margin-top:0">
     <div class="prob-icon">🎯</div>
     <div>
-      <div class="prob-title">De 5% a 20–30% de cierre: manejar la objeción, no evitarla</div>
-      <div class="prob-text">La tasa de cierre en tienda de Emma Clara es históricamente <strong>5%</strong> — bajísima considerando que es tráfico calificado que ya está físicamente en el showroom. Casi siempre la clienta se va con una objeción sin resolver ("lo quiero pensar", "quiero ver otra tienda", "quiero que mi mamá lo vea"...). Esta sección le da al equipo un guión probado para cada objeción común, más una forma de detectar cuál se repite más para enfocar la práctica ahí.</div>
+      <div class="prob-title">Si el problema no son los vestidos, son las vendedoras — y eso es lo que resuelve este módulo</div>
+      <div class="prob-text">La tasa de cierre en tienda de Emma Clara es históricamente <strong>5%</strong> — bajísima considerando que es tráfico calificado que ya está físicamente en el showroom, ya se probó el vestido y ya le gustó. El evento exclusivo de colorimetría ya demostró que esa tasa puede subir a <strong>20%</strong> solo con más urgencia real. La meta ahora es llegar a <strong>40%</strong> — mínimo 2 de cada 5 citas cerrando. Eso no se logra con mejores vestidos: se logra entrenando a quien vende para diagnosticar la objeción real y usar la herramienta correcta. Sin registrar por qué no cerró cada cita, y sin entrenar, la tasa nunca sube — y Emma Clara nunca se vuelve más exclusiva ni vende más.</div>
+      <div class="prob-stats">
+        <div><div class="prob-sv">5% → 20%</div><div class="prob-sl">cierre showroom vs. evento exclusivo</div></div>
+        <div><div class="prob-sv">40%</div><div class="prob-sl">meta — mínimo 2 de 5 citas</div></div>
+        <div><div class="prob-sv">40%</div><div class="prob-sl">citas de pago hoy (+50% vs. histórico)</div></div>
+      </div>
     </div>
   </div>
 
@@ -855,7 +858,25 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
   <div class="alert-box red-bg">
     <span class="alert-icon">⚠️</span>
-    <div><div class="alert-title">No todas las objeciones se resuelven ofreciendo la reserva</div><div class="alert-text">Hay dos tipos de objeción y cada una tiene una ruta distinta. <strong>Objeciones de decisión/tiempo</strong> ("quiero pensarlo", "quiero ver otra tienda", "quiero que mi mamá lo vea") — ahí la reserva de $20.000 es la herramienta correcta. <strong>Objeciones de producto</strong> ("el escote", "me queda suelto", "por atrás no me convence") — ahí NO se ofrece una reserva primero: se diagnostica el problema real y se resuelve con una alternativa en tienda o un ajuste de costura. Reservar un vestido que no le queda bien no cierra nada.</div></div>
+    <div><div class="alert-title">No todas las objeciones se resuelven ofreciendo la reserva</div><div class="alert-text">Cada objeción cae en una de 4 categorías, y cada una tiene una herramienta distinta: <strong>Producto</strong> (el escote, me queda suelto, por atrás) → diagnosticar y resolver con alternativa o ajuste, nunca reserva. <strong>Decisión</strong> (quiero pensarlo, ver otra tienda, mostrárselo a alguien) → reserva de $20.000. <strong>Presupuesto</strong> (está caro) → separar presupuesto real de valor percibido. <strong>Tiempo/Urgencia</strong> (tengo dos meses, no hay apuro) → gestionar el calendario real. La clave no es memorizar guiones — es reconocer rápido en cuál de las 4 está parada la clienta.</div></div>
+  </div>
+
+  <div class="slbl">Cómo cerrar: primero aísla, después ofrece</div>
+  <div class="flow-wrap">
+    <div class="flow-col">
+      <div class="flow-col-title">1. AÍSLA</div>
+      <div class="flow-step"><div class="flow-n">1</div><div class="flow-txt">Escala 1–10: ¿qué tanto te gustó?</div></div>
+      <div class="flow-step"><div class="flow-n">2</div><div class="flow-txt">Si es 5–7: ¿qué haría que fuera un 9 o 10?</div></div>
+      <div class="flow-step"><div class="flow-n">3</div><div class="flow-txt">¿Es presupuesto o valor percibido?</div></div>
+      <div class="flow-step"><div class="flow-n">4</div><div class="flow-txt">¿Necesita comparar en otro lado, con certeza y tiempo real?</div></div>
+    </div>
+    <div class="flow-arrow">→</div>
+    <div class="flow-col">
+      <div class="flow-col-title">2. OFRECE</div>
+      <div class="flow-step opt"><div class="flow-n opt">A</div><div class="flow-txt">Reserva $20.000 · 7 días <span class="flow-tag">Decisión / Tiempo</span></div></div>
+      <div class="flow-step opt"><div class="flow-n opt">B</div><div class="flow-txt">Alternativa en tienda o ajuste de costura <span class="flow-tag">Producto</span></div></div>
+      <div class="flow-step opt"><div class="flow-n opt">C</div><div class="flow-txt">Cuotas u opciones de pago <span class="flow-tag">Presupuesto</span></div></div>
+    </div>
   </div>
 
   <div class="slbl" style="margin-top:0">Señales para identificar antes de cerrar</div>
@@ -908,32 +929,25 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="slbl">Objeciones más repetidas en tienda</div>
-  <div class="rank-wrap">
-    <div class="rank-hd">
-      <div class="rank-title">Ranking en vivo — guardado en este dispositivo</div>
-      <button class="rank-reset" onclick="resetFreq()">Reiniciar conteo</button>
-    </div>
-    <div id="rank-list"></div>
-  </div>
-
-  <div class="alert-box info">
-    <span class="alert-icon">💡</span>
-    <div><div class="alert-title">Cómo usar el ranking</div><div class="alert-text">Cada roleplay de abajo tiene 3 botones: <strong>Rara · A veces · Frecuente</strong>. Márcalo después de cada cita en tienda según la objeción que apareció. El ranking se actualiza solo y te dice en qué objeción entrenar primero al equipo.</div></div>
-  </div>
-
   <div class="slbl">Sugerencias para subir la tasa de cierre presencial</div>
   <div class="sug-grid">
     <div class="sug-card"><div class="sug-n">01</div><div class="sug-title">Usa la escala 1–10 antes de ofrecer nada</div><div class="sug-text">Diagnostica primero. Si el puntaje es 8–10 y la objeción es de decisión/tiempo, ofrece la reserva. Si el puntaje es 5–7 por un tema de producto (ajuste, escote), resuélvelo — reservar no arregla un vestido que no calza.</div></div>
     <div class="sug-card"><div class="sug-n">02</div><div class="sug-title">Seguir la secuencia: calificar → urgencia → cuotas</div><div class="sug-text">Nunca mostrar el financiamiento antes de generar el deseo real de comprar hoy. Mostrarlo muy pronto le da a la clienta el permiso de "pensarlo".</div></div>
     <div class="sug-card"><div class="sug-n">03</div><div class="sug-title">Follow-up en las primeras 24–48 horas</div><div class="sug-text">El 22/6, 0 de 5 citas cerraron en el momento, pero 2 cerraron al día siguiente. Esa ventana existe — hay que perseguirla con un WhatsApp planificado, no dejarla al azar.</div></div>
     <div class="sug-card"><div class="sug-n">04</div><div class="sug-title">Vender confianza a la madre antes de que llegue a tienda</div><div class="sug-text">Cuando decide y paga la madre, su miedo a que la hija se arrepienta es la objeción real detrás de "lo quiero pensar". El contenido dirigido a madres pre-vende esa confianza.</div></div>
-    <div class="sug-card"><div class="sug-n">05</div><div class="sug-title">Registrar la objeción de cada cita que no cierra</div><div class="sug-text">Sin dato no hay mejora. Usar el ranking de esta página en cada turno para saber contra qué está perdiendo realmente la tienda.</div></div>
-    <div class="sug-card"><div class="sug-n">06</div><div class="sug-title">Practicar un roleplay real por semana en equipo</div><div class="sug-text">10 minutos de práctica de la objeción más frecuente vale más que memorizar los 14 guiones sin usarlos nunca.</div></div>
+    <div class="sug-card"><div class="sug-n">05</div><div class="sug-title">Anotar la razón real de cada cita que no cierra</div><div class="sug-text">Sin ese dato escrito, la tasa de cierre nunca sube: no se puede entrenar contra un problema que no se conoce. Es el mismo principio del cuadro de abajo — categoría, no anécdota.</div></div>
+    <div class="sug-card"><div class="sug-n">06</div><div class="sug-title">Practicar una categoría de objeción por semana en equipo</div><div class="sug-text">10 minutos entrenando la lógica de diagnóstico (Producto / Decisión / Presupuesto / Tiempo) vale más que memorizar guiones que la clienta nunca va a decir palabra por palabra.</div></div>
   </div>
 
-  <div class="slbl">Closing roleplays · 16 objeciones reales</div>
+  <div class="slbl">Closing roleplays · 10 objeciones reales</div>
   <div id="rp-list"></div>
+
+  <div class="slbl">Entrena tu criterio</div>
+  <div class="alert-box info" style="margin-top:0">
+    <span class="alert-icon">💡</span>
+    <div><div class="alert-title">Cómo usar este ejercicio</div><div class="alert-text">La clienta dice una frase real. Elige qué harías tú — no hay guión que memorizar, solo la lógica de diagnóstico de arriba. Se marca en verde si acertaste y en rojo si no, con la explicación de por qué.</div></div>
+  </div>
+  <div id="quiz-list"></div>
 </div>
 
 
@@ -957,7 +971,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="prob-icon">📖</div>
     <div>
       <div class="prob-title">Reemplaza el 10% de descuento que no logró cerrar al evento de colorimetría</div>
-      <div class="prob-text">El evento de colorimetría convirtió solo 3 de 15 asistentes (20%) — mejor que el 5% histórico de tienda, pero el 10% de descuento no fue suficiente para los otros 9. Causa raíz: el servicio gratuito entregó demasiado valor de una sola vez, sin dejar nada pendiente que empujara la compra. La nueva oferta agrupa descuentos de negocios socios (ej. Coffee Body, Beauty Plus) en un cuadernillo de cupones — un paquete de "total look" que vale más que un simple % de descuento.</div>
+      <div class="prob-text">El evento de colorimetría convirtió solo 3 de 15 asistentes (20%) — mejor que el 5% histórico de tienda, pero el 10% de descuento no fue suficiente para los otros 9. Causa raíz: el servicio gratuito entregó demasiado valor de una sola vez, sin dejar nada pendiente que empujara la compra. La nueva oferta agrupa descuentos de negocios socios (ej. Kafi Body, Beauty Plus) en un cuadernillo de cupones — un paquete de "total look" que vale más que un simple % de descuento.</div>
       <div class="prob-stats">
         <div><div class="prob-sv">20%</div><div class="prob-sl">conversión evento (vs 5% tienda)</div></div>
         <div><div class="prob-sv">9</div><div class="prob-sl">prospectos de alto potencial sin cerrar</div></div>
@@ -975,10 +989,18 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="ch-row"><span class="ch-k">Paso 2</span><span class="ch-v">Costurera local confecciona desde cero (~30 días)</span></div>
     </div>
     <div class="ch-card store">
-      <div class="ch-head">⚠️ Desafío <span class="bdg amber">Sin resolver</span></div>
-      <div class="ch-row"><span class="ch-k">Riesgo</span><span class="ch-v red">Alienar al público adolescente</span></div>
-      <div class="ch-row"><span class="ch-k">Feed actual</span><span class="ch-v">Enfocado en adolescentes</span></div>
-      <div class="ch-row"><span class="ch-k">Pendiente</span><span class="ch-v amber">Cómo integrar contenido para público maduro</span></div>
+      <div class="ch-head">⚠️ Desafío de contenido <span class="bdg amber">Definido, falta ejecutar</span></div>
+      <div class="ch-row"><span class="ch-k">Riesgo</span><span class="ch-v red">Ni tan adolescente, ni tan adulta</span></div>
+      <div class="ch-row"><span class="ch-k">Solución</span><span class="ch-v">Modelos de 22–25 años</span></div>
+      <div class="ch-row"><span class="ch-k">Por qué</span><span class="ch-v">Aspiracional para hijas y madres a la vez</span></div>
+    </div>
+  </div>
+
+  <div class="problem-card">
+    <div class="prob-icon">🎯</div>
+    <div>
+      <div class="prob-title">El punto medio en contenido exige asesoría — y eso es lo que sube el cierre</div>
+      <div class="prob-text">La solución al desafío de contenido no es elegir entre adolescente o adulta: es un <strong>punto medio con modelos de 22–25 años</strong>, que las adolescentes ven como aspiracional y las madres también. Ese punto medio exige que la clienta necesite asesoría en tienda para saber cómo se le va a ver a ella específicamente — y eventualmente exige el ajuste con modista o confección personalizada. La publicidad tiene que seguir siendo aspiracional y real al mismo tiempo, para que estos eventos de venta logren altas tasas de cierre.</div>
     </div>
   </div>
 
@@ -995,7 +1017,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
   <div class="task">
     <div class="task-ring"></div>
-    <div class="task-body"><div class="task-title">Definir plan de contenido para vestido a medida</div><div class="task-desc">Cómo mostrar este servicio de madres sin desplazar el contenido principal dirigido a adolescentes.</div></div>
+    <div class="task-body"><div class="task-title">Producir contenido con modelos de 22–25 años</div><div class="task-desc">Ejecutar el punto medio ya definido: aspiracional para adolescentes y madres a la vez, manteniendo publicidad real que impulse la necesidad de asesoría en tienda.</div></div>
     <span class="bdg amber">Emma</span>
   </div>
 </div>
@@ -1012,7 +1034,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <tr><td><div class="sdot" style="background:#7B61FF">1</div></td><td class="sname">Foundations</td><td><span class="bdg teal">✓ Cerrada</span></td><td class="sgap">ICP real. Modelo híbrido entendido. Brecha de tienda diagnosticada. Prioridades definidas.</td><td class="sgap">Mes 1 ✓</td></tr>
       <tr><td><div class="sdot" style="background:#3B9EE8">2</div></td><td class="sname">Atracción</td><td><span class="bdg amber">🔄 Activa</span></td><td class="sgap">Meta + TikTok activos. Serie Cápsulas lanzando. Evento 27 jun como lead magnet con Facebook Lead Form.</td><td class="sgap">Mes 1–2</td></tr>
       <tr><td><div class="sdot" style="background:#E2503A">3</div></td><td class="sname">Activación web</td><td><span class="bdg red">✗ Roto</span></td><td class="sgap">0.12% CVR. Sin reseñas, sin guía de talla, sin filtros en colección principal. La web no está lista para resolver dudas de ticket alto.</td><td class="sgap"><span class="bdg grey">Mes 2</span></td></tr>
-      <tr class="broken"><td><div class="sdot" style="background:#E8A237">4</div></td><td class="sname">Conversión tienda</td><td><span class="bdg red">✗ Crítico</span></td><td class="sgap">112 citas en junio, 39% no asiste. Cierre histórico: 5%. Nuevo guión (calificar → urgencia → cuotas), reserva con vigencia de 7 días y roleplays de objeciones en implementación. Meta: 20–30% cierre.</td><td class="sgap">Mes 1 · en curso</td></tr>
+      <tr class="broken"><td><div class="sdot" style="background:#E8A237">4</div></td><td class="sname">Conversión tienda</td><td><span class="bdg red">✗ Crítico</span></td><td class="sgap">112 citas en junio, 39% no asiste. Cierre histórico: 5%. Nuevo guión (calificar → urgencia → cuotas), reserva con vigencia de 7 días y roleplays de objeciones en implementación. Meta: 40% cierre (2 de 5 mínimo).</td><td class="sgap">Mes 1 · en curso</td></tr>
       <tr class="broken"><td><div class="sdot" style="background:#E05599">5</div></td><td class="sname">Conversión web</td><td><span class="bdg red">✗ Roto</span></td><td class="sgap">80% abandona checkout. Sin recuperación de carritos. Formulario largo, costos ocultos. El ticket de $67K se pierde sin sistema de rescate.</td><td class="sgap"><span class="bdg grey">Mes 2</span></td></tr>
       <tr class="broken"><td><div class="sdot" style="background:#3EB489">6</div></td><td class="sname">Retención</td><td><span class="bdg amber">🔄 Recién arrancando</span></td><td class="sgap">La relación terminaba con el pago. Ahora en definición: reseñas post-evento con regalo físico, cuadernillo de beneficios y vestido a medida como upsell. Ver pestaña Recompra.</td><td class="sgap"><span class="bdg grey">Empezó 6 jul</span></td></tr>
       <tr class="broken"><td><div class="sdot" style="background:#AA6E28">7</div></td><td class="sname">Referidos</td><td><span class="bdg red">✗ Por construir</span></td><td class="sgap">Sin reseñas en ficha. Sin programa de referidos. UGC no sistematizado. Word-of-mouth existe pero no se capitaliza.</td><td class="sgap"><span class="bdg grey">Mes 3</span></td></tr>
@@ -1055,7 +1077,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <li>¿El guión de cierre sigue la secuencia correcta: calificar → urgencia → cuotas?</li>
       <li>¿Se está ofreciendo la reserva con vigencia de 7 días para no perder la venta?</li>
       <li>¿Sabemos cuál es la objeción más repetida esta semana en tienda?</li>
-      <li>¿El showroom está pasando del 5% histórico a la meta de 20–30% de cierre?</li>
+      <li>¿El showroom está pasando del 5% histórico a la meta de 40% de cierre (2 de 5 mínimo)?</li>
     </ul></div>
   </div>
 
@@ -1132,8 +1154,9 @@ mobBtn.addEventListener('click',e=>{e.stopPropagation();toggleMob();});
 function toggleCard(card){card.classList.toggle('open');}
 
 /* ═══ VENTAS · ROLEPLAYS DE CIERRE ═══ */
+const CAT={producto:'Producto',decision:'Decisión',presupuesto:'Presupuesto',tiempo:'Tiempo'};
 const RP=[
-{t:'"Quiero ver una segunda opción"',meta:'Mujer, 24 años · Invitada a matrimonio · Le encanta el vestido pero teme comprar rápido · Objetivo: conseguir la reserva · Ruta: objeción de decisión — reserva aplica',m:[
+{t:'"Quiero ver una segunda opción"',cat:'decision',meta:'Mujer, 24 años · Invitada a matrimonio · Objetivo: conseguir la reserva',m:[
 ['c','Me gustó mucho, pero quiero ir a ver otro que vi en otra tienda.'],
 ['a','Obvio, te entiendo. Para saber bien cómo ayudarte, ¿hay algo de este vestido que todavía no te convenza o simplemente quieres comparar antes de decidir?'],
 ['c','No, en verdad este me gustó mucho. Solo que quiero ver el otro para quedarme tranquila.'],
@@ -1153,7 +1176,7 @@ const RP=[
 ['c','Sí, podría ser.'],
 ['a','Perfecto. Entonces hagamos la reserva de $20.000 y te quedas tranquila.']
 ]},
-{t:'"Lo quiero pensar"',meta:'Mujer, 29 años · Matrimonio de su mejor amiga · Le gusta pero tiene ansiedad al decidir · Objetivo: descubrir qué significa "pensarlo" · Ruta: objeción de decisión — reserva aplica',m:[
+{t:'"Lo quiero pensar"',cat:'decision',meta:'Mujer, 29 años · Matrimonio de su mejor amiga · Objetivo: descubrir qué significa "pensarlo"',m:[
 ['c','Me encanta, pero prefiero pensarlo.'],
 ['a','Claro. Y para no asumir, cuando dices "pensarlo", ¿qué parte específicamente sientes que necesitas pensar?'],
 ['c','No sé… quiero estar segura.'],
@@ -1171,7 +1194,7 @@ const RP=[
 ['c','Sí, bastante.'],
 ['a','Perfecto. Entonces reservemos este y te das el espacio de decidir tranquila.']
 ]},
-{t:'"Quiero ver más tiendas" (el escote)',meta:'Mujer, 21 años · Fiesta de graduación · FOMO, cree que podría existir algo mejor · Objetivo: diagnosticar si es un tema de producto o de comparar por comparar · Ruta: primero diagnóstico de producto, reserva solo si sigue sin resolverse',m:[
+{t:'"Quiero ver más tiendas" (el escote)',cat:'producto',meta:'Mujer, 21 años · Fiesta de graduación · Objetivo: diagnosticar si es un tema de producto o de comparar por comparar',m:[
 ['c','Está hermoso, pero todavía quiero recorrer más tiendas.'],
 ['a','Sí, totalmente válido. ¿Qué esperas encontrar en las otras tiendas que sientes que todavía no encontraste en este vestido?'],
 ['c','No sé… quizás algo que me guste más.'],
@@ -1188,7 +1211,7 @@ const RP=[
 ['p'],
 ['a','Nota para el equipo: si ninguna alternativa la convence y de verdad necesita comparar en otro lugar, ahí sí ofrece la reserva de $20.000 por 7 días para no perder este vestido mientras compara — pero solo después de intentar resolver el escote acá mismo.']
 ]},
-{t:'"Quiero volver con mi mamá"',meta:'Mujer, 19 años · Fiesta formal · Necesita validación externa · Objetivo: entender autoridad real de decisión · Ruta: objeción de decisión — reserva aplica',m:[
+{t:'"Quiero volver con mi mamá"',cat:'decision',meta:'Mujer, 19 años · Fiesta formal · Objetivo: entender autoridad real de decisión',m:[
 ['c','Me encanta, pero quiero volver con mi mamá para que lo vea.'],
 ['a','Obvio. ¿La opinión de tu mamá es importante para sentirte segura o ella participa directamente en la decisión de compra?'],
 ['c','Las dos cosas. Igual ella me ayuda a pagarlo.'],
@@ -1202,19 +1225,23 @@ const RP=[
 ['p'],
 ['a','¿Te serviría asegurar este y venir con tu mamá a tomar la decisión final?']
 ]},
-{t:'"No quiero perder los $20.000"',meta:'Mujer, 27 años · Invitada a matrimonio · Interés alto, aversión a perder dinero · Objetivo: no discutir, clarificar condiciones · Ruta: objeción de decisión — reserva aplica',m:[
-['c','Ya, pero no quiero dejar $20.000 y después perderlos.'],
-['a','Totalmente entendible. Para saber qué te preocupa exactamente, ¿es la posibilidad de encontrar otro vestido y sentir que esos $20.000 fueron una mala decisión?'],
-['c','Sí, exactamente.'],
-['a','Perfecto. Entonces antes de avanzar te explico con absoluta claridad qué ocurre con la reserva, porque no quiero que dejes dinero sin entenderlo.'],
-['a','La reserva son $20.000, 7 días desde hoy. Durante esos 7 días el vestido queda apartado solo para ti. Si confirmas la compra dentro de ese plazo, los $20.000 se descuentan del total. Si no confirmas dentro de esos 7 días, la reserva se libera automáticamente y el vestido vuelve a la venta — los $20.000 no son reembolsables, ese es el único caso en que no se recuperan.'],
-['a','Sabiendo exactamente cómo funciona, ¿lo que te incomoda sigue siendo el monto o hay algo más que todavía no te convence del vestido?'],
-['c','No, el vestido sí me encanta. Es el miedo a perder plata.'],
-['a','Perfecto. Entonces resolvamos únicamente eso. La reserva tiene sentido si para ti vale la pena mantener disponible una opción que ya sabes que te encanta mientras comparas.'],
+{t:'"Necesito que a ella también le encante, no solo a mí"',cat:'decision',meta:'Mujer, 45 años · Mamá comprando vestido de gala para su hija de 15 · Objetivo: separar la duda de la madre de la duda real de la hija',m:[
+['c','A mí me encanta este para ella, pero la veo insegura. No quiero comprarlo y que después no se lo quiera poner.'],
+['a','Totalmente válido. ¿Le preguntamos directamente a ella qué le parece, en vez de decidir por ella?'],
+['c','Sí, hagamos eso.'],
+['a','(a la hija) ¿Tú cómo te sientes con este puesto, del 1 al 10?'],
+['c','(hija) Como un 8, creo.'],
+['a','¿Qué le faltaría para ser un 10?'],
+['c','(hija) No sé… quizás el color.'],
+['a','(a la madre) Ahí tiene una razón concreta — no es que no le guste, es el color. Podemos mostrarle esta misma línea en otro tono antes de decidir cualquier cosa.'],
+['c','Ya, eso me tranquiliza harto.'],
 ['p'],
-['a','Con las condiciones claras, ¿te da tranquilidad reservarlo o prefieres genuinamente asumir el riesgo de dejarlo disponible?']
+['a','Mientras deciden el color, si este ya es un candidato fuerte, podemos reservarlo con $20.000 por 7 días para que no se pierda mientras prueban otras opciones.'],
+['c','¿Y si al final no le gusta ninguno de estos?'],
+['a','Entonces simplemente no confirman la compra y la reserva se libera — no pierden nada más que la opción de este vestido en particular.'],
+['c','Perfecto, hagámoslo así.']
 ]},
-{t:'"Está muy caro"',meta:'Mujer, 31 años · Matrimonio familiar · Le encanta el vestido pero el precio supera su expectativa · Objetivo: diferenciar presupuesto vs. valor',m:[
+{t:'"Está muy caro"',cat:'presupuesto',meta:'Mujer, 31 años · Matrimonio familiar · Objetivo: diferenciar presupuesto vs. valor',m:[
 ['c','Me encanta, pero encuentro que está caro.'],
 ['a','Te entiendo. Cuando dices "caro", ¿es porque se sale realmente de tu presupuesto o porque todavía no estás segura de que valga ese monto?'],
 ['c','Más que nada se sale un poco de lo que quería gastar.'],
@@ -1230,51 +1257,7 @@ const RP=[
 ['c','Lo consideraría.'],
 ['a','Perfecto. ¿Qué necesitarías aclarar todavía para sentirte cómoda avanzando?']
 ]},
-{t:'"Mi pololo quiere verlo antes"',meta:'Mujer, 26 años · Matrimonio de un familiar de su pareja · Quiere aprobación aunque ella paga · Objetivo: no atacar a la pareja, identificar autoridad · Ruta: objeción de decisión — reserva aplica',m:[
-['c','Me gusta, pero quiero mostrárselo a mi pololo.'],
-['a','Claro. ¿Necesitas su aprobación para decidir o principalmente quieres compartirlo con él porque su opinión te importa?'],
-['c','No, decidir decido yo. Pero igual quiero saber qué piensa.'],
-['a','Perfecto. Entonces tú sí te ves usando este vestido.'],
-['c','Sí, mucho.'],
-['a','¿Qué crees que él podría decir que te hiciera cambiar de opinión?'],
-['c','Quizás que es demasiado llamativo.'],
-['a','Ya. Entonces la duda real no es el vestido: es cómo te sentirías si él lo percibiera demasiado llamativo.'],
-['c','Sí, puede ser.'],
-['a','¿Tú cómo te sentiste cuando te viste con él puesto?'],
-['c','Hermosa, la verdad.'],
-['a','Eso es importante. No te diría que ignores su opinión, pero tampoco quiero que pierdas de vista cómo tú te sentiste.'],
-['p'],
-['a','¿Te serviría reservarlo mientras se lo muestras y así decides tranquila sin perder esta opción?']
-]},
-{t:'"No sé si me queda perfecto" (hombros)',meta:'Mujer, 34 años · Matrimonio elegante · Inseguridad corporal · Objetivo: reducir riesgo con modificaciones reales, no halagos vacíos · Ruta: diagnóstico de producto → ajuste (NO ofrecer reserva)',m:[
-['c','Me gusta, pero siento que acá en los hombros no me queda perfecto.'],
-['a','Sí, entiendo exactamente lo que dices. ¿Ese detalle es lo único que hoy te impide verte comprándolo?'],
-['c','Sí. Todo lo demás me encanta.'],
-['a','Perfecto. Entonces no intentaría convencerte de ignorarlo. Justamente ese tipo de detalle puede evaluarse dentro de nuestras opciones de confección y modificación.'],
-['c','¿Se puede arreglar?'],
-['a','Podemos revisar concretamente si ese ajuste aplica a tu caso. Tenemos modificaciones como largo y hombros dentro de las condiciones del servicio, hasta 15 días después de la compra.'],
-['c','Ah, eso cambia harto.'],
-['a','Claro, porque tu objeción no era "no me gusta". Era "quiero que me quede bien". Esto no se resuelve con una reserva — se resuelve confirmando el ajuste.'],
-['p'],
-['a','Si confirmamos que ese ajuste específico se puede hacer, ¿te sentirías cómoda avanzando con este vestido?'],
-['c','Sí.'],
-['a','Perfecto. Entonces primero confirmemos el ajuste y, si aplica, avanzamos.']
-]},
-{t:'"No me gusta cómo cae en la espalda"',meta:'Mujer, 26 años · Matrimonio de una amiga · Se mira por detrás y frunce el ceño · Objetivo: diagnosticar si es talla, corte o percepción · Ruta: diagnóstico de producto → ajuste (NO ofrecer reserva)',m:[
-['c','Me gusta mucho, pero por atrás siento que no cae bien.'],
-['a','Buena observación. Del 1 al 10, ¿qué tan grande sientes que es el problema en la espalda?'],
-['c','Como un 6. El resto me encanta.'],
-['a','¿Es que te queda ancho, que se marca algo, o que simplemente no te convence la forma de la espalda en este diseño?'],
-['c','Creo que me queda un poco ancho ahí.'],
-['a','Perfecto, eso ya es un dato concreto: no es el vestido, es un tema de ajuste. Ese tipo de corrección se hace con costura interna en la espalda, dentro de las modificaciones incluidas hasta 15 días después de la compra.'],
-['c','¿Y va a quedar bien después de eso?'],
-['a','Sí — es un ajuste común, no estructural. Si te muestro cómo quedaría con un pinche rápido acá mismo, ¿te ayuda a decidir con más seguridad?'],
-['c','Sí, eso me ayudaría harto.'],
-['a','[La asesora marca el ajuste con alfileres para mostrar el resultado real.]'],
-['c','Ahora sí, así se ve perfecto.'],
-['a','Genial — entonces confirmamos el ajuste de espalda junto con la compra. No hace falta reservar nada: el problema ya está resuelto.']
-]},
-{t:'"Me queda suelto"',meta:'Mujer, 33 años · Matrimonio corporativo · Le encanta el diseño pero el corte no le cierra en la cintura · Objetivo: diagnosticar talla vs. corte antes de ofrecer nada · Ruta: diagnóstico de producto → talla/ajuste (NO ofrecer reserva)',m:[
+{t:'"Me queda suelto"',cat:'producto',meta:'Mujer, 33 años · Matrimonio corporativo, compra para ella como invitada · Objetivo: diagnosticar talla vs. corte antes de ofrecer nada',m:[
 ['c','Me encanta, pero siento que me queda suelto, sobre todo en la cintura.'],
 ['a','Entiendo. ¿Te probaste esta talla porque es la que usas siempre o porque era la que había disponible en este modelo?'],
 ['c','Es la que había disponible. Normalmente uso una talla menos.'],
@@ -1286,46 +1269,7 @@ const RP=[
 ['c','Ya, prefiero probarme la talla correcta si la tienen.'],
 ['a','Perfecto. Vamos a buscarla — así comparas peras con peras y decides sobre el vestido real, no sobre un problema de talla.']
 ]},
-{t:'"Si es para mí, va a seguir estando"',meta:'Mujer, 23 años · Personalidad relajada · Baja urgencia · Objetivo: no confrontar, devolver el control · Ruta: objeción de decisión — reserva aplica',m:[
-['c','Prefiero pensarlo. Si es para mí, va a seguir estando.'],
-['a','Puede ser. Y honestamente también puede pasar que sí esté.'],
-['p'],
-['c','Claro.'],
-['a','Yo no te diría lo contrario solo para presionarte. Lo único que quiero entender es: si vuelves y ya no está disponible, ¿te daría igual o realmente te frustraría perder este?'],
-['c','Pucha… sí me frustraría porque me gustó mucho.'],
-['a','Perfecto. Entonces no estamos hablando de crear urgencia artificial. Estamos hablando de cuánto te importa proteger una opción que genuinamente no quieres perder.'],
-['c','Sí.'],
-['a','Para eso existe la reserva por una semana: $20.000, no reembolsables. Si confirmas la compra dentro de esos 7 días se descuentan del total, y si no confirmas, se libera y vuelve a la venta.'],
-['p'],
-['a','Sabiendo eso, ¿prefieres dejarlo abierto o asegurarlo mientras decides?']
-]},
-{t:'"Si me gusta otro, ¿qué hago?"',meta:'Mujer, 28 años · Muy analítica · Necesita conocer escenarios futuros · Objetivo: claridad total antes del cierre · Ruta: objeción de decisión — reserva aplica',m:[
-['c','Ya, pero imagina que lo reservo y después me gusta otro.'],
-['a','Buena pregunta. Antes de responderte, ¿tu miedo principal es quedar obligada a comprar este?'],
-['c','Sí, exactamente.'],
-['a','Perfecto. Entonces te explico exactamente las condiciones reales de la reserva y qué ocurre en ese escenario.'],
-['a','La reserva dura 7 días. Durante ese plazo el vestido es solo tuyo. Si en esos 7 días decides que prefieres otro, simplemente no confirmas la compra: la reserva se libera automáticamente y el vestido vuelve a la venta, sin ninguna obligación de tu parte más allá de ese plazo.'],
-['a','Con eso claro, ¿sientes que la reserva te da flexibilidad o todavía la sientes como una obligación?'],
-['c','No, así sí la veo más flexible.'],
-['a','Perfecto. Entonces la función no es obligarte a elegir este. Es darte tiempo para comparar sin que esta opción desaparezca mientras decides.'],
-['p'],
-['a','¿Te hace sentido usarla de esa manera?']
-]},
-{t:'"Me estás apurando"',meta:'Mujer, 32 años · Ha tenido malas experiencias con vendedores · Defensiva · Objetivo: recuperar confianza y frame',m:[
-['c','Siento que me estás apurando para comprar.'],
-['a','Gracias por decírmelo. No quiero que te sientas así.'],
-['p'],
-['a','¿Qué fue específicamente lo que dije que te hizo sentir presionada?'],
-['c','Eso de que después quizás no esté.'],
-['a','Entiendo. Y tienes razón en cuestionarlo. Mi intención era explicarte un riesgo posible, no decirte que necesariamente va a desaparecer.'],
-['c','Ya.'],
-['a','Hagamos algo: olvidemos por un momento la reserva. Quiero entender si el vestido realmente te convence. ¿Hay algo de él que no te guste?'],
-['c','No. El vestido me encanta.'],
-['a','Perfecto. Entonces primero me importa que tengas claro eso. Después tú decides si prefieres comprar, reservar o simplemente seguir mirando. Las tres son opciones válidas.'],
-['c','Ya, así sí.'],
-['a','Perfecto. Entonces, sin presión: ¿qué necesitas resolver para tomar una decisión tranquila?']
-]},
-{t:'"No puedo decidir hoy"',meta:'Mujer, 30 años · Sobrepiensa decisiones · Saturación mental · Objetivo: convertir la decisión final en microdecisión reversible · Ruta: objeción de decisión — reserva aplica',m:[
+{t:'"No puedo decidir hoy"',cat:'decision',meta:'Mujer, 30 años · Sobrepiensa decisiones, saturación mental · Objetivo: convertir la decisión final en microdecisión reversible',m:[
 ['c','No puedo decidir hoy. De verdad que no.'],
 ['a','Está bien. No voy a intentar forzarte.'],
 ['p'],
@@ -1343,7 +1287,7 @@ const RP=[
 ['p'],
 ['a','¿Te daría más tranquilidad dejar este asegurado y decidir con la cabeza más fresca?']
 ]},
-{t:'"El matrimonio es en dos meses, tengo tiempo"',meta:'Mujer, 25 años · Baja urgencia percibida · Cree que esperar no tiene costo · Objetivo: gestión realista del calendario',m:[
+{t:'"El matrimonio es en dos meses, tengo tiempo"',cat:'tiempo',meta:'Mujer, 25 años · Baja urgencia percibida, cree que esperar no tiene costo · Objetivo: gestión realista del calendario',m:[
 ['c','Igual el matrimonio es en dos meses, tengo tiempo.'],
 ['a','Sí, dos meses suena a bastante. ¿Cuándo te gustaría tener el vestido resuelto de verdad?'],
 ['c','No sé, quizás un par de semanas antes.'],
@@ -1355,7 +1299,7 @@ const RP=[
 ['p'],
 ['a','Considerando que este ya te gustó y probablemente necesitarías ajuste, ¿te conviene seguir postergando o te daría más tranquilidad dejar esta opción encaminada?']
 ]},
-{t:'"Quiero ver otro y después vuelvo" (clienta difícil)',meta:'Mujer, 35 años · Segura, dominante, impaciente · No quiere sentirse vendida · Objetivo: mantener autoridad sin competir · Ruta: objeción de decisión — reserva aplica',m:[
+{t:'"Quiero ver otro y después vuelvo" (clienta difícil)',cat:'decision',meta:'Mujer, 35 años · Segura, dominante, no quiere sentirse vendida · Objetivo: mantener autoridad sin competir',m:[
 ['c','Mira, me gustó, pero voy a ver otro y después vuelvo.'],
 ['a','Perfecto.'],
 ['p'],
@@ -1374,68 +1318,104 @@ const RP=[
 ['a','Perfecto.']
 ]}
 ];
-const LS_KEY='ec_ventas_freq';
-function loadFreq(){try{return JSON.parse(localStorage.getItem(LS_KEY))||{}}catch(e){return{}}}
-function saveFreq(f){localStorage.setItem(LS_KEY,JSON.stringify(f))}
 function renderRP(){
   const list=document.getElementById('rp-list');
-  const freq=loadFreq();
   list.innerHTML=RP.map((rp,i)=>{
-    const metaParts=rp.meta.split(' · ');
     const chat=rp.m.map(line=>{
       if(line[0]==='p')return '<div class="msg pause">Pausa</div>';
       const cls=line[0]==='c'?'client':'advisor';
       return `<div class="msg ${cls}">${line[1]}</div>`;
     }).join('');
-    const lvl=freq[i]||0;
-    const btns=[1,2,3].map(l=>{
-      const lbl=l===1?'Rara':l===2?'A veces':'Frecuente';
-      return `<button class="freq-btn${lvl===l?' active':''}" data-lvl="${l}" onclick="setFreq(${i},${l},this)">${lbl}</button>`;
-    }).join('');
     return `<div class="rp-card" data-i="${i}">
       <div class="rp-hd" onclick="toggleRP(this)">
         <div class="rp-num">${i+1}</div>
-        <div class="rp-info"><div class="rp-title">${rp.t}</div><div class="rp-meta">${metaParts.slice(0,2).join(' · ')}</div></div>
-        <div class="rp-freq" onclick="event.stopPropagation()">${btns}</div>
+        <div class="rp-info"><div class="rp-title">${rp.t}</div><div class="rp-meta">${rp.meta}</div></div>
+        <span class="rp-cat ${rp.cat}">${CAT[rp.cat]}</span>
         <div class="rp-icon">▼</div>
       </div>
       <div class="rp-body">
-        <div class="rp-tags">${metaParts.slice(2).map(p=>`<span class="bdg violet">${p}</span>`).join('')}</div>
         <div class="chat">${chat}</div>
       </div>
     </div>`;
   }).join('');
 }
 function toggleRP(hd){hd.parentElement.classList.toggle('open');}
-function setFreq(i,lvl,btn){
-  const freq=loadFreq();
-  freq[i]=(freq[i]===lvl)?0:lvl;
-  saveFreq(freq);
-  const row=btn.closest('.rp-freq');
-  row.querySelectorAll('.freq-btn').forEach(b=>b.classList.remove('active'));
-  if(freq[i]>0)btn.classList.add('active');
-  renderRanking();
+
+/* ═══ VENTAS · ENTRENA TU CRITERIO (CARD TRAINING) ═══ */
+const QUIZ=[
+{s:'Clienta: "Necesito verlo con mi mamá antes de decidir."',
+ opts:[
+   {ok:true,txt:'Reservar el vestido con $20.000 mientras trae a su mamá.'},
+   {ok:false,txt:'Ofrecerle un descuento ahí mismo para que decida sin esperar a nadie.'}
+ ],
+ fb:'Es una objeción de Decisión — ella no duda del vestido, necesita validación externa. Un descuento no resuelve eso; la reserva sí, porque protege la opción mientras consigue esa validación.'},
+{s:'Clienta: "Siento que me queda suelto en la cintura."',
+ opts:[
+   {ok:false,txt:'Ofrecer reservarlo mientras lo piensa.'},
+   {ok:true,txt:'Revisar si es un tema de talla y ofrecer ajuste de costura o probar otra talla.'}
+ ],
+ fb:'Es una objeción de Producto. Reservar no arregla un vestido que no calza — hay que diagnosticar (talla real vs. disponible) y resolverlo ahí mismo.'},
+{s:'Clienta: "Está lindo, pero se sale de mi presupuesto."',
+ opts:[
+   {ok:true,txt:'Preguntar "si el dinero no fuera problema, ¿qué tanto te gustó?" para separar presupuesto de valor percibido.'},
+   {ok:false,txt:'Bajar el precio de inmediato para cerrar la venta.'}
+ ],
+ fb:'Es Presupuesto — pero antes de tocar el precio hay que diagnosticar si es falta de plata real o falta de valor percibido. Bajar el precio sin preguntar regala margen que quizás no hacía falta regalar.'},
+{s:'Clienta: "Quiero ver qué hay en otras tiendas." (calificó el vestido 9/10)',
+ opts:[
+   {ok:false,txt:'Dejarla ir sin más — "si le interesa, va a volver".'},
+   {ok:true,txt:'Preguntar qué espera encontrar afuera que no encontró aquí y ofrecer la reserva por su alta intención (9/10).'}
+ ],
+ fb:'Es Decisión/Tiempo con intención alta (8–10 en la escala). Dejarla ir sin reserva regala una venta casi cerrada a la competencia.'},
+{s:'Clienta: "No quiero perder los $20.000 si al final no compro."',
+ opts:[
+   {ok:true,txt:'Explicar con total transparencia las condiciones exactas: 7 días, no reembolsable, se descuenta si compra.'},
+   {ok:false,txt:'Decirle "tranquila, no va a pasar nada" sin explicar las condiciones reales.'}
+ ],
+ fb:'Es Decisión — el miedo es al compromiso, no al vestido. La claridad total sobre las condiciones genera la confianza que cierra; la vaguedad genera más desconfianza, no menos.'},
+{s:'Clienta: "El escote no es exactamente lo que buscaba."',
+ opts:[
+   {ok:true,txt:'Mostrar si hay otro corte con un escote distinto en el mismo estilo, ahí mismo en tienda.'},
+   {ok:false,txt:'Ofrecer la reserva de $20.000 para que compare en otras tiendas.'}
+ ],
+ fb:'Es Producto. El problema tiene una solución concreta disponible en tienda — resolverlo ahí es más rápido y efectivo que mandarla a comparar afuera con una reserva.'},
+{s:'Mamá comprando para su hija: "A mí me encanta, pero la veo insegura."',
+ opts:[
+   {ok:true,txt:'Preguntarle directamente a la hija, del 1 al 10, y descubrir qué le falta para el 10.'},
+   {ok:false,txt:'Convencer a la mamá de que igual lo compre, porque ella es quien paga y decide.'}
+ ],
+ fb:'La objeción real no es de la madre — es de la hija, y hay que aislarla con la escala 1–10 antes de asumir nada. Comprar sin resolver la duda de la hija es la receta para una devolución o una clienta insatisfecha.'},
+{s:'Clienta: "El matrimonio es en dos meses, tengo tiempo de sobra."',
+ opts:[
+   {ok:false,txt:'Estar de acuerdo y dejarla ir tranquila — "efectivamente, tiene tiempo".'},
+   {ok:true,txt:'Preguntar si necesitará ajustes (largo, calce) para mostrar que el tiempo real es menor de lo que parece.'}
+ ],
+ fb:'Es Tiempo — pero "tiempo hasta el evento" no es lo mismo que "tiempo para decidir". Si necesita ajustes, ese cálculo cambia y vale la pena cerrar antes.'}
+];
+function renderQuiz(){
+  const list=document.getElementById('quiz-list');
+  if(!list)return;
+  list.innerHTML=QUIZ.map((q,i)=>{
+    const opts=q.opts.map((o,j)=>`<button class="quiz-opt" onclick="answerQuiz(${i},${j},this)">${String.fromCharCode(65+j)}) ${o.txt}</button>`).join('');
+    return `<div class="quiz-card" data-i="${i}">
+      <div class="quiz-situation">${q.s}</div>
+      <div class="quiz-opts">${opts}</div>
+      <div class="quiz-feedback"></div>
+    </div>`;
+  }).join('');
 }
-function resetFreq(){
-  if(!confirm('¿Reiniciar el conteo de objeciones en este dispositivo?'))return;
-  localStorage.removeItem(LS_KEY);
-  renderRP();
-  renderRanking();
+function answerQuiz(qi,oi,btn){
+  const card=btn.closest('.quiz-card');
+  if(card.classList.contains('answered'))return;
+  card.classList.add('answered');
+  const q=QUIZ[qi];
+  card.querySelectorAll('.quiz-opt').forEach((b,j)=>{
+    b.classList.add(q.opts[j].ok?'correct':'wrong');
+  });
+  card.querySelector('.quiz-feedback').textContent=(q.opts[oi].ok?'✓ Correcto. ':'✗ No es la mejor opción. ')+q.fb;
 }
-function renderRanking(){
-  const freq=loadFreq();
-  const wrap=document.getElementById('rank-list');
-  const rows=RP.map((rp,i)=>({title:rp.t,lvl:freq[i]||0})).filter(r=>r.lvl>0).sort((a,b)=>b.lvl-a.lvl);
-  if(!rows.length){wrap.innerHTML='<div class="rank-empty">Todavía no hay objeciones marcadas. Usa los botones "Rara · A veces · Frecuente" en cada roleplay de abajo después de cada cita en tienda.</div>';return;}
-  const max=3;
-  wrap.innerHTML=rows.map((r,n)=>`<div class="rank-row">
-    <div class="rank-n">${n+1}</div>
-    <div class="rank-lbl">${r.title}</div>
-    <div class="rank-track"><div class="rank-fill" style="width:${(r.lvl/max*100)}%"></div></div>
-    <div class="rank-val">${r.lvl}/3</div>
-  </div>`).join('');
-}
-if(document.getElementById('rp-list')){renderRP();renderRanking();}
+if(document.getElementById('rp-list'))renderRP();
+if(document.getElementById('quiz-list'))renderQuiz();
 document.addEventListener('click',e=>{
   if(!mobDrop.classList.contains('open'))return;
   if(mobDrop.contains(e.target)||mobBtn.contains(e.target))return;
