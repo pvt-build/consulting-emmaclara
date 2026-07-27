@@ -190,6 +190,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .week-body{margin-top:10px;padding-top:10px;border-top:0.5px solid var(--border);display:none}
 .week-card.open .week-body{display:block}
 .week-chips{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
+.rec-link{display:inline-flex;align-items:center;gap:6px;background:var(--violet-lt);color:var(--violet);border:0.5px solid var(--violet);border-radius:7px;padding:6px 12px;font-size:11.5px;font-weight:600;text-decoration:none;margin-bottom:10px}
+.rec-links{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}
 .week-sec{font-size:10px;font-weight:600;color:var(--grey);text-transform:uppercase;letter-spacing:.08em;margin:8px 0 4px}
 .week-text{font-size:12px;color:var(--grey);line-height:1.65}
 .week-text strong{color:var(--ink);font-weight:600}
@@ -420,62 +422,77 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 <!-- ════════════ PANEL ════════════ -->
 <div class="page on" id="pg-overview">
 
-  <div class="slbl">Progreso — sesión 6 de 12</div>
+  <div class="slbl">Progreso — sesión 7 de 12</div>
   <div class="chips-row">
     <div class="sch done" title="Sem 1 · Foundations + Diagnóstico">1</div>
     <div class="sch done" title="Sem 2 · Evento 27 jun + Guión de cierre">2</div>
     <div class="sch done" title="Sem 3 · Junio 23 · CAC + cuellos de botella">3</div>
     <div class="sch done" title="Sem 4 · Julio 6 · Resultados evento + escala de cierre">4</div>
     <div class="sch done" title="Sem 5 · Julio 13 · Mejor eficiencia histórica + escalar gasto">5</div>
-    <div class="sch now" title="Sem 6 · Próxima sesión">6</div>
-    <div class="sch todo">7</div><div class="sch todo">8</div>
+    <div class="sch done" title="Sem 6 · Julio 20 · Add-to-Cart móvil + giro estratégico web">6</div>
+    <div class="sch now" title="Sem 7 · Próxima sesión">7</div>
+    <div class="sch todo">8</div>
     <div class="sch todo">9</div><div class="sch todo">10</div>
     <div class="sch todo">11</div><div class="sch todo">12</div>
   </div>
 
-  <div class="slbl">Métricas clave · última llamada (13 jul)</div>
+  <div class="slbl">Métricas clave · última llamada (20 jul)</div>
   <div class="ov-row1">
-    <div class="ov-card"><div class="ov-lbl">Ingresos julio vs. año pasado</div><div class="ov-num red">-$3M</div><div class="ov-sub">Es volumen, no performance</div></div>
-    <div class="ov-card"><div class="ov-lbl">Gasto en ads vs. julio 2025</div><div class="ov-num amber">1/6</div><div class="ov-sub">Invirtiendo una fracción del histórico</div></div>
-    <div class="ov-card"><div class="ov-lbl">Cierre en tienda</div><div class="ov-num green">20%</div><div class="ov-sub">vs 5% histórico · meta 50%</div></div>
+    <div class="ov-card"><div class="ov-lbl">Ingresos julio (al 20/7)</div><div class="ov-num amber">$6.9M</div><div class="ov-sub">Tienda $6.78M + Web $140K</div></div>
+    <div class="ov-card"><div class="ov-lbl">Proyección julio vs. 2025</div><div class="ov-num red">~$7M vs $11M</div><div class="ov-sub">Brecha de inversión, no de eficiencia</div></div>
+    <div class="ov-card"><div class="ov-lbl">Add-to-Cart móvil</div><div class="ov-num red">0.3%</div><div class="ov-sub">Cuello de botella crítico del sitio</div></div>
   </div>
   <div class="ov-row2">
-    <div class="ov-card"><div class="ov-lbl">CPA por cita agendada</div><div class="ov-num green">$2.4K</div><div class="bdg-row"><span class="bdg green">✓ Mínimo histórico (era $8–13K)</span></div></div>
-    <div class="ov-card"><div class="ov-lbl">ROAS</div><div class="ov-num green">15x</div><div class="bdg-row"><span class="bdg green">✓ Máximo histórico</span></div></div>
-    <div class="ov-card"><div class="ov-lbl">Inasistencia citas gratis</div><div class="ov-num amber">5%</div><div class="bdg-row"><span class="bdg amber">⚠ Subió desde 3% — vigilar</span></div></div>
-    <div class="ov-card"><div class="ov-lbl">Meta de cierre en tienda</div><div class="ov-num violet">50%</div><div class="bdg-row"><span class="bdg violet">1 de cada 2 citas · subió de 40%</span></div></div>
+    <div class="ov-card"><div class="ov-lbl">Costo por conversación</div><div class="ov-num green">$470</div><div class="bdg-row"><span class="bdg green">✓ El más bajo en meses</span></div></div>
+    <div class="ov-card"><div class="ov-lbl">Costo por agenda</div><div class="ov-num green">$4.0K</div><div class="bdg-row"><span class="bdg green">✓ vs $8–9K histórico</span></div></div>
+    <div class="ov-card"><div class="ov-lbl">Conversión citas pagadas</div><div class="ov-num green">~30%</div><div class="bdg-row"><span class="bdg green">✓ El doble del 14% histórico</span></div></div>
+    <div class="ov-card"><div class="ov-lbl">$500K quemados</div><div class="ov-num red">1 venta</div><div class="bdg-row"><span class="bdg red">⚠ 50K sesiones sin Add-to-Cart resuelto</span></div></div>
   </div>
 
   <div class="slbl">Modelo de negocio · híbrido tienda + ecommerce</div>
   <div class="ch-split">
     <div class="ch-card ecomm">
-      <div class="ch-head">🏪 Tienda física <span class="bdg green">✓ Mejor eficiencia histórica</span></div>
-      <div class="ch-row"><span class="ch-k">Tasa de cierre</span><span class="ch-v green">20% (vs 5% histórico)</span></div>
-      <div class="ch-row"><span class="ch-k">CPA por cita</span><span class="ch-v green">$2.4K (vs $8–13K histórico)</span></div>
-      <div class="ch-row"><span class="ch-k">ROAS</span><span class="ch-v green">15x</span></div>
-      <div class="ch-row"><span class="ch-k">Inasistencia</span><span class="ch-v amber">5% (subió de 3%)</span></div>
-      <div class="ch-row"><span class="ch-k">Palanca</span><span class="ch-v amber">Subir gasto 20% cada 5 días</span></div>
+      <div class="ch-head">🏪 Tienda física <span class="bdg green">✓ Motor principal del negocio</span></div>
+      <div class="ch-row"><span class="ch-k">Conversión citas pagadas</span><span class="ch-v green">~30% (vs 14% histórico)</span></div>
+      <div class="ch-row"><span class="ch-k">Costo por agenda</span><span class="ch-v green">$4.0K (vs $8–9K histórico)</span></div>
+      <div class="ch-row"><span class="ch-k">Ingresos julio (al 20/7)</span><span class="ch-v green">$6.78M</span></div>
+      <div class="ch-row"><span class="ch-k">Confecciones personalizadas</span><span class="ch-v">9 este año · $500–600K c/u</span></div>
+      <div class="ch-row"><span class="ch-k">Palanca</span><span class="ch-v amber">Seguir escalando a $10–12M/mes</span></div>
     </div>
     <div class="ch-card store">
-      <div class="ch-head">🌐 E-commerce <span class="bdg red">⚠ Sin campaña activa</span></div>
-      <div class="ch-row"><span class="ch-k">CVR actual</span><span class="ch-v red">0.12%</span></div>
-      <div class="ch-row"><span class="ch-k">Aporte web julio (año pasado)</span><span class="ch-v">~$1M</span></div>
-      <div class="ch-row"><span class="ch-k">Aporte web julio (este año)</span><span class="ch-v red">$24K — casi nada</span></div>
-      <div class="ch-row"><span class="ch-k">Causa</span><span class="ch-v">Sin pauta web corriendo en julio</span></div>
-      <div class="ch-row"><span class="ch-k">Palanca</span><span class="ch-v amber">Google Shopping · top 10 productos</span></div>
+      <div class="ch-head">🌐 E-commerce <span class="bdg red">⚠ Add-to-Cart crítico</span></div>
+      <div class="ch-row"><span class="ch-k">Tráfico móvil</span><span class="ch-v">~90% (20K sesiones/mes)</span></div>
+      <div class="ch-row"><span class="ch-k">Add-to-Cart móvil</span><span class="ch-v red">0.3%</span></div>
+      <div class="ch-row"><span class="ch-k">Ingresos julio (al 20/7)</span><span class="ch-v red">$140K (1 venta)</span></div>
+      <div class="ch-row"><span class="ch-k">Caso real</span><span class="ch-v red">$500K → 50K sesiones → 1 venta</span></div>
+      <div class="ch-row"><span class="ch-k">Palanca</span><span class="ch-v amber">Arreglar PDP antes de meter más tráfico</span></div>
     </div>
   </div>
 
   <div class="slbl">Principal problema</div>
   <div class="problem-card">
-    <div class="prob-icon">📈</div>
+    <div class="prob-icon">📱</div>
     <div>
-      <div class="prob-title">Julio va -$3M vs. el año pasado — pero es un problema de volumen, no de performance</div>
-      <div class="prob-text">El CAC de junio bajó de $63,910 a cerca de $19,000 por vestido, el costo por cita agendada está en su <strong>mínimo histórico</strong> ($2,400 vs $8–13K), el ROAS está en 15x y la tasa de cierre en tienda subió de 5% a <strong>20%</strong> — el negocio nunca estuvo más eficiente. El problema es que julio se está invirtiendo solo <strong>1/6 del presupuesto</strong> de julio 2025, así que aunque cada peso rinde mucho más, hay menos pesos generando tráfico. La solución no es "arreglar" nada — es escalar el gasto de forma controlada, vigilando la capacidad operativa del equipo para responder mensajes.</div>
+      <div class="prob-title">El sitio vende por características, no por lo que la clienta busca — y eso frena el Add-to-Cart</div>
+      <div class="prob-text">La tienda física está en su mejor momento (30% de conversión en citas pagadas, costo por agenda en $4.000). El problema real ahora es el e-commerce: <strong>solo 0,3% de las visitas móviles agregan algo al carrito</strong> — de 20.000 sesiones mensuales, casi ninguna. Meter más tráfico pagado sin resolver esto quema plata: un caso reciente gastó $500.000 en generar 50.000 sesiones y cerró <strong>una sola venta</strong>. Causa raíz: el sitio describe vestidos por características técnicas ("satinado", "brillante") en vez de por la necesidad real de búsqueda ("vestido para caderas anchas", "para disimular la barriga"). No existe ninguna página en Chile organizada así — es una oportunidad de posicionamiento, no solo un arreglo técnico.</div>
       <div class="prob-stats">
-        <div><div class="prob-sv">$2.4K</div><div class="prob-sl">CPA por cita (mínimo histórico)</div></div>
-        <div><div class="prob-sv">15x</div><div class="prob-sl">ROAS (máximo histórico)</div></div>
-        <div><div class="prob-sv">20% → 50%</div><div class="prob-sl">cierre en tienda: logrado → meta</div></div>
+        <div><div class="prob-sv">0.3%</div><div class="prob-sl">Add-to-Cart móvil</div></div>
+        <div><div class="prob-sv">$500K → 1</div><div class="prob-sl">gastados → ventas (sin fix)</div></div>
+        <div><div class="prob-sv">30%</div><div class="prob-sl">conversión citas pagadas en tienda</div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slbl">Oportunidad estratégica · hallazgo 21 jul</div>
+  <div class="problem-card" style="background:linear-gradient(135deg,#1A1A1A,#2A1F4A)">
+    <div class="prob-icon">🪄</div>
+    <div>
+      <div class="prob-title">Google AI Shopping ya prueba vestidos sobre la clienta — y nadie en el nicho lo está usando</div>
+      <div class="prob-text">Test real: se subió la foto de una clienta a Google AI Shopping junto con un vestido del catálogo, y la herramienta la "vistió" con él automáticamente. Esto resuelve de raíz la objeción #1 del e-commerce — <strong>"no sé cómo me va a quedar"</strong> — con una herramienta gratuita que ya existe hoy. Tiene dos caras: <strong>riesgo</strong>, porque si la clienta llega a Google y Emma Clara no tiene presencia/pauta ahí, la venta se la lleva quien sí la tenga; y <strong>oportunidad</strong>, porque nadie en el nicho lo está usando todavía — quien se posicione primero educando a su clienta sobre esto gana ventana de first-mover, no solo tráfico. Se está armando contenido (3 videos, 3 ángulos) para ocupar ese espacio antes que la competencia.</div>
+      <div class="prob-stats">
+        <div><div class="prob-sv">1ero</div><div class="prob-sl">en el nicho en mostrarlo</div></div>
+        <div><div class="prob-sv">3 videos</div><div class="prob-sl">en producción, 3 ángulos</div></div>
+        <div><div class="prob-sv">0</div><div class="prob-sl">pauta en Google hoy</div></div>
       </div>
     </div>
   </div>
@@ -498,24 +515,24 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
         <rect x="165" y="52" width="90" height="160" rx="7" fill="#E0D8CE"/>
         <text x="210" y="44" text-anchor="middle" font-size="12" fill="#8A8076" font-weight="600">100%</text>
         <text x="210" y="236" text-anchor="middle" font-size="12" fill="#2A2420" font-weight="600">Web sessions</text>
-        <text x="210" y="254" text-anchor="middle" font-size="11" fill="#8A8076">~148K/mes</text>
+        <text x="210" y="254" text-anchor="middle" font-size="11" fill="#8A8076">~20K/mes (90% móvil)</text>
         <text x="278" y="135" text-anchor="middle" font-size="20" fill="#C8C0B8">›</text>
         <rect x="295" y="176" width="90" height="36" rx="5" fill="#E2503A"/>
         <rect x="304" y="62" width="72" height="22" rx="5" fill="#FDF0ED" stroke="#E2503A" stroke-width="1.2"/>
-        <text x="340" y="77" text-anchor="middle" font-size="11" fill="#A02A18" font-weight="700">⚡ 0.12% CVR</text>
-        <text x="340" y="44" text-anchor="middle" font-size="12" fill="#E2503A" font-weight="700">1.25% add cart</text>
+        <text x="340" y="77" text-anchor="middle" font-size="11" fill="#A02A18" font-weight="700">⚡ 0.3% add cart</text>
+        <text x="340" y="44" text-anchor="middle" font-size="12" fill="#E2503A" font-weight="700">Cuello crítico</text>
         <text x="340" y="236" text-anchor="middle" font-size="12" fill="#2A2420" font-weight="600">Carrito web</text>
-        <text x="340" y="254" text-anchor="middle" font-size="11" fill="#8A8076">ticket $67K</text>
+        <text x="340" y="254" text-anchor="middle" font-size="11" fill="#8A8076">falta contenido de confianza</text>
         <text x="408" y="135" text-anchor="middle" font-size="20" fill="#C8C0B8">›</text>
         <rect x="425" y="196" width="90" height="16" rx="5" fill="#A02A18"/>
-        <text x="470" y="44" text-anchor="middle" font-size="12" fill="#A02A18" font-weight="700">80% abandona</text>
+        <text x="470" y="44" text-anchor="middle" font-size="12" fill="#A02A18" font-weight="700">$140K jul</text>
         <text x="470" y="236" text-anchor="middle" font-size="12" fill="#2A2420" font-weight="600">Venta web</text>
-        <text x="470" y="254" text-anchor="middle" font-size="11" fill="#8A8076">ticket bajo</text>
+        <text x="470" y="254" text-anchor="middle" font-size="11" fill="#8A8076">1 venta al 20/7</text>
         <line x1="548" y1="30" x2="548" y2="220" stroke="#E4DDD4" stroke-width="1.5" stroke-dasharray="5,4"/>
         <text x="548" y="22" text-anchor="middle" font-size="10" fill="#C8C0B8" font-family="DM Mono, monospace">TIENDA</text>
         <rect x="562" y="102" width="90" height="110" rx="7" fill="#E8A237"/>
         <text x="607" y="44" text-anchor="middle" font-size="12" fill="#A06810" font-weight="600">Showroom</text>
-        <text x="607" y="60" text-anchor="middle" font-size="11" fill="#8A8076">CPA $2.4K</text>
+        <text x="607" y="60" text-anchor="middle" font-size="11" fill="#8A8076">CPA $4.0K</text>
         <text x="607" y="236" text-anchor="middle" font-size="12" fill="#2A2420" font-weight="600">Showroom</text>
         <text x="607" y="254" text-anchor="middle" font-size="11" fill="#8A8076">5% no asiste</text>
         <text x="675" y="135" text-anchor="middle" font-size="20" fill="#C8C0B8">›</text>
@@ -526,17 +543,18 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
         <text x="716" y="254" text-anchor="middle" font-size="11" fill="#8A8076">ROAS 15x</text>
       </svg>
     </div>
-    <div class="funnel-note"><strong>Modelo híbrido:</strong> El e-commerce captura ventas de ticket bajo ($67K) con dudas mínimas. El ticket alto se cierra en tienda —donde la clienta puede ver, tocarse, pedir opinión y obtener financiamiento—. Con CPA en mínimo histórico ($2.4K) y cierre en 20% (vs 5% histórico), el embudo de tienda ya no es el problema: ahora se trata de <strong>escalar el gasto</strong> sin perder esa eficiencia, y de activar Google Shopping para que la web deje de aportar casi nada.</div>
+    <div class="funnel-note"><strong>Modelo híbrido:</strong> La tienda ya no es el problema —30% de conversión en citas pagadas, costo por agenda en $4.000—. El embudo roto es el web: 90% del tráfico es móvil y solo <strong>0,3% agrega algo al carrito</strong>. Meter más pauta ahí antes de arreglarlo solo quema plata (ya pasó: $500K → 50K sesiones → 1 venta). El plan no es más tráfico, es reescribir el sitio para que hable el idioma de búsqueda de la clienta (por dolor/necesidad) en vez de características técnicas del vestido.</div>
   </div>
 
-  <div class="slbl">Cuellos de botella detectados · actualizado sesión 5 (13 jul)</div>
+  <div class="slbl">Cuellos de botella detectados · actualizado 22 jul</div>
   <div class="bn-grid">
-    <div class="bn-card c"><div class="bn-head"><div class="bn-n c">1</div><div class="bn-title">Volumen bajo: julio con 1/6 del presupuesto de julio 2025</div></div><div class="bn-text">La eficiencia nunca fue mejor (CPA $2.4K, ROAS 15x), pero se está invirtiendo una fracción del gasto histórico — por eso julio va -$3M vs. el año pasado a pesar de vender mejor por peso invertido.</div><div class="bn-imp c">→ Subir gasto 20% cada 5 días, vigilando capacidad operativa</div></div>
-    <div class="bn-card w"><div class="bn-head"><div class="bn-n w">2</div><div class="bn-title">Inasistencia subió de 3% a 5%</div></div><div class="bn-text">Sigue siendo baja en términos absolutos, pero la tendencia va al alza. De 6 no-shows en junio: 1 ya había comprado en otro lado, 2 no cumplían la regla de acompañante adulto (21+), 3 vieron el catálogo y se autoexcluyeron por presupuesto.</div><div class="bn-imp w">→ Seguimiento inmediato a cada no-show, automatizar cuando el resto esté resuelto</div></div>
-    <div class="bn-card w"><div class="bn-head"><div class="bn-n w">3</div><div class="bn-title">E-commerce sin campaña activa en julio</div></div><div class="bn-text">El aporte web pasó de ~$1M (julio 2025) a $24K (julio 2026) — no por peor performance, sino porque no hay pauta corriendo. Una campaña de tráfico genérico no serviría: falta armar los mecanismos de cierre (garantías, urgencia) dentro del sitio.</div><div class="bn-imp w">→ Google Shopping solo para el top 10 de productos que ya convierten</div></div>
-    <div class="bn-card i"><div class="bn-head"><div class="bn-n i">4</div><div class="bn-title">"Nosotras no vendemos, los vestidos se venden solos" — Marjorie</div></div><div class="bn-text">Reconocimiento clave de la última llamada: el equipo nunca ha vendido activamente. El salto de 5% a 20% de cierre prueba que entrenar la venta consultiva (no el producto) es la palanca real para llegar al 50%.</div><div class="bn-imp i">→ Seguir entrenando con el módulo de Ventas — ver pestaña</div></div>
-    <div class="bn-card i"><div class="bn-head"><div class="bn-n i">5</div><div class="bn-title">Clientas que visitaron y no compraron, sin reactivar</div></div><div class="bn-text">Hay data de todas las visitas de junio y julio que no cerraron. Reactivarlas es más barato que adquirir clientas nuevas — la clienta ya conoce la marca, el producto y probablemente ya tiene 1-2 vestidos favoritos.</div><div class="bn-imp i">→ Barrido de no-compradores · ver pestaña Recompra</div></div>
-    <div class="bn-card i"><div class="bn-head"><div class="bn-n i">6</div><div class="bn-title">Cero sistema de post-venta ni retención (en construcción)</div></div><div class="bn-text">Ya empezaron a llegar las primeras reseñas post-evento vía Google. El cuadernillo de beneficios y el vestido a medida siguen pendientes de sistematizar.</div><div class="bn-imp i">→ Ver pestaña Recompra</div></div>
+    <div class="bn-card c"><div class="bn-head"><div class="bn-n c">1</div><div class="bn-title">Marjorie bloqueada produciendo el contenido de los 4 dolores</div></div><div class="bn-text">Los 4 artículos SEO y las ideas por dolor de búsqueda siguen sin salir de su lado — "se bloquea ahí". No es falta de claridad ni de herramienta (la skill de SEO ya está lista): es fricción de producción de contenido real, y hoy es lo que más frena el giro estratégico del sitio.</div><div class="bn-imp c">→ Bajar la idea base de cómo plantean los cuerpos antes que todo lo demás</div></div>
+    <div class="bn-card c"><div class="bn-head"><div class="bn-n c">2</div><div class="bn-title">Add-to-Cart móvil en 0,3% — el sitio no habla el idioma de búsqueda de la clienta</div></div><div class="bn-text">90% del tráfico es móvil (~20K sesiones/mes) y casi nada agrega al carrito. Causa raíz: describe vestidos por características ("satinado") en vez de por necesidad real ("para caderas anchas"). No existe ninguna página así en Chile — oportunidad de posicionamiento, no solo de conversión.</div><div class="bn-imp c">→ Reorganizar por dolor/evento + declarar en cada PDP qué resuelve cada vestido</div></div>
+    <div class="bn-card c"><div class="bn-head"><div class="bn-n c">3</div><div class="bn-title">$500K quemados: 50K sesiones, 1 venta</div></div><div class="bn-text">Meter tráfico pagado sin resolver el Add-to-Cart no genera ventas, solo gasta presupuesto. Confirmado con un caso real reciente.</div><div class="bn-imp c">→ No escalar tráfico genérico hasta arreglar el funnel</div></div>
+    <div class="bn-card w"><div class="bn-head"><div class="bn-n w">4</div><div class="bn-title">PDP sin contenido de confianza para decidir desde el celular</div></div><div class="bn-text">Faltan fotos de detalle (costuras, tela), reseñas específicas por producto (no genéricas), logos de medios de pago, y el botón de agregar al carrito no está visible sin hacer scroll.</div><div class="bn-imp w">→ Rehacer PDP con checklist de confianza + cuotas + reseñas por producto</div></div>
+    <div class="bn-card w"><div class="bn-head"><div class="bn-n w">5</div><div class="bn-title">Inasistencia subió de 3% a 5%</div></div><div class="bn-text">Sigue siendo baja en términos absolutos, pero la tendencia va al alza. Seguimiento inmediato a cada no-show reforzado.</div><div class="bn-imp w">→ Vigilar, automatizar cuando el resto esté resuelto</div></div>
+    <div class="bn-card i"><div class="bn-head"><div class="bn-n i">6</div><div class="bn-title">Confecciones personalizadas: nicho validado sin explotar</div></div><div class="bn-text">9 confecciones este año ($500-600K c/u), mayormente mamás de novia/novio, llegan pidiéndolo — nunca se les ofreció proactivamente. Storytelling documentando el proceso ("making of") sin explotar.</div><div class="bn-imp i">→ Ver pestaña Recompra</div></div>
+    <div class="bn-card i"><div class="bn-head"><div class="bn-n i">7</div><div class="bn-title">Clientas que visitaron y no compraron, sin reactivar</div></div><div class="bn-text">Hay data de todas las visitas de junio y julio que no cerraron. Reactivarlas es más barato que adquirir clientas nuevas.</div><div class="bn-imp i">→ Barrido de no-compradores · ver pestaña Recompra</div></div>
   </div>
 
   <div class="slbl">Stack actual</div>
@@ -562,7 +580,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="rm-how-row">
       <div class="rm-how-item">
         <div class="rm-how-icon">📞</div>
-        <div><div class="rm-how-title">Llamadas semanales</div><div class="rm-how-text">Cada semana 45 min. Lo acordado alimenta directamente el siguiente paso del mapa.</div></div>
+        <div><div class="rm-how-title">Llamada semanal + check-in mitad de semana</div><div class="rm-how-text">Sesión principal + un touch de datos+tech a mitad de semana. Lo acordado alimenta directamente el siguiente paso del mapa.</div></div>
       </div>
       <div class="rm-how-div"></div>
       <div class="rm-how-item">
@@ -610,8 +628,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="rm-node"><div class="rm-dot done">3</div><div class="rm-lbl">CAC + cuellos</div><div class="rm-sub">23 jun</div></div>
       <div class="rm-node"><div class="rm-dot done">4</div><div class="rm-lbl">Ventas</div><div class="rm-sub">6 jul</div></div>
       <div class="rm-node"><div class="rm-dot done">5</div><div class="rm-lbl">Escalar gasto</div><div class="rm-sub">13 jul</div></div>
-      <div class="rm-node"><div class="rm-dot now">6</div><div class="rm-lbl">Recompra</div><div class="rm-sub">+ Shopping</div></div>
-      <div class="rm-node"><div class="rm-dot future">7</div><div class="rm-lbl mt">Email</div><div class="rm-sub">Flujos</div></div>
+      <div class="rm-node"><div class="rm-dot done">6</div><div class="rm-lbl">Giro web</div><div class="rm-sub">20 jul</div></div>
+      <div class="rm-node"><div class="rm-dot now">7</div><div class="rm-lbl">SEO + IA</div><div class="rm-sub">Shopify-Claude</div></div>
       <div class="rm-node"><div class="rm-dot future">8</div><div class="rm-lbl mt">Regiones</div><div class="rm-sub">Geo camps.</div></div>
       <div class="rm-node"><div class="rm-dot future">9</div><div class="rm-lbl mt">Post-venta</div><div class="rm-sub">NPS + UGC</div></div>
       <div class="rm-node"><div class="rm-dot future">10</div><div class="rm-lbl mt">Fidelización</div><div class="rm-sub">Recompra</div></div>
@@ -627,6 +645,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg teal">Diagnóstico</span><span class="bdg teal">ICP</span><span class="bdg teal">Flywheel</span></div>
+      <a class="rec-link" href="https://fathom.video/calls/701319239" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 1</a>
       <div class="week-sec">Lo que se resolvió</div>
       <div class="week-text">Diagnóstico del modelo híbrido. Brecha -82% en tienda identificada. Canal web estable pero con ticket bajo ($67K). CPA de citas saludable ($10–13K). Modelo de negocio clarificado: la web captura, la tienda cierra el ticket de $150–350K.</div>
     </div>
@@ -637,6 +656,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg teal">Evento 27 jun</span><span class="bdg teal">Guión fases</span><span class="bdg teal">Cápsulas</span><span class="bdg amber">Pendientes Marjorie</span></div>
+      <a class="rec-link" href="https://fathom.video/calls/710151248" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 2 (90 min)</a>
       <div class="week-sec">Estrategia del evento definida</div>
       <div class="week-text">Público: madres de graduados (tomadoras de decisión y presupuesto). Oferta: servicios gratuitos ~$60K (colometría exprés + styling + obsequio). Cupos: 20 (escasez real). Meta: captar ~200 leads vía Facebook Lead Form para llenar los 20 cupos y crear base para nutrición futura.</div>
       <div class="week-sec">Nuevo guión de cierre (3 fases)</div>
@@ -667,6 +687,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg red">CAC</span><span class="bdg red">Inasistencia</span><span class="bdg red">Cierre tienda</span><span class="bdg grey">Expansión pausada</span></div>
+      <a class="rec-link" href="https://fathom.video/calls/722099280" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 3</a>
       <div class="week-sec">Desempeño de junio (al 23/6)</div>
       <div class="week-text">Gasto en ads $766,924 · 1,088 conversaciones · 112 citas (23 pagadas, 87 gratis) · Ingresos $4.3M · 12 vestidos vendidos. <strong>CAC: $63,910</strong> vs utilidad neta de <strong>$52,500</strong> por vestido → la estrategia actual no es rentable. Meta inmediata: bajar el CAC a $50K.</div>
       <div class="week-sec">Cuello de botella 1 — Inasistencia</div>
@@ -694,6 +715,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg green">Evento 20%</span><span class="bdg red">Reserva $20K</span><span class="bdg amber">Escala 1–10</span><span class="bdg grey">Vestido a medida</span></div>
+      <div class="rec-links">
+        <a class="rec-link" href="https://fathom.video/share/WyyauvLaDU3ZgjQgWDVa6xy9MJSM_WVM" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 4 · pt.1 (60 min)</a>
+        <a class="rec-link" href="https://fathom.video/share/wmaUgBPP5eiMHNLuZzbRZj61XqcBmhZn" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 4 · pt.2 (21 min)</a>
+      </div>
       <div class="week-sec">Resultado del evento de colorimetría</div>
       <div class="week-text">3 de 15 asistentes convirtieron (20%) — 4 veces el 5% histórico de tienda, pero quedaron 9 prospectos de alto potencial sin cerrar. Causa raíz: el servicio gratuito entregó todo el valor de una vez, sin dejar nada pendiente que empujara la compra. El 10% de descuento no fue suficiente para cerrarlos.</div>
       <div class="week-sec">Nueva oferta: cuadernillo de cupones de beneficios</div>
@@ -726,6 +751,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg green">CPA $2.4K</span><span class="bdg green">ROAS 15x</span><span class="bdg green">Cierre 20%</span><span class="bdg amber">Escalar gasto</span></div>
+      <a class="rec-link" href="https://fathom.video/calls/743134398" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 5</a>
       <div class="week-sec">Julio va -$3M vs. el año pasado — pero es volumen, no performance</div>
       <div class="week-text">Comparando fecha con fecha (13 jul), 2025 llevaba $8,2M y 2026 lleva $4,5M. La causa: julio 2026 solo invirtió <strong>1/6 del presupuesto</strong> de julio 2025 ($300K vs $1,8-2M), aunque el costo por conversación es prácticamente igual (~$480 vs $500). Menos plata invertida, mismo costo unitario → menos volumen total.</div>
       <div class="week-sec">Pero la eficiencia está en su mejor momento histórico</div>
@@ -755,37 +781,79 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="slbl">Sesión activa</div>
-
-  <div class="week-card now open" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 6 — Resultado de escalar gasto + arrancar Recompra y Shopping</div><div class="week-date">📅 Próxima sesión</div></div><span class="bdg amber">Próxima</span></div>
+  <div class="week-card done" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 6 — Add-to-Cart móvil + giro estratégico del sitio</div><div class="week-date">Llamada 20 jul · dos bloques: diagnóstico del funnel y plan de acción</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
-      <div class="week-chips"><span class="bdg amber">Gasto escalado</span><span class="bdg amber">Google Shopping</span><span class="bdg amber">Barrido recompra</span></div>
-      <div class="week-sec">🔍 Revisión (0–10 min)</div>
+      <div class="week-chips"><span class="bdg red">Add-to-Cart 0.3%</span><span class="bdg green">Citas pagadas 30%</span><span class="bdg amber">Giro por dolor</span><span class="bdg grey">SEO</span></div>
+      <div class="rec-links">
+        <a class="rec-link" href="https://fathom.video/calls/751720951" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 6 · pt.1 (60 min)</a>
+        <a class="rec-link" href="https://fathom.video/calls/754108204" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 6 · pt.2 (7 min)</a>
+      </div>
+      <div class="week-sec">Performance de julio (al 20/7)</div>
+      <div class="week-text">Tienda $6.776.308 (31 ventas) · Web $140.458 (1 venta). Citas: 141 totales — 96 gratis, 39 pagadas, 5 confecciones, 1 colorimetría. Ad spend $562.477, costo por conversación $470 (el más bajo en meses). Julio 2025 cerró en $11M; este año se proyecta ~$7M — la brecha sigue siendo de inversión publicitaria, no de eficiencia.</div>
+      <div class="week-sec">Diagnóstico del embudo e-commerce</div>
+      <div class="week-text">90% del tráfico es móvil (~20.000 sesiones/mes) vs. desktop (~2.000). Add-to-Cart móvil: <strong>0,3%</strong> — el cuello de botella crítico. Causas identificadas: falta de fotos de detalle (costuras, tela), reseñas genéricas en vez de por producto, sin logos de medios de pago, banner de envío gratis mal ubicado, botón de agregar al carrito no visible sin scroll.</div>
+      <div class="week-sec">Giro estratégico: de catálogo a herramienta consultiva</div>
+      <div class="week-text">Una auditoría externa (vía IA) detectó que el sitio dice vender "experiencia" pero solo describe vestidos por características técnicas. Búsqueda real en Google confirmó: <strong>no existe ninguna página en Chile</strong> que organice vestidos por dolor/necesidad (caderas anchas, busto grande, etc.) — oportunidad de posicionamiento y SEO. Plan: sumar un menú por evento (gala, graduación, matrimonio, mamá de novia) sin romper el SEO existente, y declarar en cada PDP qué dolor resuelve cada vestido para que la IA (ChatGPT, etc.) lo indexe y recomiende.</div>
+      <div class="week-sec">Por qué NO escalar tráfico pagado todavía</div>
+      <div class="week-text">Caso real: $500.000 generaron 50.000 sesiones y <strong>1 sola venta</strong>. Meter más presupuesto sin resolver el Add-to-Cart solo repite el problema con más plata. Se prioriza arreglar el funnel antes de escalar inversión en e-commerce.</div>
+      <div class="week-sec">Showroom sigue siendo el motor principal</div>
+      <div class="week-text">Conversión en citas pagadas ~30% (el doble del 14% histórico), costo por agenda $4.000 (vs $8-9K histórico). Decisión: seguir escalando el showroom hacia $10-12M/mes antes de invertir fuerte en e-commerce. Confecciones personalizadas: 9 este año ($500-600K c/u) — nicho validado sin explotar proactivamente, oportunidad de storytelling documentando el proceso.</div>
+      <div class="week-sec">Plan de acción concreto (pt.2)</div>
       <div class="week-text"><ul>
-        <li>¿Se llegó a $800K de gasto? ¿Aguantó la operación el volumen de mensajes?</li>
-        <li>¿Se mantuvo el CPA y el cierre al subir el gasto, o bajaron?</li>
-        <li>¿Qué salió del barrido de no-compradoras de junio/julio?</li>
+        <li>Funnel: resolver bloqueo de checkout, reubicar banner de envío gratis por etiquetas de urgencia ("última unidad")</li>
+        <li>Orgánico: publicar 4 artículos de blog por dolor del cliente con skills de IA para SEO, actualizar menús y descripciones</li>
+        <li>Pauta: redirigir presupuesto de tráfico amplio a Google Store + campañas regionales de alta intención (Antofagasta, Atacama)</li>
+        <li>Subir presupuesto general — las tasas y márgenes actuales lo justifican</li>
       </ul></div>
-      <div class="week-sec">🎯 Núcleo (10–35 min)</div>
+      <div class="week-sec">Lo que pidió Marjorie — Próximos pasos Pato</div>
       <div class="week-text"><ul>
-        <li>Decidir el siguiente salto de presupuesto según cómo respondió la operación</li>
-        <li>Activar Google Shopping para el top 10 de productos si la meta de gasto se cumplió</li>
-        <li>Definir el guion de reactivación con la guía de styling para no-compradoras</li>
+        <li><span class="pend">Pendiente:</span> Compartir ejemplos de mejores prácticas de PDP y carrusel de producto</li>
+        <li><span class="pend">Pendiente:</span> Entregar la skill de generación de contenido SEO para Shopify</li>
+        <li><span class="pend">Pendiente:</span> Enviar el video tutorial para conectar Shopify con Claude</li>
       </ul></div>
-      <div class="week-sec">📝 Entregable</div>
-      <div class="week-text">Reporte de la escalada de gasto + Shopping activo (si aplica) + guion de reactivación listo.</div>
+      <div class="week-sec">Próximos pasos — Emma</div>
+      <div class="week-text"><ul>
+        <li><span class="pend">Pendiente:</span> Publicar los 4 artículos SEO con las skills entregadas</li>
+        <li><span class="pend">Pendiente:</span> Actualizar menús y descripciones de producto</li>
+        <li><span class="pend">Pendiente:</span> Resolver el bloqueo de checkout (Add to Cart)</li>
+        <li><span class="pend">Pendiente:</span> Revisar este panel de roadmap consolidado — se lo pidió Pato directamente en la llamada</li>
+      </ul></div>
     </div>
   </div>
 
-  <div class="slbl">Próximas sesiones</div>
+  <div class="slbl">Sesión activa</div>
+
+  <div class="week-card now open" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 7 — Tecnología: Shopify-Claude + AI Shopping</div><div class="week-date">📅 Sesión de mañana</div></div><span class="bdg amber">Próxima</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg amber">Shopify-Claude</span><span class="bdg violet">AI Shopping</span><span class="bdg red">Contenido bloqueado</span></div>
+      <div class="week-sec">🔍 Revisión (0–10 min)</div>
+      <div class="week-text"><ul>
+        <li>¿Salió la idea base de los 4 dolores? Sin esto, PDP/menús/SEO siguen frenados.</li>
+        <li>¿Se subió el gasto en Google Ads como quedó para "esta semana"?</li>
+        <li>¿Cómo va la producción de los 3 videos de AI Shopping?</li>
+      </ul></div>
+      <div class="week-sec">🎯 Núcleo (10–35 min) — foco tecnología</div>
+      <div class="week-text"><ul>
+        <li>Implementar la conexión Shopify-Claude (recorridos y consultas de datos en vivo: tráfico, productos vendidos, patrones)</li>
+        <li>Armar el video de cómo cargar la skill de SEO en Shopify apenas Marjorie tenga la idea base de los 4 dolores</li>
+        <li>Definir el ángulo de los 3 videos de AI Shopping y quién los produce</li>
+      </ul></div>
+      <div class="week-sec">📝 Entregable</div>
+      <div class="week-text">Shopify conectado a Claude + video de la skill de SEO listo para usar + plan de los 3 videos de AI Shopping con fecha.</div>
+    </div>
+  </div>
+
+  <div class="slbl">Camino a la sesión 12 · cierre del programa</div>
   <div class="rm-uc-grid">
-    <div class="rm-uc"><div class="rm-uc-num">Sem 7–8 · Mes 2</div><div class="rm-uc-title">CRO web — ficha y colección</div><div class="rm-uc-chips"><span class="bdg grey">Reseñas</span><span class="bdg grey">Guía talla</span><span class="bdg grey">Filtros</span></div></div>
-    <div class="rm-uc"><div class="rm-uc-num">Sem 9 · Mes 2</div><div class="rm-uc-title">Checkout + recuperación de carritos</div><div class="rm-uc-chips"><span class="bdg grey">Abandono</span><span class="bdg grey">Email</span></div></div>
-    <div class="rm-uc"><div class="rm-uc-num">Sem 10 · Mes 2</div><div class="rm-uc-title">Retomar expansión regional (si el embudo sigue firme)</div><div class="rm-uc-chips"><span class="bdg grey">Geo</span><span class="bdg grey">Ocasión</span></div></div>
-    <div class="rm-uc"><div class="rm-uc-num">Sem 11 · Mes 3</div><div class="rm-uc-title">Post-venta, referidos y segunda vida</div><div class="rm-uc-chips"><span class="bdg grey">NPS</span><span class="bdg grey">UGC</span><span class="bdg grey">2da vida</span></div></div>
-    <div class="rm-uc"><div class="rm-uc-num">Sem 12 · Mes 3</div><div class="rm-uc-title">Cierre 90 días</div><div class="rm-uc-chips"><span class="bdg grey">Baseline vs actual</span><span class="bdg grey">¿DFY?</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 8</div><div class="rm-uc-title">Google Ads activo + Add-to-Cart tras cambios de PDP</div><div class="rm-uc-chips"><span class="bdg grey">Datos+tech</span><span class="bdg grey">PDP</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 9</div><div class="rm-uc-title">Recompra: barrido de no-compradoras + primeros resultados AI Shopping</div><div class="rm-uc-chips"><span class="bdg grey">Recompra</span><span class="bdg grey">AI Shopping</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 10</div><div class="rm-uc-title">Retomar expansión regional o doblar apuesta en AI Shopping</div><div class="rm-uc-chips"><span class="bdg grey">Geo</span><span class="bdg grey">Decisión</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 11</div><div class="rm-uc-title">Sistematizar lo validado — qué queda documentado, qué se automatiza</div><div class="rm-uc-chips"><span class="bdg grey">Systems</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 12 · Cierre</div><div class="rm-uc-title">Baseline (sesión 1) vs. resultado final + conversación de continuidad</div><div class="rm-uc-chips"><span class="bdg grey">Cierre</span><span class="bdg grey">¿Continuidad?</span></div></div>
   </div>
 </div>
 
@@ -798,14 +866,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div><div class="alert-title">Cualquier duda → WhatsApp con Patricio al tiro</div><div class="alert-text">No esperar a la próxima sesión. Un mensaje resuelto en el día vale más que una hora de llamada.</div></div>
   </div>
 
-  <div class="tg-hd">Pendientes Marjorie — todos son de ella <span class="bdg red" style="margin-left:4px">4 urgentes</span></div>
+  <div class="tg-hd">Pendientes Marjorie — todos son de ella <span class="bdg red" style="margin-left:4px">5 urgentes</span></div>
 
   <div class="task" style="border-color:rgba(226,80,58,.3)">
     <div class="task-ring" style="border-color:var(--red)"></div>
     <div class="task-body">
-      <div class="task-title">Subir el gasto en ads 20% cada 5 días — meta $800.000 CLP esta semana</div>
-      <div class="task-desc">Escalar gradual, no de golpe. El límite real es la capacidad operativa del equipo respondiendo mensajes (hoy ~50-70/día), no la eficiencia del anuncio.</div>
-      <div class="task-note">Con CPA en mínimo histórico ($2.400) y ROAS 15x, cada peso extra invertido hoy rinde muy por sobre el promedio histórico.</div>
+      <div class="task-title">Publicar los 4 artículos SEO por dolor del cliente</div>
+      <div class="task-desc">Usar las skills de IA que entrega Pato para generar el esquema de cada artículo (caderas anchas, busto grande, barriga, plus size), agregar fotos, y publicar. En una pasada, 2-3 horas.</div>
+      <div class="task-note">Esto recoge tráfico orgánico sin depender de pauta paga.</div>
     </div>
     <span class="bdg red">Urgente</span>
   </div>
@@ -813,9 +881,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="task" style="border-color:rgba(226,80,58,.3)">
     <div class="task-ring" style="border-color:var(--red)"></div>
     <div class="task-body">
-      <div class="task-title">Implementar el entrenamiento de cierre consultivo con el equipo</div>
-      <div class="task-desc">Escala 1–10 + categorías (Producto / Decisión / Presupuesto / Tiempo) en cada cita, sin excepción. El salto de 5% a 20% ya prueba que funciona — la meta ahora es 50%.</div>
-      <div class="task-note">Practicar con el roleplay de IA (ChatGPT personalizado) antes de aplicarlo en tienda. Detalle completo en pestaña Ventas.</div>
+      <div class="task-title">Actualizar menús y descripciones de producto</div>
+      <div class="task-desc">Sumar un menú por evento (gala, graduación, matrimonio, mamá de novia) sin tocar el actual — no romper el SEO ya trabajado. En cada PDP, declarar explícitamente qué dolor resuelve el vestido para que la IA lo indexe y recomiende.</div>
     </div>
     <span class="bdg red">Urgente</span>
   </div>
@@ -823,9 +890,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="task" style="border-color:rgba(226,80,58,.3)">
     <div class="task-ring" style="border-color:var(--red)"></div>
     <div class="task-body">
-      <div class="task-title">Reactivar no-compradoras de junio/julio con la guía de styling</div>
-      <div class="task-desc">Hacer el barrido de contactos que visitaron y no cerraron. Ofrecer valor (guía de styling personalizada), no descuento — la colorimetría gratis ya se descartó por ser un descuento disfrazado.</div>
-      <div class="task-note">Traer las conclusiones del barrido a la próxima sesión. Detalle en pestaña Recompra.</div>
+      <div class="task-title">Resolver el bloqueo de Add-to-Cart (checkout)</div>
+      <div class="task-desc">Arreglar el bloqueo técnico del checkout, reubicar el banner de envío gratis (sacarlo de arriba de todos los productos, o cambiarlo por urgencia tipo "última unidad"), agregar fotos de detalle y reseñas por producto, logos de medios de pago.</div>
+      <div class="task-note">No escalar tráfico pagado hasta que esto esté resuelto — ya se quemaron $500K en un intento.</div>
     </div>
     <span class="bdg red">Urgente</span>
   </div>
@@ -833,24 +900,26 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="task" style="border-color:rgba(226,80,58,.3)">
     <div class="task-ring" style="border-color:var(--red)"></div>
     <div class="task-body">
-      <div class="task-title">Vigilar no-show y capacidad operativa al subir el gasto</div>
-      <div class="task-desc">La inasistencia subió de 3% a 5% — no es crítico todavía, pero hay que monitorearlo mientras se escala la inversión. Si el no-show llega a 10%, revisar de inmediato.</div>
+      <div class="task-title">Bajar la idea base de cómo plantear "los 4 cuerpos" (dolores) — el primer paso real</div>
+      <div class="task-desc">Antes de escribir los 4 artículos: definir en una frase por dolor qué se quiere comunicar (caderas anchas, busto grande, barriga, plus size). Con eso en mano, Pato arma el video de cómo cargar la skill de SEO en Shopify.</div>
+      <div class="task-note">Esto es lo que está bloqueando todo lo demás — PDP, menús y SEO dependen de que esto salga primero.</div>
     </div>
     <span class="bdg red">Urgente</span>
   </div>
 
-  <div class="tg-hd">Pendiente de Pato <span class="bdg amber" style="margin-left:4px">1</span></div>
-
-  <div class="task">
-    <div class="task-ring"></div>
+  <div class="task" style="border-color:rgba(226,80,58,.3)">
+    <div class="task-ring" style="border-color:var(--red)"></div>
     <div class="task-body">
-      <div class="task-title">Entregar setup de Google Shopping (top 10 productos)</div>
-      <div class="task-desc">Condicionado a que se cumpla la meta de gasto ($800K) y la operación aguante el volumen de mensajes sin atrasarse.</div>
+      <div class="task-title">Revisar este panel de roadmap consolidado</div>
+      <div class="task-desc">Pato lo pidió directamente en la llamada — todo lo trabajado en las sesiones queda consolidado acá como ayuda memoria.</div>
     </div>
-    <span class="bdg amber">Pato</span>
+    <span class="bdg red">Urgente</span>
   </div>
 
-
+  <div class="alert-box info">
+    <span class="alert-icon">🎁</span>
+    <div><div class="alert-title">Disponibles a pedido — no bloquean nada de tu lado</div><div class="alert-text">La skill de SEO para los 4 artículos y el video de cómo conectar Shopify con Claude están listos del lado de Pato. Se entregan apenas mandes la idea base de los 4 dolores — no hace falta pedirlos, van a llegar solos en cuanto ese paso esté listo.</div></div>
+  </div>
 </div>
 
 
@@ -1020,11 +1089,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="slbl">Vestido a medida · nicho de alto margen</div>
+  <div class="slbl">Vestido a medida · nicho validado, sin explotar</div>
   <div class="ch-split">
     <div class="ch-card ecomm">
-      <div class="ch-head">✂️ Oportunidad <span class="bdg teal">40–50% margen</span></div>
-      <div class="ch-row"><span class="ch-k">Público</span><span class="ch-v">Madres de novia/novio</span></div>
+      <div class="ch-head">✂️ Ya está pasando <span class="bdg teal">9 este año · $500–600K c/u</span></div>
+      <div class="ch-row"><span class="ch-k">Público</span><span class="ch-v">Mayormente mamás de novia/novio</span></div>
+      <div class="ch-row"><span class="ch-k">Cómo llegan</span><span class="ch-v amber">Piden ellas — nunca se les ofrece</span></div>
       <div class="ch-row"><span class="ch-k">Paso 1</span><span class="ch-v">IA genera bocetos con referencias de la clienta</span></div>
       <div class="ch-row"><span class="ch-k">Paso 2</span><span class="ch-v">Costurera local confecciona desde cero (~30 días)</span></div>
     </div>
@@ -1033,6 +1103,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="ch-row"><span class="ch-k">Riesgo</span><span class="ch-v red">Ni tan adolescente, ni tan adulta</span></div>
       <div class="ch-row"><span class="ch-k">Solución</span><span class="ch-v">Modelos de 22–25 años</span></div>
       <div class="ch-row"><span class="ch-k">Por qué</span><span class="ch-v">Aspiracional para hijas y madres a la vez</span></div>
+    </div>
+  </div>
+
+  <div class="problem-card">
+    <div class="prob-icon">🎬</div>
+    <div>
+      <div class="prob-title">Storytelling del proceso: ya empezó, falta sistematizarlo</div>
+      <div class="prob-text">Marjorie ya está documentando el proceso completo de una confección ("making of") con dos mamás, sin mostrar el rostro — idea que tomó de una diseñadora de vestidos de novia que hace lo mismo. Si el nicho ya se valida solo (9 confecciones sin pedirlas activamente), el paso siguiente es cerrar el círculo completo de storytelling: mostrarlo de forma consistente, no caso a caso, y empezar a <strong>ofrecerlo proactivamente</strong> en vez de esperar a que la clienta lo pida.</div>
     </div>
   </div>
 
@@ -1073,7 +1151,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <tbody>
       <tr><td><div class="sdot" style="background:#7B61FF">1</div></td><td class="sname">Foundations</td><td><span class="bdg teal">✓ Cerrada</span></td><td class="sgap">ICP real. Modelo híbrido entendido. Brecha de tienda diagnosticada. Prioridades definidas.</td><td class="sgap">Mes 1 ✓</td></tr>
       <tr><td><div class="sdot" style="background:#3B9EE8">2</div></td><td class="sname">Atracción</td><td><span class="bdg amber">🔄 Activa</span></td><td class="sgap">Meta + TikTok activos. Serie Cápsulas lanzando. Evento 27 jun como lead magnet con Facebook Lead Form.</td><td class="sgap">Mes 1–2</td></tr>
-      <tr><td><div class="sdot" style="background:#E2503A">3</div></td><td class="sname">Activación web</td><td><span class="bdg red">✗ Roto</span></td><td class="sgap">0.12% CVR. Sin reseñas, sin guía de talla, sin filtros en colección principal. La web no está lista para resolver dudas de ticket alto.</td><td class="sgap"><span class="bdg grey">Mes 2</span></td></tr>
+      <tr class="broken"><td><div class="sdot" style="background:#E2503A">3</div></td><td class="sname">Activación web</td><td><span class="bdg red">✗ Roto — diagnóstico específico</span></td><td class="sgap">Add-to-Cart móvil 0.3% (90% del tráfico es móvil). Causa: describe por características, no por dolor/necesidad de búsqueda. Plan: menú por evento + PDP declarando qué resuelve cada vestido + 4 artículos SEO.</td><td class="sgap"><span class="bdg amber">En curso — Sem 7</span></td></tr>
       <tr><td><div class="sdot" style="background:#E8A237">4</div></td><td class="sname">Conversión tienda</td><td><span class="bdg amber">🔄 En progreso — subiendo</span></td><td class="sgap">Cierre en tienda: 5% histórico → 20% actual. Inasistencia: 5% (subió de 3%, vigilar). Guión, reserva de $20.000 y roleplays de objeciones ya en uso. Meta: 50% cierre (1 de 2 mínimo).</td><td class="sgap">Mes 1 · validado</td></tr>
       <tr class="broken"><td><div class="sdot" style="background:#E05599">5</div></td><td class="sname">Conversión web</td><td><span class="bdg red">✗ Roto</span></td><td class="sgap">80% abandona checkout. Sin recuperación de carritos. Formulario largo, costos ocultos. El ticket de $67K se pierde sin sistema de rescate.</td><td class="sgap"><span class="bdg grey">Mes 2</span></td></tr>
       <tr class="broken"><td><div class="sdot" style="background:#3EB489">6</div></td><td class="sname">Retención</td><td><span class="bdg amber">🔄 Recién arrancando</span></td><td class="sgap">La relación terminaba con el pago. Ahora en definición: reseñas post-evento con regalo físico, cuadernillo de beneficios y vestido a medida como upsell. Ver pestaña Recompra.</td><td class="sgap"><span class="bdg grey">Empezó 6 jul</span></td></tr>
@@ -1105,9 +1183,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="qa-card broken-q" onclick="toggleCard(this)">
     <div class="qa-hd"><div class="qa-n" style="background:#E2503A">3</div><div class="qa-title">Activación web</div><span class="bdg red" style="margin-left:auto">✗ Roto</span><span class="qa-icon">▼</span></div>
     <div class="qa-body"><ul>
-      <li>¿La ficha de producto tiene reseñas, guía de talla y video real?</li>
-      <li>¿La colección tiene filtros por ocasión, talla y precio?</li>
-      <li>¿La web puede responder las dudas de una compra de $150–350K, o siempre termina en WhatsApp?</li>
+      <li>¿La PDP declara qué dolor o necesidad resuelve cada vestido, o solo describe características?</li>
+      <li>¿Hay fotos de detalle (costuras, tela), reseñas por producto y logos de medios de pago?</li>
+      <li>¿El botón de agregar al carrito es visible sin hacer scroll en mobile?</li>
+      <li>¿Subió el Add-to-Cart móvil desde el 0.3% con los cambios de PDP y menú?</li>
     </ul></div>
   </div>
 
