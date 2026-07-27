@@ -116,6 +116,33 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .funnel-svg-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .funnel-svg-wrap svg{min-width:600px;width:100%}
 .funnel-note{margin-top:12px;padding:10px 13px;background:var(--bg);border-radius:7px;font-size:11.5px;color:var(--grey);line-height:1.65;border:0.5px solid var(--border)}
+
+/* DIAGRAMA — FLUJO COMPLETO DEL NEGOCIO */
+.dg-stage-lbl{font-family:'DM Mono',monospace;font-size:9.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--warm);text-align:center;margin-bottom:8px}
+.dg-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;width:100%;margin-bottom:4px}
+.dg-box{background:var(--surf);border:1.5px solid var(--border);border-radius:11px;padding:12px 14px;min-width:135px;max-width:200px;text-align:center;flex:1}
+.dg-box.source{border-color:var(--violet);background:var(--violet-lt)}
+.dg-box.hero{border-color:var(--gold);background:var(--gold-lt)}
+.dg-box.broken{border-color:var(--red);background:var(--red-lt)}
+.dg-box.success{border-color:var(--teal);background:var(--teal-lt)}
+.dg-box.neutral{border-color:var(--sand)}
+.dg-title{font-size:12px;font-weight:700;color:var(--dark);margin-bottom:3px;line-height:1.3}
+.dg-sub{font-size:10px;color:var(--grey);line-height:1.4}
+.dg-arrow{font-size:20px;color:var(--sand);text-align:center;line-height:1;margin:2px 0 6px}
+.dg-cols{display:flex;gap:22px;width:100%;justify-content:center;flex-wrap:wrap;align-items:flex-start;margin-bottom:6px}
+.dg-col{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;min-width:220px;max-width:300px;border-radius:14px;padding:14px 12px 10px}
+.dg-col.tienda{background:rgba(232,162,55,.06);border:1px dashed var(--gold)}
+.dg-col.web{background:rgba(226,80,58,.05);border:1px dashed var(--red)}
+.dg-col-lbl{font-family:'DM Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;text-align:center}
+.dg-col.tienda .dg-col-lbl{color:var(--gold-dk)}
+.dg-col.web .dg-col-lbl{color:var(--red-dk)}
+.dg-col .dg-box{width:100%;max-width:none}
+.dg-loop{margin:14px auto 0;padding:10px 18px;border:1.5px dashed var(--violet);border-radius:10px;color:var(--violet);font-size:11.5px;font-weight:600;text-align:center;max-width:480px}
+.dg-wrap{background:var(--surf);border:0.5px solid var(--border);border-radius:14px;padding:22px 16px;margin-bottom:20px;overflow-x:auto}
+@media(max-width:680px){
+  .dg-cols{flex-direction:column;align-items:stretch}
+  .dg-col{max-width:none}
+}
 .funnel-note strong{color:var(--ink)}
 
 /* BOTTLENECKS */
@@ -383,8 +410,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="brand"><div class="brand-dot"></div>Emma Clara</div>
   <nav class="tabs-desktop">
     <div class="tab on" onclick="sw('overview',this)">🏠 Panel</div>
-    <div class="tab" onclick="sw('roadmap',this)">🗺️ Hoja de ruta</div>
-    <div class="tab" onclick="sw('tasks',this)">✅ Pendientes</div>
+    <div class="tab" onclick="sw('roadmap',this)">🗺️ Roadmap</div>
+    <div class="tab" onclick="sw('diagrama',this)">🧩 Diagrama</div>
     <div class="tab" onclick="sw('ventas',this)">💰 Ventas</div>
     <div class="tab" onclick="sw('recompra',this)">🔁 Recompra</div>
     <div class="tab" onclick="sw('engine',this)">⚙️ Flywheel</div>
@@ -410,8 +437,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
   <div class="mob-drop" id="mob-drop">
     <div class="mob-row on" onclick="sw('overview',this,true)"><span class="mob-em">🏠</span> Panel</div>
-    <div class="mob-row" onclick="sw('roadmap',this,true)"><span class="mob-em">🗺️</span> Hoja de ruta</div>
-    <div class="mob-row" onclick="sw('tasks',this,true)"><span class="mob-em">✅</span> Pendientes</div>
+    <div class="mob-row" onclick="sw('roadmap',this,true)"><span class="mob-em">🗺️</span> Roadmap</div>
+    <div class="mob-row" onclick="sw('diagrama',this,true)"><span class="mob-em">🧩</span> Diagrama</div>
     <div class="mob-row" onclick="sw('ventas',this,true)"><span class="mob-em">💰</span> Ventas</div>
     <div class="mob-row" onclick="sw('recompra',this,true)"><span class="mob-em">🔁</span> Recompra</div>
     <div class="mob-row" onclick="sw('engine',this,true)"><span class="mob-em">⚙️</span> Flywheel</div>
@@ -575,6 +602,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
 <!-- ════════════ HOJA DE RUTA ════════════ -->
 <div class="page" id="pg-roadmap">
+
+  <div class="alert-box info" style="margin-top:0">
+    <span class="alert-icon">💬</span>
+    <div><div class="alert-title">Cualquier duda → WhatsApp con Patricio al tiro</div><div class="alert-text">No esperar a la próxima sesión. Un mensaje resuelto en el día vale más que una hora de llamada.</div></div>
+  </div>
 
   <div class="rm-how">
     <div class="rm-how-row">
@@ -844,6 +876,44 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       </ul></div>
       <div class="week-sec">📝 Entregable</div>
       <div class="week-text">Shopify conectado a Claude + video de la skill de SEO listo para usar + plan de los 3 videos de AI Shopping con fecha.</div>
+      <div class="week-sec">✅ Pendientes de Marjorie — todos son de ella <span class="bdg red" style="margin-left:4px;text-transform:none;letter-spacing:normal;font-family:'DM Sans',sans-serif">4 urgentes</span></div>
+      <div class="task" style="border-color:rgba(226,80,58,.3)" onclick="event.stopPropagation()">
+        <div class="task-ring" style="border-color:var(--red)"></div>
+        <div class="task-body">
+          <div class="task-title">Bajar la idea base de los 4 dolores — el bloqueo real de todo lo demás</div>
+          <div class="task-desc">Definir en una frase por dolor qué se quiere comunicar (caderas anchas, busto grande, barriga, plus size). Con eso, Pato arma el video de la skill de SEO y salen los 4 artículos en 2-3 horas (skill ya lista).</div>
+        </div>
+        <span class="bdg red">Urgente</span>
+      </div>
+      <div class="task" style="border-color:rgba(226,80,58,.3)" onclick="event.stopPropagation()">
+        <div class="task-ring" style="border-color:var(--red)"></div>
+        <div class="task-body">
+          <div class="task-title">Actualizar menús y descripciones de producto</div>
+          <div class="task-desc">Sumar un menú por evento (gala, graduación, matrimonio, mamá de novia) sin tocar el actual. En cada PDP, declarar qué dolor resuelve el vestido para que la IA lo indexe y recomiende.</div>
+        </div>
+        <span class="bdg red">Urgente</span>
+      </div>
+      <div class="task" style="border-color:rgba(226,80,58,.3)" onclick="event.stopPropagation()">
+        <div class="task-ring" style="border-color:var(--red)"></div>
+        <div class="task-body">
+          <div class="task-title">Resolver el bloqueo de Add-to-Cart (checkout)</div>
+          <div class="task-desc">Arreglar el bloqueo técnico del checkout, reubicar el banner de envío gratis por urgencia tipo "última unidad", agregar fotos de detalle y reseñas por producto, logos de medios de pago.</div>
+          <div class="task-note">No escalar tráfico pagado hasta que esto esté resuelto — ya se quemaron $500K en un intento.</div>
+        </div>
+        <span class="bdg red">Urgente</span>
+      </div>
+      <div class="task" style="border-color:rgba(226,80,58,.3)" onclick="event.stopPropagation()">
+        <div class="task-ring" style="border-color:var(--red)"></div>
+        <div class="task-body">
+          <div class="task-title">Revisar este panel de roadmap consolidado</div>
+          <div class="task-desc">Pato lo pidió directamente en la llamada — todo lo trabajado en las sesiones queda consolidado acá como ayuda memoria.</div>
+        </div>
+        <span class="bdg red">Urgente</span>
+      </div>
+      <div class="alert-box info" onclick="event.stopPropagation()">
+        <span class="alert-icon">🎁</span>
+        <div><div class="alert-title">Disponibles a pedido — no bloquean nada de tu lado</div><div class="alert-text">La skill de SEO para los 4 artículos y el video de cómo conectar Shopify con Claude están listos del lado de Pato. Se entregan apenas mandes la idea base de los 4 dolores — no hace falta pedirlos, van a llegar solos en cuanto ese paso esté listo.</div></div>
+      </div>
     </div>
   </div>
 
@@ -858,67 +928,81 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 </div>
 
 
-<!-- ════════════ PENDIENTES ════════════ -->
-<div class="page" id="pg-tasks">
+<!-- ════════════ DIAGRAMA ════════════ -->
+<div class="page" id="pg-diagrama">
 
-  <div class="alert-box info" style="margin-top:0">
-    <span class="alert-icon">💬</span>
-    <div><div class="alert-title">Cualquier duda → WhatsApp con Patricio al tiro</div><div class="alert-text">No esperar a la próxima sesión. Un mensaje resuelto en el día vale más que una hora de llamada.</div></div>
-  </div>
-
-  <div class="tg-hd">Pendientes Marjorie — todos son de ella <span class="bdg red" style="margin-left:4px">5 urgentes</span></div>
-
-  <div class="task" style="border-color:rgba(226,80,58,.3)">
-    <div class="task-ring" style="border-color:var(--red)"></div>
-    <div class="task-body">
-      <div class="task-title">Publicar los 4 artículos SEO por dolor del cliente</div>
-      <div class="task-desc">Usar las skills de IA que entrega Pato para generar el esquema de cada artículo (caderas anchas, busto grande, barriga, plus size), agregar fotos, y publicar. En una pasada, 2-3 horas.</div>
-      <div class="task-note">Esto recoge tráfico orgánico sin depender de pauta paga.</div>
+  <div class="problem-card" style="margin-top:0">
+    <div class="prob-icon">🧩</div>
+    <div>
+      <div class="prob-title">Así funciona Emma Clara hoy, de principio a fin</div>
+      <div class="prob-text">Un solo diagrama con todo el negocio: de dónde viene el tráfico, los dos caminos de venta (tienda y web), qué tan bien cierra cada uno hoy, y cómo se reactiva a la clienta después de la compra. Sirve para ver de un vistazo dónde está el negocio fuerte y dónde está roto — sin tener que leer todas las pestañas.</div>
     </div>
-    <span class="bdg red">Urgente</span>
   </div>
 
-  <div class="task" style="border-color:rgba(226,80,58,.3)">
-    <div class="task-ring" style="border-color:var(--red)"></div>
-    <div class="task-body">
-      <div class="task-title">Actualizar menús y descripciones de producto</div>
-      <div class="task-desc">Sumar un menú por evento (gala, graduación, matrimonio, mamá de novia) sin tocar el actual — no romper el SEO ya trabajado. En cada PDP, declarar explícitamente qué dolor resuelve el vestido para que la IA lo indexe y recomiende.</div>
+  <div class="dg-wrap">
+    <div class="dg-stage-lbl">1 · Atracción — de dónde llega la clienta</div>
+    <div class="dg-row">
+      <div class="dg-box neutral"><div class="dg-title">Meta Ads + Social</div><div class="dg-sub">$562K jul · $470/conv</div></div>
+      <div class="dg-box neutral"><div class="dg-title">TikTok</div><div class="dg-sub">UGC orgánico</div></div>
+      <div class="dg-box broken"><div class="dg-title">SEO / Orgánico</div><div class="dg-sub">4 artículos bloqueados</div></div>
+      <div class="dg-box source"><div class="dg-title">🪄 Google AI Shopping</div><div class="dg-sub">Nuevo · sin pauta todavía</div></div>
     </div>
-    <span class="bdg red">Urgente</span>
-  </div>
+    <div class="dg-arrow">↓</div>
 
-  <div class="task" style="border-color:rgba(226,80,58,.3)">
-    <div class="task-ring" style="border-color:var(--red)"></div>
-    <div class="task-body">
-      <div class="task-title">Resolver el bloqueo de Add-to-Cart (checkout)</div>
-      <div class="task-desc">Arreglar el bloqueo técnico del checkout, reubicar el banner de envío gratis (sacarlo de arriba de todos los productos, o cambiarlo por urgencia tipo "última unidad"), agregar fotos de detalle y reseñas por producto, logos de medios de pago.</div>
-      <div class="task-note">No escalar tráfico pagado hasta que esto esté resuelto — ya se quemaron $500K en un intento.</div>
+    <div class="dg-stage-lbl">2 · Contacto — WhatsApp</div>
+    <div class="dg-row">
+      <div class="dg-box success" style="max-width:280px"><div class="dg-title">Conversación por WhatsApp</div><div class="dg-sub">1.197 conversaciones · $470 c/u — el costo más bajo en meses</div></div>
     </div>
-    <span class="bdg red">Urgente</span>
-  </div>
+    <div class="dg-arrow">↓</div>
 
-  <div class="task" style="border-color:rgba(226,80,58,.3)">
-    <div class="task-ring" style="border-color:var(--red)"></div>
-    <div class="task-body">
-      <div class="task-title">Bajar la idea base de cómo plantear "los 4 cuerpos" (dolores) — el primer paso real</div>
-      <div class="task-desc">Antes de escribir los 4 artículos: definir en una frase por dolor qué se quiere comunicar (caderas anchas, busto grande, barriga, plus size). Con eso en mano, Pato arma el video de cómo cargar la skill de SEO en Shopify.</div>
-      <div class="task-note">Esto es lo que está bloqueando todo lo demás — PDP, menús y SEO dependen de que esto salga primero.</div>
+    <div class="dg-stage-lbl">3 · Dos caminos de venta</div>
+    <div class="dg-cols">
+      <div class="dg-col tienda">
+        <div class="dg-col-lbl">🏪 Tienda física</div>
+        <div class="dg-box success"><div class="dg-title">Cita agendada</div><div class="dg-sub">96 gratis + 39 pagadas</div></div>
+        <div class="dg-arrow">↓</div>
+        <div class="dg-box success"><div class="dg-title">Showroom — venta consultiva</div><div class="dg-sub">Escala 1–10 · Producto/Decisión/Presupuesto/Tiempo</div></div>
+        <div class="dg-arrow">↓</div>
+        <div class="dg-box success"><div class="dg-title">Reserva $20K o cierre directo</div><div class="dg-sub">Ver pestaña Ventas</div></div>
+        <div class="dg-arrow">↓</div>
+        <div class="dg-box hero"><div class="dg-title">✓ Venta tienda</div><div class="dg-sub">30% conversión citas pagadas · $6,78M jul</div></div>
+      </div>
+      <div class="dg-col web">
+        <div class="dg-col-lbl">🌐 E-commerce</div>
+        <div class="dg-box neutral"><div class="dg-title">Visita PDP</div><div class="dg-sub">90% móvil · ~20K sesiones/mes</div></div>
+        <div class="dg-arrow">↓</div>
+        <div class="dg-box broken"><div class="dg-title">✗ Add-to-Cart</div><div class="dg-sub">0,3% — roto, describe por característica no por dolor</div></div>
+        <div class="dg-arrow">↓</div>
+        <div class="dg-box neutral"><div class="dg-title">Checkout</div><div class="dg-sub">Bloqueo técnico sin resolver</div></div>
+        <div class="dg-arrow">↓</div>
+        <div class="dg-box broken"><div class="dg-title">Venta web</div><div class="dg-sub">$140K jul · 1 venta</div></div>
+      </div>
     </div>
-    <span class="bdg red">Urgente</span>
-  </div>
+    <div class="dg-arrow">↓ ↓</div>
 
-  <div class="task" style="border-color:rgba(226,80,58,.3)">
-    <div class="task-ring" style="border-color:var(--red)"></div>
-    <div class="task-body">
-      <div class="task-title">Revisar este panel de roadmap consolidado</div>
-      <div class="task-desc">Pato lo pidió directamente en la llamada — todo lo trabajado en las sesiones queda consolidado acá como ayuda memoria.</div>
+    <div class="dg-stage-lbl">4 · Venta total</div>
+    <div class="dg-row">
+      <div class="dg-box hero" style="max-width:280px"><div class="dg-title">$6,9M en julio (al 20/7)</div><div class="dg-sub">32 vestidos vendidos entre tienda y web</div></div>
     </div>
-    <span class="bdg red">Urgente</span>
+    <div class="dg-arrow">↓</div>
+
+    <div class="dg-stage-lbl">5 · Recompra — después de la venta</div>
+    <div class="dg-row">
+      <div class="dg-box neutral"><div class="dg-title">Reseña post-evento</div><div class="dg-sub">Ya en marcha vía Google</div></div>
+      <div class="dg-box neutral"><div class="dg-title">Cuadernillo de beneficios</div><div class="dg-sub">Reemplaza el descuento directo</div></div>
+      <div class="dg-box neutral"><div class="dg-title">Vestido a medida</div><div class="dg-sub">9 este año · $500–600K c/u</div></div>
+      <div class="dg-box neutral"><div class="dg-title">Barrido no-compradoras</div><div class="dg-sub">Guía de styling, no descuento</div></div>
+    </div>
+
+    <div class="dg-loop">↻ Reactivar a quien ya conoce la marca es más barato que atraer una clienta nueva — vuelve a alimentar la Etapa 1</div>
   </div>
 
-  <div class="alert-box info">
-    <span class="alert-icon">🎁</span>
-    <div><div class="alert-title">Disponibles a pedido — no bloquean nada de tu lado</div><div class="alert-text">La skill de SEO para los 4 artículos y el video de cómo conectar Shopify con Claude están listos del lado de Pato. Se entregan apenas mandes la idea base de los 4 dolores — no hace falta pedirlos, van a llegar solos en cuanto ese paso esté listo.</div></div>
+  <div class="slbl" style="margin-top:0">Cómo leer los colores</div>
+  <div class="bdg-row">
+    <span class="bdg green">🟢 Funciona bien hoy</span>
+    <span class="bdg red">🔴 Roto — foco actual</span>
+    <span class="bdg violet">🟣 Nuevo / oportunidad</span>
+    <span class="bdg grey">⚪ En desarrollo</span>
   </div>
 </div>
 
@@ -1250,7 +1334,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 </a>
 
 <script>
-const PAGES=['overview','roadmap','tasks','ventas','recompra','engine'];
+const PAGES=['overview','roadmap','diagrama','ventas','recompra','engine'];
 function sw(id,el,isMob){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab,.mob-row').forEach(t=>t.classList.remove('on'));
