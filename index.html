@@ -109,6 +109,17 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .prob-sv{font-size:20px;font-weight:500;color:var(--teal);line-height:1}
 .prob-sl{font-size:9px;color:rgba(255,255,255,.35);font-family:'DM Mono',monospace;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
 
+/* SLIDER BOXES — cuellos de botella + oportunidad */
+.slider-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
+.slide-box{background:var(--surf);border:0.5px solid var(--border);border-left:3px solid var(--border);border-radius:10px;padding:13px 14px}
+.slide-box.c{border-left-color:var(--red)}
+.slide-box.w{border-left-color:var(--orange)}
+.slide-box.o{border-left-color:var(--violet)}
+.slide-box.g{border-left-color:var(--teal)}
+.slide-icon{font-size:17px;margin-bottom:6px;line-height:1}
+.slide-title{font-size:12px;font-weight:600;color:var(--dark);margin-bottom:4px;line-height:1.3}
+.slide-text{font-size:11px;color:var(--grey);line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+
 /* FUNNEL */
 .funnel-wrap{background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px}
 .funnel-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:16px}
@@ -379,6 +390,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   .ov-row1,.ov-row2,.ov-row3{grid-template-columns:repeat(2,1fr);gap:9px}
   .ch-split{grid-template-columns:1fr;gap:9px}
   .bn-grid{grid-template-columns:1fr;gap:9px}
+  .slider-grid{display:flex;grid-template-columns:none;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:10px;margin:0 -15px 20px;padding:0 15px 4px}
+  .slide-box{scroll-snap-align:start;min-width:76%;flex-shrink:0}
   .phase-grid{grid-template-columns:1fr;gap:9px}
   .rm-track{min-width:620px}
   .rm-uc-grid{grid-template-columns:1fr}
@@ -496,31 +509,51 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="slbl">Principal problema</div>
-  <div class="problem-card">
-    <div class="prob-icon">📱</div>
-    <div>
-      <div class="prob-title">El sitio vende por características, no por lo que la clienta busca — y eso frena el Add-to-Cart</div>
-      <div class="prob-text">La tienda física está en su mejor momento (30% de conversión en citas pagadas, costo por agenda en $4.000). El problema real ahora es el e-commerce: <strong>solo 0,3% de las visitas móviles agregan algo al carrito</strong> — de 20.000 sesiones mensuales, casi ninguna. Meter más tráfico pagado sin resolver esto quema plata: un caso reciente gastó $500.000 en generar 50.000 sesiones y cerró <strong>una sola venta</strong>. Causa raíz: el sitio describe vestidos por características técnicas ("satinado", "brillante") en vez de por la necesidad real de búsqueda ("vestido para caderas anchas", "para disimular la barriga"). No existe ninguna página en Chile organizada así — es una oportunidad de posicionamiento, no solo un arreglo técnico.</div>
-      <div class="prob-stats">
-        <div><div class="prob-sv">0.3%</div><div class="prob-sl">Add-to-Cart móvil</div></div>
-        <div><div class="prob-sv">$500K → 1</div><div class="prob-sl">gastados → ventas (sin fix)</div></div>
-        <div><div class="prob-sv">31%</div><div class="prob-sl">conversión citas pagadas en tienda</div></div>
-      </div>
+  <div class="slbl">Principal cuellos de botella</div>
+  <div class="slider-grid">
+    <div class="slide-box c">
+      <div class="slide-icon">📱</div>
+      <div class="slide-title">Add-to-Cart móvil 0,3%</div>
+      <div class="slide-text">El sitio describe por característica ("satinado"), no por lo que la clienta busca ("para caderas anchas").</div>
+    </div>
+    <div class="slide-box c">
+      <div class="slide-icon">🔥</div>
+      <div class="slide-title">$500K quemados sin fix</div>
+      <div class="slide-text">50.000 sesiones generadas, 1 sola venta. Meter más tráfico sin resolver el funnel solo gasta plata.</div>
+    </div>
+    <div class="slide-box w">
+      <div class="slide-icon">🧍‍♀️</div>
+      <div class="slide-title">Marjorie al límite de capacidad</div>
+      <div class="slide-text">Dirige tienda y campañas a la vez. A agosto proyecta estar full — no hay quién suelte.</div>
+    </div>
+    <div class="slide-box w">
+      <div class="slide-icon">🖼️</div>
+      <div class="slide-title">PDP sin contenido de confianza</div>
+      <div class="slide-text">Faltan fotos de detalle, reseñas por producto y medios de pago visibles sin hacer scroll.</div>
     </div>
   </div>
 
-  <div class="slbl">Oportunidad estratégica · hallazgo 21 jul</div>
-  <div class="problem-card" style="background:linear-gradient(135deg,#1A1A1A,#2A1F4A)">
-    <div class="prob-icon">🪄</div>
-    <div>
-      <div class="prob-title">Google AI Shopping ya prueba vestidos sobre la clienta — y nadie en el nicho lo está usando</div>
-      <div class="prob-text">Test real: se subió la foto de una clienta a Google AI Shopping junto con un vestido del catálogo, y la herramienta la "vistió" con él automáticamente. Esto resuelve de raíz la objeción #1 del e-commerce — <strong>"no sé cómo me va a quedar"</strong> — con una herramienta gratuita que ya existe hoy. Tiene dos caras: <strong>riesgo</strong>, porque si la clienta llega a Google y Emma Clara no tiene presencia/pauta ahí, la venta se la lleva quien sí la tenga; y <strong>oportunidad</strong>, porque nadie en el nicho lo está usando todavía — quien se posicione primero educando a su clienta sobre esto gana ventana de first-mover, no solo tráfico. Se está armando contenido (3 videos, 3 ángulos) para ocupar ese espacio antes que la competencia.</div>
-      <div class="prob-stats">
-        <div><div class="prob-sv">1ero</div><div class="prob-sl">en el nicho en mostrarlo</div></div>
-        <div><div class="prob-sv">3 videos</div><div class="prob-sl">en producción, 3 ángulos</div></div>
-        <div><div class="prob-sv">0</div><div class="prob-sl">pauta en Google hoy</div></div>
-      </div>
+  <div class="slbl">Oportunidad</div>
+  <div class="slider-grid">
+    <div class="slide-box o">
+      <div class="slide-icon">🪄</div>
+      <div class="slide-title">Google AI Shopping</div>
+      <div class="slide-text">Nadie en el nicho lo usa todavía — ventana de first-mover abierta, sin pauta hoy.</div>
+    </div>
+    <div class="slide-box o">
+      <div class="slide-icon">🌎</div>
+      <div class="slide-title">Expansión regional</div>
+      <div class="slide-text">Clientas fuera de Santiago (ej. Atacama) hoy sin atender ni conquistar con campaña propia.</div>
+    </div>
+    <div class="slide-box g">
+      <div class="slide-icon">✂️</div>
+      <div class="slide-title">Confecciones y referidos</div>
+      <div class="slide-text">10 en proceso ($500-600K c/u). El ciclo de referidos (prima, tía, amiga) sigue sin sistematizar.</div>
+    </div>
+    <div class="slide-box g">
+      <div class="slide-icon">🤖</div>
+      <div class="slide-title">Sistemas agénticos</div>
+      <div class="slide-text">Shopify-Claude libera la capacidad de Marjorie sin tener que sumar más gente.</div>
     </div>
   </div>
 
