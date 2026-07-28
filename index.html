@@ -109,8 +109,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .prob-sv{font-size:20px;font-weight:500;color:var(--teal);line-height:1}
 .prob-sl{font-size:9px;color:rgba(255,255,255,.35);font-family:'DM Mono',monospace;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
 
-/* SLIDER BOXES — cuellos de botella + oportunidad */
-.slider-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:20px}
+/* SLIDER BOXES — cuello de botella → oportunidad, pareados */
+.slider-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin-bottom:20px}
 .slide-box{background:var(--surf);border:0.5px solid var(--border);border-left:3px solid var(--border);border-radius:10px;padding:13px 14px}
 .slide-box.c{border-left-color:var(--red)}
 .slide-box.w{border-left-color:var(--orange)}
@@ -118,7 +118,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .slide-box.g{border-left-color:var(--teal)}
 .slide-icon{font-size:17px;margin-bottom:6px;line-height:1}
 .slide-title{font-size:12px;font-weight:600;color:var(--dark);margin-bottom:4px;line-height:1.3}
-.slide-text{font-size:11px;color:var(--grey);line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.slide-text{font-size:11px;color:var(--grey);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.slide-lbl{font-family:'DM Mono',monospace;font-size:8.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
+.slide-lbl.cuello{color:var(--red-dk)}
+.slide-lbl.op{color:var(--teal-dk)}
+.slide-pair{margin-top:7px;padding-top:7px;border-top:0.5px dashed var(--border)}
 
 /* FUNNEL */
 .funnel-wrap{background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px}
@@ -509,51 +513,77 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="slbl">Principal cuellos de botella</div>
+  <div class="slbl">Cuello de botella → oportunidad · según las llamadas</div>
   <div class="slider-grid">
     <div class="slide-box c">
       <div class="slide-icon">📱</div>
       <div class="slide-title">Add-to-Cart móvil 0,3%</div>
-      <div class="slide-text">El sitio describe por característica ("satinado"), no por lo que la clienta busca ("para caderas anchas").</div>
+      <div class="slide-lbl cuello">Cuello</div>
+      <div class="slide-text">El sitio describe por característica, no por lo que la clienta busca.</div>
+      <div class="slide-pair">
+        <div class="slide-lbl op">Oportunidad</div>
+        <div class="slide-text">PDP/carrusel por cuerpo-talla + AI Shopping — piloto en curso con Belu.</div>
+      </div>
     </div>
     <div class="slide-box c">
       <div class="slide-icon">🔥</div>
       <div class="slide-title">$500K quemados sin fix</div>
-      <div class="slide-text">50.000 sesiones generadas, 1 sola venta. Meter más tráfico sin resolver el funnel solo gasta plata.</div>
+      <div class="slide-lbl cuello">Cuello</div>
+      <div class="slide-text">50.000 sesiones generadas, 1 sola venta — el funnel sigue sin resolver.</div>
+      <div class="slide-pair">
+        <div class="slide-lbl op">Oportunidad</div>
+        <div class="slide-text">No escalar tráfico hasta que el Add-to-Cart mejore.</div>
+      </div>
     </div>
     <div class="slide-box w">
       <div class="slide-icon">🧍‍♀️</div>
       <div class="slide-title">Marjorie al límite de capacidad</div>
-      <div class="slide-text">Dirige tienda y campañas a la vez. A agosto proyecta estar full — no hay quién suelte.</div>
+      <div class="slide-lbl cuello">Cuello</div>
+      <div class="slide-text">Dirige tienda y campañas a la vez — a agosto proyecta estar full.</div>
+      <div class="slide-pair">
+        <div class="slide-lbl op">Oportunidad</div>
+        <div class="slide-text">Shopify-Claude para delegar — arranca Sem 9, no más headcount.</div>
+      </div>
     </div>
     <div class="slide-box w">
-      <div class="slide-icon">🖼️</div>
-      <div class="slide-title">PDP sin contenido de confianza</div>
-      <div class="slide-text">Faltan fotos de detalle, reseñas por producto y medios de pago visibles sin hacer scroll.</div>
-    </div>
-  </div>
-
-  <div class="slbl">Oportunidad</div>
-  <div class="slider-grid">
-    <div class="slide-box o">
-      <div class="slide-icon">🪄</div>
-      <div class="slide-title">Google AI Shopping</div>
-      <div class="slide-text">Nadie en el nicho lo usa todavía — ventana de first-mover abierta, sin pauta hoy.</div>
+      <div class="slide-icon">✍️</div>
+      <div class="slide-title">Contenido de los 4 dolores, sin salir</div>
+      <div class="slide-lbl cuello">Cuello</div>
+      <div class="slide-text">La idea base (caderas, busto, barriga, plus size) sigue sin bajar del lado de Marjorie.</div>
+      <div class="slide-pair">
+        <div class="slide-lbl op">Oportunidad</div>
+        <div class="slide-text">Skill de SEO lista — apenas llegue la idea, salen los 4 artículos en horas.</div>
+      </div>
     </div>
     <div class="slide-box o">
       <div class="slide-icon">🌎</div>
-      <div class="slide-title">Expansión regional</div>
-      <div class="slide-text">Clientas fuera de Santiago (ej. Atacama) hoy sin atender ni conquistar con campaña propia.</div>
+      <div class="slide-title">Ventas de regiones sin conquistar</div>
+      <div class="slide-lbl cuello">Cuello</div>
+      <div class="slide-text">Clientas fuera de Santiago (ej. Atacama) no pueden llegar a tienda.</div>
+      <div class="slide-pair">
+        <div class="slide-lbl op">Oportunidad</div>
+        <div class="slide-text">Sidekick identifica qué regiones más convierten + prueba social localizada antes de vender directo.</div>
+      </div>
     </div>
     <div class="slide-box g">
       <div class="slide-icon">✂️</div>
-      <div class="slide-title">Confecciones y referidos</div>
-      <div class="slide-text">10 en proceso ($500-600K c/u). El ciclo de referidos (prima, tía, amiga) sigue sin sistematizar.</div>
+      <div class="slide-title">Confecciones y referidos sin sistematizar</div>
+      <div class="slide-lbl cuello">Cuello</div>
+      <div class="slide-text">10 en proceso, nunca ofrecidas proactivamente. El ciclo de referidos se desaprovecha.</div>
+      <div class="slide-pair">
+        <div class="slide-lbl op">Oportunidad</div>
+        <div class="slide-text">Storytelling consistente + activar referidos — ver pestaña Recompra.</div>
+      </div>
     </div>
     <div class="slide-box g">
-      <div class="slide-icon">🤖</div>
-      <div class="slide-title">Sistemas agénticos</div>
-      <div class="slide-text">Shopify-Claude libera la capacidad de Marjorie sin tener que sumar más gente.</div>
+      <div class="slide-icon">♻️</div>
+      <div class="slide-title">Clientas que visitaron y no compraron</div>
+      <div class="slide-lbl cuello">Cuello</div>
+      <div class="slide-text">Data de junio-julio de visitas que no cerraron, sin activar.</div>
+      <div class="slide-pair">
+        <div class="slide-lbl op">Oportunidad</div>
+        <div class="slide-text">Barrido con guía de styling (no descuento) — ver pestaña Recompra.</div>
+      </div>
     </div>
   </div>
 
@@ -604,18 +634,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       </svg>
     </div>
     <div class="funnel-note"><strong>Modelo híbrido:</strong> La tienda ya no es el problema —31% de conversión en citas pagadas, 25% de cierre en tienda (vs <10% al iniciar el programa)—. El embudo roto sigue siendo el web: 90% del tráfico es móvil y solo <strong>0,3% agrega algo al carrito</strong>. Meter más pauta ahí antes de arreglarlo solo quema plata (ya pasó: $500K → 50K sesiones → 1 venta). El plan no es más tráfico, es reescribir el sitio para que hable el idioma de búsqueda de la clienta (por dolor/necesidad) en vez de características técnicas del vestido — piloto en curso con Belu.</div>
-  </div>
-
-  <div class="slbl">Cuellos de botella detectados · actualizado 22 jul</div>
-  <div class="bn-grid">
-    <div class="bn-card c"><div class="bn-head"><div class="bn-n c">1</div><div class="bn-title">Marjorie bloqueada produciendo el contenido de los 4 dolores</div></div><div class="bn-text">Los 4 artículos SEO y las ideas por dolor de búsqueda siguen sin salir de su lado — "se bloquea ahí". No es falta de claridad ni de herramienta (la skill de SEO ya está lista): es fricción de producción de contenido real, y hoy es lo que más frena el giro estratégico del sitio.</div><div class="bn-imp c">→ Bajar la idea base de cómo plantean los cuerpos antes que todo lo demás</div></div>
-    <div class="bn-card c"><div class="bn-head"><div class="bn-n c">2</div><div class="bn-title">Add-to-Cart móvil en 0,3% — el sitio no habla el idioma de búsqueda de la clienta</div></div><div class="bn-text">90% del tráfico es móvil (~20K sesiones/mes) y casi nada agrega al carrito. Causa raíz: describe vestidos por características ("satinado") en vez de por necesidad real ("para caderas anchas"). No existe ninguna página así en Chile — oportunidad de posicionamiento, no solo de conversión.</div><div class="bn-imp c">→ Reorganizar por dolor/evento + declarar en cada PDP qué resuelve cada vestido</div></div>
-    <div class="bn-card c"><div class="bn-head"><div class="bn-n c">3</div><div class="bn-title">$500K quemados: 50K sesiones, 1 venta</div></div><div class="bn-text">Meter tráfico pagado sin resolver el Add-to-Cart no genera ventas, solo gasta presupuesto. Confirmado con un caso real reciente.</div><div class="bn-imp c">→ No escalar tráfico genérico hasta arreglar el funnel</div></div>
-    <div class="bn-card w"><div class="bn-head"><div class="bn-n w">4</div><div class="bn-title">PDP sin contenido de confianza para decidir desde el celular</div></div><div class="bn-text">Faltan fotos de detalle (costuras, tela), reseñas específicas por producto (no genéricas), logos de medios de pago, y el botón de agregar al carrito no está visible sin hacer scroll.</div><div class="bn-imp w">→ Rehacer PDP con checklist de confianza + cuotas + reseñas por producto</div></div>
-    <div class="bn-card w"><div class="bn-head"><div class="bn-n w">5</div><div class="bn-title">Inasistencia subió de 3% a 5%</div></div><div class="bn-text">Sigue siendo baja en términos absolutos, pero la tendencia va al alza. Seguimiento inmediato a cada no-show reforzado.</div><div class="bn-imp w">→ Vigilar, automatizar cuando el resto esté resuelto</div></div>
-    <div class="bn-card i"><div class="bn-head"><div class="bn-n i">6</div><div class="bn-title">Confecciones personalizadas: nicho validado sin explotar</div></div><div class="bn-text">10 confecciones en proceso ($500-600K c/u), mayormente mamás de novia/novio, llegan pidiéndolo — nunca se les ofreció proactivamente. Referidos (prima, tía, amiga) también quedan sin sistematizar. Storytelling documentando el proceso ("making of") sin explotar.</div><div class="bn-imp i">→ Ver pestaña Recompra</div></div>
-    <div class="bn-card i"><div class="bn-head"><div class="bn-n i">7</div><div class="bn-title">Clientas que visitaron y no compraron, sin reactivar</div></div><div class="bn-text">Hay data de todas las visitas de junio y julio que no cerraron. Reactivarlas es más barato que adquirir clientas nuevas.</div><div class="bn-imp i">→ Barrido de no-compradores · ver pestaña Recompra</div></div>
-    <div class="bn-card w"><div class="bn-head"><div class="bn-n w">8</div><div class="bn-title">Marjorie llegando a capacidad — dirige campañas y tienda a la vez</div></div><div class="bn-text">A agosto proyecta estar full en tienda y sin tiempo para seguir dirigiendo las campañas ella misma. La respuesta no es sumar una persona (Mati) sino sistematizar: Shopify conectado a Claude para que la operación corra con datos en vivo y tareas delegadas a agentes, no a más headcount.</div><div class="bn-imp w">→ Conectar Shopify-Claude y arrancar la capa agéntica — Sem 9</div></div>
   </div>
 
   <div class="slbl">Stack actual</div>
