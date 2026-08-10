@@ -138,8 +138,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .dg-box{background:var(--surf);border:1.5px solid var(--border);border-radius:11px;padding:12px 14px;min-width:135px;max-width:200px;text-align:center;flex:1}
 .dg-box.source{border-color:var(--violet);background:var(--violet-lt)}
 .dg-box.hero{border-color:var(--gold);background:var(--gold-lt)}
-.dg-box.broken{border-color:var(--red);background:var(--red-lt)}
+.dg-box.broken{border-color:var(--red);background:var(--red-lt);animation:pulse-red 2s ease-in-out infinite}
 .dg-box.success{border-color:var(--teal);background:var(--teal-lt)}
+@keyframes pulse-red{0%,100%{box-shadow:0 0 0 0 rgba(226,80,58,.4)}50%{box-shadow:0 0 0 7px rgba(226,80,58,0)}}
+@keyframes pulse-blue{0%,100%{box-shadow:0 0 0 0 rgba(42,91,173,.45)}50%{box-shadow:0 0 0 8px rgba(42,91,173,0)}}
+.cat-tag{display:inline-block;font-family:'DM Mono',monospace;font-size:8.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:5px;margin-bottom:8px}
+.cat-tag.showroom{background:var(--gold-lt);color:var(--gold-dk)}
+.cat-tag.ecommerce{background:var(--red-lt);color:var(--red-dk)}
 .dg-box.neutral{border-color:var(--sand)}
 .dg-title{font-size:12px;font-weight:700;color:var(--dark);margin-bottom:3px;line-height:1.3}
 .dg-sub{font-size:10px;color:var(--grey);line-height:1.4}
@@ -175,6 +180,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 /* STACK */
 .stack-wrap{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
 .sp{display:flex;align-items:center;gap:6px;background:var(--surf);border:0.5px solid var(--border);border-radius:7px;padding:6px 10px;font-size:11.5px;color:var(--ink)}
+.sp-fav{width:14px;height:14px;border-radius:3px;flex-shrink:0;object-fit:contain}
 .sd{width:6px;height:6px;border-radius:50%;flex-shrink:0}
 .sd.on{background:var(--green)}.sd.warn{background:var(--orange)}.sd.off{background:var(--sand)}
 
@@ -296,6 +302,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .rm-uc-num{font-family:'DM Mono',monospace;font-size:9px;color:var(--grey);margin-bottom:4px}
 .rm-uc-title{font-size:12px;font-weight:500;color:var(--ink);margin-bottom:5px;line-height:1.3}
 .rm-uc-chips{display:flex;flex-wrap:wrap;gap:3px}
+.rm-uc.next-call{opacity:1;border:1.5px solid var(--blue);background:var(--blue-lt);animation:pulse-blue 2s ease-in-out infinite}
+.rm-uc.next-call .rm-uc-num{color:var(--blue-dk);font-weight:700}
+.rm-uc.next-call .rm-uc-title{color:var(--blue-dk);font-weight:600}
 
 /* VENTAS — DIAGRAMA AÍSLA → OFRECE */
 .flow-wrap{display:flex;align-items:center;gap:14px;background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:20px}
@@ -598,66 +607,44 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="slbl">Funnel híbrido · modelo Emma Clara</div>
+  <div class="slbl">Dos funnels, no uno · no se colapsan salvo que cruce a tienda</div>
   <div class="funnel-wrap">
     <div class="funnel-top">
-      <div class="funnel-title">De tráfico a venta — canal web vs canal tienda</div>
+      <div class="funnel-title">Showroom y Ecommerce corren en paralelo</div>
       <span class="bdg orange">⚡ El ticket alto se cierra en tienda</span>
     </div>
-    <div class="funnel-svg-wrap">
-      <svg viewBox="0 0 760 290" xmlns="http://www.w3.org/2000/svg" style="display:block" font-family="DM Sans, sans-serif">
-        <line x1="24" y1="212" x2="736" y2="212" stroke="#E4DDD4" stroke-width="1"/>
-        <rect x="30" y="52" width="90" height="160" rx="7" fill="#7B61FF"/>
-        <text x="75" y="44" text-anchor="middle" font-size="12" fill="#5A46CC" font-weight="600">Ads + Social</text>
-        <text x="75" y="236" text-anchor="middle" font-size="12" fill="#2A2420" font-weight="600">Tráfico</text>
-        <text x="75" y="254" text-anchor="middle" font-size="11" fill="#8A8076">Meta + TikTok</text>
-        <text x="143" y="112" text-anchor="middle" font-size="16" fill="#C8C0B8">↗</text>
-        <text x="143" y="152" text-anchor="middle" font-size="16" fill="#C8C0B8">↘</text>
-        <rect x="165" y="52" width="90" height="160" rx="7" fill="#E0D8CE"/>
-        <text x="210" y="44" text-anchor="middle" font-size="12" fill="#8A8076" font-weight="600">100%</text>
-        <text x="210" y="236" text-anchor="middle" font-size="12" fill="#2A2420" font-weight="600">Web sessions</text>
-        <text x="210" y="254" text-anchor="middle" font-size="11" fill="#8A8076">~20K/mes (90% móvil)</text>
-        <text x="278" y="135" text-anchor="middle" font-size="20" fill="#C8C0B8">›</text>
-        <rect x="295" y="176" width="90" height="36" rx="5" fill="#E2503A"/>
-        <rect x="304" y="62" width="72" height="22" rx="5" fill="#FDF0ED" stroke="#E2503A" stroke-width="1.2"/>
-        <text x="340" y="77" text-anchor="middle" font-size="11" fill="#A02A18" font-weight="700">⚡ 0.3% add cart</text>
-        <text x="340" y="44" text-anchor="middle" font-size="12" fill="#E2503A" font-weight="700">Cuello crítico</text>
-        <text x="340" y="236" text-anchor="middle" font-size="12" fill="#2A2420" font-weight="600">Carrito web</text>
-        <text x="340" y="254" text-anchor="middle" font-size="11" fill="#8A8076">falta contenido de confianza</text>
-        <text x="408" y="135" text-anchor="middle" font-size="20" fill="#C8C0B8">›</text>
-        <rect x="425" y="196" width="90" height="16" rx="5" fill="#A02A18"/>
-        <text x="470" y="44" text-anchor="middle" font-size="12" fill="#A02A18" font-weight="700">$638K jul</text>
-        <text x="470" y="236" text-anchor="middle" font-size="12" fill="#2A2420" font-weight="600">Venta web</text>
-        <text x="470" y="254" text-anchor="middle" font-size="11" fill="#8A8076">5 productos, cierre final</text>
-        <line x1="548" y1="30" x2="548" y2="220" stroke="#E4DDD4" stroke-width="1.5" stroke-dasharray="5,4"/>
-        <text x="548" y="22" text-anchor="middle" font-size="10" fill="#C8C0B8" font-family="DM Mono, monospace">TIENDA</text>
-        <rect x="562" y="102" width="90" height="110" rx="7" fill="#E8A237"/>
-        <text x="607" y="44" text-anchor="middle" font-size="12" fill="#A06810" font-weight="600">Showroom</text>
-        <text x="607" y="60" text-anchor="middle" font-size="11" fill="#8A8076">CPA $4.0K</text>
-        <text x="607" y="236" text-anchor="middle" font-size="12" fill="#2A2420" font-weight="600">Showroom</text>
-        <text x="607" y="254" text-anchor="middle" font-size="11" fill="#8A8076">5% no asiste</text>
-        <text x="675" y="135" text-anchor="middle" font-size="20" fill="#C8C0B8">›</text>
-        <rect x="688" y="132" width="56" height="80" rx="7" fill="#3EB489"/>
-        <text x="716" y="44" text-anchor="middle" font-size="12" fill="#1E8A5C" font-weight="600">36% cierre</text>
-        <text x="716" y="60" text-anchor="middle" font-size="11" fill="#8A8076">→ meta 50%</text>
-        <text x="716" y="236" text-anchor="middle" font-size="12" fill="#2A2420" font-weight="600">Venta tienda</text>
-        <text x="716" y="254" text-anchor="middle" font-size="11" fill="#8A8076">71 vestidos jul</text>
-      </svg>
+    <div class="dg-cols" style="margin-bottom:0">
+      <div class="dg-col tienda">
+        <div class="dg-col-lbl"><span class="cat-tag showroom">🏪 Showroom</span></div>
+        <div class="dg-box neutral"><div class="dg-title">Tráfico</div><div class="dg-sub">Meta + TikTok</div></div>
+        <div class="dg-arrow">↓</div>
+        <div class="dg-box success"><div class="dg-title">Cita agendada</div><div class="dg-sub">194 citas jul</div></div>
+        <div class="dg-arrow">↓</div>
+        <div class="dg-box hero"><div class="dg-title">✓ Venta tienda</div><div class="dg-sub">36% cierre · $16M+ jul</div></div>
+      </div>
+      <div class="dg-col web">
+        <div class="dg-col-lbl"><span class="cat-tag ecommerce">🌐 Ecommerce</span></div>
+        <div class="dg-box neutral"><div class="dg-title">Tráfico</div><div class="dg-sub">Meta + SEO (bloqueado)</div></div>
+        <div class="dg-arrow">↓</div>
+        <div class="dg-box broken"><div class="dg-title">✗ Add-to-Cart</div><div class="dg-sub">0,3% — cuello crítico</div></div>
+        <div class="dg-arrow">↓</div>
+        <div class="dg-box broken"><div class="dg-title">Venta web</div><div class="dg-sub">$638K jul · regiones</div></div>
+      </div>
     </div>
-    <div class="funnel-note"><strong>Modelo híbrido:</strong> La tienda ya no es el problema —36% de cierre en tienda (vs 5-10% al iniciar el programa)—. El próximo cuello ahí es de capacidad: una sola vendedora no alcanza en eventos grandes, se necesita una segunda con comisión. El embudo roto sigue siendo el web: 90% del tráfico es móvil y solo <strong>0,3% agrega algo al carrito</strong>. Meter más pauta ahí antes de arreglarlo solo quema plata (ya pasó: $500K → 50K sesiones → 1 venta). El plan no es más tráfico, es reescribir el sitio para que hable el idioma de búsqueda de la clienta (por dolor/necesidad) en vez de características técnicas del vestido — piloto en curso con Belu.</div>
+    <div class="funnel-note"><strong>No se colapsan:</strong> una clienta que ve la web y termina comprando en tienda cuenta como Showroom, no como Ecommerce. Solo se queda 100% en el track Ecommerce la que nunca puede pisar la tienda — típicamente por región. Detalle completo con todos los pasos y estados en la pestaña <strong>Diagrama</strong>.</div>
   </div>
 
   <div class="slbl">Stack actual</div>
   <div class="stack-wrap">
     <div class="sp"><div class="sd on"></div>Tienda física · showroom<span class="bdg grey" style="margin-left:3px">canal principal</span></div>
     <div class="sp"><div class="sd on"></div>E-commerce <span class="bdg grey" style="margin-left:3px">ticket bajo</span></div>
-    <div class="sp"><div class="sd on"></div>Meta Ads <span class="bdg grey" style="margin-left:3px">pauta activa</span></div>
-    <div class="sp"><div class="sd on"></div>TikTok <span class="bdg grey" style="margin-left:3px">UGC viral</span></div>
-    <div class="sp"><div class="sd on"></div>Agenda Pro <span class="bdg grey" style="margin-left:3px">citas</span></div>
-    <div class="sp"><div class="sd on"></div>WhatsApp <span class="bdg grey" style="margin-left:3px">ventas asistidas</span></div>
-    <div class="sp"><div class="sd on"></div>Claude + GPT <span class="bdg grey" style="margin-left:3px">contenido IA</span></div>
-    <div class="sp"><div class="sd warn"></div>Facebook Lead Form <span class="bdg amber" style="margin-left:3px">evento 27 jun</span></div>
-    <div class="sp"><div class="sd off"></div>Email / flujos automáticos <span class="bdg grey" style="margin-left:3px">por construir</span></div>
+    <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=facebook.com" alt="">Meta Ads <span class="bdg grey" style="margin-left:3px">pauta activa</span></div>
+    <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=tiktok.com" alt="">TikTok <span class="bdg grey" style="margin-left:3px">UGC viral</span></div>
+    <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=agendapro.com" alt="">Agenda Pro <span class="bdg grey" style="margin-left:3px">citas</span></div>
+    <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=whatsapp.com" alt="">WhatsApp <span class="bdg grey" style="margin-left:3px">ventas asistidas</span></div>
+    <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=claude.ai" alt="">Claude + GPT <span class="bdg grey" style="margin-left:3px">contenido IA</span></div>
+    <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=facebook.com" alt=""><div class="sd warn" style="margin-left:2px"></div>Facebook Lead Form <span class="bdg amber" style="margin-left:3px">evento 27 jun</span></div>
+    <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=gmail.com" alt=""><div class="sd off" style="margin-left:2px"></div>Email / flujos automáticos <span class="bdg grey" style="margin-left:3px">por construir</span></div>
     <div class="sp"><div class="sd off"></div>CRM retención <span class="bdg grey" style="margin-left:3px">por construir</span></div>
   </div>
 </div>
@@ -1011,7 +998,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       </ul></div>
       <div class="week-sec">Pendientes de Pato</div>
       <div class="week-text"><ul>
-        <li><span class="pend">Pendiente:</span> Preparar la sesión del 10/08 — SEO, plan Cloud, campaña web</li>
+        <li><span class="pend">Pendiente:</span> Preparar la sesión del 10/08 — SEO, plan Claude, campaña web</li>
       </ul></div>
     </div>
   </div>
@@ -1019,25 +1006,29 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="slbl">Sesión activa</div>
 
   <div class="week-card now open" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 10 — Tecnología: SEO, plan Cloud y campaña web</div><div class="week-date">📅 Lunes 10 ago</div></div><span class="bdg amber">Próxima</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 10 — Tecnología: SEO, plan Claude y campaña web</div><div class="week-date">📅 Lunes 10 ago</div></div><span class="bdg amber">Próxima</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg amber">Shopify-Claude</span><span class="bdg violet">SEO</span><span class="bdg grey">Campaña web</span></div>
-      <div class="week-sec">🔍 Revisión (0–10 min)</div>
+      <div class="week-sec">1️⃣ Revisar métricas</div>
       <div class="week-text"><ul>
+        <li>¿Subió el presupuesto de agosto a $2-2.5M? ¿Se mantuvo el costo por conversación en ~$586?</li>
         <li>¿Definió la comisión de Mónica?</li>
-        <li>¿Subió el presupuesto de agosto a $2-2.5M? ¿Se mantuvo el costo por conversación?</li>
         <li>¿Está publicando historias semanales con urgencia real?</li>
       </ul></div>
-      <div class="week-sec">🎯 Núcleo (10–35 min) — foco tecnología</div>
+      <div class="week-sec">2️⃣ Identificar cuellos</div>
+      <div class="week-text">Add-to-Cart móvil sigue en 0,3% sin resolver — mismo cuello de 3 sesiones seguidas. Segunda vendedora con comisión, todavía sin definir. Parte tecnológica (Shopify-Claude, SEO) pospuesta dos veces.</div>
+      <div class="week-sec">3️⃣ Desbloquear y ajustar</div>
       <div class="week-text"><ul>
         <li>Dejar Shopify conectado a Claude (consultas de datos en vivo)</li>
         <li>Retomar la skill de SEO para los artículos de blog</li>
         <li>Montar la campaña web con Shopping que quedó pendiente</li>
       </ul></div>
+      <div class="week-sec">4️⃣ Volver al core — Diagrama y Funnel</div>
+      <div class="week-text">Revisar en las pestañas Diagrama y Panel qué avanzó (verde) y qué sigue bloqueado (rojo palpitante) desde la última sesión, antes de cerrar con los pendientes.</div>
       <div class="week-sec">📝 Entregable</div>
       <div class="week-text">Shopify-Claude conectado + skill de SEO entregada + campaña web montada.</div>
-      <div class="week-sec">✅ Pendientes de Marjorie — arrastrados de Sem 7/8/9</div>
+      <div class="week-sec">5️⃣ Pendientes semanales de mayor leverage</div>
       <div class="task" style="border-color:rgba(226,80,58,.3)" onclick="event.stopPropagation()">
         <div class="task-ring" style="border-color:var(--red)"></div>
         <div class="task-body">
@@ -1070,7 +1061,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
   <div class="slbl">Camino a la sesión 12 · cierre del programa</div>
   <div class="rm-uc-grid">
-    <div class="rm-uc"><div class="rm-uc-num">Sem 11</div><div class="rm-uc-title">Ventana de renovación — programa partió en junio, va en la mitad</div><div class="rm-uc-chips"><span class="bdg grey">Renovación 🟢</span></div></div>
+    <div class="rm-uc next-call"><div class="rm-uc-num">Sem 11 · Próxima llamada</div><div class="rm-uc-title">Ventana de renovación, con beneficios especiales 🎁</div><div class="rm-uc-chips"><span class="bdg grey">Renovación 🟢</span></div></div>
     <div class="rm-uc"><div class="rm-uc-num">Sem 12 · Cierre</div><div class="rm-uc-title">Baseline (sesión 1) vs. resultado final + conversación de continuidad</div><div class="rm-uc-chips"><span class="bdg grey">Cierre</span><span class="bdg grey">¿Continuidad?</span></div></div>
   </div>
 </div>
@@ -1082,67 +1073,57 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="problem-card" style="margin-top:0">
     <div class="prob-icon">🧩</div>
     <div>
-      <div class="prob-title">Así funciona Emma Clara hoy, de principio a fin</div>
-      <div class="prob-text">Un solo diagrama con todo el negocio: de dónde viene el tráfico, los dos caminos de venta (tienda y web), qué tan bien cierra cada uno hoy, y cómo se reactiva a la clienta después de la compra. Sirve para ver de un vistazo dónde está el negocio fuerte y dónde está roto — sin tener que leer todas las pestañas.</div>
+      <div class="prob-title">Dos negocios en uno: Showroom y Ecommerce no se colapsan</div>
+      <div class="prob-text">No son un solo funnel — son dos. Una clienta puede ver la web y comprar en tienda (se cuenta como Showroom). Otra, sobre todo de regiones, compra 100% online sin pisar nunca la tienda (Ecommerce puro). Por eso cada bloque de abajo queda categorizado — <span class="cat-tag showroom" style="margin:0 2px">SHOWROOM</span> o <span class="cat-tag ecommerce" style="margin:0 2px">ECOMMERCE</span> — y en verde lo que avanza, en rojo palpitante lo que sigue bloqueado.</div>
     </div>
   </div>
 
   <div class="dg-wrap">
-    <div class="dg-stage-lbl">1 · Atracción — de dónde llega la clienta</div>
-    <div class="dg-row">
-      <div class="dg-box neutral"><div class="dg-title">Meta Ads + Social</div><div class="dg-sub">$1.11M jul · $586/conv</div></div>
-      <div class="dg-box neutral"><div class="dg-title">TikTok</div><div class="dg-sub">UGC orgánico</div></div>
-      <div class="dg-box broken"><div class="dg-title">SEO / Orgánico</div><div class="dg-sub">4 artículos bloqueados</div></div>
-      <div class="dg-box source"><div class="dg-title">🪄 Google AI Shopping</div><div class="dg-sub">Nuevo · sin pauta todavía</div></div>
-    </div>
-    <div class="dg-arrow">↓</div>
-
-    <div class="dg-stage-lbl">2 · Contacto — WhatsApp</div>
-    <div class="dg-row">
-      <div class="dg-box success" style="max-width:280px"><div class="dg-title">Conversación por WhatsApp</div><div class="dg-sub">2.248 conversaciones · $586 c/u — julio cerrado, cifra corregida</div></div>
-    </div>
-    <div class="dg-arrow">↓</div>
-
-    <div class="dg-stage-lbl">3 · Dos caminos de venta</div>
     <div class="dg-cols">
       <div class="dg-col tienda">
-        <div class="dg-col-lbl">🏪 Tienda física</div>
-        <div class="dg-box success"><div class="dg-title">Cita agendada</div><div class="dg-sub">194 citas jul (130 gratis + 53 experiencia + 11 confección/color)</div></div>
+        <div class="dg-col-lbl">🏪 <span class="cat-tag showroom">Showroom</span></div>
+        <div class="dg-box neutral"><div class="dg-title">Meta Ads (ángulo mamá/niña)</div><div class="dg-sub">$1.11M jul · $586/conv</div></div>
         <div class="dg-arrow">↓</div>
-        <div class="dg-box success"><div class="dg-title">Showroom — venta consultiva</div><div class="dg-sub">Escala 1–10 · Producto/Decisión/Presupuesto/Tiempo</div></div>
+        <div class="dg-box success"><div class="dg-title">Cita agendada</div><div class="dg-sub">194 citas jul · costo agenda ~$6K</div></div>
         <div class="dg-arrow">↓</div>
-        <div class="dg-box success"><div class="dg-title">Reserva $20K o cierre directo</div><div class="dg-sub">Ver pestaña Ventas</div></div>
+        <div class="dg-box success"><div class="dg-title">Venta consultiva</div><div class="dg-sub">Escala 1–10 · Producto/Decisión/Presupuesto/Tiempo</div></div>
         <div class="dg-arrow">↓</div>
-        <div class="dg-box hero"><div class="dg-title">✓ Venta tienda</div><div class="dg-sub">36% cierre · 71 vestidos · $16M+ jul (final)</div></div>
+        <div class="dg-box broken"><div class="dg-title">⚠ Segunda vendedora</div><div class="dg-sub">Sin comisión definida — cuello en eventos grandes</div></div>
+        <div class="dg-arrow">↓</div>
+        <div class="dg-box hero"><div class="dg-title">✓ Venta tienda</div><div class="dg-sub">36% cierre · 71 vestidos · $16M+ jul</div></div>
       </div>
       <div class="dg-col web">
-        <div class="dg-col-lbl">🌐 E-commerce</div>
+        <div class="dg-col-lbl">🌐 <span class="cat-tag ecommerce">Ecommerce</span></div>
+        <div class="dg-box broken"><div class="dg-title">✗ SEO / Orgánico</div><div class="dg-sub">4 artículos bloqueados</div></div>
+        <div class="dg-arrow">↓</div>
         <div class="dg-box neutral"><div class="dg-title">Visita PDP</div><div class="dg-sub">90% móvil · ~20K sesiones/mes</div></div>
         <div class="dg-arrow">↓</div>
-        <div class="dg-box broken"><div class="dg-title">✗ Add-to-Cart</div><div class="dg-sub">0,3% — roto, describe por característica no por dolor</div></div>
+        <div class="dg-box broken"><div class="dg-title">✗ Add-to-Cart</div><div class="dg-sub">0,3% — mismo cuello hace 4 sesiones</div></div>
         <div class="dg-arrow">↓</div>
         <div class="dg-box neutral"><div class="dg-title">Checkout</div><div class="dg-sub">Piloto de carrusel PDP en curso con Belu</div></div>
         <div class="dg-arrow">↓</div>
-        <div class="dg-box broken"><div class="dg-title">Venta web</div><div class="dg-sub">$638K jul (final) · 5 productos</div></div>
+        <div class="dg-box broken"><div class="dg-title">Venta web</div><div class="dg-sub">$638K jul · 5 productos (regiones)</div></div>
       </div>
     </div>
     <div class="dg-arrow">↓ ↓</div>
 
-    <div class="dg-stage-lbl">4 · Venta total</div>
+    <div class="dg-stage-lbl">Venta total — julio (cierre final)</div>
     <div class="dg-row">
-      <div class="dg-box hero" style="max-width:280px"><div class="dg-title">~$19M en julio (cierre final)</div><div class="dg-sub">76 unidades · ticket medio $250K</div></div>
+      <div class="dg-box hero" style="max-width:280px"><div class="dg-title">~$19M en julio</div><div class="dg-sub">76 unidades · ticket medio $250K</div></div>
     </div>
     <div class="dg-arrow">↓</div>
 
-    <div class="dg-stage-lbl">5 · Recompra — después de la venta</div>
+    <div class="dg-stage-lbl">Recompra — después de la venta</div>
     <div class="dg-row">
-      <div class="dg-box neutral"><div class="dg-title">Reseña post-evento</div><div class="dg-sub">Ya en marcha vía Google</div></div>
-      <div class="dg-box neutral"><div class="dg-title">Cuadernillo de beneficios</div><div class="dg-sub">Reemplaza el descuento directo</div></div>
-      <div class="dg-box neutral"><div class="dg-title">Vestido a medida</div><div class="dg-sub">10 en proceso · $500–600K c/u</div></div>
-      <div class="dg-box neutral"><div class="dg-title">Barrido no-compradoras</div><div class="dg-sub">Guía de styling, no descuento</div></div>
+      <div class="dg-box success"><div class="cat-tag showroom">Showroom</div><div class="dg-title">Reseña post-evento</div><div class="dg-sub">Ya en marcha vía Google</div></div>
+      <div class="dg-box success"><div class="cat-tag showroom">Showroom</div><div class="dg-title">Cuadernillo de beneficios</div><div class="dg-sub">Reemplaza el descuento directo</div></div>
+      <div class="dg-box success"><div class="cat-tag showroom">Showroom</div><div class="dg-title">Vestido a medida</div><div class="dg-sub">10 en proceso · $500–600K c/u</div></div>
+      <div class="dg-box broken"><div class="cat-tag ecommerce">Ecommerce</div><div class="dg-title">Barrido no-compradoras</div><div class="dg-sub">Guía de styling — todavía sin ejecutar</div></div>
     </div>
 
-    <div class="dg-loop">↻ Reactivar a quien ya conoce la marca es más barato que atraer una clienta nueva — vuelve a alimentar la Etapa 1</div>
+    <div class="dg-loop">↻ Reactivar a quien ya conoce la marca es más barato que atraer una clienta nueva — vuelve a alimentar Meta Ads en ambos tracks</div>
+
+    <div class="funnel-note" style="margin-top:14px"><strong>Dónde cruzan:</strong> Meta Ads alimenta a los dos tracks desde el mismo presupuesto. WhatsApp es el punto de contacto compartido — desde ahí, la clienta agenda cita (pasa a Showroom) o compra directo si no puede llegar a tienda, típicamente por región (se queda en Ecommerce puro).</div>
   </div>
 
   <div class="slbl" style="margin-top:0">Cómo leer los colores</div>
@@ -1162,13 +1143,56 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="prob-icon">🎯</div>
     <div>
       <div class="prob-title">"Nosotras no vendemos, los vestidos se venden solos" — Marjorie ya probó que esto se puede cambiar</div>
-      <div class="prob-text">La tasa de cierre en tienda de Emma Clara era históricamente <strong>5%</strong> — bajísima considerando que es tráfico calificado que ya está físicamente en el showroom, ya se probó el vestido y ya le gustó. Con este módulo (escala 1–10, categorías de objeción, reserva) la tasa <strong>ya subió a 20%</strong> — la prueba de que el problema nunca fueron los vestidos. La meta ahora es <strong>50%</strong>: 1 de cada 2 citas cerrando. Eso no se logra con mejores vestidos: se logra entrenando a quien vende para diagnosticar la objeción real y usar la herramienta correcta. Sin registrar por qué no cerró cada cita, y sin entrenar, la tasa nunca sube.</div>
+      <div class="prob-text">La tasa de cierre en tienda de Emma Clara era históricamente <strong>5%</strong> — bajísima considerando que es tráfico calificado que ya está físicamente en el showroom, ya se probó el vestido y ya le gustó. Con este módulo (escala 1–10, categorías de objeción, reserva) la tasa <strong>ya subió a 36%</strong> — la prueba de que el problema nunca fueron los vestidos. La meta ahora es <strong>50%</strong>: 1 de cada 2 citas cerrando. Eso no se logra con mejores vestidos: se logra entrenando a quien vende para diagnosticar la objeción real y usar la herramienta correcta. Sin registrar por qué no cerró cada cita, y sin entrenar, la tasa nunca sube.</div>
       <div class="prob-stats">
-        <div><div class="prob-sv">5% → 20%</div><div class="prob-sl">cierre en tienda: histórico → logrado</div></div>
+        <div><div class="prob-sv">5% → 36%</div><div class="prob-sl">cierre en tienda: histórico → logrado</div></div>
         <div><div class="prob-sv">50%</div><div class="prob-sl">meta — 1 de cada 2 citas</div></div>
-        <div><div class="prob-sv">15x</div><div class="prob-sl">ROAS con esta eficiencia de cierre</div></div>
+        <div><div class="prob-sv">17 pts</div><div class="prob-sl">ratio eficiencia (vs 12 pts año pasado)</div></div>
       </div>
     </div>
+  </div>
+
+  <div class="slbl" style="margin-top:0">Métricas globales · última llamada (4 ago)</div>
+  <div class="ov-row1">
+    <div class="ov-card"><div class="ov-lbl">Cierre en tienda</div><div class="ov-num green">36%</div><div class="ov-sub">71 vestidos · 194 citas jul</div></div>
+    <div class="ov-card"><div class="ov-lbl">Costo por conversación</div><div class="ov-num amber">$586</div><div class="ov-sub">Cifra final de julio</div></div>
+    <div class="ov-card"><div class="ov-lbl">Citas gratis vs pagadas</div><div class="ov-num green">130 / 64</div><div class="ov-sub">Experiencia + confección + colorimetría</div></div>
+  </div>
+
+  <div class="slbl">Cuellos de botella en ventas → oportunidad</div>
+  <div class="slider-grid">
+    <div class="slide-box w">
+      <div class="slide-icon">🙋‍♀️</div>
+      <div class="slide-title">Una sola vendedora en eventos grandes</div>
+      <div class="slide-lbl cuello">Cuello</div>
+      <div class="slide-text">15 asistentes, 6 cerrados (40%) — tiempo y probadores no dieron para más.</div>
+      <div class="slide-pair">
+        <div class="slide-lbl op">Oportunidad</div>
+        <div class="slide-text">Segunda vendedora con comisión — sin esto, no escala.</div>
+      </div>
+    </div>
+    <div class="slide-box w">
+      <div class="slide-icon">📋</div>
+      <div class="slide-title">Sin SOP de venta documentado</div>
+      <div class="slide-lbl cuello">Cuello</div>
+      <div class="slide-text">Solo Marjorie domina el diagnóstico de objeciones — depositarlo en otra persona toma tiempo.</div>
+      <div class="slide-pair">
+        <div class="slide-lbl op">Oportunidad</div>
+        <div class="slide-text">Documentar el guion de esta página como manual de venta del equipo.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slbl">Objeciones más difíciles · ranking</div>
+  <div class="sug-grid">
+    <div class="sug-card"><div class="sug-n">1</div><div class="sug-title">"Necesito seguir cotizando / ver en otro lado"</div><div class="sug-text">La más repetida. Objeción de <strong>Decisión</strong>, no de producto — se resuelve con la reserva de $20.000, nunca discutiendo el vestido.</div></div>
+    <div class="sug-card"><div class="sug-n">2</div><div class="sug-title">"Está muy caro"</div><div class="sug-text">Objeción de <strong>Presupuesto</strong> — hay que separar presupuesto real de valor percibido antes de ofrecer cuotas.</div></div>
+    <div class="sug-card"><div class="sug-n">3</div><div class="sug-title">Objeciones de Producto (escote, ajuste, talla)</div><div class="sug-text">Antes eran las más comunes; bajaron al diagnosticar con la escala 1–10 en vez de asumir que es el vestido.</div></div>
+  </div>
+
+  <div class="alert-box info">
+    <span class="alert-icon">🔁</span>
+    <div><div class="alert-title">Cómo ventas retroalimenta marketing</div><div class="alert-text">Si sube el costo por venta pero el costo del anuncio se mantuvo, no es un problema de tráfico — cayó la tasa de cierre. Y la objeción más repetida en tienda es el próximo ángulo de contenido: si "necesito comparar" es lo que más se repite, ese es el video/anuncio que hay que sacar para pre-vender la confianza antes de que la clienta llegue.</div></div>
   </div>
 
   <div class="policy-box">
@@ -1286,7 +1310,31 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div><div class="alert-title">Sistema en construcción — se sigue sistematizando desde la llamada del 6 jul</div><div class="alert-text">Ya llegaron las primeras reseñas post-evento vía Google. El resto sigue en definición — esta pestaña documenta las decisiones tomadas para que el equipo las sistematice paso a paso, no para presentarlas como un sistema terminado.</div></div>
   </div>
 
-  <div class="slbl" style="margin-top:0">Barrido de no-compradoras · junio-julio</div>
+  <div class="slbl" style="margin-top:0">El journey después de la compra</div>
+  <div class="dg-wrap">
+    <div class="dg-row">
+      <div class="dg-box hero" style="max-width:220px"><div class="dg-title">✓ Compra</div><div class="dg-sub">Tienda o web</div></div>
+    </div>
+    <div class="dg-arrow">↓</div>
+    <div class="dg-stage-lbl">Post-compra — 3 caminos en paralelo</div>
+    <div class="dg-row">
+      <div class="dg-box success"><div class="dg-title">Reseña post-evento</div><div class="dg-sub">Contacto vía Google + regalo físico — ya en marcha</div></div>
+      <div class="dg-box neutral"><div class="dg-title">Cuadernillo de beneficios</div><div class="dg-sub">Cupones de socios — definido, falta ejecutar</div></div>
+      <div class="dg-box success"><div class="dg-title">Vestido a medida</div><div class="dg-sub">10 en proceso · $500–600K c/u</div></div>
+    </div>
+    <div class="dg-arrow">↓</div>
+    <div class="dg-stage-lbl">No compró — camino paralelo</div>
+    <div class="dg-row">
+      <div class="dg-box broken"><div class="dg-title">Barrido no-compradoras</div><div class="dg-sub">Guía de styling — pendiente de ejecutar</div></div>
+    </div>
+    <div class="dg-arrow">↓</div>
+    <div class="dg-row">
+      <div class="dg-box hero" style="max-width:280px"><div class="dg-title">Recompra o Referido</div><div class="dg-sub">Prima, tía, amiga — ciclo hoy desaprovechado</div></div>
+    </div>
+    <div class="dg-loop">↻ Reactivar cuesta menos que adquirir — vuelve a alimentar Meta Ads en la pestaña Diagrama</div>
+  </div>
+
+  <div class="slbl">Barrido de no-compradoras · junio-julio</div>
   <div class="problem-card">
     <div class="prob-icon">♻️</div>
     <div>
