@@ -60,6 +60,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .sch.done{background:var(--teal);color:#fff}
 .sch.now{background:var(--gold);color:#fff;box-shadow:0 0 0 3px rgba(232,162,55,.2)}
 .sch.todo{background:var(--surf);color:var(--grey);border:0.5px solid var(--border)}
+.sch.critical{background:var(--red);color:#fff;animation:pulse-red 2s ease-in-out infinite}
+.rm-dot.critical{background:var(--red);animation:pulse-red 2s ease-in-out infinite}
+.week-card.critical{border:1.5px solid var(--red)!important;animation:pulse-red 2s ease-in-out infinite}
 
 /* BADGES */
 .bdg{display:inline-flex;align-items:center;font-size:10px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:normal;line-height:1.4}
@@ -475,7 +478,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 <!-- ════════════ PANEL ════════════ -->
 <div class="page on" id="pg-overview">
 
-  <div class="slbl">Progreso — sesión 10 de 12</div>
+  <div class="slbl">Progreso — sesión 11 de 12</div>
   <div class="chips-row">
     <div class="sch done" title="Sem 1 · Foundations + Diagnóstico">1</div>
     <div class="sch done" title="Sem 2 · Evento 27 jun + Guión de cierre">2</div>
@@ -486,8 +489,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="sch done" title="Sem 7 · Julio 27 · PDP y carrusel con Belu">7</div>
     <div class="sch done" title="Sem 8 · Julio 28 · Cierre de proyecciones">8</div>
     <div class="sch done" title="Sem 9 · Agosto 4 · Capacidad, comisiones y meta $30M">9</div>
-    <div class="sch now" title="Sem 10 · Lunes 10 ago">10</div>
-    <div class="sch todo">11</div><div class="sch todo">12</div>
+    <div class="sch done" title="Sem 10 · Agosto 10 · Economía de tiempo: gratis vs experiencia">10</div>
+    <div class="sch critical" title="Sem 11 · Lunes 17 ago · Ventana de renovación">11</div>
+    <div class="sch todo">12</div>
   </div>
 
   <div class="slbl">Métricas clave · última llamada (4 ago)</div>
@@ -724,7 +728,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="rm-track-wrap">
     <div style="font-size:12px;font-weight:600;color:var(--dark);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px">
       Recorrido por etapas del Flywheel
-      <span class="bdg amber">📅 Próxima: Sem 10 — lunes 10 ago</span>
+      <span class="bdg red">🔴 Próxima: Sem 11 — lunes 17 ago · Renovación</span>
     </div>
     <div class="rm-track">
       <div class="rm-node"><div class="rm-dot done">1</div><div class="rm-lbl">Foundations</div><div class="rm-sub">Diagnóstico</div></div>
@@ -736,8 +740,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="rm-node"><div class="rm-dot done">7</div><div class="rm-lbl">SEO + IA</div><div class="rm-sub">PDP/Carrusel</div></div>
       <div class="rm-node"><div class="rm-dot done">8</div><div class="rm-lbl mt">Regiones</div><div class="rm-sub">Cierre proy.</div></div>
       <div class="rm-node"><div class="rm-dot done">9</div><div class="rm-lbl mt">Capacidad</div><div class="rm-sub">Comisiones</div></div>
-      <div class="rm-node"><div class="rm-dot now">10</div><div class="rm-lbl mt">Sistemas</div><div class="rm-sub">Shopify-Claude</div></div>
-      <div class="rm-node"><div class="rm-dot future">11</div><div class="rm-lbl mt">Referidos</div><div class="rm-sub">Renovación</div></div>
+      <div class="rm-node"><div class="rm-dot done">10</div><div class="rm-lbl mt">Sistemas</div><div class="rm-sub">Economía tiempo</div></div>
+      <div class="rm-node"><div class="rm-dot critical">11</div><div class="rm-lbl mt">Referidos</div><div class="rm-sub">Renovación</div></div>
       <div class="rm-node"><div class="rm-dot future">12</div><div class="rm-lbl mt">Cierre 90d</div><div class="rm-sub">¿Continuidad?</div></div>
     </div>
   </div>
@@ -1025,65 +1029,77 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="slbl">Sesión activa</div>
-
-  <div class="week-card now open" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 10 — Tecnología: SEO, plan Claude y campaña web</div><div class="week-date">📅 Lunes 10 ago</div></div><span class="bdg amber">Próxima</span></div>
+  <div class="week-card done" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 10 — Economía de tiempo: cita gratis vs experiencia</div><div class="week-date">Llamada 10 ago (58 min)</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
-      <div class="week-chips"><span class="bdg amber">Shopify-Claude</span><span class="bdg violet">SEO</span><span class="bdg grey">Campaña web</span></div>
-      <div class="week-sec">1️⃣ Revisar métricas</div>
+      <div class="week-chips"><span class="bdg green">42% citas pagadas</span><span class="bdg amber">Cierre 24%</span><span class="bdg violet">Ratio 2,08x</span><span class="bdg grey">Nueva vendedora</span></div>
+      <a class="rec-link" href="https://fathom.video/share/RzaqUcE2ELj8ooZoxggQws7UwqtbpnzY" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 10 (58 min)</a>
+      <div class="week-sec">El hallazgo central: el tiempo del equipo, no la pauta, es el recurso escaso</div>
+      <div class="week-text">Cita gratis (15 min, 8% cierre) vs. cita experiencia (45 min, 42-50% cierre). Normalizando por hora de equipo: la experiencia rinde <strong>2,08x más</strong> ($200K/hora vs $96K/hora con ticket medio $300K). Cálculo completo visible arriba, en "Modelo de negocio · Tienda física". Decisión: subir la vara, dejar de promover la cita gratis.</div>
+      <div class="week-sec">Métricas de agosto (parcial)</div>
+      <div class="week-text">Tasa de agendamiento 15% (vs 11% año pasado) · % citas pagadas 42% (vs 13% histórico, el dato más fuerte de la sesión) · costo por agenda $3.700 (mínimo histórico) · cierre en tienda cayó a 24% (vs 36% mes anterior) · ROAS 21x (+4 pts).</div>
+      <div class="week-sec">Nueva vendedora — onboarding agresivo, no pasivo</div>
+      <div class="week-text">Se suma una vendedora (publicista) el 13/08. Marjorie pensaba dejarla solo observando; Pato corrige: directo a roleplay con el sistema de objeciones, sin fase de solo mirar.</div>
+      <div class="week-sec">Demo: asistente de roleplay (Claude/GPT) para entrenar</div>
+      <div class="week-text">Se muestra en vivo el uso del GPT de closing con modo de voz — Marjorie lo usa en tiempos muertos y para entrenar a la vendedora nueva sin depender de su tiempo.</div>
+      <div class="week-sec">Pendientes de Marjorie</div>
       <div class="week-text"><ul>
-        <li>¿Subió el presupuesto de agosto a $2-2.5M? ¿Se mantuvo el costo por conversación en ~$586?</li>
-        <li>¿Definió la comisión de Mónica?</li>
-        <li>¿Está publicando historias semanales con urgencia real?</li>
+        <li><span class="pend">Pendiente:</span> Sacar tasa de cierre histórica por tipo de cita (gratis vs paga), junio-agosto</li>
+        <li><span class="pend">Pendiente:</span> Testear 2 semanas priorizando experiencia sobre gratis, medir si sube el cierre</li>
+        <li><span class="pend">Pendiente:</span> Lanzar a la vendedora nueva a roleplay directo</li>
       </ul></div>
-      <div class="week-sec">2️⃣ Identificar cuellos</div>
-      <div class="week-text">Add-to-Cart móvil sigue en 0,3% sin resolver — mismo cuello de 3 sesiones seguidas. Segunda vendedora con comisión, todavía sin definir. Parte tecnológica (Shopify-Claude, SEO) pospuesta dos veces.</div>
-      <div class="week-sec">3️⃣ Desbloquear y ajustar</div>
+      <div class="week-sec">Pendientes de Pato</div>
       <div class="week-text"><ul>
-        <li>Dejar Shopify conectado a Claude (consultas de datos en vivo)</li>
-        <li>Retomar la skill de SEO para los artículos de blog</li>
-        <li>Montar la campaña web con Shopping que quedó pendiente</li>
+        <li><span class="pend">Pendiente:</span> Revisar configuración de campaña Meta (fragmentación de públicos)</li>
+        <li><span class="pend">Pendiente:</span> Retomar SEO/Shopify-Claude/campaña web — van 2 sesiones pospuesto</li>
       </ul></div>
-      <div class="week-sec">4️⃣ Volver al core — Diagrama y Funnel</div>
-      <div class="week-text">Revisar en las pestañas Diagrama y Panel qué avanzó (verde) y qué sigue bloqueado (rojo palpitante) desde la última sesión, antes de cerrar con los pendientes.</div>
+    </div>
+  </div>
+
+  <div class="slbl">Sesión activa</div>
+
+  <div class="week-card critical open" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 11 — Ventana de renovación 🎁</div><div class="week-date">📅 Lunes 17 de agosto</div></div><span class="bdg red">Próxima · Renovación</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg red">Renovación 🟢</span><span class="bdg grey">Testeo 2 semanas</span><span class="bdg grey">SEO pendiente x3</span></div>
+      <div class="week-sec">🔍 Revisión</div>
+      <div class="week-text"><ul>
+        <li>¿Subió o se mantuvo el cierre en tienda con la vendedora nueva ya integrada?</li>
+        <li>¿Sacó la Belu la tasa de cierre histórica por tipo de cita (gratis vs paga)?</li>
+        <li>¿Se notó el efecto de subir la vara — menos citas gratis, más experiencia?</li>
+        <li>¿Revisaste la configuración de campaña Meta (fragmentación de públicos)?</li>
+      </ul></div>
+      <div class="week-sec">🎯 Núcleo — conversación de renovación</div>
+      <div class="week-text">Programa partió en junio, va en la mitad. Señal 🟢 confirmada hace 2 sesiones. Es el momento de poner la propuesta de renovación/expansión sobre la mesa, con los resultados del programa como respaldo (cierre 5%→36%, ROAS histórico, framework de economía de tiempo).</div>
       <div class="week-sec">📝 Entregable</div>
-      <div class="week-text">Shopify-Claude conectado + skill de SEO entregada + campaña web montada.</div>
-      <div class="week-sec">5️⃣ Pendientes semanales de mayor leverage</div>
+      <div class="week-text">Propuesta de renovación conversada + review del testeo de 2 semanas (gratis vs experiencia).</div>
+      <div class="week-sec">✅ Pendientes de Marjorie — arrastrados</div>
       <div class="task" style="border-color:rgba(226,80,58,.3)" onclick="event.stopPropagation()">
         <div class="task-ring" style="border-color:var(--red)"></div>
         <div class="task-body">
-          <div class="task-title">Montar el piloto de 5 productos / 2 versiones de carrusel</div>
-          <div class="task-desc">Testear la jerarquía nueva (cuerpo/talla antes que precio) vs. la estructura actual, midiendo Add-to-Cart semana a semana.</div>
-        </div>
-        <span class="bdg red">Urgente</span>
-      </div>
-      <div class="task" style="border-color:rgba(226,80,58,.3)" onclick="event.stopPropagation()">
-        <div class="task-ring" style="border-color:var(--red)"></div>
-        <div class="task-body">
-          <div class="task-title">Sacar el botón de WhatsApp y ocultar el bloque de ajuste/modista</div>
-          <div class="task-desc">Ambos matan urgencia de compra — decisión ya tomada en Sem 7, falta ejecutar en el sitio.</div>
+          <div class="task-title">Tasa de cierre histórica por tipo de cita</div>
+          <div class="task-desc">Junio-agosto, gratis vs paga — con la Belu. Sin esto no se puede confirmar el ratio de rentabilidad con datos reales propios.</div>
         </div>
         <span class="bdg red">Urgente</span>
       </div>
       <div class="task" onclick="event.stopPropagation()">
         <div class="task-ring"></div>
         <div class="task-body">
-          <div class="task-title">Definir la comisión de Mónica</div>
-          <div class="task-desc">Estructura de incentivo para escalar el volumen de eventos sin depender de un favor.</div>
+          <div class="task-title">Lanzar a la vendedora nueva a roleplay directo</div>
+          <div class="task-desc">Sin fase de solo observación — sistema de objeciones + asistente de roleplay.</div>
         </div>
       </div>
       <div class="alert-box info" onclick="event.stopPropagation()">
         <span class="alert-icon">🎁</span>
-        <div><div class="alert-title">Disponibles a pedido — no bloquean nada de tu lado</div><div class="alert-text">La skill de blog/SEO y el video para conectar Shopify con Claude están listos del lado de Pato. Llegan apenas se sincronice la conexión el lunes.</div></div>
+        <div><div class="alert-title">SEO, Shopify-Claude y campaña web — van 2 sesiones pospuesto</div><div class="alert-text">Sigue disponible del lado de Pato apenas haya espacio en la llamada, pero el foco de Sem 11 es la conversación de renovación.</div></div>
       </div>
     </div>
   </div>
 
   <div class="slbl">Camino a la sesión 12 · cierre del programa</div>
   <div class="rm-uc-grid">
-    <div class="rm-uc next-call"><div class="rm-uc-num">Sem 11 · Próxima llamada</div><div class="rm-uc-title">Ventana de renovación, con beneficios especiales 🎁</div><div class="rm-uc-chips"><span class="bdg grey">Renovación 🟢</span></div></div>
     <div class="rm-uc"><div class="rm-uc-num">Sem 12 · Cierre</div><div class="rm-uc-title">Baseline (sesión 1) vs. resultado final + conversación de continuidad</div><div class="rm-uc-chips"><span class="bdg grey">Cierre</span><span class="bdg grey">¿Continuidad?</span></div></div>
   </div>
 </div>
