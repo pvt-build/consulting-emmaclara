@@ -180,6 +180,17 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .bn-imp{font-size:10.5px;font-weight:500;font-family:'DM Mono',monospace}
 .bn-imp.c{color:var(--red-dk)}.bn-imp.w{color:var(--orange-dk)}.bn-imp.i{color:var(--teal-dk)}
 
+/* RECURSOS — biblioteca */
+.res-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:14px;margin-bottom:20px}
+.res-card{background:var(--surf);border:0.5px solid var(--border);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.res-icon{font-size:26px;margin-bottom:6px}
+.res-title{font-size:14px;font-weight:600;color:var(--dark);margin-bottom:4px}
+.res-desc{font-size:12px;color:var(--grey);line-height:1.6;margin-bottom:10px}
+.res-steps{font-size:12px;color:var(--ink);line-height:1.9;margin:0 0 12px 18px}
+.res-steps li{margin-bottom:2px}
+.res-cta{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:var(--teal-dk);text-decoration:none;padding:9px 14px;background:var(--teal-lt);border-radius:8px;align-self:flex-start;transition:opacity .15s}
+.res-cta:hover{opacity:.8}
+
 /* STACK */
 .stack-wrap{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
 .sp{display:flex;align-items:center;gap:6px;background:var(--surf);border:0.5px solid var(--border);border-radius:7px;padding:6px 10px;font-size:11.5px;color:var(--ink)}
@@ -444,13 +455,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="tab" onclick="sw('ventas',this)">💰 Ventas</div>
     <div class="tab" onclick="sw('recompra',this)">🔁 Recompra</div>
     <div class="tab" onclick="sw('engine',this)">⚙️ Flywheel</div>
+    <div class="tab" onclick="sw('recursos',this)">📚 Recursos</div>
   </nav>
   <div class="topbar-right">
     <div class="ext-bar">
-      <a class="ext-btn" href="https://private-build.notion.site/emmaclara" target="_blank" title="Notion">
-        <svg width="13" height="13" viewBox="0 0 120 126" fill="currentColor"><path d="M20.636 21.647c3.406 2.742 4.69 2.547 11.104 2.118l60.415-3.601c1.284 0 .214-.856-.215-1.07l-10.033-7.268c-1.925-1.497-4.49-3.208-9.393-2.78L14.647 13.52c-2.136.214-2.566 1.283-1.711 2.14l7.7 6.013v-.026zm3.192 12.226v63.451c0 3.41.856 4.922 3.852 4.708l66.394-3.831c2.997-.214 3.425-2.14 3.425-4.494V30.47c0-2.353-.856-3.638-2.78-3.425l-67.462 3.852c-2.138.214-3.429 1.498-3.429 2.975zm65.297 3.424c.428.855 0 1.712-1.071 1.926l-1.712.214v25.214c-1.497.856-2.995.856-4.278.214L60.12 43.553v30.779l4.921 1.07s0 1.713-2.355 1.927l-6.633.428c-.428-.214-1.498-.856-1.712-1.712l.428-1.284V42.482L51.798 42.268c-.428-.856 0-2.138 1.284-2.353l7.054-.428L82.48 62.636V38.279l-4.06-.642c-.428-1.071.214-2.14 1.498-2.354l6.418-.214 2.79 1.428z"/></svg>
-        <span class="ext-lbl">Notion</span>
-      </a>
       <a class="ext-btn" href="https://docs.google.com/spreadsheets/d/1CsoA4Gj5MJ4NjVLYeVScWnYLOk5oIyqIrePo6HLMg8w/edit" target="_blank" title="Matriz">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="21"/><line x1="15" y1="3" x2="15" y2="21"/></svg>
         <span class="ext-lbl">Matriz</span>
@@ -471,6 +479,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="mob-row" onclick="sw('ventas',this,true)"><span class="mob-em">💰</span> Ventas</div>
     <div class="mob-row" onclick="sw('recompra',this,true)"><span class="mob-em">🔁</span> Recompra</div>
     <div class="mob-row" onclick="sw('engine',this,true)"><span class="mob-em">⚙️</span> Flywheel</div>
+    <div class="mob-row" onclick="sw('recursos',this,true)"><span class="mob-em">📚</span> Recursos</div>
   </div>
 </header>
 
@@ -1561,6 +1570,42 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 </div>
 
 
+<!-- ════════════ RECURSOS ════════════ -->
+<div class="page" id="pg-recursos">
+
+  <div class="problem-card" style="margin-top:0">
+    <div class="prob-icon">📚</div>
+    <div>
+      <div class="prob-title">Biblioteca de recursos</div>
+      <div class="prob-text">Todo lo que tienes disponible para usar directo, sin depender de una llamada — herramientas de entrenamiento y el repositorio completo de módulos de Private Build.</div>
+    </div>
+  </div>
+
+  <div class="res-grid">
+    <div class="res-card">
+      <div class="res-icon">🎙️</div>
+      <div class="res-title">Closing Coach GPT — cómo usarlo</div>
+      <div class="res-desc">Asistente de IA armado para roleplay de objeciones de venta, con modo de voz. Sirve para entrenarte a ti y a cualquier vendedora nueva sin que dependa de tu tiempo — en tiempos muertos, antes de una cita, o para practicar una objeción que se repite.</div>
+      <ol class="res-steps">
+        <li>Abre el chat que te compartió Pato (o pídeselo si lo perdiste).</li>
+        <li>Activa el modo de voz — el botón de la derecha, el que captura la conversación hablada.</li>
+        <li>Dile qué clienta querés simular: tipo de vestido, objeción, contexto (ej. "una mamá que dice que necesita comparar en otro lado").</li>
+        <li>Elegí el rol: puede comportarse como la clienta y tú la cierras, o al revés — tú simulas la objeción y él te muestra cómo cerrarla.</li>
+        <li>Dejá que te lleve por situaciones nuevas — no es para repetir lo que ya sabes, es para entrenar lo que todavía no dominas.</li>
+        <li>Repetí el mismo ejercicio con cada vendedora nueva del equipo, antes de que esté frente a una clienta real.</li>
+      </ol>
+      <span class="bdg teal" style="align-self:flex-start;margin-top:2px">✓ Ya validado con otros founders de Private Build</span>
+    </div>
+    <div class="res-card">
+      <div class="res-icon">📓</div>
+      <div class="res-title">Notion — Recursos y Módulos</div>
+      <div class="res-desc">El repositorio completo de Private Build: módulos, guías y recursos que se van sumando a medida que avanza el programa. Es el mismo lugar donde antes vivía el link directo a tu carpeta — ahora todo queda centralizado acá.</div>
+      <a class="res-cta" href="https://app.notion.com/p/private-build/M-dulos-3ba1b21db3ba805680c4e62c62648525?source=copy_link" target="_blank">Abrir en Notion ↗</a>
+    </div>
+  </div>
+</div>
+
+
 <!-- WA FAB -->
 <a class="wa-fab" href="https://wa.me/56978048922?text=Patricio%20tengo%20dudas%20sobre..." target="_blank" aria-label="WhatsApp Patricio">
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.005 2.001C6.474 2.001 2 6.476 2 12.007c0 1.771.462 3.463 1.338 4.952L2 22l5.188-1.359A9.944 9.944 0 0 0 12.005 22c5.531 0 10.005-4.476 10.005-10.007 0-2.674-1.041-5.188-2.931-7.079A9.953 9.953 0 0 0 12.005 2z"/></svg>
@@ -1568,7 +1613,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 </a>
 
 <script>
-const PAGES=['overview','roadmap','diagrama','ventas','recompra','engine'];
+const PAGES=['overview','roadmap','diagrama','ventas','recompra','engine','recursos'];
 function sw(id,el,isMob){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab,.mob-row').forEach(t=>t.classList.remove('on'));
