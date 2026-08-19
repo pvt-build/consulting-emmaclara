@@ -499,7 +499,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="sch done" title="Sem 8 · Julio 28 · Cierre de proyecciones">8</div>
     <div class="sch done" title="Sem 9 · Agosto 4 · Capacidad, comisiones y meta $30M">9</div>
     <div class="sch done" title="Sem 10 · Agosto 10 · Economía de tiempo: gratis vs experiencia">10</div>
-    <div class="sch critical" title="Sem 11 · Lunes 17 ago · Ventana de renovación">11</div>
+    <div class="sch done" title="Sem 11 · Agosto 18 · Desequilibrio de pauta y nicho bodas">11</div>
     <div class="sch todo">12</div>
   </div>
 
@@ -737,7 +737,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="rm-track-wrap">
     <div style="font-size:12px;font-weight:600;color:var(--dark);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px">
       Recorrido por etapas del Flywheel
-      <span class="bdg red">🔴 Próxima: Sem 11 — lunes 17 ago · Renovación</span>
+      <span class="bdg red">🔴 Próxima: Sem 12 — lunes 24 ago · Cierre del bloque + renovación</span>
     </div>
     <div class="rm-track">
       <div class="rm-node"><div class="rm-dot done">1</div><div class="rm-lbl">Foundations</div><div class="rm-sub">Diagnóstico</div></div>
@@ -1068,49 +1068,86 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
   <div class="slbl">Sesión activa</div>
 
-  <div class="week-card critical open" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 11 — Ventana de renovación 🎁</div><div class="week-date">📅 Lunes 17 de agosto</div></div><span class="bdg red">Próxima · Renovación</span></div>
+  <div class="week-card open" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 11 — Desequilibrio de pauta y nicho bodas</div><div class="week-date">Llamada 18 ago (57 min)</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
-      <div class="week-chips"><span class="bdg red">Renovación 🟢</span><span class="bdg grey">Testeo 2 semanas</span><span class="bdg grey">SEO pendiente x3</span></div>
-      <div class="week-sec">🔍 Revisión</div>
+      <div class="week-chips"><span class="bdg red">Pauta desequilibrada</span><span class="bdg teal">Nicho bodas</span><span class="bdg grey">Cyber Monday oct</span></div>
+
+      <div class="week-sec">📊 Métricas de la semana</div>
       <div class="week-text"><ul>
-        <li>¿Subió o se mantuvo el cierre en tienda con la vendedora nueva ya integrada?</li>
-        <li>¿Sacó la Belu la tasa de cierre histórica por tipo de cita (gratis vs paga)?</li>
-        <li>¿Se notó el efecto de subir la vara — menos citas gratis, más experiencia?</li>
-        <li>¿Revisaste la configuración de campaña Meta (fragmentación de públicos)?</li>
+        <li><b>Gasto en pauta:</b> $937.499 CLP — 42% de la proyección de $2,2M del mes.</li>
+        <li><b>Costo por mensaje:</b> ~$530 CLP, estabilizado (venía de un peak de $700).</li>
+        <li><b>Volumen:</b> 80-110 mensajes por día.</li>
+        <li><b>Citas gratis:</b> 101 — se duplicaron respecto de la semana pasada.</li>
+        <li><b>Citas pagadas:</b> 57 (49 experiencia + 8 confección).</li>
+        <li><b>E-commerce agosto:</b> $363.000 CLP con cero inversión en ads.</li>
       </ul></div>
-      <div class="week-sec">🎯 Núcleo — conversación de renovación</div>
-      <div class="week-text">Programa partió en junio, va en la mitad. Señal 🟢 confirmada hace 2 sesiones. Es el momento de poner la propuesta de renovación/expansión sobre la mesa, con los resultados del programa como respaldo (cierre 5%→36%, ROAS histórico, framework de economía de tiempo).</div>
-      <div class="week-sec">📝 Entregable</div>
-      <div class="week-text">Propuesta de renovación conversada + review del testeo de 2 semanas (gratis vs experiencia).</div>
-      <div class="week-sec">✅ Pendientes de Marjorie — arrastrados</div>
+
+      <div class="week-sec">🎯 Núcleo — la pauta está comprando la cita equivocada</div>
+      <div class="week-text">Subir el gasto en $350.000 trajo <b>50 citas gratis adicionales y solo 11 pagadas</b>. No es problema de volumen ni de costo (los dos mejoraron): la campaña sigue optimizando hacia el perfil que históricamente no cierra — exactamente lo que se decidió dejar de hacer en la sesión del 10 de agosto. Cada peso extra hoy agranda el cuello en vez de destaparlo.</div>
+
+      <div class="week-sec">💎 Hallazgo — el nicho de bodas ya está entrando solo</div>
+      <div class="week-text"><b>12 de 14</b> proyectos de confección personalizada son para madres de novios y novias, con ticket promedio de <b>$500.000</b>. Ese perfil llega por los anuncios de gala, sin campaña propia: es demanda que ya existe y no se está capturando. Se valida con una campaña en la sombra, segmentada, con presupuesto acotado de $500.000 (el costo de una sola confección) antes de escalar.</div>
+
+      <div class="week-sec">⚠️ El CPA que estamos mirando está mal</div>
+      <div class="week-text">El CPA de $20.000 CLP está inflado porque <b>las cuotas de pago se contabilizan como ventas nuevas</b>. Hasta separar cuotas de unidades vendidas, cualquier decisión que se tome sobre ese número parte de un dato falso.</div>
+
+      <div class="week-sec">✅ Pendientes de Marjorie</div>
       <div class="task" style="border-color:rgba(226,80,58,.3)" onclick="event.stopPropagation()">
         <div class="task-ring" style="border-color:var(--red)"></div>
         <div class="task-body">
-          <div class="task-title">Tasa de cierre histórica por tipo de cita</div>
-          <div class="task-desc">Junio-agosto, gratis vs paga — con la Belu. Sin esto no se puede confirmar el ratio de rentabilidad con datos reales propios.</div>
+          <div class="task-title">Separar cuotas de unidades vendidas</div>
+          <div class="task-desc">Sin esto el CPA está inflado y todas las decisiones de pauta se toman sobre un número falso.</div>
         </div>
         <span class="bdg red">Urgente</span>
       </div>
       <div class="task" onclick="event.stopPropagation()">
         <div class="task-ring"></div>
         <div class="task-body">
-          <div class="task-title">Lanzar a la vendedora nueva a roleplay directo</div>
-          <div class="task-desc">Sin fase de solo observación — sistema de objeciones + asistente de roleplay.</div>
+          <div class="task-title">Analizar citas por tipo de campaña</div>
+          <div class="task-desc">Graduadas vs madres — para saber cuál campaña rinde y cuál solo trae volumen gratis.</div>
         </div>
       </div>
+      <div class="task" onclick="event.stopPropagation()">
+        <div class="task-ring"></div>
+        <div class="task-body">
+          <div class="task-title">Contenido que empuje la cita Experiencia</div>
+          <div class="task-desc">Bajar el volumen de citas gratis por contenido, no solo por configuración de campaña.</div>
+        </div>
+      </div>
+      <div class="task" onclick="event.stopPropagation()">
+        <div class="task-ring"></div>
+        <div class="task-body">
+          <div class="task-title">Entrevistar clientas de confección personalizada</div>
+          <div class="task-desc">Levantar motivación y dolor real para escribir los anuncios del nicho bodas.</div>
+        </div>
+      </div>
+
+      <div class="alert-box info" onclick="event.stopPropagation()">
+        <span class="alert-icon">🛒</span>
+        <div><div class="alert-title">Cyber Monday de octubre — hay que calentar antes</div><div class="alert-text">Primero identificar las regiones con más ventas y seguidores, después una campaña de calentamiento con lead magnet para armar lista regional, y recién ahí ejecutar. Lanzar en frío quema presupuesto. Se define el plan en la Sem 12.</div></div>
+      </div>
+      <a class="rec-link" href="https://fathom.video/share/8dyAea_GMCg7YQjZpjEFPXzzaXdE522w" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 11 (57 min)</a>
+    </div>
+  </div>
+
+  <div class="week-card critical open" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 12 — Cierre del bloque + renovación 🎁</div><div class="week-date">📅 Lunes 24 de agosto</div></div><span class="bdg red">Próxima · Última del bloque</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg red">Renovación</span><span class="bdg grey">Cyber Monday</span><span class="bdg grey">Baseline vs. final</span></div>
+      <div class="week-sec">🎯 Núcleo</div>
+      <div class="week-text">Última sesión del bloque de 12 semanas. Se cierra con el baseline de la sesión 1 contra el resultado final, en números, y se define el plan de calentamiento de e-commerce para el Cyber Monday de octubre.</div>
+      <div class="week-sec">📝 Entregable</div>
+      <div class="week-text">Plan de calentamiento e-commerce + cierre del bloque con resultados medidos + propuesta del siguiente bloque de 3 meses.</div>
       <div class="alert-box info" onclick="event.stopPropagation()">
         <span class="alert-icon">🎁</span>
-        <div><div class="alert-title">SEO, Shopify-Claude y campaña web — van 2 sesiones pospuesto</div><div class="alert-text">Sigue disponible del lado de Pato apenas haya espacio en la llamada, pero el foco de Sem 11 es la conversación de renovación.</div></div>
+        <div><div class="alert-title">Pendiente de arrastre: SEO, Shopify-Claude y campaña web</div><div class="alert-text">Van 3 sesiones pospuestos. Entran al alcance del siguiente bloque.</div></div>
       </div>
     </div>
   </div>
 
-  <div class="slbl">Camino a la sesión 12 · cierre del programa</div>
-  <div class="rm-uc-grid">
-    <div class="rm-uc"><div class="rm-uc-num">Sem 12 · Cierre</div><div class="rm-uc-title">Baseline (sesión 1) vs. resultado final + conversación de continuidad</div><div class="rm-uc-chips"><span class="bdg grey">Cierre</span><span class="bdg grey">¿Continuidad?</span></div></div>
-  </div>
 </div>
 
 
