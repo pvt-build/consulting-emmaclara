@@ -188,6 +188,40 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .res-desc{font-size:12px;color:var(--grey);line-height:1.6;margin-bottom:10px}
 .res-steps{font-size:12px;color:var(--ink);line-height:1.9;margin:0 0 12px 18px}
 .res-steps li{margin-bottom:2px}
+/* ═══ RENOVACIÓN ═══ */
+.rn-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:10px}
+.rn-c{background:var(--surf);border:0.5px solid var(--border);border-radius:11px;padding:14px 15px;min-width:0;display:flex;flex-direction:column;gap:7px}
+.rn-c.up{border-top:2px solid var(--teal)}
+.rn-l{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.rn-v{font-size:21px;font-weight:700;letter-spacing:-.02em;line-height:1}
+.rn-v .to{color:var(--teal)}
+.rn-v .de{font-size:14px;color:var(--muted);font-weight:600}
+.rn-s{font-size:10.5px;color:var(--muted);margin-top:auto;padding-top:8px;border-top:0.5px solid var(--border)}
+.rn-open{border:1px dashed var(--border);border-radius:11px;padding:14px 16px;margin-bottom:14px}
+.rn-open-l{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:9px}
+.rn-pills{display:flex;flex-wrap:wrap;gap:6px}
+.rn-pill{font-size:10.5px;color:var(--muted);border:1px dashed var(--border);border-radius:999px;padding:3px 10px}
+.rn-pill.hot{border-color:var(--red);color:var(--red);border-style:solid}
+.rn-price{display:grid;grid-template-columns:1.1fr 1fr;gap:12px;margin-bottom:12px}
+.rn-box{background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:20px 22px}
+.rn-was{font-size:15px;color:var(--muted);text-decoration:line-through;font-weight:600}
+.rn-was-l{font-size:9.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-left:8px;text-decoration:none;display:inline-block}
+.rn-now{font-size:34px;font-weight:700;letter-spacing:-.03em;line-height:1.05;margin-top:5px}
+.rn-unit{font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-top:6px}
+.rn-mes{display:inline-block;margin-top:11px;font-size:11.5px;color:var(--teal);border:1px solid var(--teal);border-radius:999px;padding:4px 12px;font-weight:600}
+.rn-why-l{font-size:9.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);font-weight:600;margin-bottom:7px}
+.rn-why p{font-size:13px;line-height:1.5;color:var(--txt);margin:0 0 7px}
+.rn-ben{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.rn-b{background:var(--surf);border:0.5px solid var(--border);border-radius:11px;padding:13px 15px;min-width:0}
+.rn-b .t{font-size:15px;font-weight:700;letter-spacing:-.02em;margin-bottom:3px}
+.rn-b.hot .t{color:var(--teal)}
+.rn-b .d{font-size:11.5px;color:var(--muted);line-height:1.4}
+.rn-pay{display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:var(--surf);border:0.5px solid var(--border);border-radius:11px;padding:13px 18px;margin-top:10px;font-size:12.5px;color:var(--muted)}
+.rn-pay b{color:var(--txt)}
+@media(max-width:680px){
+  .rn-grid{grid-template-columns:repeat(2,1fr)}
+  .rn-price,.rn-ben{grid-template-columns:1fr}
+}
 .res-cta{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:#fff;text-decoration:none;padding:9px 14px;background:var(--dark);border-radius:8px;align-self:flex-start;transition:opacity .15s}
 .res-cta:hover{opacity:.8}
 
@@ -456,6 +490,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="tab" onclick="sw('recompra',this)">🔁 Recompra</div>
     <div class="tab" onclick="sw('engine',this)">⚙️ Flywheel</div>
     <div class="tab" onclick="sw('recursos',this)">📚 Recursos</div>
+    <div class="tab" onclick="sw('renovacion',this)">🥂 Renovación</div>
   </nav>
   <div class="topbar-right">
     <div class="ext-bar">
@@ -480,6 +515,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="mob-row" onclick="sw('recompra',this,true)"><span class="mob-em">🔁</span> Recompra</div>
     <div class="mob-row" onclick="sw('engine',this,true)"><span class="mob-em">⚙️</span> Flywheel</div>
     <div class="mob-row" onclick="sw('recursos',this,true)"><span class="mob-em">📚</span> Recursos</div>
+    <div class="mob-row" onclick="sw('renovacion',this,1)">🥂 Renovación</div>
   </div>
 </header>
 
@@ -1648,8 +1684,105 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <span class="wa-lbl">Consultar a Patricio</span>
 </a>
 
+
+<div class="page" id="pg-renovacion">
+
+  <div class="problem-card" style="margin-top:0">
+    <div class="prob-icon">🥂</div>
+    <div>
+      <div class="prob-title">Renovación · el siguiente bloque de 3 meses</div>
+      <div class="prob-text">Cierre del bloque 1 con los números validados, lo que viene de septiembre a febrero, y las condiciones de continuidad. Todo lo conversado en la sesión 12, acá para consultar cuando quieras.</div>
+    </div>
+  </div>
+
+  <div class="slbl">Dónde estás hoy</div>
+  <div class="rn-grid">
+    <div class="rn-c up"><div class="rn-l">Cierre en tienda</div><div class="rn-v"><span class="de">5%</span> → <span class="to">36%</span></div><div class="rn-s">meta trazada: 50%</div></div>
+    <div class="rn-c up"><div class="rn-l">Citas que pagan</div><div class="rn-v"><span class="de">13%</span> → <span class="to">42%</span></div><div class="rn-s">más volumen con más margen</div></div>
+    <div class="rn-c up"><div class="rn-l">Costo por mensaje</div><div class="rn-v"><span class="de">$700</span> → <span class="to">$530</span></div><div class="rn-s">estabilizado, no fue suerte</div></div>
+    <div class="rn-c up"><div class="rn-l">Equipo comercial</div><div class="rn-v"><span class="de">1</span> → <span class="to">3</span></div><div class="rn-s">+ Belu en tecnología</div></div>
+    <div class="rn-c"><div class="rn-l">Presupuesto usado</div><div class="rn-v">42%</div><div class="rn-s">de los $2,2M proyectados</div></div>
+    <div class="rn-c"><div class="rn-l">Recaudado agosto</div><div class="rn-v">$10,7M</div><div class="rn-s">con el 42% del budget</div></div>
+    <div class="rn-c"><div class="rn-l">Julio cerrado</div><div class="rn-v">$19M</div><div class="rn-s">76 unidades · cierre final</div></div>
+    <div class="rn-c"><div class="rn-l">Rentabilidad / hora</div><div class="rn-v">2,08×</div><div class="rn-s">experiencia vs. gratis</div></div>
+    <div class="rn-c"><div class="rn-l">Citas de pago</div><div class="rn-v">57</div><div class="rn-s">49 experiencia · 8 confección</div></div>
+    <div class="rn-c"><div class="rn-l">Ticket confección</div><div class="rn-v">$500K</div><div class="rn-s">14 cierres sin campaña propia</div></div>
+    <div class="rn-c"><div class="rn-l">E-commerce agosto</div><div class="rn-v">$363K</div><div class="rn-s">sin pauta</div></div>
+    <div class="rn-c"><div class="rn-l">Costo por agenda</div><div class="rn-v">$3,7K</div><div class="rn-s">mínimo histórico</div></div>
+  </div>
+
+  <div class="rn-open">
+    <div class="rn-open-l">Lo que todavía está abierto</div>
+    <div class="rn-pills">
+      <span class="rn-pill hot">CPA real — separar cuotas de unidades</span>
+      <span class="rn-pill">SEO</span>
+      <span class="rn-pill">Shopify + Claude</span>
+      <span class="rn-pill">Add-to-Cart móvil 0,3%</span>
+      <span class="rn-pill">Campaña propia de bodas</span>
+      <span class="rn-pill">Plan del cyber</span>
+      <span class="rn-pill">Recompra por email</span>
+    </div>
+  </div>
+
+  <div class="slbl">Los 3 hitos del bloque</div>
+  <div class="bn-grid">
+    <div class="bn-card"><div class="bn-head"><span class="bn-n">01</span><span class="bn-title">Foco</span></div><div class="bn-text">Dejaste de buscar volumen en agenda gratis para priorizar experiencia y eventos.</div></div>
+    <div class="bn-card"><div class="bn-head"><span class="bn-n">02</span><span class="bn-title">Equipo</span></div><div class="bn-text">Sumaste una vendedora más y orientaste el win-win hacia maquilladoras y colorimetristas.</div></div>
+    <div class="bn-card"><div class="bn-head"><span class="bn-n">03</span><span class="bn-title">Cierre</span></div><div class="bn-text">Subió tu tasa: entiendes al avatar de punta a punta, identificas las objeciones clave y sabes manejarlas.</div></div>
+  </div>
+
+  <div class="slbl">Septiembre a febrero</div>
+  <div class="phase-grid">
+    <div class="phase-card">
+      <div class="phase-hd"><span class="phase-title">Cyber Monday</span><span class="phase-tag">Sep — Oct</span></div>
+      <div class="phase-text">Audiencia regional segmentada, lead magnet de calentamiento y campaña sobre lista propia. El e-commerce ya hace $363K sin pauta: acá es donde se multiplica. El calentamiento arranca la segunda semana de septiembre — seis a siete semanas antes, como tú misma dijiste.</div>
+    </div>
+    <div class="phase-card">
+      <div class="phase-hd"><span class="phase-title">Temporada alta</span><span class="phase-tag">Nov — Dic</span></div>
+      <div class="phase-text">Graduaciones y matrimonios con el equipo de 3 ya entrenado y la cita Experiencia como default. Es el primer peak que entras con criterio instalado.</div>
+    </div>
+    <div class="phase-card">
+      <div class="phase-hd"><span class="phase-title">Nicho bodas</span><span class="phase-tag">Ene — Feb</span></div>
+      <div class="phase-text">Campaña propia para madres de novios y novias: 12 de 14 confecciones ya son ese perfil, a $500.000 de ticket, sin haberles hablado nunca directo.</div>
+    </div>
+  </div>
+  <div class="alert-box info" style="margin-top:10px">
+    <span class="alert-icon">🤖</span>
+    <div><div class="alert-title">Transversal a los tres</div><div class="alert-text">Contenido con datos · SEO y CRO · referidos · recompra por email. Todo apalancado con IA, para que sume sin sumar headcount.</div></div>
+  </div>
+
+  <div class="slbl">La inversión</div>
+  <div class="rn-price">
+    <div class="rn-box">
+      <div><span class="rn-was">$2.000.000</span><span class="rn-was-l">valor actualizado · mentoría 3 meses</span></div>
+      <div class="rn-now">$1.500.000</div>
+      <div class="rn-unit">CLP · valor preferente para ti</div>
+      <div class="rn-mes">$500.000 al mes</div>
+    </div>
+    <div class="rn-box rn-why">
+      <div class="rn-why-l">Razón del bloque</div>
+      <p>Cerrar lo que quedó abierto y <b>entrar al cyber con plan</b>, no improvisando: lista regional construida, campaña de bodas validada y el equipo operando con criterio propio.</p>
+      <p style="color:var(--muted);font-size:12px">Esto es el objetivo. Lo de abajo son los beneficios — no se confunden.</p>
+    </div>
+  </div>
+
+  <div class="slbl">Beneficios de renovar</div>
+  <div class="rn-ben">
+    <div class="rn-b hot"><div class="t">$500.000</div><div class="d">de ahorro sobre el valor actualizado</div></div>
+    <div class="rn-b hot"><div class="t">$350.000</div><div class="d">de cashback por cada referida que entre a programas</div></div>
+    <div class="rn-b"><div class="t">Documentación</div><div class="d">tus sistemas escritos y entregados, no en mi cabeza</div></div>
+    <div class="rn-b"><div class="t">Copy-paste</div><div class="d">plantillas y sistemas listos para usar tal cual</div></div>
+    <div class="rn-b"><div class="t">Skills de Claude</div><div class="d">las mismas que uso yo, instaladas en tu operación</div></div>
+    <div class="rn-b"><div class="t">Tech gifts</div><div class="d">acceso a plataformas de IA nuevas para ti y tu equipo</div></div>
+  </div>
+  <div class="rn-pay">
+    <b>Pago total</b> <span>o</span> <span>Mercado Pago · 3 cuotas + recargo</span>
+  </div>
+
+</div>
+
 <script>
-const PAGES=['overview','roadmap','diagrama','ventas','recompra','engine','recursos'];
+const PAGES=['overview','roadmap','diagrama','ventas','recompra','engine','recursos','renovacion'];
 function sw(id,el,isMob){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab,.mob-row').forEach(t=>t.classList.remove('on'));
