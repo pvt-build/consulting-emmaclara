@@ -20,6 +20,7 @@
   --blue:#2A5BAD;--blue-lt:#EAF0FB;--blue-dk:#1A3A7A;
   --grey:#8A8076;--border:#E4DDD4;--wa:#25D366;
   --violet:#7B61FF;--violet-lt:#F0EEFF;
+  --muted:#8A8076;
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%;overflow-x:clip;max-width:100%}
@@ -173,7 +174,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .bn-card{background:var(--surf);border:0.5px solid var(--border);border-radius:10px;padding:13px 15px;border-left:3px solid var(--border);min-width:0}
 .bn-card.c{border-left-color:var(--red)}.bn-card.w{border-left-color:var(--orange)}.bn-card.i{border-left-color:var(--teal)}
 .bn-head{display:flex;align-items:center;gap:7px;margin-bottom:5px}
-.bn-n{width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;color:#fff;flex-shrink:0}
+.bn-n{width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;color:#fff;flex-shrink:0;background:var(--grey)}
 .bn-n.c{background:var(--red)}.bn-n.w{background:var(--orange)}.bn-n.i{background:var(--teal)}
 .bn-title{font-size:12px;font-weight:600;color:var(--dark)}
 .bn-text{font-size:11.5px;color:var(--grey);line-height:1.6;margin-bottom:5px}
@@ -276,6 +277,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .week-card.now{border-left:2px solid var(--gold);box-shadow:0 0 0 1px rgba(232,162,55,.2)}
 .week-card.gate-done{border-left:2px solid var(--teal);background:rgba(62,180,137,.02)}
 .week-card.future{opacity:.5}
+.week-card.plan{border-left:2px solid var(--sand)}
+.week-card.plan .week-title{color:var(--ink)}
 .week-hd{display:flex;align-items:flex-start;gap:10px}
 .week-info{flex:1}
 .week-title{font-size:13.5px;font-weight:600;color:var(--dark);line-height:1.3;margin-bottom:2px}
@@ -285,6 +288,24 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .week-card.open .week-toggle-icon{transform:rotate(180deg)}
 .week-body{margin-top:10px;padding-top:10px;border-top:0.5px solid var(--border);display:none}
 .week-card.open .week-body{display:block}
+
+/* BLOQUES DEL PROGRAMA (acordeón) */
+.blk{background:var(--surf);border:0.5px solid var(--border);border-radius:14px;margin-bottom:12px;overflow:hidden}
+.blk.live{border:1px solid var(--teal);box-shadow:0 0 0 3px rgba(62,180,137,.08)}
+.blk-hd{display:flex;align-items:center;gap:12px;padding:15px 18px;cursor:pointer;user-select:none;background:var(--beige);transition:background .15s}
+.blk-hd:hover{background:var(--sand)}
+.blk-n{width:30px;height:30px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;font-weight:600;color:#fff;flex-shrink:0;background:var(--grey)}
+.blk-n.done{background:var(--teal)}
+.blk-n.live{background:var(--dark)}
+.blk-info{flex:1;min-width:0}
+.blk-title{font-size:13.5px;font-weight:600;color:var(--dark);line-height:1.3}
+.blk-sub{font-size:11px;color:var(--grey);line-height:1.5;margin-top:2px}
+.blk-ico{font-size:10px;color:var(--grey);transition:transform .2s;flex-shrink:0}
+.blk.open .blk-ico{transform:rotate(180deg)}
+.blk-body{display:none;padding:16px 16px 4px;border-top:0.5px solid var(--border)}
+.blk.open .blk-body{display:block}
+.blk-body .slbl:first-child{margin-top:0}
+@media(max-width:640px){.blk-hd{padding:13px 14px;gap:9px}.blk-body{padding:14px 12px 2px}}
 .week-chips{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
 .rec-link{display:inline-flex;align-items:center;gap:6px;background:var(--violet-lt);color:var(--violet);border:0.5px solid var(--violet);border-radius:7px;padding:6px 12px;font-size:11.5px;font-weight:600;text-decoration:none;margin-bottom:10px}
 .rec-links{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}
@@ -523,7 +544,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 <!-- ════════════ PANEL ════════════ -->
 <div class="page on" id="pg-overview">
 
-  <div class="slbl">Progreso — sesión 11 de 12</div>
+  <div class="slbl">Progreso — bloque 1 cerrado · bloque 2 en curso</div>
   <div class="chips-row">
     <div class="sch done" title="Sem 1 · Foundations + Diagnóstico">1</div>
     <div class="sch done" title="Sem 2 · Evento 27 jun + Guión de cierre">2</div>
@@ -536,20 +557,36 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="sch done" title="Sem 9 · Agosto 4 · Capacidad, comisiones y meta $30M">9</div>
     <div class="sch done" title="Sem 10 · Agosto 10 · Economía de tiempo: gratis vs experiencia">10</div>
     <div class="sch done" title="Sem 11 · Agosto 18 · Desequilibrio de pauta y nicho bodas">11</div>
-    <div class="sch todo">12</div>
+    <div class="sch done" title="Sem 12 · Agosto 24 · Cierre del bloque 1 + renovación firmada">12</div>
+    <div class="sch now" title="Sem 13 · Agosto 31 · Estrategia web">13</div>
+    <div class="sch todo">14</div>
+    <div class="sch todo">15</div>
+    <div class="sch todo">16</div>
+    <div class="sch todo">17</div>
+    <div class="sch todo">18</div>
+    <div class="sch todo">19</div>
+    <div class="sch todo">20</div>
+    <div class="sch todo">21</div>
+    <div class="sch todo">22</div>
+    <div class="sch todo">23</div>
+    <div class="sch todo">24</div>
+  </div>
+  <div class="bdg-row" style="margin-top:-14px;margin-bottom:22px">
+    <span class="bdg teal">Bloque 1 · jun–ago · 12/12 ✓</span>
+    <span class="bdg red">Bloque 2 · sep–nov · arranca el 31 de agosto</span>
   </div>
 
-  <div class="slbl">Métricas clave · última llamada (4 ago)</div>
+  <div class="slbl">Métricas clave · última llamada (24 ago · cierre del bloque 1)</div>
   <div class="ov-row1">
-    <div class="ov-card"><div class="ov-lbl">Ingresos julio (cierre final)</div><div class="ov-num amber">~$19M</div><div class="ov-sub">76 unidades · ticket medio $250K · corrige lectura parcial anterior</div></div>
-    <div class="ov-card"><div class="ov-lbl">Cierre en tienda</div><div class="ov-num green">36%</div><div class="ov-sub">vs 5-10% al iniciar el programa · sigue subiendo</div></div>
-    <div class="ov-card"><div class="ov-lbl">Add-to-Cart móvil</div><div class="ov-num red">0.3%</div><div class="ov-sub">Cuello de botella crítico del sitio — sigue sin resolver</div></div>
+    <div class="ov-card"><div class="ov-lbl">Venta tienda · agosto al 24</div><div class="ov-num green">$15,5M</div><div class="ov-sub">55 prendas · el mes se cierra con la venta de los últimos días</div></div>
+    <div class="ov-card"><div class="ov-lbl">Cierre por tipo de cita</div><div class="ov-num green">43%</div><div class="ov-sub">la cita Experiencia · contra 15% de la gratis</div></div>
+    <div class="ov-card"><div class="ov-lbl">Venta web · agosto</div><div class="ov-num amber">$692K</div><div class="ov-sub">el canal que mueve el bloque 2 · sin pauta propia</div></div>
   </div>
   <div class="ov-row2">
-    <div class="ov-card"><div class="ov-lbl">Costo por conversación</div><div class="ov-num amber">$586</div><div class="bdg-row"><span class="bdg amber">Cifra final de julio (corrige metodología)</span></div></div>
-    <div class="ov-card"><div class="ov-lbl">Ratio eficiencia</div><div class="ov-num green">17 pts</div><div class="bdg-row"><span class="bdg green">✓ vs 12 pts el año pasado misma fecha</span></div></div>
-    <div class="ov-card"><div class="ov-lbl">Meta agosto</div><div class="ov-num amber">$30M</div><div class="bdg-row"><span class="bdg amber">Necesita $2-2.5M CLP en pauta + 400 citas</span></div></div>
-    <div class="ov-card"><div class="ov-lbl">Costo por agenda</div><div class="ov-num green">~$6K</div><div class="bdg-row"><span class="bdg green">✓ Bajó a la mitad vs julio</span></div></div>
+    <div class="ov-card"><div class="ov-lbl">Ticket promedio</div><div class="ov-num green">$363K</div><div class="bdg-row"><span class="bdg green">✓ vs $253K en agosto 2025</span></div></div>
+    <div class="ov-card"><div class="ov-lbl">Horas trabajadas</div><div class="ov-num green">78</div><div class="bdg-row"><span class="bdg green">✓ vs 120 en agosto 2025 · facturando más</span></div></div>
+    <div class="ov-card"><div class="ov-lbl">Pauta agosto</div><div class="ov-num amber">$1,31M</div><div class="bdg-row"><span class="bdg amber">2.235 conversaciones generadas</span></div></div>
+    <div class="ov-card"><div class="ov-lbl">No-shows</div><div class="ov-num red">17</div><div class="bdg-row"><span class="bdg red">15 son de citas gratis</span></div></div>
   </div>
 
   <div class="slbl">Modelo de negocio · híbrido tienda + ecommerce</div>
@@ -557,7 +594,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="ch-card ecomm">
       <div class="ch-head">🏪 Tienda física <span class="bdg green">✓ Motor principal del negocio</span></div>
       <div class="ch-row"><span class="ch-k">Cierre en tienda</span><span class="ch-v green">36% (vs 5-10% al iniciar)</span></div>
-      <div class="ch-row"><span class="ch-k">Ingresos julio (cierre final)</span><span class="ch-v green">$16M+ (71 vestidos)</span></div>
+      <div class="ch-row"><span class="ch-k">Ingresos agosto (al 24)</span><span class="ch-v green">$15,5M (55 prendas)</span></div>
       <div class="ch-row"><span class="ch-k">Costo por vestido vendido</span><span class="ch-v green">~$15-22K</span></div>
       <div class="ch-row"><span class="ch-k">Confecciones personalizadas</span><span class="ch-v">10 en proceso · $500–600K c/u</span></div>
       <div class="ch-row"><span class="ch-k">Palanca</span><span class="ch-v amber">Segunda vendedora con comisión — un solo bloque de evento no alcanza a cerrar todo</span></div>
@@ -566,32 +603,34 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="ch-head">🌐 E-commerce <span class="bdg red">⚠ Add-to-Cart crítico</span></div>
       <div class="ch-row"><span class="ch-k">Tráfico móvil</span><span class="ch-v">~90% (20K sesiones/mes)</span></div>
       <div class="ch-row"><span class="ch-k">Add-to-Cart móvil</span><span class="ch-v red">0.3%</span></div>
-      <div class="ch-row"><span class="ch-k">Ingresos julio (cierre final)</span><span class="ch-v red">$638K (5 productos)</span></div>
+      <div class="ch-row"><span class="ch-k">Ingresos agosto (al 24)</span><span class="ch-v amber">$692K</span></div>
       <div class="ch-row"><span class="ch-k">Ratio eficiencia</span><span class="ch-v amber">17 pts — pero limitado por Add-to-Cart</span></div>
       <div class="ch-row"><span class="ch-k">Palanca</span><span class="ch-v amber">PDP/carrusel jerarquizado por cuerpo-talla (piloto en curso con Belu)</span></div>
     </div>
   </div>
 
-  <div class="slbl">Ratio de rentabilidad por hora en tienda — por qué "subir la vara"</div>
+  <div class="slbl">Ratio de rentabilidad por hora en tienda — recalculado con agosto real</div>
   <div class="ch-split">
     <div class="ch-card store">
-      <div class="ch-head">🕐 Cita gratis <span class="bdg red">$96K/hora</span></div>
+      <div class="ch-head">🕐 Cita gratis <span class="bdg amber">~$218K/hora</span></div>
       <div class="ch-row"><span class="ch-k">Duración</span><span class="ch-v">15 min</span></div>
-      <div class="ch-row"><span class="ch-k">Tasa de cierre</span><span class="ch-v red">8%</span></div>
-      <div class="ch-row"><span class="ch-k">En 1 hora caben</span><span class="ch-v">4 citas → 0,32 ventas</span></div>
-      <div class="ch-row"><span class="ch-k">Revenue esperado/hora</span><span class="ch-v red">$96.000</span></div>
+      <div class="ch-row"><span class="ch-k">Tasa de cierre real</span><span class="ch-v amber">15%</span></div>
+      <div class="ch-row"><span class="ch-k">En 1 hora caben</span><span class="ch-v">4 citas → 0,60 ventas</span></div>
+      <div class="ch-row"><span class="ch-k">Revenue esperado/hora</span><span class="ch-v amber">~$218.000</span></div>
+      <div class="ch-row"><span class="ch-k">Costo oculto</span><span class="ch-v red">15 de los 17 no-shows + reseñas negativas</span></div>
     </div>
     <div class="ch-card ecomm">
-      <div class="ch-head">✨ Cita experiencia <span class="bdg green">$200K/hora</span></div>
-      <div class="ch-row"><span class="ch-k">Duración</span><span class="ch-v">45 min</span></div>
-      <div class="ch-row"><span class="ch-k">Tasa de cierre</span><span class="ch-v green">50%</span></div>
-      <div class="ch-row"><span class="ch-k">En 1 hora caben</span><span class="ch-v">1,3 citas → 0,67 ventas</span></div>
-      <div class="ch-row"><span class="ch-k">Revenue esperado/hora</span><span class="ch-v green">$200.000</span></div>
+      <div class="ch-head">✨ Cita experiencia <span class="bdg green">~$187K/hora</span></div>
+      <div class="ch-row"><span class="ch-k">Duración</span><span class="ch-v">50 min</span></div>
+      <div class="ch-row"><span class="ch-k">Tasa de cierre real</span><span class="ch-v green">43%</span></div>
+      <div class="ch-row"><span class="ch-k">En 1 hora caben</span><span class="ch-v">1,2 citas → 0,52 ventas</span></div>
+      <div class="ch-row"><span class="ch-k">Revenue esperado/hora</span><span class="ch-v green">~$187.000</span></div>
+      <div class="ch-row"><span class="ch-k">A favor</span><span class="ch-v green">clienta que llega decidida · casi sin no-shows</span></div>
     </div>
   </div>
-  <div class="alert-box info">
+  <div class="alert-box warn">
     <span class="alert-icon">🧮</span>
-    <div><div class="alert-title">La experiencia rinde 2,08x más por hora de equipo que la gratis</div><div class="alert-text">Con ticket medio de $300.000: normalizando por hora (no por cita), la cita experiencia genera el doble de plata que la gratis, aunque cierre menos citas por bloque. No es preferencia — es la decisión matemáticamente más rentable con los datos actuales. Por eso "subir la vara" (priorizar experiencia, dejar de promover la gratis) es la jugada correcta.</div></div>
+    <div><div class="alert-title">Con los datos reales de agosto, la brecha se da vuelta — y por eso la cita gratis se arregla en vez de eliminarse</div><div class="alert-text">La estimación anterior (8% de cierre en la gratis, 50% en la experiencia) suponía un ticket parejo y números que agosto corrigió: la gratis cierra 15% y la experiencia 43%. Calculado a ticket parejo de $363.000, la gratis rinde <strong>~$218K por hora</strong> y la experiencia <strong>~$187K</strong>. Lo que hace cara a la gratis no es la conversión: es que se lleva 15 de los 17 no-shows, satura el horario peak y genera reseñas negativas en Agenda Pro por una expectativa que no cumple. <strong>Falta un dato para cerrar la discusión con números:</strong> el ticket promedio separado por tipo de cita — la experiencia es donde se cierra la confección de $500K, así que su ticket real debería ser más alto. Se pide en la Sem 13.</div></div>
   </div>
 
   <div class="slbl">Cuello de botella → oportunidad · según las llamadas</div>
@@ -748,6 +787,46 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
+  <div class="slbl">Lo que queda instalado — el bloque 1 no se archiva, se hereda</div>
+  <div class="bn-grid">
+    <div class="bn-card i"><div class="bn-head"><span class="bn-n i">01</span><span class="bn-title">Aislar la objeción antes de ofrecer</span></div><div class="bn-text">La escala 1–10 separa Producto de Decisión. Si el problema de producto se resuelve en la conversación y aun así no compra, la objeción real es Precio — recién ahí se habla de cuotas.</div><div class="bn-imp i">Cierre en tienda 5% → 36%</div></div>
+    <div class="bn-card i"><div class="bn-head"><span class="bn-n i">02</span><span class="bn-title">La hora del equipo es el recurso escaso</span></div><div class="bn-text">No la pauta. Toda decisión de agenda se evalúa por lo que rinde una hora de tienda, no por cuántas citas entran.</div><div class="bn-imp i">78 horas en ago-26 vs 120 en ago-25</div></div>
+    <div class="bn-card i"><div class="bn-head"><span class="bn-n i">03</span><span class="bn-title">El mix de agenda manda sobre el volumen</span></div><div class="bn-text">La cita Experiencia cierra 43% y la gratis 15%. Más citas no es más negocio: es más horas ocupadas con peor conversión.</div><div class="bn-imp i">54 Experiencia vs 130 gratis en agosto</div></div>
+    <div class="bn-card i"><div class="bn-head"><span class="bn-n i">04</span><span class="bn-title">No se compra tráfico, se compra agenda</span></div><div class="bn-text">La métrica de pauta que importa es el costo por cita agendada, no el costo por clic ni por conversación.</div><div class="bn-imp i">Costo por agenda $3,7K · mínimo histórico</div></div>
+    <div class="bn-card i"><div class="bn-head"><span class="bn-n i">05</span><span class="bn-title">Reactivar cuesta menos que adquirir</span></div><div class="bn-text">Quien ya visitó vuelve más barato que una clienta nueva. Se reactiva con valor real (guía de styling), nunca con un descuento disfrazado.</div><div class="bn-imp i">Se descartó la colorimetría gratis</div></div>
+    <div class="bn-card i"><div class="bn-head"><span class="bn-n i">06</span><span class="bn-title">Lo que no está documentado no se delega</span></div><div class="bn-text">El SOP es lo que permite que una persona nueva — o un agente de IA — ejecute sin Marjorie encima. Vale para la vendedora nueva y para Claude sobre Shopify.</div><div class="bn-imp i">Equipo comercial 1 → 3 + Belu</div></div>
+  </div>
+
+  <div class="slbl">Baseline congelado · contra esto se mide el bloque 2</div>
+  <div class="rn-grid">
+    <div class="rn-c up"><div class="rn-l">Ticket promedio</div><div class="rn-v"><span class="de">$253K</span> → <span class="to">$363K</span></div><div class="rn-s">ago-2025 vs ago-2026</div></div>
+    <div class="rn-c up"><div class="rn-l">Horas trabajadas</div><div class="rn-v"><span class="de">120</span> → <span class="to">78</span></div><div class="rn-s">menos horas, más plata</div></div>
+    <div class="rn-c"><div class="rn-l">Venta tienda · agosto</div><div class="rn-v">$15,5M</div><div class="rn-s">55 prendas · al 24/08</div></div>
+    <div class="rn-c"><div class="rn-l">Venta web · agosto</div><div class="rn-v">$692K</div><div class="rn-s">el canal a mover</div></div>
+    <div class="rn-c"><div class="rn-l">Pauta agosto</div><div class="rn-v">$1,31M</div><div class="rn-s">2.235 conversaciones</div></div>
+    <div class="rn-c"><div class="rn-l">Citas gratis</div><div class="rn-v">130</div><div class="rn-s">cierre 15% · 15 no-shows</div></div>
+    <div class="rn-c up"><div class="rn-l">Citas Experiencia</div><div class="rn-v">54</div><div class="rn-s">cierre 43% · 2 no-shows</div></div>
+    <div class="rn-c"><div class="rn-l">Confección</div><div class="rn-v">10</div><div class="rn-s">ticket ~$500K</div></div>
+  </div>
+  <div class="alert-box warn" style="margin-top:2px">
+    <span class="alert-icon">🧮</span>
+    <div><div class="alert-title">Falta un dato para cerrar la discusión de la cita gratis: el ticket por tipo de cita</div><div class="alert-text">Con el ticket parejo de $363.000, la cita gratis rinde ~$218K por hora de tienda y la Experiencia ~$187K — la gratis no queda atrás. Lo que la hace cara es otra cosa: se lleva 15 de los 17 no-shows, satura el horario peak y genera reseñas negativas en Agenda Pro. Para decidir con números y no con intuición hace falta el ticket promedio separado por tipo de cita. Es el primer dato que se pide en la Sem 13.</div></div>
+  </div>
+
+  <div class="slbl">Programa por bloques</div>
+
+  <div class="blk">
+    <div class="blk-hd" onclick="toggleBlk(this)">
+      <span class="blk-n done">01</span>
+      <div class="blk-info">
+        <div class="blk-title">Bloque 1 · Junio – Agosto 2026</div>
+        <div class="blk-sub">12 sesiones · del diagnóstico al cierre con renovación firmada · toca para ver las 12 completas</div>
+      </div>
+      <span class="bdg teal">✓ Cerrado</span>
+      <span class="blk-ico">▼</span>
+    </div>
+    <div class="blk-body">
+
   <div class="slbl">Estructura · 3 meses · 12 sesiones</div>
   <div class="phase-grid">
     <div class="phase-card m1">
@@ -763,7 +842,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="phase-tags"><span class="bdg grey">Escalar gasto</span><span class="bdg grey">PDP/Carrusel</span><span class="bdg grey">Belu</span><span class="bdg grey">Renovación 🟢</span></div>
     </div>
     <div class="phase-card m3">
-      <div class="phase-hd"><span class="phase-tag">Mes 3 · Sem 9–12</span><span class="bdg teal">En curso</span></div>
+      <div class="phase-hd"><span class="phase-tag">Mes 3 · Sem 9–12</span><span class="bdg teal">✓ Completado</span></div>
       <div class="phase-title">Capacidad de venta + sistemas agénticos + cierre del programa</div>
       <div class="phase-text">Julio cierra con $19M finales y 36% de cierre en tienda. Meta agosto $30M, calculada hacia atrás ($2-2.5M pauta + 400 citas). Próximo cuello: segunda vendedora con comisión. Shopify-Claude y SEO se retoman el 10/08.</div>
       <div class="phase-tags"><span class="bdg grey">Capacidad venta</span><span class="bdg grey">Meta $30M</span><span class="bdg grey">Shopify-Claude</span><span class="bdg grey">Renovación 🟢</span></div>
@@ -773,7 +852,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="rm-track-wrap">
     <div style="font-size:12px;font-weight:600;color:var(--dark);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px">
       Recorrido por etapas del Flywheel
-      <span class="bdg red">🔴 Próxima: Sem 12 — lunes 24 ago · Cierre del bloque + renovación</span>
+      <span class="bdg teal">✓ Bloque cerrado el 24 de agosto · renovación firmada</span>
     </div>
     <div class="rm-track">
       <div class="rm-node"><div class="rm-dot done">1</div><div class="rm-lbl">Foundations</div><div class="rm-sub">Diagnóstico</div></div>
@@ -786,12 +865,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="rm-node"><div class="rm-dot done">8</div><div class="rm-lbl mt">Regiones</div><div class="rm-sub">Cierre proy.</div></div>
       <div class="rm-node"><div class="rm-dot done">9</div><div class="rm-lbl mt">Capacidad</div><div class="rm-sub">Comisiones</div></div>
       <div class="rm-node"><div class="rm-dot done">10</div><div class="rm-lbl mt">Sistemas</div><div class="rm-sub">Economía tiempo</div></div>
-      <div class="rm-node"><div class="rm-dot critical">11</div><div class="rm-lbl mt">Referidos</div><div class="rm-sub">Renovación</div></div>
-      <div class="rm-node"><div class="rm-dot future">12</div><div class="rm-lbl mt">Cierre 90d</div><div class="rm-sub">¿Continuidad?</div></div>
+      <div class="rm-node"><div class="rm-dot done">11</div><div class="rm-lbl mt">Referidos</div><div class="rm-sub">Pauta y bodas</div></div>
+      <div class="rm-node"><div class="rm-dot done">12</div><div class="rm-lbl mt">Cierre 90d</div><div class="rm-sub">✓ Renovado</div></div>
     </div>
   </div>
 
-  <div class="slbl">Sesiones completadas</div>
+  <div class="slbl">Las 12 sesiones del bloque 1</div>
 
   <div class="week-card done" onclick="toggleCard(this)">
     <div class="week-hd"><div class="week-info"><div class="week-title">Sem 1 — Foundations · Diagnóstico inicial</div><div class="week-date">Revisión de brecha interanual y modelo híbrido</div></div><span class="bdg teal">✓</span></div>
@@ -1168,19 +1247,268 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="week-card critical open" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 12 — Cierre del bloque + renovación 🎁</div><div class="week-date">📅 Lunes 24 de agosto</div></div><span class="bdg red">Próxima · Última del bloque</span></div>
+  <div class="week-card done open" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 12 — Cierre del bloque 1 + renovación firmada 🥂</div><div class="week-date">📅 Lunes 24 de agosto · 60 min</div></div><span class="bdg teal">✓ Última del bloque</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
-      <div class="week-chips"><span class="bdg red">Renovación</span><span class="bdg grey">Cyber Monday</span><span class="bdg grey">Baseline vs. final</span></div>
+      <div class="week-chips"><span class="bdg teal">Renovación</span><span class="bdg teal">Agosto cerrado</span><span class="bdg amber">Cita gratis</span><span class="bdg grey">Estrategia web</span></div>
       <div class="week-sec">🎯 Núcleo</div>
-      <div class="week-text">Última sesión del bloque de 12 semanas. Se cierra con el baseline de la sesión 1 contra el resultado final, en números, y se define el plan de calentamiento de e-commerce para el Cyber Monday de octubre.</div>
-      <div class="week-sec">📝 Entregable</div>
-      <div class="week-text">Plan de calentamiento e-commerce + cierre del bloque con resultados medidos + propuesta del siguiente bloque de 3 meses.</div>
+      <div class="week-text">Se revisó agosto completo y se firmó el segundo bloque. El dato que ordenó la sesión: la cita Experiencia cierra <strong>43%</strong> y la gratis <strong>15%</strong>, y 15 de los 17 no-shows del mes son de citas gratuitas. La gratis además está generando reseñas negativas en Agenda Pro, porque la clienta llega esperando una asesoría completa y recibe una prueba de 15 minutos. La decisión no fue eliminarla sino <strong>optimizarla con un upsell hacia la Experiencia</strong>.</div>
+      <div class="week-sec">📊 Agosto al 24 — los números que se revisaron</div>
+      <div class="week-text"><ul>
+        <li>Pauta: $1.307.203 · 2.235 conversaciones generadas</li>
+        <li>Citas: 130 gratuitas · 54 Experiencia · 10 confección</li>
+        <li>Venta tienda: $15.564.793 (55 prendas) · Venta web: $692.094</li>
+        <li>Ticket promedio: $363.000 (vs $253.000 en agosto 2025)</li>
+        <li>Horas trabajadas: 78 (vs 120 en agosto 2025)</li>
+        <li>No-shows: 17 — 15 gratuitas, 2 pagadas</li>
+      </ul></div>
+      <div class="week-sec">✅ Renovación</div>
+      <div class="week-text">Segundo bloque de 3 meses cerrado en <strong>$1.500.000</strong>, contra el valor actualizado de $2.000.000. El siguiente bloque queda anclado desde ya en <strong>$1.750.000</strong>. Beneficios acordados: cashback de $350.000 por referida, plantillas y skills de Claude instaladas, y tech gifts.</div>
+      <div class="week-sec">Pendientes de Marjorie</div>
+      <div class="week-text"><ul>
+        <li><span class="pend">Pendiente:</span> Grabar y enviar el video de upsell a quien agenda cita gratis — explicar la diferencia entre los dos tipos y vender la asesoría de 50 minutos, no un vestido</li>
+        <li><span class="pend">Pendiente:</span> Analizar los no-shows para definir la ventana óptima de agendamiento</li>
+        <li><span class="pend">Pendiente:</span> Pagar la renovación</li>
+        <li><span class="pend">Pendiente:</span> Definir qué producto sale a web: el sale y los vestidos para regiones</li>
+      </ul></div>
+      <div class="week-sec">Pendientes de Pato</div>
+      <div class="week-text"><ul>
+        <li><span class="pend">Pendiente:</span> Enviar el link de pago y la factura</li>
+        <li><span class="pend">Pendiente:</span> Llegar a la Sem 13 con el plan de estrategia web armado</li>
+        <li><span class="pend">Pendiente:</span> Entregar el alcance escrito del bloque 2, con baseline congelado y fechas</li>
+        <li><span class="pend">Pendiente:</span> Entregar los beneficios de la renovación en la primera semana: plantillas, skills y tech gifts</li>
+        <li><span class="pend">Pendiente:</span> Pasar el guion del video de upsell para que no se trabe</li>
+      </ul></div>
       <div class="alert-box info" onclick="event.stopPropagation()">
-        <span class="alert-icon">🎁</span>
-        <div><div class="alert-title">Pendiente de arrastre: SEO, Shopify-Claude y campaña web</div><div class="alert-text">Van 3 sesiones pospuestos. Entran al alcance del siguiente bloque.</div></div>
+        <span class="alert-icon">💡</span>
+        <div><div class="alert-title">El reframe de la sesión</div><div class="alert-text">Menos trabajo en showroom no es menos negocio: es el tiempo que libera para dejar el e-commerce andando. El bloque 2 no agrega horas — reasigna las que devuelve el arreglo de la cita gratis.</div></div>
       </div>
+      <a class="rec-link" href="https://fathom.video/share/teESZUidMihCRSHjr2YQnJtjUnHzeoSR" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 12 (60 min)</a>
+    </div>
+  </div>
+
+    </div>
+  </div>
+
+  <div class="blk live open">
+    <div class="blk-hd" onclick="toggleBlk(this)">
+      <span class="blk-n live">02</span>
+      <div class="blk-info">
+        <div class="blk-title">Bloque 2 · Septiembre – Noviembre 2026</div>
+        <div class="blk-sub">12 sesiones · KPI del bloque: facturación total · arranca lunes 31 de agosto</div>
+      </div>
+      <span class="bdg red">En curso</span>
+      <span class="blk-ico">▼</span>
+    </div>
+    <div class="blk-body">
+
+  <div class="slbl">Las 7 decisiones que ordenan el bloque</div>
+  <div class="bn-grid">
+    <div class="bn-card c"><div class="bn-head"><span class="bn-n c">01</span><span class="bn-title">El KPI es facturación total</span></div><div class="bn-text">No ventas web aisladas. La web es el vehículo para crecer sin sumar horas de equipo, no una meta en sí misma.</div></div>
+    <div class="bn-card w"><div class="bn-head"><span class="bn-n w">02</span><span class="bn-title">Qué sale a la web</span></div><div class="bn-text">El sale y los vestidos para regiones. No se baja el ticket a propósito para captar volumen: si la clienta compra más caro, mejor.</div></div>
+    <div class="bn-card c"><div class="bn-head"><span class="bn-n c">03</span><span class="bn-title">La cita gratis se optimiza, no se elimina</span></div><div class="bn-text">El upsell a la Experiencia se busca dentro de la propia cita gratis. El video es el primer movimiento, no el único.</div></div>
+    <div class="bn-card i"><div class="bn-head"><span class="bn-n i">04</span><span class="bn-title">Escalera de precio</span></div><div class="bn-text">Este bloque $1.500.000. El siguiente sube a $1.750.000 cada 3 meses. Queda dicho desde ahora, no se negocia al final.</div></div>
+    <div class="bn-card w"><div class="bn-head"><span class="bn-n w">05</span><span class="bn-title">Quién ejecuta</span></div><div class="bn-text">Ejecuta el equipo de Emma. Pato aporta skills, sistemas y criterio. Si hay ejecución, va de la mano de la sesión — sesiones prácticas, no tareas delegadas hacia afuera.</div></div>
+    <div class="bn-card i"><div class="bn-head"><span class="bn-n i">06</span><span class="bn-title">Contra qué se mide</span></div><div class="bn-text">Agosto 2025 contra agosto 2026 para el cierre del bloque 1, y de ahí en adelante mes contra mes. Baseline congelado arriba.</div></div>
+    <div class="bn-card w"><div class="bn-head"><span class="bn-n w">07</span><span class="bn-title">El cyber se define antes de armarse</span></div><div class="bn-text">Primero qué buscamos en el evento, con qué productos y qué proyectamos. Recién con eso se arma la campaña y se fija la meta del bloque.</div></div>
+  </div>
+
+  <div class="slbl">Estructura · 3 meses · 12 sesiones</div>
+  <div class="phase-grid">
+    <div class="phase-card m1">
+      <div class="phase-hd"><span class="phase-tag">Mes 1 · Sem 13–16</span><span class="bdg red">En curso</span></div>
+      <div class="phase-title">Arreglar la agenda y montar el e-commerce con criterio</div>
+      <div class="phase-text">Las horas que devuelve el arreglo de la cita gratis se reasignan a dejar la web andando. Se define el mix de producto (sale + regiones), sale el video de upsell y arranca el calentamiento regional para el cyber.</div>
+      <div class="phase-tags"><span class="bdg grey">Estrategia web</span><span class="bdg grey">Upsell cita</span><span class="bdg grey">Lista regional</span><span class="bdg grey">CRO PDP</span></div>
+    </div>
+    <div class="phase-card m2">
+      <div class="phase-hd"><span class="phase-tag">Mes 2 · Sem 17–20</span><span class="bdg grey">Por venir</span></div>
+      <div class="phase-title">Cyber Monday y la deuda técnica de la web</div>
+      <div class="phase-text">El cyber se corre sobre lista propia, no sobre pauta fría. Después del evento se lee qué convirtió y se paga por fin la deuda de SEO y Shopify con Claude, que lleva cuatro sesiones pospuesta.</div>
+      <div class="phase-tags"><span class="bdg grey">Cyber</span><span class="bdg grey">Post-mortem</span><span class="bdg grey">SEO</span><span class="bdg grey">Shopify + Claude</span></div>
+    </div>
+    <div class="phase-card m3">
+      <div class="phase-hd"><span class="phase-tag">Mes 3 · Sem 21–24</span><span class="bdg grey">Por venir</span></div>
+      <div class="phase-title">Temporada alta con el criterio ya instalado</div>
+      <div class="phase-text">Graduaciones y matrimonios con el equipo de tres entrenado y la Experiencia como cita por defecto. Se sistematizan recompra y referidos, se mide el bloque completo y se cierra la continuidad.</div>
+      <div class="phase-tags"><span class="bdg grey">Temporada alta</span><span class="bdg grey">Recompra</span><span class="bdg grey">Referidos</span><span class="bdg grey">Cierre + renovación</span></div>
+    </div>
+  </div>
+
+  <div class="rm-track-wrap">
+    <div style="font-size:12px;font-weight:600;color:var(--dark);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px">
+      Recorrido del bloque 2
+      <span class="bdg red">🔴 Próxima: Sem 13 — lunes 31 ago · Estrategia web</span>
+    </div>
+    <div class="rm-track">
+      <div class="rm-node"><div class="rm-dot critical">13</div><div class="rm-lbl">Estrategia web</div><div class="rm-sub">31 ago</div></div>
+      <div class="rm-node"><div class="rm-dot future">14</div><div class="rm-lbl">Upsell cita</div><div class="rm-sub">7 sep</div></div>
+      <div class="rm-node"><div class="rm-dot future">15</div><div class="rm-lbl">Lista regional</div><div class="rm-sub">14 sep</div></div>
+      <div class="rm-node"><div class="rm-dot future">16</div><div class="rm-lbl">CRO PDP</div><div class="rm-sub">21 sep</div></div>
+      <div class="rm-node"><div class="rm-dot future">17</div><div class="rm-lbl mt">Pre-cyber</div><div class="rm-sub">28 sep</div></div>
+      <div class="rm-node"><div class="rm-dot future">18</div><div class="rm-lbl mt">Cyber</div><div class="rm-sub">5 oct</div></div>
+      <div class="rm-node"><div class="rm-dot future">19</div><div class="rm-lbl mt">Post-mortem</div><div class="rm-sub">12 oct</div></div>
+      <div class="rm-node"><div class="rm-dot future">20</div><div class="rm-lbl mt">SEO + Claude</div><div class="rm-sub">19 oct</div></div>
+      <div class="rm-node"><div class="rm-dot future">21</div><div class="rm-lbl mt">Temporada alta</div><div class="rm-sub">26 oct</div></div>
+      <div class="rm-node"><div class="rm-dot future">22</div><div class="rm-lbl mt">Recompra</div><div class="rm-sub">2 nov</div></div>
+      <div class="rm-node"><div class="rm-dot future">23</div><div class="rm-lbl mt">Medición</div><div class="rm-sub">9 nov</div></div>
+      <div class="rm-node"><div class="rm-dot future">24</div><div class="rm-lbl mt">Cierre + renov.</div><div class="rm-sub">16 nov</div></div>
+    </div>
+  </div>
+
+  <div class="slbl">Las 12 sesiones del bloque 2</div>
+
+  <div class="week-card critical open" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 13 — Estrategia web: qué buscamos, con qué y cuánto</div><div class="week-date">📅 Lunes 31 de agosto</div></div><span class="bdg red">Próxima · La lidera Pato</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg red">Estrategia web</span><span class="bdg grey">Proyección</span><span class="bdg grey">Mix de producto</span></div>
+      <div class="week-sec">🎯 Núcleo</div>
+      <div class="week-text">Antes de armar nada se responden tres preguntas: <strong>qué buscamos en el cyber</strong> (facturación, lista, primera compra de regiones), <strong>qué productos entran</strong> (el sale y los vestidos para regiones) y <strong>qué proyectamos</strong>. Con eso se fija la meta del bloque; sin eso, cualquier campaña es improvisación cara.</div>
+      <div class="week-sec">📝 Entregable</div>
+      <div class="week-text">Plan de e-commerce escrito: objetivo del cyber, catálogo que entra, proyección de venta y calendario de calentamiento. Más el alcance del bloque 2 firmado por escrito.</div>
+      <div class="week-sec">Qué necesito de ti antes de la sesión</div>
+      <div class="week-text"><ul>
+        <li><span class="pend">Pendiente:</span> Ticket promedio separado por tipo de cita — gratis, Experiencia y confección. Es el dato que falta para decidir la agenda con números</li>
+        <li><span class="pend">Pendiente:</span> Listado del sale y de los modelos que se pueden vender a regiones sin prueba</li>
+        <li><span class="pend">Pendiente:</span> Ventas web por región de los últimos 3 meses</li>
+      </ul></div>
+    </div>
+  </div>
+
+  <div class="week-card plan" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 14 — El upsell dentro de la cita gratis</div><div class="week-date">📅 Lunes 7 de septiembre</div></div><span class="bdg grey">Por venir</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg grey">Upsell</span><span class="bdg grey">Agenda</span><span class="bdg grey">No-shows</span></div>
+      <div class="week-sec">🎯 Núcleo</div>
+      <div class="week-text">Revisar el video de upsell ya enviado y el flujo completo: el equipo manda el video, la clienta confirma interés y se reagenda como Experiencia. Además se ataca el no-show con la ventana de agendamiento que salga del análisis.</div>
+      <div class="week-sec">📝 Entregable</div>
+      <div class="week-text">Flujo de upsell operando con guion y responsable, más la nueva regla de agendamiento. Primera medición del corrimiento del mix gratis → Experiencia.</div>
+    </div>
+  </div>
+
+  <div class="week-card plan" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 15 — Lead magnet y lista regional</div><div class="week-date">📅 Lunes 14 de septiembre</div></div><span class="bdg grey">Por venir</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg grey">Lead magnet</span><span class="bdg grey">Regiones</span><span class="bdg grey">Calentamiento</span></div>
+      <div class="week-sec">🎯 Núcleo</div>
+      <div class="week-text">Arranca el calentamiento del cyber, seis semanas antes. Primero se identifican las regiones que más venden y más siguen, después sale el lead magnet que construye la lista propia. Lanzar en frío el día del evento quema presupuesto.</div>
+      <div class="week-sec">📝 Entregable</div>
+      <div class="week-text">Lead magnet publicado, segmentación regional definida y lista propia creciendo con número medible por semana.</div>
+    </div>
+  </div>
+
+  <div class="week-card plan" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 16 — CRO del PDP: el add-to-cart de 0,3%</div><div class="week-date">📅 Lunes 21 de septiembre</div></div><span class="bdg grey">Por venir · Sesión práctica</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg grey">CRO</span><span class="bdg grey">PDP</span><span class="bdg grey">Móvil</span></div>
+      <div class="week-sec">🎯 Núcleo</div>
+      <div class="week-text">El 90% del tráfico es móvil y el add-to-cart lleva meses en 0,3%. Se trabaja en vivo con Belu sobre la ficha de producto: jerarquía por cuerpo-talla, prueba social localizada y la información que la clienta de regiones necesita para comprar sin probarse.</div>
+      <div class="week-sec">📝 Entregable</div>
+      <div class="week-text">PDP intervenida y publicada antes del cyber, con medición de add-to-cart antes y después.</div>
+    </div>
+  </div>
+
+  <div class="week-card plan" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 17 — Última pasada antes del cyber</div><div class="week-date">📅 Lunes 28 de septiembre</div></div><span class="bdg grey">Por venir</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg grey">Oferta</span><span class="bdg grey">Stock</span><span class="bdg grey">Proyección</span></div>
+      <div class="week-sec">🎯 Núcleo</div>
+      <div class="week-text">Cerrar la oferta del evento, revisar stock contra la proyección de la Sem 13 y dejar la operación lista: quién responde WhatsApp, cómo se despacha a regiones y qué se hace si la demanda supera lo previsto.</div>
+      <div class="week-sec">📝 Entregable</div>
+      <div class="week-text">Plan de ejecución del cyber cerrado, con oferta, stock comprometido, responsables y plan de contingencia.</div>
+    </div>
+  </div>
+
+  <div class="week-card plan" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 18 — Semana del Cyber: leer mientras corre</div><div class="week-date">📅 Lunes 5 de octubre · fecha oficial por confirmar</div></div><span class="bdg grey">Por venir</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg grey">Cyber</span><span class="bdg grey">Datos en vivo</span></div>
+      <div class="week-sec">🎯 Núcleo</div>
+      <div class="week-text">Sesión de lectura en caliente: qué producto se mueve, de qué región llega, qué mensaje convierte. Las decisiones de presupuesto se toman durante el evento, no después.</div>
+      <div class="week-sec">📝 Entregable</div>
+      <div class="week-text">Ajustes de campaña aplicados en vivo y registro de lo que funcionó para el post-mortem.</div>
+    </div>
+  </div>
+
+  <div class="week-card plan" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 19 — Post-mortem del cyber</div><div class="week-date">📅 Lunes 12 de octubre</div></div><span class="bdg grey">Por venir</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg grey">Resultados</span><span class="bdg grey">Aprendizajes</span></div>
+      <div class="week-sec">🎯 Núcleo</div>
+      <div class="week-text">Qué convirtió de la lista propia contra lo que convirtió de pauta fría, cuánto costó cada venta web y qué parte del catálogo se movió. De acá sale la regla para el próximo evento y para la temporada alta.</div>
+      <div class="week-sec">📝 Entregable</div>
+      <div class="week-text">Números del cyber cerrados y las dos o tres reglas que quedan escritas para repetir el evento sin volver a partir de cero.</div>
+    </div>
+  </div>
+
+  <div class="week-card plan" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 20 — SEO y Shopify con Claude</div><div class="week-date">📅 Lunes 19 de octubre</div></div><span class="bdg amber">Deuda de 4 sesiones</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg amber">Deuda</span><span class="bdg grey">SEO</span><span class="bdg grey">Automatización</span></div>
+      <div class="week-sec">🎯 Núcleo</div>
+      <div class="week-text">La parte técnica que se viene posponiendo desde el bloque 1. Conectar Claude a Shopify para que la captura de datos deje de ser manual, y sacar los artículos de blog que sostienen la visibilidad orgánica del canal web.</div>
+      <div class="week-sec">📝 Entregable</div>
+      <div class="week-text">Conexión operando, primeros artículos publicados y el criterio para que el equipo siga produciendo sin depender de la sesión.</div>
+    </div>
+  </div>
+
+  <div class="week-card plan" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 21 — Temporada alta con el equipo de tres</div><div class="week-date">📅 Lunes 26 de octubre</div></div><span class="bdg grey">Por venir</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg grey">Graduaciones</span><span class="bdg grey">Matrimonios</span><span class="bdg grey">Capacidad</span></div>
+      <div class="week-sec">🎯 Núcleo</div>
+      <div class="week-text">Primer peak que se entra con criterio instalado: la Experiencia como cita por defecto, el equipo entrenado en el sistema de objeciones y la agenda ordenada por rentabilidad de la hora, no por volumen.</div>
+      <div class="week-sec">📝 Entregable</div>
+      <div class="week-text">Plan de temporada alta con capacidad calculada, reglas de agenda y proyección de facturación por semana.</div>
+    </div>
+  </div>
+
+  <div class="week-card plan" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 22 — Recompra por email y referidos</div><div class="week-date">📅 Lunes 2 de noviembre</div></div><span class="bdg grey">Por venir</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg grey">Recompra</span><span class="bdg grey">Referidos</span><span class="bdg grey">Email</span></div>
+      <div class="week-sec">🎯 Núcleo</div>
+      <div class="week-text">Las dos palancas más baratas del negocio, todavía sin sistematizar: el barrido de quien visitó y no compró con la guía de styling, y el pedido de referido convertido en paso fijo del cierre y no en algo que se acuerda de pedir.</div>
+      <div class="week-sec">📝 Entregable</div>
+      <div class="week-text">Flujo de email de recompra andando y el pedido de referido incorporado al guion de venta, con su seguimiento.</div>
+    </div>
+  </div>
+
+  <div class="week-card plan" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 23 — Medición del bloque contra el baseline</div><div class="week-date">📅 Lunes 9 de noviembre</div></div><span class="bdg grey">Por venir</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg grey">Métricas</span><span class="bdg grey">Facturación total</span></div>
+      <div class="week-sec">🎯 Núcleo</div>
+      <div class="week-text">Facturación total del bloque contra el baseline congelado de agosto, mes a mes. Cuánto aportó la web, cuánto se movió el mix de agenda y cuántas horas costó cada peso. Sin adornos: los números que se fijaron en la Sem 13.</div>
+      <div class="week-sec">📝 Entregable</div>
+      <div class="week-text">Cierre numérico del bloque listo para la conversación de continuidad.</div>
+    </div>
+  </div>
+
+  <div class="week-card plan" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 24 — Cierre del bloque 2 + continuidad</div><div class="week-date">📅 Lunes 16 de noviembre</div></div><span class="bdg grey">Última del bloque</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg grey">Cierre</span><span class="bdg grey">Renovación</span><span class="bdg grey">Nicho bodas</span></div>
+      <div class="week-sec">🎯 Núcleo</div>
+      <div class="week-text">Cierre del bloque con resultados medidos y la conversación del siguiente, ya anclado en $1.750.000. En el alcance del bloque 3 entra el nicho de bodas: 12 de 14 confecciones son madres de novios y novias, a $500.000 de ticket, sin que nunca se les haya hablado directo.</div>
+      <div class="week-sec">📝 Entregable</div>
+      <div class="week-text">Cierre documentado, referido pedido y propuesta del bloque 3 sobre la mesa.</div>
+    </div>
+  </div>
+
     </div>
   </div>
 
@@ -1691,29 +2019,30 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="prob-icon">🥂</div>
     <div>
       <div class="prob-title">Renovación · el siguiente bloque de 3 meses</div>
-      <div class="prob-text">Cierre del bloque 1 con los números validados, lo que viene de septiembre a febrero, y las condiciones de continuidad. Todo lo conversado en la sesión 12, acá para consultar cuando quieras.</div>
+      <div class="prob-text"><strong>Firmada en la sesión 12 del 24 de agosto.</strong> Segundo bloque de 3 meses, de septiembre a noviembre. Acá quedan los números con que se cerró el bloque 1, lo que se decidió para el que viene y las condiciones, para consultar cuando quieras.</div>
     </div>
   </div>
 
-  <div class="slbl">Dónde estás hoy</div>
+  <div class="slbl">Con qué números cerró el bloque 1 · agosto 2025 vs agosto 2026</div>
   <div class="rn-grid">
+    <div class="rn-c up"><div class="rn-l">Ticket promedio</div><div class="rn-v"><span class="de">$253K</span> → <span class="to">$363K</span></div><div class="rn-s">ago-2025 vs ago-2026</div></div>
+    <div class="rn-c up"><div class="rn-l">Horas trabajadas</div><div class="rn-v"><span class="de">120</span> → <span class="to">78</span></div><div class="rn-s">menos horas, más plata</div></div>
     <div class="rn-c up"><div class="rn-l">Cierre en tienda</div><div class="rn-v"><span class="de">5%</span> → <span class="to">36%</span></div><div class="rn-s">meta trazada: 50%</div></div>
-    <div class="rn-c up"><div class="rn-l">Citas que pagan</div><div class="rn-v"><span class="de">13%</span> → <span class="to">42%</span></div><div class="rn-s">más volumen con más margen</div></div>
-    <div class="rn-c up"><div class="rn-l">Costo por mensaje</div><div class="rn-v"><span class="de">$700</span> → <span class="to">$530</span></div><div class="rn-s">estabilizado, no fue suerte</div></div>
     <div class="rn-c up"><div class="rn-l">Equipo comercial</div><div class="rn-v"><span class="de">1</span> → <span class="to">3</span></div><div class="rn-s">+ Belu en tecnología</div></div>
-    <div class="rn-c"><div class="rn-l">Presupuesto usado</div><div class="rn-v">42%</div><div class="rn-s">de los $2,2M proyectados</div></div>
-    <div class="rn-c"><div class="rn-l">Recaudado agosto</div><div class="rn-v">$10,7M</div><div class="rn-s">con el 42% del budget</div></div>
-    <div class="rn-c"><div class="rn-l">Julio cerrado</div><div class="rn-v">$19M</div><div class="rn-s">76 unidades · cierre final</div></div>
-    <div class="rn-c"><div class="rn-l">Rentabilidad / hora</div><div class="rn-v">2,08×</div><div class="rn-s">experiencia vs. gratis</div></div>
-    <div class="rn-c"><div class="rn-l">Citas de pago</div><div class="rn-v">57</div><div class="rn-s">49 experiencia · 8 confección</div></div>
-    <div class="rn-c"><div class="rn-l">Ticket confección</div><div class="rn-v">$500K</div><div class="rn-s">14 cierres sin campaña propia</div></div>
-    <div class="rn-c"><div class="rn-l">E-commerce agosto</div><div class="rn-v">$363K</div><div class="rn-s">sin pauta</div></div>
-    <div class="rn-c"><div class="rn-l">Costo por agenda</div><div class="rn-v">$3,7K</div><div class="rn-s">mínimo histórico</div></div>
+    <div class="rn-c up"><div class="rn-l">Cierre cita Experiencia</div><div class="rn-v">43%</div><div class="rn-s">contra 15% de la gratis</div></div>
+    <div class="rn-c"><div class="rn-l">Venta tienda · agosto</div><div class="rn-v">$15,5M</div><div class="rn-s">55 prendas · al 24/08</div></div>
+    <div class="rn-c"><div class="rn-l">Venta web · agosto</div><div class="rn-v">$692K</div><div class="rn-s">sin pauta propia</div></div>
+    <div class="rn-c"><div class="rn-l">Pauta agosto</div><div class="rn-v">$1,31M</div><div class="rn-s">2.235 conversaciones</div></div>
+    <div class="rn-c"><div class="rn-l">Citas agendadas</div><div class="rn-v">194</div><div class="rn-s">130 gratis · 54 exp. · 10 confección</div></div>
+    <div class="rn-c"><div class="rn-l">Ticket confección</div><div class="rn-v">$500K</div><div class="rn-s">sin campaña propia todavía</div></div>
+    <div class="rn-c up"><div class="rn-l">Costo por mensaje</div><div class="rn-v"><span class="de">$700</span> → <span class="to">$530</span></div><div class="rn-s">estabilizado, no fue suerte</div></div>
+    <div class="rn-c"><div class="rn-l">No-shows</div><div class="rn-v">17</div><div class="rn-s">15 de ellos, citas gratis</div></div>
   </div>
 
   <div class="rn-open">
     <div class="rn-open-l">Lo que todavía está abierto</div>
     <div class="rn-pills">
+      <span class="rn-pill hot">Ticket promedio por tipo de cita</span>
       <span class="rn-pill hot">CPA real — separar cuotas de unidades</span>
       <span class="rn-pill">SEO</span>
       <span class="rn-pill">Shopify + Claude</span>
@@ -1731,27 +2060,31 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="bn-card"><div class="bn-head"><span class="bn-n">03</span><span class="bn-title">Cierre</span></div><div class="bn-text">Subió tu tasa: entiendes al avatar de punta a punta, identificas las objeciones clave y sabes manejarlas.</div></div>
   </div>
 
-  <div class="slbl">Septiembre a febrero</div>
+  <div class="slbl">Qué cubre el bloque firmado · septiembre a noviembre</div>
   <div class="phase-grid">
-    <div class="phase-card">
-      <div class="phase-hd"><span class="phase-title">Cyber Monday</span><span class="phase-tag">Sep — Oct</span></div>
-      <div class="phase-text">Audiencia regional segmentada, lead magnet de calentamiento y campaña sobre lista propia. El e-commerce ya hace $363K sin pauta: acá es donde se multiplica. El calentamiento arranca la segunda semana de septiembre — seis a siete semanas antes, como tú misma dijiste.</div>
+    <div class="phase-card m1">
+      <div class="phase-hd"><span class="phase-title">Agenda y e-commerce</span><span class="phase-tag">Sem 13–16 · Sep</span></div>
+      <div class="phase-text">Las horas que devuelve el arreglo de la cita gratis se reasignan a dejar la web andando. Se define qué producto sale a web — el sale y los vestidos para regiones —, sale el video de upsell y arranca el calentamiento regional. La web ya hace $692K sin pauta propia: acá es donde se multiplica.</div>
     </div>
-    <div class="phase-card">
-      <div class="phase-hd"><span class="phase-title">Temporada alta</span><span class="phase-tag">Nov — Dic</span></div>
-      <div class="phase-text">Graduaciones y matrimonios con el equipo de 3 ya entrenado y la cita Experiencia como default. Es el primer peak que entras con criterio instalado.</div>
+    <div class="phase-card m2">
+      <div class="phase-hd"><span class="phase-title">Cyber Monday</span><span class="phase-tag">Sem 17–20 · Oct</span></div>
+      <div class="phase-text">El evento se corre sobre lista propia, no sobre pauta fría. Después se lee qué convirtió y se salda la deuda técnica de SEO y Shopify con Claude, que lleva cuatro sesiones pospuesta.</div>
     </div>
-    <div class="phase-card">
-      <div class="phase-hd"><span class="phase-title">Nicho bodas</span><span class="phase-tag">Ene — Feb</span></div>
-      <div class="phase-text">Campaña propia para madres de novios y novias: 12 de 14 confecciones ya son ese perfil, a $500.000 de ticket, sin haberles hablado nunca directo.</div>
+    <div class="phase-card m3">
+      <div class="phase-hd"><span class="phase-title">Temporada alta</span><span class="phase-tag">Sem 21–24 · Nov</span></div>
+      <div class="phase-text">Graduaciones y matrimonios con el equipo de 3 entrenado y la cita Experiencia como default. Es el primer peak que entras con criterio instalado. Se sistematizan recompra y referidos, y se cierra midiendo el bloque completo.</div>
     </div>
   </div>
   <div class="alert-box info" style="margin-top:10px">
     <span class="alert-icon">🤖</span>
-    <div><div class="alert-title">Transversal a los tres</div><div class="alert-text">Contenido con datos · SEO y CRO · referidos · recompra por email. Todo apalancado con IA, para que sume sin sumar headcount.</div></div>
+    <div><div class="alert-title">Transversal a los tres</div><div class="alert-text">Contenido con datos · SEO y CRO · referidos · recompra por email. Todo apalancado con IA, para que sume sin sumar headcount. El KPI del bloque es <strong>facturación total</strong>, no ventas web aisladas: la web es el vehículo para crecer sin agregar horas de equipo.</div></div>
+  </div>
+  <div class="alert-box warn" style="margin-top:2px">
+    <span class="alert-icon">💍</span>
+    <div><div class="alert-title">El nicho de bodas queda para el bloque siguiente</div><div class="alert-text">La campaña propia para madres de novios y novias — 12 de 14 confecciones son ese perfil, a $500.000 de ticket, sin haberles hablado nunca directo — necesita enero y febrero completos. Entra al alcance del bloque 3, no de este. Queda dicho ahora para que no se discuta en noviembre.</div></div>
   </div>
 
-  <div class="slbl">La inversión</div>
+  <div class="slbl">La inversión · firmada el 24 de agosto</div>
   <div class="rn-price">
     <div class="rn-box">
       <div><span class="rn-was">$2.000.000</span><span class="rn-was-l">valor actualizado · mentoría 3 meses</span></div>
@@ -1761,9 +2094,17 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
     <div class="rn-box rn-why">
       <div class="rn-why-l">Razón del bloque</div>
-      <p>Cerrar lo que quedó abierto y <b>entrar al cyber con plan</b>, no improvisando: lista regional construida, campaña de bodas validada y el equipo operando con criterio propio.</p>
+      <p>Cerrar lo que quedó abierto y <b>entrar al cyber con plan</b>, no improvisando: lista regional construida, el e-commerce operando y el equipo con criterio propio.</p>
       <p style="color:var(--muted);font-size:12px">Esto es el objetivo. Lo de abajo son los beneficios — no se confunden.</p>
     </div>
+  </div>
+  <div class="alert-box warn">
+    <span class="alert-icon">🧾</span>
+    <div><div class="alert-title">Pendiente para que arranque: el pago</div><div class="alert-text">Pato envía el link de pago y la factura. Pago total, o Mercado Pago en 3 cuotas con recargo. La sesión 13 es el lunes 31 de agosto.</div></div>
+  </div>
+  <div class="alert-box info">
+    <span class="alert-icon">📈</span>
+    <div><div class="alert-title">El valor del siguiente bloque queda fijado desde ahora: $1.750.000</div><div class="alert-text">La mentoría sube cada 3 meses. Se dice al firmar este bloque, no al final, para que la continuidad se decida por resultados y no por una sorpresa de precio.</div></div>
   </div>
 
   <div class="slbl">Beneficios de renovar</div>
@@ -1803,6 +2144,7 @@ function toggleMob(){setMenu(!mobDrop.classList.contains('open'));}
 function closeMob(){setMenu(false);}
 mobBtn.addEventListener('click',e=>{e.stopPropagation();toggleMob();});
 function toggleCard(card){card.classList.toggle('open');}
+function toggleBlk(hd){hd.parentElement.classList.toggle('open');}
 
 /* ═══ VENTAS · ROLEPLAYS DE CIERRE ═══ */
 const CAT={producto:'Producto',decision:'Decisión',presupuesto:'Presupuesto',tiempo:'Tiempo'};
