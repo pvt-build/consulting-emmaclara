@@ -128,7 +128,39 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .slide-pair{margin-top:7px;padding-top:7px;border-top:0.5px dashed var(--border)}
 
 /* FUNNEL */
-.brand-by{font-size:9.5px;font-weight:400;color:rgba(255,255,255,.4);margin-left:7px;letter-spacing:.02em}
+.brand-by{font-size:9.5px;font-weight:400;color:rgba(255,255,255,.42);margin-left:7px;letter-spacing:.02em}
+.brand-by sup{font-size:7px;vertical-align:super;opacity:.8}
+.brand-sep{color:rgba(255,255,255,.28);margin:0 2px}
+/* ═══ RADAR ═══ */
+.radar-wrap{background:var(--surf);border:0.5px solid var(--border);border-radius:13px;padding:18px 20px;margin-bottom:12px}
+.radar-grid{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
+.radar-svg{width:100%;max-width:340px;height:auto;display:block}
+.radar-svg .ring{fill:none;stroke:var(--border);stroke-width:1}
+.radar-svg .spoke{stroke:var(--border);stroke-width:1}
+.radar-svg .ax{fill:var(--muted);font-size:10px;font-weight:600;letter-spacing:.02em}
+.radar-svg .pt{stroke:var(--surf);stroke-width:1.5}
+.rd-legend{display:flex;gap:16px;margin-bottom:14px;flex-wrap:wrap}
+.rd-li{display:flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:var(--dark)}
+.rd-sw{width:11px;height:11px;border-radius:3px}
+.rd-rows{display:flex;flex-direction:column;gap:0}
+.rd-row{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;padding:8px 0;border-top:0.5px solid var(--border)}
+.rd-row:first-child{border-top:none}
+.rd-area{font-size:12px;font-weight:600;color:var(--dark);min-width:0}
+.rd-bar{display:flex;gap:2px}
+.rd-seg{width:9px;height:7px;border-radius:1.5px;background:var(--border)}
+.rd-seg.t{background:var(--teal)} .rd-seg.w{background:#5B9BD5}
+.rd-lbl{font-size:9.5px;color:var(--muted);width:44px;text-align:right}
+@media(max-width:680px){.radar-grid{grid-template-columns:1fr;gap:16px}}
+/* ═══ QUICK WIN ═══ */
+.qw{background:linear-gradient(180deg,rgba(232,179,57,.08),rgba(232,179,57,.03));border:1px solid rgba(232,179,57,.42);border-radius:13px;padding:18px 20px;margin-bottom:12px}
+.qw-top{display:flex;align-items:center;gap:9px;margin-bottom:11px;flex-wrap:wrap}
+.qw-k{font-size:9.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#9A7420;background:rgba(232,179,57,.2);padding:3px 9px;border-radius:999px}
+.qw-t{font-size:14.5px;font-weight:700;color:var(--dark)}
+.qw-txt{font-size:12.5px;color:var(--ink);line-height:1.5}
+.qw-txt b{color:var(--dark)}
+.qw-flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:13px;padding-top:13px;border-top:0.5px solid rgba(232,179,57,.3)}
+.qw-step{font-size:11px;font-weight:600;color:var(--dark);background:var(--surf);border:0.5px solid var(--border);border-radius:7px;padding:6px 11px}
+.qw-arw{color:var(--muted);font-size:11px}
 /* ═══ FILTRO DUAL ═══ */
 .dual{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
 .ch{background:var(--surf);border:0.5px solid var(--border);border-radius:13px;padding:18px 20px;min-width:0;position:relative;overflow:hidden}
@@ -470,7 +502,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 <body>
 
 <header class="topbar">
-  <div class="brand"><div class="brand-dot"></div>Founder OS<span class="brand-by">by Private Build</span></div>
+  <div class="brand"><div class="brand-dot"></div>Emma Clara <span class="brand-sep">·</span> FounderOS<span class="brand-by">by PrivateBuild<sup>™</sup></span></div>
   <nav class="tabs-desktop">
     <div class="tab on" onclick="sw('overview',this)">🏠 Panel</div>
     <div class="tab" onclick="sw('roadmap',this)">🗺️ Roadmap</div>
@@ -507,14 +539,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
 <!-- ════════════ PANEL ════════════ -->
 <div class="page on" id="pg-overview">
-
-  <div class="problem-card" style="margin-top:0">
-    <div class="prob-icon">🧭</div>
-    <div>
-      <div class="prob-title">De qué hablamos hoy</div>
-      <div class="prob-text">El negocio corre en dos canales que se comportan distinto. La tienda <b>sostiene</b> — ya cierra bien y hay que sistematizarlo. La web <b>escala</b> — no consume horas y está muy por debajo de lo que ya rindió.</div>
-    </div>
-  </div>
 
   <div class="slbl">Agosto 2026 · cifras al 24/08</div>
   <div class="dual">
@@ -556,6 +580,75 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="alert-box info" style="margin-top:0">
     <span class="alert-icon">⚠️</span>
     <div><div class="alert-title">Cierre de agosto por confirmar</div><div class="alert-text">La proyección apunta a ~$30M. La cifra del mes es la más variable de todas — sirve para el titular, no para decidir. Las decisiones se toman sobre tasa de cierre y Add-to-Cart, que se mueven despacio y dicen la verdad.</div></div>
+  </div>
+
+  <div class="slbl">Dónde está fuerte cada canal · 6 áreas del negocio</div>
+  <div class="radar-wrap">
+    <div class="rd-legend">
+      <div class="rd-li"><span class="rd-sw" style="background:var(--teal)"></span>Tienda</div>
+      <div class="rd-li"><span class="rd-sw" style="background:#5B9BD5"></span>Web</div>
+    </div>
+    <div class="radar-grid">
+      <svg class="radar-svg" viewBox="0 0 340 290" role="img" aria-label="Radar comparativo de tienda y web por área">
+        <polygon class="ring" points="170,50 252.3,97.5 252.3,192.5 170,240 87.7,192.5 87.7,97.5"/>
+        <polygon class="ring" points="170,69 235.8,107 235.8,183 170,221 104.2,183 104.2,107"/>
+        <polygon class="ring" points="170,88 219.4,116.5 219.4,173.5 170,202 120.6,173.5 120.6,116.5"/>
+        <polygon class="ring" points="170,107 202.9,126 202.9,164 170,183 137.1,164 137.1,126"/>
+        <polygon class="ring" points="170,126 186.5,135.5 186.5,154.5 170,164 153.5,154.5 153.5,135.5"/>
+        <line class="spoke" x1="170" y1="145" x2="170" y2="50"/>
+        <line class="spoke" x1="170" y1="145" x2="252.3" y2="97.5"/>
+        <line class="spoke" x1="170" y1="145" x2="252.3" y2="192.5"/>
+        <line class="spoke" x1="170" y1="145" x2="170" y2="240"/>
+        <line class="spoke" x1="170" y1="145" x2="87.7" y2="192.5"/>
+        <line class="spoke" x1="170" y1="145" x2="87.7" y2="97.5"/>
+        <polygon points="170,69 235.8,107 252.3,192.5 170,164 120.6,173.5 120.6,116.5"
+                 fill="rgba(62,180,137,.22)" stroke="#3EB489" stroke-width="2"/>
+        <polygon points="170,126 186.5,135.5 202.9,164 170,164 153.5,154.5 153.5,135.5"
+                 fill="rgba(91,155,213,.24)" stroke="#5B9BD5" stroke-width="2"/>
+        <circle class="pt" cx="170" cy="69" r="3.5" fill="#3EB489"/>
+        <circle class="pt" cx="235.8" cy="107" r="3.5" fill="#3EB489"/>
+        <circle class="pt" cx="252.3" cy="192.5" r="3.5" fill="#3EB489"/>
+        <circle class="pt" cx="120.6" cy="173.5" r="3.5" fill="#3EB489"/>
+        <circle class="pt" cx="120.6" cy="116.5" r="3.5" fill="#3EB489"/>
+        <circle class="pt" cx="202.9" cy="164" r="3.5" fill="#5B9BD5"/>
+        <text class="ax" x="170" y="30" text-anchor="middle">Adquisición</text>
+        <text class="ax" x="272" y="88" text-anchor="middle">Conversión</text>
+        <text class="ax" x="272" y="206" text-anchor="middle">Ticket</text>
+        <text class="ax" x="170" y="264" text-anchor="middle">Recompra</text>
+        <text class="ax" x="68" y="206" text-anchor="middle">Sistemas</text>
+        <text class="ax" x="68" y="88" text-anchor="middle">Datos</text>
+      </svg>
+      <div class="rd-rows">
+        <div class="rd-row"><span class="rd-area">Adquisición</span><span class="rd-bar"><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg"></i></span><span class="rd-lbl">pauta activa</span></div>
+        <div class="rd-row"><span class="rd-area"></span><span class="rd-bar"><i class="rd-seg w"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">SEO sin usar</span></div>
+        <div class="rd-row"><span class="rd-area">Conversión</span><span class="rd-bar"><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg"></i></span><span class="rd-lbl">43% pagada</span></div>
+        <div class="rd-row"><span class="rd-area"></span><span class="rd-bar"><i class="rd-seg w"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">ATC 0,3%</span></div>
+        <div class="rd-row"><span class="rd-area">Ticket</span><span class="rd-bar"><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i></span><span class="rd-lbl">$363K</span></div>
+        <div class="rd-row"><span class="rd-area"></span><span class="rd-bar"><i class="rd-seg w"></i><i class="rd-seg w"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">ticket bajo</span></div>
+        <div class="rd-row"><span class="rd-area">Recompra</span><span class="rd-bar"><i class="rd-seg t"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">sin sistema</span></div>
+        <div class="rd-row"><span class="rd-area"></span><span class="rd-bar"><i class="rd-seg w"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">sin email</span></div>
+        <div class="rd-row"><span class="rd-area">Sistemas</span><span class="rd-bar"><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">depende de quién</span></div>
+        <div class="rd-row"><span class="rd-area"></span><span class="rd-bar"><i class="rd-seg w"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">Shopify suelto</span></div>
+        <div class="rd-row"><span class="rd-area">Datos</span><span class="rd-bar"><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">CPA recién limpio</span></div>
+        <div class="rd-row"><span class="rd-area"></span><span class="rd-bar"><i class="rd-seg w"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">atribución rota</span></div>
+      </div>
+    </div>
+    <div class="funnel-note" style="margin-top:14px"><strong>Cómo leerlo:</strong> la tienda cubre casi todo el hexágono salvo recompra. La web está colapsada en el centro — no es que rinda poco, es que <strong>ninguna de las seis áreas está construida todavía</strong>. Ahí está el espacio.</div>
+  </div>
+
+  <div class="qw">
+    <div class="qw-top">
+      <span class="qw-k">Quick win pendiente</span>
+      <span class="qw-t">Video de upsell en el setting</span>
+    </div>
+    <div class="qw-txt">Sumar un video en los mensajes, antes de que la clienta agende, que explique la diferencia entre la cita gratis y la Experiencia. <b>No vende un vestido: vende la asesoría de 50 minutos.</b> Es la palanca más corta que queda — mueve el mix de gratis hacia pagada sin sumar pauta ni horas.</div>
+    <div class="qw-flow">
+      <span class="qw-step">Mensaje entrante</span><span class="qw-arw">→</span>
+      <span class="qw-step">Video de upsell</span><span class="qw-arw">→</span>
+      <span class="qw-step">Cita Experiencia</span><span class="qw-arw">→</span>
+      <span class="qw-step" style="border-color:var(--teal);color:var(--teal)">43% de cierre</span>
+    </div>
+    <div class="qw-txt" style="margin-top:12px"><b>Quién lo hace:</b> el equipo graba el video. <b>Qué falta de mi lado:</b> el guion. <b>Por qué importa ahora:</b> 130 citas gratis contra 54 pagadas en agosto, y 15 de los 17 no-shows fueron gratis.</div>
   </div>
 
   <div class="slbl">Dónde está fuerte y dónde tiene que sostener</div>
