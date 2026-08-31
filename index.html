@@ -137,7 +137,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .radar-svg{width:100%;max-width:340px;height:auto;display:block}
 .radar-svg .ring{fill:none;stroke:var(--border);stroke-width:1}
 .radar-svg .spoke{stroke:var(--border);stroke-width:1}
-.radar-svg .ax{fill:var(--muted);font-size:10px;font-weight:600;letter-spacing:.02em}
+.radar-svg .ax{fill:var(--grey);font-size:10px;font-weight:600;letter-spacing:.02em}
 .radar-svg .pt{stroke:var(--surf);stroke-width:1.5}
 .rd-legend{display:flex;gap:16px;margin-bottom:14px;flex-wrap:wrap}
 .rd-li{display:flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:var(--dark)}
@@ -149,7 +149,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .rd-bar{display:flex;gap:2px}
 .rd-seg{width:9px;height:7px;border-radius:1.5px;background:var(--border)}
 .rd-seg.t{background:var(--teal)} .rd-seg.w{background:#5B9BD5}
-.rd-lbl{font-size:9.5px;color:var(--muted);width:44px;text-align:right}
+.rd-lbl{font-size:9.5px;color:var(--grey);width:44px;text-align:right}
 @media(max-width:680px){.radar-grid{grid-template-columns:1fr;gap:16px}}
 /* ═══ QUICK WIN ═══ */
 .qw{background:linear-gradient(180deg,rgba(232,179,57,.08),rgba(232,179,57,.03));border:1px solid rgba(232,179,57,.42);border-radius:13px;padding:18px 20px;margin-bottom:12px}
@@ -160,7 +160,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .qw-txt b{color:var(--dark)}
 .qw-flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:13px;padding-top:13px;border-top:0.5px solid rgba(232,179,57,.3)}
 .qw-step{font-size:11px;font-weight:600;color:var(--dark);background:var(--surf);border:0.5px solid var(--border);border-radius:7px;padding:6px 11px}
-.qw-arw{color:var(--muted);font-size:11px}
+.qw-arw{color:var(--grey);font-size:11px}
 /* ═══ FILTRO DUAL ═══ */
 .dual{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
 .ch{background:var(--surf);border:0.5px solid var(--border);border-radius:13px;padding:18px 20px;min-width:0;position:relative;overflow:hidden}
@@ -172,13 +172,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .ch.tienda .ch-job{background:rgba(62,180,137,.13);color:var(--teal)}
 .ch.web .ch-job{background:rgba(91,155,213,.14);color:#3F7CB4}
 .ch-big{font-size:25px;font-weight:700;letter-spacing:-.02em;color:var(--dark);line-height:1}
-.ch-vs{font-size:11px;color:var(--muted);margin-top:5px}
+.ch-vs{font-size:11px;color:var(--grey);margin-top:5px}
 .ch-div{height:0.5px;background:var(--border);margin:14px 0}
 .ch-kpi{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:9px}
-.ch-kpi-l{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);font-weight:600}
+.ch-kpi-l{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);font-weight:600}
 .ch-kpi-v{font-size:16px;font-weight:700;color:var(--dark);white-space:nowrap}
 .ch-kpi-v.warn{color:var(--red)}
-.ch-kpi-s{font-size:10.5px;color:var(--muted)}
+.ch-kpi-s{font-size:10.5px;color:var(--grey)}
 .ch-lev{font-size:11.5px;color:var(--ink);line-height:1.45;margin-top:12px;padding-top:12px;border-top:0.5px solid var(--border)}
 .ch-lev b{color:var(--dark)}
 @media(max-width:680px){.dual{grid-template-columns:1fr}}
@@ -452,9 +452,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .msg.pause{align-self:center;background:transparent;color:var(--grey);font-family:'DM Mono',monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.1em;padding:3px 0}
 
 /* WA FAB */
-.wa-fab{position:fixed;bottom:22px;right:18px;z-index:400;display:flex;align-items:center;gap:8px;background:var(--wa);color:#fff;border-radius:50px;padding:11px 18px 11px 14px;font-size:13px;font-weight:600;box-shadow:0 4px 20px rgba(37,211,102,.3);text-decoration:none;transition:transform .2s,box-shadow .2s}
-.wa-fab:hover{transform:translateY(-2px);box-shadow:0 6px 28px rgba(37,211,102,.4)}
-.wa-fab svg{width:20px;height:20px;flex-shrink:0}
+.wa-foot{display:flex;align-items:center;justify-content:center;gap:8px;margin:26px 0 4px;padding-top:18px;border-top:0.5px solid var(--border);font-size:11.5px;color:var(--grey);text-decoration:none;transition:color .18s}
+.wa-foot:hover{color:var(--wa)}
+.wa-foot svg{width:14px;height:14px;flex-shrink:0;opacity:.75}
+.wa-foot:hover svg{opacity:1}
+.wa-foot b{font-weight:600;color:var(--ink)}
+.wa-foot:hover b{color:var(--wa)}
 
 /* RESPONSIVE */
 @media(min-width:681px){.tabs-desktop{display:flex}.mob-btn{display:none}.mob-drop{display:none!important}.only-mob{display:none!important}}
@@ -495,7 +498,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   .eng-table td:nth-child(3){margin-bottom:8px}
   .eng-table td:nth-child(4)::before{content:"Situación: ";font-weight:600;color:var(--ink)}
   .eng-table td:nth-child(5)::before{content:"Cuándo: ";font-weight:600;color:var(--ink)}
-  .wa-fab{bottom:14px;left:14px;right:14px;width:auto;max-width:calc(100% - 28px);justify-content:center;border-radius:14px;padding:13px 18px;font-size:14px}
 }
 </style>
 </head>
@@ -708,6 +710,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
+  <a class="wa-foot" href="https://wa.me/56978048922?text=Patricio%20tengo%20dudas%20sobre..." target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.005 2.001C6.474 2.001 2 6.476 2 12.007c0 1.771.462 3.463 1.338 4.952L2 22l5.188-1.359A9.944 9.944 0 0 0 12.005 22c5.531 0 10.005-4.476 10.005-10.007 0-2.674-1.041-5.188-2.931-7.079A9.953 9.953 0 0 0 12.005 2z"/></svg>¿Dudas? <b>Escríbele a Patricio</b></a>
 </div>
 
 
@@ -1227,6 +1230,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
+  <a class="wa-foot" href="https://wa.me/56978048922?text=Patricio%20tengo%20dudas%20sobre..." target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.005 2.001C6.474 2.001 2 6.476 2 12.007c0 1.771.462 3.463 1.338 4.952L2 22l5.188-1.359A9.944 9.944 0 0 0 12.005 22c5.531 0 10.005-4.476 10.005-10.007 0-2.674-1.041-5.188-2.931-7.079A9.953 9.953 0 0 0 12.005 2z"/></svg>¿Dudas? <b>Escríbele a Patricio</b></a>
 </div>
 
 
@@ -1393,6 +1397,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div><div class="alert-title">Cómo usar este ejercicio</div><div class="alert-text">La clienta dice una frase real. Elige qué harías tú — no hay guión que memorizar, solo la lógica de diagnóstico de arriba. Se marca en verde si acertaste y en rojo si no, con la explicación de por qué.</div></div>
   </div>
   <div id="quiz-list"></div>
+  <a class="wa-foot" href="https://wa.me/56978048922?text=Patricio%20tengo%20dudas%20sobre..." target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.005 2.001C6.474 2.001 2 6.476 2 12.007c0 1.771.462 3.463 1.338 4.952L2 22l5.188-1.359A9.944 9.944 0 0 0 12.005 22c5.531 0 10.005-4.476 10.005-10.007 0-2.674-1.041-5.188-2.931-7.079A9.953 9.953 0 0 0 12.005 2z"/></svg>¿Dudas? <b>Escríbele a Patricio</b></a>
 </div>
 
 
@@ -1512,6 +1517,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="task-body"><div class="task-title">Producir contenido con modelos de 22–25 años</div><div class="task-desc">Ejecutar el punto medio ya definido: aspiracional para adolescentes y madres a la vez, manteniendo publicidad real que impulse la necesidad de asesoría en tienda.</div></div>
     <span class="bdg amber">Emma</span>
   </div>
+  <a class="wa-foot" href="https://wa.me/56978048922?text=Patricio%20tengo%20dudas%20sobre..." target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.005 2.001C6.474 2.001 2 6.476 2 12.007c0 1.771.462 3.463 1.338 4.952L2 22l5.188-1.359A9.944 9.944 0 0 0 12.005 22c5.531 0 10.005-4.476 10.005-10.007 0-2.674-1.041-5.188-2.931-7.079A9.953 9.953 0 0 0 12.005 2z"/></svg>¿Dudas? <b>Escríbele a Patricio</b></a>
 </div>
 
 
@@ -1614,6 +1620,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <span class="alert-icon">ℹ️</span>
     <div><div class="alert-title">El orden importa: primero tienda, luego web</div><div class="alert-text">La brecha más grande está en la tienda (-82%). Antes de optimizar el CVR web (0.12%), hay que llenar el showroom con el evento del 27 jun y mejorar el cierre presencial. El CRO web se prioriza en el Mes 2, cuando la tienda ya esté estabilizada.</div></div>
   </div>
+  <a class="wa-foot" href="https://wa.me/56978048922?text=Patricio%20tengo%20dudas%20sobre..." target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.005 2.001C6.474 2.001 2 6.476 2 12.007c0 1.771.462 3.463 1.338 4.952L2 22l5.188-1.359A9.944 9.944 0 0 0 12.005 22c5.531 0 10.005-4.476 10.005-10.007 0-2.674-1.041-5.188-2.931-7.079A9.953 9.953 0 0 0 12.005 2z"/></svg>¿Dudas? <b>Escríbele a Patricio</b></a>
 </div>
 
 
@@ -1649,14 +1656,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <a class="res-cta" href="https://app.notion.com/p/private-build/M-dulos-3ba1b21db3ba805680c4e62c62648525?source=copy_link" target="_blank">Abrir en Notion ↗</a>
     </div>
   </div>
+  <a class="wa-foot" href="https://wa.me/56978048922?text=Patricio%20tengo%20dudas%20sobre..." target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.005 2.001C6.474 2.001 2 6.476 2 12.007c0 1.771.462 3.463 1.338 4.952L2 22l5.188-1.359A9.944 9.944 0 0 0 12.005 22c5.531 0 10.005-4.476 10.005-10.007 0-2.674-1.041-5.188-2.931-7.079A9.953 9.953 0 0 0 12.005 2z"/></svg>¿Dudas? <b>Escríbele a Patricio</b></a>
 </div>
 
 
-<!-- WA FAB -->
-<a class="wa-fab" href="https://wa.me/56978048922?text=Patricio%20tengo%20dudas%20sobre..." target="_blank" aria-label="WhatsApp Patricio">
-  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.005 2.001C6.474 2.001 2 6.476 2 12.007c0 1.771.462 3.463 1.338 4.952L2 22l5.188-1.359A9.944 9.944 0 0 0 12.005 22c5.531 0 10.005-4.476 10.005-10.007 0-2.674-1.041-5.188-2.931-7.079A9.953 9.953 0 0 0 12.005 2z"/></svg>
-  <span class="wa-lbl">Consultar a Patricio</span>
-</a>
+
 
 
 <script>
