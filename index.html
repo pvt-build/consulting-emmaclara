@@ -161,6 +161,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .qw-flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:13px;padding-top:13px;border-top:0.5px solid rgba(232,179,57,.3)}
 .qw-step{font-size:11px;font-weight:600;color:var(--dark);background:var(--surf);border:0.5px solid var(--border);border-radius:7px;padding:6px 11px}
 .qw-arw{color:var(--grey);font-size:11px}
+/* ═══ CARDS DE METRICA (reusable) ═══ */
+.rn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:9px}
+.rn-c{background:var(--bg);border:0.5px solid var(--border);border-radius:10px;padding:12px 13px;min-width:0;display:flex;flex-direction:column;gap:5px}
+.rn-c.up{border-top:2px solid var(--teal)}
+.rn-l{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey)}
+.rn-v{font-size:20px;font-weight:700;letter-spacing:-.02em;color:var(--dark);line-height:1}
+.rn-c.up .rn-v{color:var(--teal)}
+.rn-s{font-size:10px;color:var(--grey);line-height:1.35;margin-top:auto}
 /* ═══ SLIDER DE FUNNELS ═══ */
 .fsw{background:var(--surf);border:0.5px solid var(--border);border-radius:13px;overflow:hidden;margin-bottom:12px}
 .fsw-nav{display:flex;border-bottom:0.5px solid var(--border)}
