@@ -161,6 +161,37 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .qw-flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:13px;padding-top:13px;border-top:0.5px solid rgba(232,179,57,.3)}
 .qw-step{font-size:11px;font-weight:600;color:var(--dark);background:var(--surf);border:0.5px solid var(--border);border-radius:7px;padding:6px 11px}
 .qw-arw{color:var(--grey);font-size:11px}
+/* ═══ SLIDER DE FUNNELS ═══ */
+.fsw{background:var(--surf);border:0.5px solid var(--border);border-radius:13px;overflow:hidden;margin-bottom:12px}
+.fsw-nav{display:flex;border-bottom:0.5px solid var(--border)}
+.fsw-btn{flex:1;padding:13px 10px;font-size:12.5px;font-weight:600;color:var(--grey);cursor:pointer;text-align:center;background:var(--bg);border:none;border-bottom:2px solid transparent;transition:color .15s,background .15s,border-color .15s;user-select:none}
+.fsw-btn.on{color:var(--dark);background:var(--surf);border-bottom-color:var(--dark)}
+.fsw-btn .st{display:block;font-size:9.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-top:3px;color:var(--red)}
+.fsw-btn.on.t .st{color:var(--teal)} .fsw-btn.on.w .st{color:#3F7CB4}
+.fsw-panel{display:none;padding:18px 20px}
+.fsw-panel.on{display:block}
+.fsw-grid{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:start}
+@media(max-width:680px){.fsw-grid{grid-template-columns:1fr;gap:14px}}
+.fst{display:flex;flex-direction:column;gap:0;min-width:150px}
+.fst-row{display:flex;align-items:center;gap:10px;padding:9px 0}
+.fst-n{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;background:var(--beige);color:var(--grey)}
+.fst-row.ok .fst-n{background:var(--green-lt);color:var(--green-dk)}
+.fst-row.bad .fst-n{background:var(--red-lt);color:var(--red)}
+.fst-l{display:block;font-size:12.5px;font-weight:600;color:var(--dark);line-height:1.2}
+.fst-v{display:block;font-size:10.5px;color:var(--grey);margin-top:2px}
+.fst-row.bad .fst-v{color:var(--red);font-weight:600}
+.fst-bar{width:2px;height:12px;background:var(--border);margin-left:10px}
+.fx{background:var(--bg);border:0.5px solid var(--border);border-radius:10px;padding:14px 16px}
+.fx-k{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-bottom:9px}
+.fx-i{display:flex;gap:9px;padding:7px 0;border-top:0.5px solid var(--border);font-size:12px;color:var(--ink);line-height:1.4}
+.fx-i:first-of-type{border-top:none}
+.fx-i b{color:var(--dark)}
+.fx-d{color:var(--teal);flex-shrink:0;font-weight:700}
+/* ═══ SUB-NAV INTERNA ═══ */
+.sub{display:flex;gap:6px;overflow-x:auto;padding-bottom:10px;margin-bottom:14px;-webkit-overflow-scrolling:touch}
+.sub-b{flex-shrink:0;padding:7px 14px;border-radius:999px;font-size:11.5px;font-weight:600;color:var(--grey);background:var(--surf);border:0.5px solid var(--border);cursor:pointer;white-space:nowrap;transition:all .15s;user-select:none}
+.sub-b.on{background:var(--dark);color:#fff;border-color:var(--dark)}
+.sec{display:none} .sec.on{display:block}
 /* ═══ CUELLO ACTUAL ═══ */
 .neck{display:flex;align-items:center;gap:14px;background:var(--red-lt);border:1px solid rgba(226,80,58,.35);border-radius:13px;padding:15px 18px;margin-bottom:10px}
 .neck-k{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);background:rgba(226,80,58,.14);padding:4px 9px;border-radius:999px;flex-shrink:0}
@@ -556,7 +587,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
   <div class="neck">
     <span class="neck-k">Cuello hoy</span>
-    <span class="neck-t"><b>Agendamiento.</b> De cada 100 que escriben, agendan 8. El cierre ya está en 80% — el problema está antes de que lleguen.</span>
+    <span class="neck-t"><b>Agendamiento.</b> De cada 100 que escriben, agendan 8. Y la gratis cierra 17% contra 80% la de pago: el volumen entra por el lado que no cierra.</span>
   </div>
 
   <div class="slbl">Quick wins de septiembre</div>
@@ -564,12 +595,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="qw2">
       <div class="qw2-n">01 · Destapa el cuello</div>
       <div class="qw2-t">Video de setting</div>
-      <div class="qw2-d">Explica la diferencia entre cita gratis y Experiencia, antes de agendar. Filtra la consulta de precio.</div>
+      <div class="qw2-d">Empuja la cita gratis hacia la de pago. 17% contra 80% de cierre.</div>
     </div>
     <div class="qw2">
       <div class="qw2-n">02 · Prepara el cyber</div>
       <div class="qw2-t">Definir vestidos del cyber</div>
-      <div class="qw2-d">Qué tickets salen a web y con qué formato. Sin esto no se puede armar el calentamiento.</div>
+      <div class="qw2-d">Qué tickets salen a web y con qué formato.</div>
     </div>
   </div>
 
@@ -583,7 +614,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="ch-kpi"><span class="ch-kpi-s">Cierre en cita pagada</span><span class="ch-kpi-v" style="color:var(--teal)">80%</span></div>
       <div class="ch-kpi"><span class="ch-kpi-s">Mix de cita de pago</span><span class="ch-kpi-v" style="color:var(--teal)">27%</span></div>
       <div class="ch-kpi"><span class="ch-kpi-s">Agendamiento</span><span class="ch-kpi-v warn">8%</span></div>
-      <div class="ch-lev"><b>Leverage: horas.</b> Crece si sube el mix, no si suman citas.</div>
+      <div class="ch-lev"><b>Leverage: horas.</b> Crece por mix, no por volumen.</div>
     </div>
     <div class="ch web">
       <div class="ch-top"><span class="ch-name">💻 Web</span><span class="ch-job">Escalar</span></div>
@@ -593,7 +624,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="ch-kpi"><span class="ch-kpi-s">Add-to-Cart móvil</span><span class="ch-kpi-v warn">0,3%</span></div>
       <div class="ch-kpi"><span class="ch-kpi-s">Atribución</span><span class="ch-kpi-v warn">rota</span></div>
       <div class="ch-kpi"><span class="ch-kpi-s">Pauta invertida</span><span class="ch-kpi-v" style="color:var(--teal)">$0</span></div>
-      <div class="ch-lev"><b>Leverage: sin horas.</b> El único canal que crece sin contratar.</div>
+      <div class="ch-lev"><b>Leverage: sin horas.</b> Crece sin contratar.</div>
     </div>
   </div>
 
@@ -626,30 +657,57 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
         <text class="ax" x="68" y="88" text-anchor="middle">Datos</text>
       </svg>
     </div>
-    <div class="funnel-note" style="margin-top:10px">La tienda tocó techo en conversión y cayó en adquisición: ahí se movió el cuello. La web está colapsada en el centro — no rinde poco, <strong>ninguna de las seis áreas está construida</strong>.</div>
+    <div class="funnel-note" style="margin-top:10px">La tienda tocó techo en conversión y cayó en adquisición. La web está colapsada: <strong>ninguna de las seis áreas está construida</strong>.</div>
   </div>
 
-  <div class="slbl">Los dos funnels</div>
-  <div class="funnel-wrap">
-    <div class="dg-cols" style="margin-bottom:0">
-      <div class="dg-col tienda">
-        <div class="dg-col-lbl"><span class="cat-tag showroom">🏪 Tienda</span></div>
-        <div class="dg-box neutral"><div class="dg-title">Mensajes</div><div class="dg-sub">Meta + TikTok</div></div>
-        <div class="dg-arrow">↓</div>
-        <div class="dg-box warn"><div class="dg-title">⚠ Agenda</div><div class="dg-sub">8% · el cuello</div></div>
-        <div class="dg-arrow">↓</div>
-        <div class="dg-box hero"><div class="dg-title">✓ Venta</div><div class="dg-sub">80% de cierre</div></div>
-      </div>
-      <div class="dg-col web">
-        <div class="dg-col-lbl"><span class="cat-tag ecommerce">💻 Web</span></div>
-        <div class="dg-box neutral"><div class="dg-title">Visita PDP</div><div class="dg-sub">solo orgánico</div></div>
-        <div class="dg-arrow">↓</div>
-        <div class="dg-box broken"><div class="dg-title">✗ Add-to-Cart</div><div class="dg-sub">0,3% · el cuello</div></div>
-        <div class="dg-arrow">↓</div>
-        <div class="dg-box broken"><div class="dg-title">Venta</div><div class="dg-sub">8 en el mes</div></div>
+  <div class="slbl">Dónde está roto cada canal</div>
+  <div class="fsw">
+    <div class="fsw-nav">
+      <button class="fsw-btn t on" onclick="fsw('t',this)">🏪 Tienda<span class="st">Roto en agenda</span></button>
+      <button class="fsw-btn w" onclick="fsw('w',this)">💻 Web<span class="st">Roto en carrito</span></button>
+    </div>
+
+    <div class="fsw-panel on" id="fsw-t">
+      <div class="fsw-grid">
+        <div class="fst">
+          <div class="fst-row ok"><span class="fst-n">1</span><span><span class="fst-l">Mensajes</span><span class="fst-v">volumen sano</span></span></div>
+          <div class="fst-bar"></div>
+          <div class="fst-row bad"><span class="fst-n">✗</span><span><span class="fst-l">Agenda</span><span class="fst-v">8% · acá se rompe</span></span></div>
+          <div class="fst-bar"></div>
+          <div class="fst-row bad"><span class="fst-n">✗</span><span><span class="fst-l">Cita gratis</span><span class="fst-v">cierra 17%</span></span></div>
+          <div class="fst-bar"></div>
+          <div class="fst-row ok"><span class="fst-n">✓</span><span><span class="fst-l">Cita de pago</span><span class="fst-v">cierra 80%</span></span></div>
+        </div>
+        <div class="fx">
+          <div class="fx-k">El desgaste · comunicar para volumen</div>
+          <div class="fx-i"><span class="fx-d">→</span><span><b>Calificación al contenido.</b> Que el video filtre antes del mensaje, no la vendedora después.</span></div>
+          <div class="fx-i"><span class="fx-d">→</span><span><b>Video en setting.</b> Empuja la cita gratis hacia la de pago.</span></div>
+          <div class="fx-i"><span class="fx-d">→</span><span><b>Experiencia y eventos de makeup.</b> Sostenerlo ahora, antes de que se vuelva estándar y lo copien.</span></div>
+          <div class="fx-i"><span class="fx-d">→</span><span><b>Virales con CTA final.</b> Mantener lo que da alcance, sumarle filtro para ahorrar pauta.</span></div>
+        </div>
       </div>
     </div>
-    <div class="funnel-note">Quien ve la web y compra en tienda cuenta como Tienda. <strong>Hoy el link de pago se registra como venta web e infla el canal.</strong></div>
+
+    <div class="fsw-panel" id="fsw-w">
+      <div class="fsw-grid">
+        <div class="fst">
+          <div class="fst-row ok"><span class="fst-n">1</span><span><span class="fst-l">Visita PDP</span><span class="fst-v">solo orgánico</span></span></div>
+          <div class="fst-bar"></div>
+          <div class="fst-row bad"><span class="fst-n">✗</span><span><span class="fst-l">Add-to-Cart</span><span class="fst-v">0,3% · acá se rompe</span></span></div>
+          <div class="fst-bar"></div>
+          <div class="fst-row bad"><span class="fst-n">✗</span><span><span class="fst-l">Venta</span><span class="fst-v">8 en el mes</span></span></div>
+          <div class="fst-bar"></div>
+          <div class="fst-row bad"><span class="fst-n">✗</span><span><span class="fst-l">Post-compra</span><span class="fst-v">no existe</span></span></div>
+        </div>
+        <div class="fx">
+          <div class="fx-k">Lo que hay que responder primero</div>
+          <div class="fx-i"><span class="fx-d">?</span><span><b>Qué vestidos se venden solos</b> y con qué ticket.</span></div>
+          <div class="fx-i"><span class="fx-d">?</span><span><b>Si son de región, la venta ahí tiene que explotar.</b> Por qué compran, qué buscan, cómo llegan.</span></div>
+          <div class="fx-i"><span class="fx-d">→</span><span><b>Armar la capa de post-compra.</b> Feedback y recompra, hoy en cero.</span></div>
+          <div class="fx-i"><span class="fx-d">→</span><span><b>El tiempo sale de las citas gratis</b> que no cierran. Ese es el desbloqueo.</span></div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="slbl">Stack y costo por canal</div>
@@ -1258,6 +1316,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="ov-card"><div class="ov-lbl">Citas gratis vs pagadas</div><div class="ov-num green">130 / 64</div><div class="ov-sub">Experiencia + confección + colorimetría</div></div>
   </div>
 
+  <div class="sub">
+    <button class="sub-b on" onclick="sub('v0',this)">Cuellos</button>
+    <button class="sub-b" onclick="sub('v1',this)">Objeciones</button>
+    <button class="sub-b" onclick="sub('v2',this)">Cómo cerrar</button>
+    <button class="sub-b" onclick="sub('v3',this)">Sugerencias</button>
+    <button class="sub-b" onclick="sub('v4',this)">Roleplays</button>
+    <button class="sub-b" onclick="sub('v5',this)">Quiz</button>
+  </div>
+
+  <div class="sec on" id="v0">
   <div class="slbl">Cuellos de botella en ventas → oportunidad</div>
   <div class="slider-grid">
     <div class="slide-box w">
@@ -1281,7 +1349,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       </div>
     </div>
   </div>
+  </div>
 
+  <div class="sec" id="v1">
   <div class="slbl">Objeciones más difíciles · ranking</div>
   <div class="sug-grid">
     <div class="sug-card"><div class="sug-n">1</div><div class="sug-title">"Necesito seguir cotizando / ver en otro lado"</div><div class="sug-text">La más repetida. Objeción de <strong>Decisión</strong>, no de producto — se resuelve con la reserva de $20.000, nunca discutiendo el vestido.</div></div>
@@ -1306,7 +1376,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <span class="alert-icon">⚠️</span>
     <div><div class="alert-title">No todas las objeciones se resuelven ofreciendo la reserva</div><div class="alert-text">Cada objeción cae en una de 4 categorías, y cada una tiene una herramienta distinta: <strong>Producto</strong> (el escote, me queda suelto, por atrás) → diagnosticar y resolver con alternativa o ajuste, nunca reserva. <strong>Decisión</strong> (quiero pensarlo, ver otra tienda, mostrárselo a alguien) → reserva de $20.000. <strong>Presupuesto</strong> (está caro) → separar presupuesto real de valor percibido. <strong>Tiempo/Urgencia</strong> (tengo dos meses, no hay apuro) → gestionar el calendario real. La clave no es memorizar guiones — es reconocer rápido en cuál de las 4 está parada la clienta.</div></div>
   </div>
+  </div>
 
+  <div class="sec" id="v2">
   <div class="slbl">Cómo cerrar: primero aísla, después ofrece</div>
   <div class="flow-wrap">
     <div class="flow-col">
@@ -1378,7 +1450,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       </div>
     </div>
   </div>
+  </div>
 
+  <div class="sec" id="v3">
   <div class="slbl">Sugerencias para subir la tasa de cierre presencial</div>
   <div class="sug-grid">
     <div class="sug-card"><div class="sug-n">01</div><div class="sug-title">Usa la escala 1–10 antes de ofrecer nada</div><div class="sug-text">Diagnostica primero. Si el puntaje es 8–10 y la objeción es de decisión/tiempo, ofrece la reserva. Si el puntaje es 5–7 por un tema de producto (ajuste, escote), resuélvelo — reservar no arregla un vestido que no calza.</div></div>
@@ -1388,16 +1462,22 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="sug-card"><div class="sug-n">05</div><div class="sug-title">Anotar la razón real de cada cita que no cierra</div><div class="sug-text">Sin ese dato escrito, la tasa de cierre nunca sube: no se puede entrenar contra un problema que no se conoce. Es el mismo principio del cuadro de abajo — categoría, no anécdota.</div></div>
     <div class="sug-card"><div class="sug-n">06</div><div class="sug-title">Practicar una categoría de objeción por semana en equipo</div><div class="sug-text">10 minutos entrenando la lógica de diagnóstico (Producto / Decisión / Presupuesto / Tiempo) vale más que memorizar guiones que la clienta nunca va a decir palabra por palabra.</div></div>
   </div>
+  </div>
 
+  <div class="sec" id="v4">
   <div class="slbl">Closing roleplays · 10 objeciones reales</div>
   <div id="rp-list"></div>
+  </div>
 
+  <div class="sec" id="v5">
   <div class="slbl">Entrena tu criterio</div>
   <div class="alert-box info" style="margin-top:0">
     <span class="alert-icon">💡</span>
     <div><div class="alert-title">Cómo usar este ejercicio</div><div class="alert-text">La clienta dice una frase real. Elige qué harías tú — no hay guión que memorizar, solo la lógica de diagnóstico de arriba. Se marca en verde si acertaste y en rojo si no, con la explicación de por qué.</div></div>
   </div>
   <div id="quiz-list"></div>
+  </div>
+
   <a class="wa-foot" href="https://wa.me/56978048922?text=Patricio%20tengo%20dudas%20sobre..." target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.005 2.001C6.474 2.001 2 6.476 2 12.007c0 1.771.462 3.463 1.338 4.952L2 22l5.188-1.359A9.944 9.944 0 0 0 12.005 22c5.531 0 10.005-4.476 10.005-10.007 0-2.674-1.041-5.188-2.931-7.079A9.953 9.953 0 0 0 12.005 2z"/></svg>¿Dudas? <b>Escríbele a Patricio</b></a>
 </div>
 
@@ -1699,6 +1779,20 @@ function toggleMob(){setMenu(!mobDrop.classList.contains('open'));}
 function closeMob(){setMenu(false);}
 mobBtn.addEventListener('click',e=>{e.stopPropagation();toggleMob();});
 function toggleCard(card){card.classList.toggle('open');}
+function sub(id,btn){
+  const wrap=btn.closest('.page');
+  wrap.querySelectorAll('.sec').forEach(x=>x.classList.remove('on'));
+  wrap.querySelectorAll('.sub-b').forEach(x=>x.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  btn.classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+}
+function fsw(k,btn){
+  document.querySelectorAll('.fsw-panel').forEach(p=>p.classList.remove('on'));
+  document.querySelectorAll('.fsw-btn').forEach(b=>b.classList.remove('on'));
+  document.getElementById('fsw-'+k).classList.add('on');
+  btn.classList.add('on');
+}
 
 /* ═══ VENTAS · ROLEPLAYS DE CIERRE ═══ */
 const CAT={producto:'Producto',decision:'Decisión',presupuesto:'Presupuesto',tiempo:'Tiempo'};
