@@ -132,9 +132,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .brand-by sup{font-size:7px;vertical-align:super;opacity:.8}
 .brand-sep{color:rgba(255,255,255,.28);margin:0 2px}
 /* ═══ RADAR ═══ */
-.radar-wrap{background:var(--surf);border:0.5px solid var(--border);border-radius:13px;padding:18px 20px;margin-bottom:12px}
-.radar-grid{display:grid;grid-template-columns:auto 1fr;gap:22px;align-items:center}
-.radar-svg{width:100%;max-width:340px;height:auto;display:block}
+.radar-wrap{background:var(--surf);border:0.5px solid var(--border);border-radius:13px;padding:16px 18px;margin-bottom:12px}
+.radar-grid{display:grid;grid-template-columns:1fr;gap:8px;justify-items:center}
+.radar-svg{width:100%;max-width:300px;height:auto;display:block}
 .radar-svg .ring{fill:none;stroke:var(--border);stroke-width:1}
 .radar-svg .spoke{stroke:var(--border);stroke-width:1}
 .radar-svg .ax{fill:var(--grey);font-size:10px;font-weight:600;letter-spacing:.02em}
@@ -161,25 +161,37 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .qw-flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:13px;padding-top:13px;border-top:0.5px solid rgba(232,179,57,.3)}
 .qw-step{font-size:11px;font-weight:600;color:var(--dark);background:var(--surf);border:0.5px solid var(--border);border-radius:7px;padding:6px 11px}
 .qw-arw{color:var(--grey);font-size:11px}
+/* ═══ CUELLO ACTUAL ═══ */
+.neck{display:flex;align-items:center;gap:14px;background:var(--red-lt);border:1px solid rgba(226,80,58,.35);border-radius:13px;padding:15px 18px;margin-bottom:10px}
+.neck-k{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);background:rgba(226,80,58,.14);padding:4px 9px;border-radius:999px;flex-shrink:0}
+.neck-t{font-size:13.5px;font-weight:600;color:var(--dark);line-height:1.4;min-width:0}
+.neck-t b{color:var(--red)}
+/* ═══ QUICK WINS ═══ */
+.qws{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.qw2{background:var(--surf);border:0.5px solid var(--border);border-left:3px solid var(--gold);border-radius:11px;padding:14px 16px;min-width:0}
+.qw2-n{font-size:9px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:5px}
+.qw2-t{font-size:13.5px;font-weight:700;color:var(--dark);margin-bottom:4px}
+.qw2-d{font-size:11.5px;color:var(--grey);line-height:1.42}
+@media(max-width:680px){.qws{grid-template-columns:1fr}}
 /* ═══ FILTRO DUAL ═══ */
 .dual{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
-.ch{background:var(--surf);border:0.5px solid var(--border);border-radius:13px;padding:18px 20px;min-width:0;position:relative;overflow:hidden}
+.ch{background:var(--surf);border:0.5px solid var(--border);border-radius:13px;padding:15px 17px;min-width:0;position:relative;overflow:hidden}
 .ch::before{content:"";position:absolute;top:0;left:0;right:0;height:3px}
 .ch.tienda::before{background:var(--teal)} .ch.web::before{background:#5B9BD5}
-.ch-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:14px;flex-wrap:wrap}
+.ch-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;flex-wrap:wrap}
 .ch-name{font-size:14px;font-weight:700;color:var(--dark)}
 .ch-job{font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
 .ch.tienda .ch-job{background:rgba(62,180,137,.13);color:var(--teal)}
 .ch.web .ch-job{background:rgba(91,155,213,.14);color:#3F7CB4}
 .ch-big{font-size:25px;font-weight:700;letter-spacing:-.02em;color:var(--dark);line-height:1}
 .ch-vs{font-size:11px;color:var(--grey);margin-top:5px}
-.ch-div{height:0.5px;background:var(--border);margin:14px 0}
-.ch-kpi{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:9px}
+.ch-div{height:0.5px;background:var(--border);margin:11px 0}
+.ch-kpi{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:7px}
 .ch-kpi-l{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);font-weight:600}
 .ch-kpi-v{font-size:16px;font-weight:700;color:var(--dark);white-space:nowrap}
 .ch-kpi-v.warn{color:var(--red)}
 .ch-kpi-s{font-size:10.5px;color:var(--grey)}
-.ch-lev{font-size:11.5px;color:var(--ink);line-height:1.45;margin-top:12px;padding-top:12px;border-top:0.5px solid var(--border)}
+.ch-lev{font-size:11.5px;color:var(--ink);line-height:1.4;margin-top:10px;padding-top:10px;border-top:0.5px solid var(--border)}
 .ch-lev b{color:var(--dark)}
 @media(max-width:680px){.dual{grid-template-columns:1fr}}
 .funnel-wrap{background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px}
@@ -542,60 +554,59 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 <!-- ════════════ PANEL ════════════ -->
 <div class="page on" id="pg-overview">
 
-  <div class="slbl">Agosto 2026 · mes cerrado</div>
-  <div class="dual">
+  <div class="neck">
+    <span class="neck-k">Cuello hoy</span>
+    <span class="neck-t"><b>Agendamiento.</b> De cada 100 que escriben, agendan 8. El cierre ya está en 80% — el problema está antes de que lleguen.</span>
+  </div>
 
+  <div class="slbl">Quick wins de septiembre</div>
+  <div class="qws">
+    <div class="qw2">
+      <div class="qw2-n">01 · Destapa el cuello</div>
+      <div class="qw2-t">Video de setting</div>
+      <div class="qw2-d">Explica la diferencia entre cita gratis y Experiencia, antes de agendar. Filtra la consulta de precio.</div>
+    </div>
+    <div class="qw2">
+      <div class="qw2-n">02 · Prepara el cyber</div>
+      <div class="qw2-t">Definir vestidos del cyber</div>
+      <div class="qw2-d">Qué tickets salen a web y con qué formato. Sin esto no se puede armar el calentamiento.</div>
+    </div>
+  </div>
+
+  <div class="slbl">Agosto cerrado</div>
+  <div class="dual">
     <div class="ch tienda">
-      <div class="ch-top">
-        <span class="ch-name">🏪 Tienda</span>
-        <span class="ch-job">Sostener</span>
-      </div>
+      <div class="ch-top"><span class="ch-name">🏪 Tienda</span><span class="ch-job">Sostener</span></div>
       <div class="ch-big">$27.000.000</div>
       <div class="ch-vs">contra <b>$16M</b> en agosto 2025 <span style="color:var(--teal)">↑ 69%</span></div>
       <div class="ch-div"></div>
-      <div class="ch-kpi"><span class="ch-kpi-l">Métrica que manda</span><span class="ch-kpi-v">Tasa de cierre</span></div>
       <div class="ch-kpi"><span class="ch-kpi-s">Cierre en cita pagada</span><span class="ch-kpi-v" style="color:var(--teal)">80%</span></div>
       <div class="ch-kpi"><span class="ch-kpi-s">Mix de cita de pago</span><span class="ch-kpi-v" style="color:var(--teal)">27%</span></div>
-      <div class="ch-kpi"><span class="ch-kpi-s">Agendamiento sobre mensajes</span><span class="ch-kpi-v warn">8%</span></div>
-      <div class="ch-kpi"><span class="ch-kpi-s">Ticket promedio</span><span class="ch-kpi-v">$363K</span></div>
-      <div class="ch-lev"><b>Leverage: horas.</b> Cada venta cuesta tiempo de equipo. Crece si sube el mix de citas pagadas, no si suman más citas.</div>
+      <div class="ch-kpi"><span class="ch-kpi-s">Agendamiento</span><span class="ch-kpi-v warn">8%</span></div>
+      <div class="ch-lev"><b>Leverage: horas.</b> Crece si sube el mix, no si suman citas.</div>
     </div>
-
     <div class="ch web">
-      <div class="ch-top">
-        <span class="ch-name">💻 Web</span>
-        <span class="ch-job">Escalar</span>
-      </div>
+      <div class="ch-top"><span class="ch-name">💻 Web</span><span class="ch-job">Escalar</span></div>
       <div class="ch-big">8 ventas</div>
-      <div class="ch-vs">un vestido de ticket alto + accesorios · contra <b>~$5M</b> en sep 2025</div>
+      <div class="ch-vs">contra <b>~$5M</b> en septiembre 2025</div>
       <div class="ch-div"></div>
-      <div class="ch-kpi"><span class="ch-kpi-l">Métrica que manda</span><span class="ch-kpi-v">Add-to-Cart</span></div>
-      <div class="ch-kpi"><span class="ch-kpi-s">ATC móvil</span><span class="ch-kpi-v warn">0,3%</span></div>
+      <div class="ch-kpi"><span class="ch-kpi-s">Add-to-Cart móvil</span><span class="ch-kpi-v warn">0,3%</span></div>
       <div class="ch-kpi"><span class="ch-kpi-s">Atribución</span><span class="ch-kpi-v warn">rota</span></div>
-      <div class="ch-kpi"><span class="ch-kpi-s">Costo del canal</span><span class="ch-kpi-v" style="color:var(--teal)">$0</span></div>
-      <div class="ch-kpi"><span class="ch-kpi-s">Pauta sobre venta</span><span class="ch-kpi-v">0%</span></div>
-      <div class="ch-lev"><b>Leverage: sin horas.</b> Factura sin pauta y sin tiempo de equipo. Es el único canal que puede crecer sin contratar.</div>
+      <div class="ch-kpi"><span class="ch-kpi-s">Pauta invertida</span><span class="ch-kpi-v" style="color:var(--teal)">$0</span></div>
+      <div class="ch-lev"><b>Leverage: sin horas.</b> El único canal que crece sin contratar.</div>
     </div>
-
   </div>
 
-  <div class="alert-box info" style="margin-top:0">
-    <span class="alert-icon">⚠️</span>
-    <div><div class="alert-title">El cuello se movió: ahora está en el agendamiento</div><div class="alert-text">El cierre en cita pagada llegó a 80% — la venta en tienda ya no es el problema. Lo que cayó es el porcentaje de mensajes que termina agendando (8%), por un anuncio que trae consultas de precio en vez de intención. Ese es el foco de la semana, no el cierre.</div></div>
-  </div>
-
-  <div class="slbl">Dónde está fuerte cada canal · 6 áreas del negocio</div>
+  <div class="slbl">Las 6 áreas · tienda contra web</div>
   <div class="radar-wrap">
     <div class="rd-legend">
       <div class="rd-li"><span class="rd-sw" style="background:var(--teal)"></span>Tienda</div>
       <div class="rd-li"><span class="rd-sw" style="background:#5B9BD5"></span>Web</div>
     </div>
     <div class="radar-grid">
-      <svg class="radar-svg" viewBox="0 0 340 290" role="img" aria-label="Radar comparativo de tienda y web por área">
+      <svg class="radar-svg" viewBox="0 0 340 290" role="img" aria-label="Radar de tienda y web por área">
         <polygon class="ring" points="170,50 252.3,97.5 252.3,192.5 170,240 87.7,192.5 87.7,97.5"/>
-        <polygon class="ring" points="170,69 235.8,107 235.8,183 170,221 104.2,183 104.2,107"/>
         <polygon class="ring" points="170,88 219.4,116.5 219.4,173.5 170,202 120.6,173.5 120.6,116.5"/>
-        <polygon class="ring" points="170,107 202.9,126 202.9,164 170,183 137.1,164 137.1,126"/>
         <polygon class="ring" points="170,126 186.5,135.5 186.5,154.5 170,164 153.5,154.5 153.5,135.5"/>
         <line class="spoke" x1="170" y1="145" x2="170" y2="50"/>
         <line class="spoke" x1="170" y1="145" x2="252.3" y2="97.5"/>
@@ -607,12 +618,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
                  fill="rgba(62,180,137,.22)" stroke="#3EB489" stroke-width="2"/>
         <polygon points="170,126 186.5,135.5 202.9,164 170,164 153.5,154.5 153.5,135.5"
                  fill="rgba(91,155,213,.24)" stroke="#5B9BD5" stroke-width="2"/>
-        <circle class="pt" cx="170" cy="88" r="3.5" fill="#3EB489"/>
-        <circle class="pt" cx="252.3" cy="97.5" r="3.5" fill="#3EB489"/>
-        <circle class="pt" cx="252.3" cy="192.5" r="3.5" fill="#3EB489"/>
-        <circle class="pt" cx="120.6" cy="173.5" r="3.5" fill="#3EB489"/>
-        <circle class="pt" cx="120.6" cy="116.5" r="3.5" fill="#3EB489"/>
-        <circle class="pt" cx="202.9" cy="164" r="3.5" fill="#5B9BD5"/>
         <text class="ax" x="170" y="30" text-anchor="middle">Adquisición</text>
         <text class="ax" x="272" y="88" text-anchor="middle">Conversión</text>
         <text class="ax" x="272" y="206" text-anchor="middle">Ticket</text>
@@ -620,92 +625,51 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
         <text class="ax" x="68" y="206" text-anchor="middle">Sistemas</text>
         <text class="ax" x="68" y="88" text-anchor="middle">Datos</text>
       </svg>
-      <div class="rd-rows">
-        <div class="rd-row"><span class="rd-area">Adquisición</span><span class="rd-bar"><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">agenda 8%</span></div>
-        <div class="rd-row"><span class="rd-area"></span><span class="rd-bar"><i class="rd-seg w"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">SEO sin usar</span></div>
-        <div class="rd-row"><span class="rd-area">Conversión</span><span class="rd-bar"><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i></span><span class="rd-lbl">80% pagada</span></div>
-        <div class="rd-row"><span class="rd-area"></span><span class="rd-bar"><i class="rd-seg w"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">ATC 0,3%</span></div>
-        <div class="rd-row"><span class="rd-area">Ticket</span><span class="rd-bar"><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i></span><span class="rd-lbl">$363K</span></div>
-        <div class="rd-row"><span class="rd-area"></span><span class="rd-bar"><i class="rd-seg w"></i><i class="rd-seg w"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">ticket bajo</span></div>
-        <div class="rd-row"><span class="rd-area">Recompra</span><span class="rd-bar"><i class="rd-seg t"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">sin sistema</span></div>
-        <div class="rd-row"><span class="rd-area"></span><span class="rd-bar"><i class="rd-seg w"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">sin email</span></div>
-        <div class="rd-row"><span class="rd-area">Sistemas</span><span class="rd-bar"><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">depende de quién</span></div>
-        <div class="rd-row"><span class="rd-area"></span><span class="rd-bar"><i class="rd-seg w"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">Shopify suelto</span></div>
-        <div class="rd-row"><span class="rd-area">Datos</span><span class="rd-bar"><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg t"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">CPA recién limpio</span></div>
-        <div class="rd-row"><span class="rd-area"></span><span class="rd-bar"><i class="rd-seg w"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i><i class="rd-seg"></i></span><span class="rd-lbl">atribución rota</span></div>
-      </div>
     </div>
-    <div class="funnel-note" style="margin-top:14px"><strong>Cómo leerlo:</strong> la tienda llegó al máximo en conversión (80% de cierre) y bajó en adquisición: el cuello se movió del cierre al agendamiento. La web está colapsada en el centro — no es que rinda poco, es que <strong>ninguna de las seis áreas está construida todavía</strong>. Ahí está el espacio.</div>
+    <div class="funnel-note" style="margin-top:10px">La tienda tocó techo en conversión y cayó en adquisición: ahí se movió el cuello. La web está colapsada en el centro — no rinde poco, <strong>ninguna de las seis áreas está construida</strong>.</div>
   </div>
 
-  <div class="qw">
-    <div class="qw-top">
-      <span class="qw-k">Quick win pendiente</span>
-      <span class="qw-t">Video de upsell en el setting</span>
-    </div>
-    <div class="qw-txt">Sumar un video en los mensajes, antes de que la clienta agende, que explique la diferencia entre la cita gratis y la Experiencia. <b>No vende un vestido: vende la asesoría de 50 minutos.</b> Es la palanca más corta que queda — y ahora es la prioridad: el agendamiento sobre mensajes cayó a 8% porque hay un anuncio abierto que trae consultas de precio en vez de intención.</div>
-    <div class="qw-flow">
-      <span class="qw-step">Mensaje entrante</span><span class="qw-arw">→</span>
-      <span class="qw-step">Video de upsell</span><span class="qw-arw">→</span>
-      <span class="qw-step">Cita Experiencia</span><span class="qw-arw">→</span>
-      <span class="qw-step" style="border-color:var(--teal);color:var(--teal)">80% de cierre</span>
-    </div>
-    <div class="qw-txt" style="margin-top:12px"><b>Quién lo hace:</b> el equipo graba el video. <b>Qué falta de mi lado:</b> el guion. <b>Por qué importa ahora:</b> el cierre en cita pagada ya está en 80% — la venta no es el problema. El cuello se movió al agendamiento, y este video es lo que lo filtra.</div>
-  </div>
-
-  <div class="slbl">Dónde está fuerte y dónde tiene que sostener</div>
-  <div class="bn-grid">
-    <div class="bn-card"><div class="bn-head"><span class="bn-n">✓</span><span class="bn-title">Fuerte · cierre en tienda</span></div><div class="bn-text">80% en cita pagada, el número más alto del programa. La venta en tienda ya no es el cuello: se sistematiza para que no dependa de quién atienda.</div></div>
-    <div class="bn-card"><div class="bn-head"><span class="bn-n">✓</span><span class="bn-title">Fuerte · contenido</span></div><div class="bn-text">Orgánico con alcances virales sin pauta detrás. Alimenta los dos canales y ya opera sin supervisión.</div></div>
-    <div class="bn-card"><div class="bn-head"><span class="bn-n">!</span><span class="bn-title">Sostener · agendamiento</span></div><div class="bn-text">El agendamiento sobre mensajes cayó a 8%. La causa está identificada: un anuncio abierto que trae consultas de precio. Se separa a campaña de tráfico y entra el video que filtra hacia la Experiencia.</div></div>
-    <div class="bn-card"><div class="bn-head"><span class="bn-n">↑</span><span class="bn-title">Escalar · web</span></div><div class="bn-text">Vende sin que nadie la haya tocado. Antes de mandarle tráfico hay que arreglar el Add-to-Cart y separar la atribución del link de pago.</div></div>
-  </div>
-
-  <div class="slbl">Los dos funnels · corren en paralelo, no se colapsan</div>
+  <div class="slbl">Los dos funnels</div>
   <div class="funnel-wrap">
     <div class="dg-cols" style="margin-bottom:0">
       <div class="dg-col tienda">
         <div class="dg-col-lbl"><span class="cat-tag showroom">🏪 Tienda</span></div>
-        <div class="dg-box neutral"><div class="dg-title">Meta + TikTok</div><div class="dg-sub">2.235 conversaciones</div></div>
+        <div class="dg-box neutral"><div class="dg-title">Mensajes</div><div class="dg-sub">Meta + TikTok</div></div>
         <div class="dg-arrow">↓</div>
-        <div class="dg-box warn"><div class="dg-title">⚠ Cita agendada</div><div class="dg-sub">8% de los mensajes</div></div>
+        <div class="dg-box warn"><div class="dg-title">⚠ Agenda</div><div class="dg-sub">8% · el cuello</div></div>
         <div class="dg-arrow">↓</div>
-        <div class="dg-box success"><div class="dg-title">Mix de pago</div><div class="dg-sub">27% y subiendo</div></div>
-        <div class="dg-arrow">↓</div>
-        <div class="dg-box hero"><div class="dg-title">✓ Venta tienda</div><div class="dg-sub">80% de cierre · $27M</div></div>
+        <div class="dg-box hero"><div class="dg-title">✓ Venta</div><div class="dg-sub">80% de cierre</div></div>
       </div>
       <div class="dg-col web">
         <div class="dg-col-lbl"><span class="cat-tag ecommerce">💻 Web</span></div>
-        <div class="dg-box neutral"><div class="dg-title">Orgánico</div><div class="dg-sub">SEO sin ejecutar</div></div>
+        <div class="dg-box neutral"><div class="dg-title">Visita PDP</div><div class="dg-sub">solo orgánico</div></div>
         <div class="dg-arrow">↓</div>
-        <div class="dg-box neutral"><div class="dg-title">Visita PDP</div><div class="dg-sub">sin optimizar</div></div>
+        <div class="dg-box broken"><div class="dg-title">✗ Add-to-Cart</div><div class="dg-sub">0,3% · el cuello</div></div>
         <div class="dg-arrow">↓</div>
-        <div class="dg-box broken"><div class="dg-title">✗ Add-to-Cart</div><div class="dg-sub">0,3% móvil · el cuello</div></div>
-        <div class="dg-arrow">↓</div>
-        <div class="dg-box broken"><div class="dg-title">Venta web</div><div class="dg-sub">8 ventas · regiones</div></div>
+        <div class="dg-box broken"><div class="dg-title">Venta</div><div class="dg-sub">8 en el mes</div></div>
       </div>
     </div>
-    <div class="funnel-note"><strong>No se colapsan:</strong> quien ve la web y compra en tienda cuenta como Tienda. Solo queda en Web quien no puede pisar la tienda — típicamente por región. <strong>Hoy esa regla no se está aplicando:</strong> el link de pago se registra como venta web e infla el canal.</div>
+    <div class="funnel-note">Quien ve la web y compra en tienda cuenta como Tienda. <strong>Hoy el link de pago se registra como venta web e infla el canal.</strong></div>
   </div>
 
   <div class="slbl">Stack y costo por canal</div>
   <div class="dual">
-    <div class="ch tienda" style="padding:16px 18px">
-      <div class="ch-top" style="margin-bottom:10px"><span class="ch-name" style="font-size:12.5px">🏪 Tienda</span><span class="ch-kpi-v">$1.307.203 / mes</span></div>
+    <div class="ch tienda" style="padding:14px 16px">
+      <div class="ch-top" style="margin-bottom:9px"><span class="ch-name" style="font-size:12.5px">🏪 Tienda</span><span class="ch-kpi-v">$1,3M / mes</span></div>
       <div class="stack-wrap">
-        <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=facebook.com" alt="">Meta Ads <span class="bdg grey" style="margin-left:3px">todo el gasto</span></div>
-        <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=agendapro.com" alt="">Agenda Pro <span class="bdg grey" style="margin-left:3px">citas</span></div>
-        <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=whatsapp.com" alt="">WhatsApp <span class="bdg grey" style="margin-left:3px">venta asistida</span></div>
-        <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=tiktok.com" alt="">TikTok <span class="bdg grey" style="margin-left:3px">orgánico</span></div>
+        <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=facebook.com" alt="">Meta Ads</div>
+        <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=agendapro.com" alt="">Agenda Pro</div>
+        <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=whatsapp.com" alt="">WhatsApp</div>
+        <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=tiktok.com" alt="">TikTok</div>
       </div>
     </div>
-    <div class="ch web" style="padding:16px 18px">
-      <div class="ch-top" style="margin-bottom:10px"><span class="ch-name" style="font-size:12.5px">💻 Web</span><span class="ch-kpi-v" style="color:var(--teal)">$0 / mes</span></div>
+    <div class="ch web" style="padding:14px 16px">
+      <div class="ch-top" style="margin-bottom:9px"><span class="ch-name" style="font-size:12.5px">💻 Web</span><span class="ch-kpi-v" style="color:var(--teal)">$0 / mes</span></div>
       <div class="stack-wrap">
-        <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=shopify.com" alt="">Shopify <span class="bdg amber" style="margin-left:3px">sin conectar a Claude</span></div>
-        <div class="sp"><div class="sd off"></div>SEO / blogs <span class="bdg grey" style="margin-left:3px">por construir</span></div>
-        <div class="sp"><div class="sd off"></div>Email / recompra <span class="bdg grey" style="margin-left:3px">por construir</span></div>
-        <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=claude.ai" alt="">Claude <span class="bdg grey" style="margin-left:3px">contenido</span></div>
+        <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=shopify.com" alt="">Shopify <span class="bdg amber" style="margin-left:3px">sin Claude</span></div>
+        <div class="sp"><div class="sd off"></div>SEO</div>
+        <div class="sp"><div class="sd off"></div>Email</div>
+        <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=claude.ai" alt="">Claude</div>
       </div>
     </div>
   </div>
