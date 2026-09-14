@@ -916,7 +916,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="rm-track">
       <div class="rm-node"><div class="rm-dot done">13</div><div class="rm-lbl">Cierre agosto</div><div class="rm-sub">3 sep</div></div>
       <div class="rm-node"><div class="rm-dot done">14</div><div class="rm-lbl">Cyber: data</div><div class="rm-sub">8 sep</div></div>
-      <div class="rm-node"><div class="rm-dot next">15</div><div class="rm-lbl">Producto + CRO</div><div class="rm-sub">14 sep</div></div>
+      <div class="rm-node"><div class="rm-dot now">15</div><div class="rm-lbl">Producto + CRO</div><div class="rm-sub">14 sep</div></div>
       <div class="rm-node"><div class="rm-dot future">16</div><div class="rm-lbl">Campañas</div><div class="rm-sub">21 sep</div></div>
       <div class="rm-node"><div class="rm-dot future">17</div><div class="rm-lbl">Última pasada</div><div class="rm-sub">28 sep</div></div>
       <div class="rm-node"><div class="rm-dot critical">18</div><div class="rm-lbl">CYBER</div><div class="rm-sub">5 oct</div></div>
@@ -1417,8 +1417,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
         <div class="cy-hero-s">La venta abre el viernes 2 en la noche, al cerrar la jornada de tienda. La ventana real son seis días, no tres.</div>
       </div>
       <div class="cy-cd">
-        <div class="cy-cd-b"><div class="cy-cd-n hot">27</div><div class="cy-cd-l">Días</div></div>
-        <div class="cy-cd-b"><div class="cy-cd-n">2</div><div class="cy-cd-l">Sesiones</div></div>
+        <div class="cy-cd-b"><div class="cy-cd-n hot" data-hasta="2026-10-02">18</div><div class="cy-cd-l">Para abrir</div></div>
+        <div class="cy-cd-b"><div class="cy-cd-n" data-hasta="2026-10-05">21</div><div class="cy-cd-l">Al evento</div></div>
         <div class="cy-cd-b"><div class="cy-cd-n">6</div><div class="cy-cd-l">Días venta</div></div>
       </div>
     </div>
@@ -1549,7 +1549,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="cy-pend">
     <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Planilla de productos con su tope de descuento</div><div class="cy-p-d">Los de gala y los de liquidación por separado. Se cruza contra tráfico y conversión antes de decidir dónde va la plata.</div></div><span class="bdg red cy-p-tag">Bloquea la pauta</span></div>
     <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Cerrar el presupuesto de pauta</div><div class="cy-p-d">$800K, $1M o $1,2M — considerando que comparte bolsa con el tráfico que alimenta la tienda.</div></div><span class="bdg red cy-p-tag">Bloquea la pauta</span></div>
-    <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Producir los creativos de las dos líneas</div><div class="cy-p-d">La próxima semana pierdes un viernes trabajando sola: la producción sale antes de esa ventana.</div></div><span class="bdg amber cy-p-tag">Con fecha</span></div>
+    <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Producir los creativos de las dos líneas</div><div class="cy-p-d">La semana del 14 estás sola hasta el miércoles y el viernes 18 es feriado: la producción se reparte antes y después.</div></div><span class="bdg amber cy-p-tag">Con fecha</span></div>
     <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Armar la audiencia /cyber en Meta</div><div class="cy-p-d">Aunque la pestaña no esté publicada. Es la base del last chance, del remarketing y del cyber siguiente.</div></div><span class="bdg grey cy-p-tag">Acumula</span></div>
     <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Corregir atributos de producto en Shopify</div><div class="cy-p-d">408 de 484 pedidos sin tipo asignado. Mientras siga así, no se puede distinguir producto ganador de fantasma.</div></div><span class="bdg red cy-p-tag">Ensucia la data</span></div>
     <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Apagar la fuga de segmentación en Meta</div><div class="cy-p-d">La casilla de "llegar a más personas" es la que te trae consultas de regiones a campañas de Santiago.</div></div><span class="bdg amber cy-p-tag">Detectado</span></div>
@@ -1578,7 +1578,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="cy-node-h">📧 Base de correos</div>
       <ul>
         <li>En toda la ventana de 2025 el correo aportó <b>5 sesiones</b>.</li>
-        <li>Cada visita, cada consulta por WhatsApp y cada compra deja una dirección. Quedan 27 días para juntarlas.</li>
+        <li>Cada visita, cada consulta por WhatsApp y cada compra deja una dirección. Cada día sin juntarlas es una lista más corta.</li>
       </ul>
     </div>
   </div>
@@ -2126,6 +2126,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
 
 <script>
+document.querySelectorAll('[data-hasta]').forEach(el=>{
+  const d=Math.ceil((new Date(el.dataset.hasta+'T00:00:00')-new Date(new Date().toDateString()))/864e5);
+  el.textContent=d>0?d:(d===0?'Hoy':'✓');
+});
 const PAGES=['overview','roadmap','cyber','ventas','recompra','engine','recursos'];
 function sw(id,el,isMob){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
