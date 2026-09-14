@@ -659,6 +659,25 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .stk-d{font-size:11px;color:var(--grey);line-height:1.45}
 .stk-w{font-size:10px;color:var(--grey);margin-top:8px;padding-top:7px;border-top:0.5px solid var(--border);display:flex;align-items:center;gap:5px}
 .stk-w b{color:var(--dark);font-weight:600}
+
+/* fase previa · flujo del lobby */
+.cy-flow{background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:18px 16px;margin-bottom:10px;overflow-x:auto}
+.cy-fl{display:flex;align-items:stretch;gap:6px;min-width:600px}
+.cy-fs{flex:1;border-radius:10px;padding:11px 12px;background:var(--bg);border:0.5px solid var(--border);display:flex;flex-direction:column;gap:4px}
+.cy-fs.key{background:var(--gold-lt);border-color:#F0DDB4}
+.cy-fs.end{background:var(--teal-lt);border-color:#BFE6D5}
+.cy-fs-n{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey)}
+.cy-fs-t{font-size:12px;font-weight:700;color:var(--dark);line-height:1.3}
+.cy-fs-d{font-size:10.5px;color:var(--grey);line-height:1.4}
+.cy-fa{display:flex;align-items:center;color:var(--sand);font-size:15px;flex-shrink:0}
+/* checklist de la PDP */
+.cy-ck{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:8px;margin-bottom:10px}
+.cy-ci{background:var(--surf);border:1px solid var(--border);border-radius:10px;padding:11px 13px;display:grid;grid-template-columns:18px 1fr;gap:9px;align-items:start}
+.cy-ci-m{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;margin-top:1px}
+.cy-ci-m.ok{background:var(--teal)}
+.cy-ci-m.to{background:var(--surf);border:1.5px solid var(--gold)}
+.cy-ci-t{font-size:12px;font-weight:600;color:var(--dark);line-height:1.35}
+.cy-ci-d{font-size:10.5px;color:var(--grey);line-height:1.4;margin-top:2px}
 </style>
 </head>
 <body>
@@ -916,8 +935,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="rm-track">
       <div class="rm-node"><div class="rm-dot done">13</div><div class="rm-lbl">Cierre agosto</div><div class="rm-sub">3 sep</div></div>
       <div class="rm-node"><div class="rm-dot done">14</div><div class="rm-lbl">Cyber: data</div><div class="rm-sub">8 sep</div></div>
-      <div class="rm-node"><div class="rm-dot now">15</div><div class="rm-lbl">Producto + CRO</div><div class="rm-sub">14 sep</div></div>
-      <div class="rm-node"><div class="rm-dot future">16</div><div class="rm-lbl">Campañas</div><div class="rm-sub">21 sep</div></div>
+      <div class="rm-node"><div class="rm-dot done">15</div><div class="rm-lbl">Lobby + CRO</div><div class="rm-sub">14 sep</div></div>
+      <div class="rm-node"><div class="rm-dot next">16</div><div class="rm-lbl">Lectura + Google</div><div class="rm-sub">21 sep</div></div>
       <div class="rm-node"><div class="rm-dot future">17</div><div class="rm-lbl">Última pasada</div><div class="rm-sub">28 sep</div></div>
       <div class="rm-node"><div class="rm-dot critical">18</div><div class="rm-lbl">CYBER</div><div class="rm-sub">5 oct</div></div>
       <div class="rm-node"><div class="rm-dot future">19</div><div class="rm-lbl mt">Last chance</div><div class="rm-sub">12 oct</div></div>
@@ -937,6 +956,68 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
   <div class="slbl">Sesión activa</div>
   <div class="week-card open" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 15 — El lobby y la PDP de los 10</div><div class="week-date">Llamada 14 sep (60 min)</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="rn-grid" style="margin-bottom:12px">
+        <div class="rn-c"><div class="rn-l">Vestidos</div><div class="rn-v">10</div><div class="rn-s">elegidos con la venta de tienda</div></div>
+        <div class="rn-c"><div class="rn-l">Ticket objetivo</div><div class="rn-v">$300K</div><div class="rn-s">línea tapa galas</div></div>
+        <div class="rn-c"><div class="rn-l">Entrega real</div><div class="rn-v">7–10</div><div class="rn-s">días hábiles, a la vista</div></div>
+        <div class="rn-c up"><div class="rn-l">Clarity</div><div class="rn-v">3.030</div><div class="rn-s">sesiones que ya lee Claude</div></div>
+      </div>
+
+      <div class="week-sec">⚠️ La web no ve la venta de tienda</div>
+      <div class="week-text">Los 10 salieron de lo que se vende en el local, y eso <b>no pasa por Shopify</b>. El lobby es el que dice si también tiran online.</div>
+
+      <div class="week-sec">✅ Decisiones</div>
+      <div class="week-text"><ul>
+        <li><b>Fase previa de tráfico</b> hasta el 27, sin hablar de cyber.</li>
+        <li><b>El remarketing va a quien entró a un vestido</b>, no a quien pasó por el lobby.</li>
+        <li><b>Google entra recién en el cyber</b>, y los saldos van sin pauta.</li>
+      </ul></div>
+
+      <div class="week-sec">🔧 Instalado en la llamada</div>
+      <div class="week-text">Cowork en el navegador y el <b>agente CRO</b> leyendo Clarity. El detalle del plan vive en el tab de Cyber.</div>
+
+      <a class="rec-link" href="https://fathom.video/share/Bgozm8LSTHVZkXQkhX59AxQGot6xmMmW" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 15</a>
+    </div>
+  </div>
+
+  <div class="week-card critical open" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 16 — Lo que dijo el lobby</div><div class="week-date">📅 21 sep · después de fiestas patrias</div></div><span class="bdg red">Próxima</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg red">Cyber</span><span class="bdg grey">Google</span><span class="bdg grey">Pauta</span></div>
+      <div class="week-sec">🎯 Núcleo</div>
+      <div class="week-text">Leer qué vestidos jalaron tráfico y cuáles no, <b>antes de ponerles la plata del evento</b>. Con eso se montan Google y las tres campañas del cyber.</div>
+      <div class="week-sec">✅ Para llegar con esto listo</div>
+      <div class="week-text"><ul>
+        <li>El lobby publicado y la campaña previa corriendo.</li>
+        <li>Las audiencias por vestido creadas en Meta.</li>
+        <li>El presupuesto del evento decidido.</li>
+      </ul></div>
+    </div>
+  </div>
+
+  <div class="slbl">Bloque 2 · sesiones anteriores</div>
+  <div class="week-card done" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 14 — Cyber: la data del año pasado y la estructura</div><div class="week-date">Llamada 8 sep (55 + 33 min)</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-sec">✅ Decisiones</div>
+      <div class="week-text"><ul>
+        <li><b>La venta abre el viernes 2</b>: el año pasado el 40% entró antes del evento.</li>
+        <li><b>Campañas por zona, no por interés</b>: el norte convierte diez veces más que Santiago.</li>
+        <li><b>Google entra al mix</b>: convierte cuatro veces mejor que redes.</li>
+      </ul></div>
+      <div class="week-sec">🔧 Instalado en la llamada</div>
+      <div class="week-text">Search Console y la skill de evento. El plan completo vive en el tab de Cyber.</div>
+      <a class="rec-link" href="https://fathom.video/share/sY5hDsHZuyyboUCtq8rPzez63Ftfsr3D" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 14 · parte 1</a>
+      <a class="rec-link" href="https://fathom.video/share/mG9-KsckxB2yw8pkPEBUSE34fkk_w4J_" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 14 · parte 2</a>
+    </div>
+  </div>
+
+  <div class="week-card done" onclick="toggleCard(this)">
     <div class="week-hd"><div class="week-info"><div class="week-title">Sem 13 — Cierre de agosto y el filtro de la pauta</div><div class="week-date">Llamada 3 sep (58 min)</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
@@ -965,32 +1046,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="week-card critical open" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 14 — IA y skills con todo el equipo 🤖</div><div class="week-date">📅 Próxima semana · sesión ampliada</div></div><span class="bdg red">Próxima</span></div>
-    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
-    <div class="week-body">
-      <div class="week-chips"><span class="bdg red">Todo el equipo</span><span class="bdg grey">Skills</span><span class="bdg grey">Reporte propio</span></div>
-      <div class="week-sec">🎯 Núcleo</div>
-      <div class="week-text">Sesión con el equipo completo — ventas y maquilladoras. Se hace el recuento de lo que ya están operando a nivel sistema e IA, y se instalan las skills para que el reporte quede en sus manos.</div>
-      <div class="week-sec">📝 Entregable</div>
-      <div class="week-text">Las skills del arsenal instaladas y funcionando en el equipo, más el reporte que ellas mismas puedan correr sin depender de la llamada.</div>
-      <div class="week-sec">✅ Para llegar con esto listo</div>
-      <div class="week-text"><ul>
-        <li>El video de la Experiencia grabado.</li>
-        <li>El anuncio abierto separado a campaña de tráfico.</li>
-        <li>Agenda Pro de septiembre del año pasado revisado, para tener el comparativo del mes.</li>
-      </ul></div>
-      <div class="alert-box info" onclick="event.stopPropagation()">
-        <span class="alert-icon">🧰</span>
-        <div><div class="alert-title">El arsenal ya está disponible</div><div class="alert-text">Siete skills instalables en la pestaña Recursos. Se parte por growth-engine, que dice dónde está el cuello y a cuál abrir después.</div></div>
-      </div>
-    </div>
-  </div>
 
   <div class="slbl">Camino del bloque 2 · semana a semana</div>
   <div class="rm-uc-grid">
-    <div class="rm-uc next-call"><div class="rm-uc-num">Sem 15 · 14 sep</div><div class="rm-uc-title">Planilla de producto, creativos y skill de CRO</div><div class="rm-uc-chips"><span class="bdg red">Cyber</span><span class="bdg grey">CRO</span></div></div>
-    <div class="rm-uc"><div class="rm-uc-num">Sem 16 · 21 sep</div><div class="rm-uc-title">Campañas montadas por zona + Google y audiencias</div><div class="rm-uc-chips"><span class="bdg red">Cyber</span><span class="bdg grey">Pauta</span></div></div>
+    <div class="rm-uc next-call"><div class="rm-uc-num">Sem 16 · 21 sep</div><div class="rm-uc-title">Qué vestidos jalaron en el lobby + Google y campañas del evento</div><div class="rm-uc-chips"><span class="bdg red">Cyber</span><span class="bdg grey">Pauta</span></div></div>
     <div class="rm-uc"><div class="rm-uc-num">Sem 17 · 28 sep</div><div class="rm-uc-title">Última pasada: stock, ruta /cyber y móvil</div><div class="rm-uc-chips"><span class="bdg red">Cyber</span><span class="bdg grey">E-comm</span></div></div>
     <div class="rm-uc"><div class="rm-uc-num">Sem 18 · 5 oct</div><div class="rm-uc-title">Cyber en vivo: monitoreo y ajuste diario</div><div class="rm-uc-chips"><span class="bdg red">Evento</span></div></div>
     <div class="rm-uc"><div class="rm-uc-num">Sem 19 · 12 oct</div><div class="rm-uc-title">Last chance, carros colgados y lectura de resultados</div><div class="rm-uc-chips"><span class="bdg grey">Cyber</span><span class="bdg grey">Datos</span></div></div>
@@ -1414,7 +1473,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="cy-hero-top">
       <div>
         <div class="cy-hero-t">Cyber · 5 al 7 de octubre</div>
-        <div class="cy-hero-s">La venta abre el viernes 2 en la noche, al cerrar la jornada de tienda. La ventana real son seis días, no tres.</div>
+        <div class="cy-hero-s">Hasta el 27 corre el lobby, sin hablar de cyber. La venta abre el viernes 2 en la noche y el evento es del 5 al 7.</div>
       </div>
       <div class="cy-cd">
         <div class="cy-cd-b"><div class="cy-cd-n hot" data-hasta="2026-10-02">18</div><div class="cy-cd-l">Para abrir</div></div>
@@ -1427,6 +1486,47 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="alert-box warn" style="margin-top:0">
     <span class="alert-icon">🎯</span>
     <div><div class="alert-title">La meta no se compra con presupuesto</div><div class="alert-text">Con $800K de pauta el piso es $8M. Llegar a $15M pide 100 pedidos a ticket completo y 45.000 sesiones más que el año pasado, en un año donde la conversión ya cayó 41% en julio y 70% en agosto con más tráfico que nunca.</div></div>
+  </div>
+
+  <div class="slbl">Fase previa · el lobby, hasta el 27 de septiembre</div>
+  <div class="cy-flow">
+    <div class="cy-fl">
+      <div class="cy-fs"><div class="cy-fs-n">01 · Anuncio</div><div class="cy-fs-t">Video aspiracional</div><div class="cy-fs-d">El que reventó el WhatsApp. Nada de cyber ni de precio.</div></div>
+      <div class="cy-fa">→</div>
+      <div class="cy-fs"><div class="cy-fs-n">02 · Lobby</div><div class="cy-fs-t">Los 10 seleccionados</div><div class="cy-fs-d">Banner, guía por tipo de cuerpo y complementa tu look.</div></div>
+      <div class="cy-fa">→</div>
+      <div class="cy-fs key"><div class="cy-fs-n">03 · Venta</div><div class="cy-fs-t">La PDP del vestido</div><div class="cy-fs-d">El lobby no vende: vende la ficha.</div></div>
+      <div class="cy-fa">→</div>
+      <div class="cy-fs"><div class="cy-fs-n">04 · Audiencia</div><div class="cy-fs-t">Una por vestido</div><div class="cy-fs-d">Quien entró al rojo, no quien pasó por el lobby.</div></div>
+      <div class="cy-fa">→</div>
+      <div class="cy-fs end"><div class="cy-fs-n">05 · Cyber</div><div class="cy-fs-t">Remarketing</div><div class="cy-fs-d">"Aquí está tu vestido", con el descuento.</div></div>
+    </div>
+  </div>
+  <div class="cy-str">
+    <div class="cy-node">
+      <div class="cy-node-h">📣 La campaña previa</div>
+      <ul>
+        <li><b>Una campaña de tráfico</b> con tres conjuntos: RM, Norte y Sur.</li>
+        <li>~$10.000 por conjunto, con segmentación de edad e intereses.</li>
+        <li>Tres creativos por conjunto: el que gana se multiplica en variaciones.</li>
+      </ul>
+    </div>
+    <div class="cy-node">
+      <div class="cy-node-h">🔎 Para qué sirve</div>
+      <ul>
+        <li><b>Calentar el público</b> para no impactar en frío, como pasó en junio.</li>
+        <li>Ver qué vestidos jalan antes de meterles la plata del evento.</li>
+        <li>Corre igual en fiestas patrias: moverse antes da margen para corregir.</li>
+      </ul>
+    </div>
+    <div class="cy-node">
+      <div class="cy-node-h">🚪 El lobby</div>
+      <ul>
+        <li><b>Público, no escondido.</b> No es un drop: si alguien llega solo, suma.</li>
+        <li>Los 10 también van a una colección de Shopify, que después alimenta Google.</li>
+        <li>Si ningún vestido convence, la salida es la tienda, no el resto del sitio.</li>
+      </ul>
+    </div>
   </div>
 
   <div class="slbl">Lo que pasó el cyber anterior · facturación por día</div>
@@ -1523,48 +1623,71 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       </ul>
     </div>
     <div class="cy-node">
-      <div class="cy-node-h">🛍️ Producto</div>
+      <div class="cy-node-h">🛍️ Producto · dos líneas</div>
       <ul>
-        <li><b>7 a 10 vestidos de gala</b> con curva de tallas completa, más el lote de liquidación.</li>
-        <li>Hasta 30% en los de margen, hasta 80% en bodega — ese es el gancho.</li>
-        <li>Zapatos y accesorios solo como cross-sell en el carro.</li>
+        <li><b>Tapa galas:</b> los 10 seleccionados, con descuento acotado. Ticket objetivo ~$300K.</li>
+        <li><b>Saldos de tienda:</b> 50% a 80%, sin pauta. Ese público llega solo.</li>
+        <li>Zapatos y accesorios no se publicitan: solo complementan el look.</li>
       </ul>
     </div>
     <div class="cy-node">
       <div class="cy-node-h">🌐 Web</div>
       <ul>
-        <li>Una sola ruta <b>/cyber</b> donde cae todo: la clienta no navega colecciones.</li>
+        <li>El <b>lobby de los 10</b> es la ruta única: la clienta no navega colecciones.</li>
         <li>Descuento simultáneo en web y tienda, para no perder el trabajo del showroom.</li>
-        <li>Carrusel editorial con toda la información de decisión adentro.</li>
+        <li>La PDP carga todo lo que hace falta para decidir, sin desplegables.</li>
       </ul>
     </div>
   </div>
 
-  <div class="alert-box red-bg" style="margin-top:0">
+  <div class="alert-box warn" style="margin-top:0">
+    <span class="alert-icon">🏷️</span>
+    <div><div class="alert-title">$300K de ticket contra $140K del cyber pasado</div><div class="alert-text">Los 10 salieron de la venta de tienda, y Shopify no ve esa venta. El lobby es la prueba: si esos vestidos no tiran online a ese precio, se sabe antes del 2 y no con la plata del evento adentro.</div></div>
+  </div>
+  <div class="alert-box info" style="margin-top:0">
     <span class="alert-icon">📦</span>
-    <div><div class="alert-title">El stock es el riesgo real: 4 a 8 unidades repartidas en 5 tallas</div><div class="alert-text">Cerca de una unidad por talla. Ningún producto puede cargar el evento solo, y cuando uno se agota Meta le sigue exigiendo ese comportamiento a los que no lo tienen. Esto no es un cyber de producto héroe, es un cyber de surtido.</div></div>
+    <div><div class="alert-title">Los 10 salen con curva completa de tallas</div><div class="alert-text">Los colores sin stock se toman como pedido por WhatsApp. Si un vestido se agota durante el evento, sale de la campaña ese mismo día: Meta sigue empujando lo que ya no se puede vender.</div></div>
+  </div>
+
+  <div class="slbl">La PDP de los 10 · la que cierra</div>
+  <div class="cy-ck">
+    <div class="cy-ci"><div class="cy-ci-m ok">✓</div><div><div class="cy-ci-t">Plantilla nueva armada</div><div class="cy-ci-d">Promesas, registro del vestido, cómo luce y por qué elegirlo.</div></div></div>
+    <div class="cy-ci"><div class="cy-ci-m ok">✓</div><div><div class="cy-ci-t">Pedido por WhatsApp prellenado</div><div class="cy-ci-d">Llega con vestido, color y talla. Filtra las consultas sueltas.</div></div></div>
+    <div class="cy-ci"><div class="cy-ci-m to"></div><div><div class="cy-ci-t">Color sin stock más visible</div><div class="cy-ci-d">Tachado más grueso y "disponible para pedido" al pasar el dedo.</div></div></div>
+    <div class="cy-ci"><div class="cy-ci-m to"></div><div><div class="cy-ci-t">Plazo real de entrega</div><div class="cy-ci-d">7 a 10 días hábiles, entre la tabla de tallas y el carro.</div></div></div>
+    <div class="cy-ci"><div class="cy-ci-m to"></div><div><div class="cy-ci-t">Paso a paso al final del carrusel</div><div class="cy-ci-d">Qué pasa después de comprar. Que nadie tenga que adivinar.</div></div></div>
+    <div class="cy-ci"><div class="cy-ci-m to"></div><div><div class="cy-ci-t">Fotos de clientas reales y reseñas</div><div class="cy-ci-d">En distintos cuerpos, dentro del carrusel: la reseña en redes no cuenta.</div></div></div>
+    <div class="cy-ci"><div class="cy-ci-m to"></div><div><div class="cy-ci-t">Salida para la que está apurada</div><div class="cy-ci-d">"¿Lo necesitas antes?" lleva a la tienda y respeta el descuento.</div></div></div>
+    <div class="cy-ci"><div class="cy-ci-m to"></div><div><div class="cy-ci-t">Una sola plantilla para los 10</div><div class="cy-ci-d">Revisada en móvil. Sin rehacer la pega vestido por vestido.</div></div></div>
   </div>
 
   <div class="slbl">Pendientes antes del 2 de octubre</div>
   <div class="cy-pend">
-    <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Planilla de productos con su tope de descuento</div><div class="cy-p-d">Los de gala y los de liquidación por separado. Se cruza contra tráfico y conversión antes de decidir dónde va la plata.</div></div><span class="bdg red cy-p-tag">Bloquea la pauta</span></div>
-    <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Cerrar el presupuesto de pauta</div><div class="cy-p-d">$800K, $1M o $1,2M — considerando que comparte bolsa con el tráfico que alimenta la tienda.</div></div><span class="bdg red cy-p-tag">Bloquea la pauta</span></div>
-    <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Producir los creativos de las dos líneas</div><div class="cy-p-d">La semana del 14 estás sola hasta el miércoles y el viernes 18 es feriado: la producción se reparte antes y después.</div></div><span class="bdg amber cy-p-tag">Con fecha</span></div>
-    <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Armar la audiencia /cyber en Meta</div><div class="cy-p-d">Aunque la pestaña no esté publicada. Es la base del last chance, del remarketing y del cyber siguiente.</div></div><span class="bdg grey cy-p-tag">Acumula</span></div>
-    <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Corregir atributos de producto en Shopify</div><div class="cy-p-d">408 de 484 pedidos sin tipo asignado. Mientras siga así, no se puede distinguir producto ganador de fantasma.</div></div><span class="bdg red cy-p-tag">Ensucia la data</span></div>
-    <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Apagar la fuga de segmentación en Meta</div><div class="cy-p-d">La casilla de "llegar a más personas" es la que te trae consultas de regiones a campañas de Santiago.</div></div><span class="bdg amber cy-p-tag">Detectado</span></div>
-    <div class="cy-p"><div class="cy-p-w p">P</div><div><div class="cy-p-t">Skill de CRO con Clarity y conector de Meta</div><div class="cy-p-d">Sin el conector, la proyección no ve la inversión real ni el ROAS por campaña.</div></div><span class="bdg violet cy-p-tag">Patricio</span></div>
-    <div class="cy-p"><div class="cy-p-w p">P</div><div><div class="cy-p-t">Google Ads y Merchant Center</div><div class="cy-p-d">Se configura en la próxima sesión, junto con los ejemplos de carrusel de producto.</div></div><span class="bdg violet cy-p-tag">Patricio</span></div>
+    <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Publicar el lobby y la colección de los 10</div><div class="cy-p-d">Con la ruta definida: sin ella no se puede montar la campaña ni crear la audiencia.</div></div><span class="bdg red cy-p-tag">Bloquea la campaña</span></div>
+    <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Lanzar la campaña de tráfico previa</div><div class="cy-p-d">Tres conjuntos, tres creativos cada uno. Corre hasta el 27.</div></div><span class="bdg amber cy-p-tag">Esta semana</span></div>
+    <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Audiencias por vestido en Meta</div><div class="cy-p-d">Una por cada PDP de los 10, además de la del lobby. Son las que se remarketean en el cyber.</div></div><span class="bdg amber cy-p-tag">Con el lobby</span></div>
+    <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Terminar los ajustes de la PDP</div><div class="cy-p-d">Los seis que faltan en la lista de arriba.</div></div><span class="bdg amber cy-p-tag">Antes del 27</span></div>
+    <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Cerrar el presupuesto del evento</div><div class="cy-p-d">El de la fase previa ya está. El del 2 al 7 sigue abierto: $800K, $1M o $1,2M.</div></div><span class="bdg red cy-p-tag">Bloquea el evento</span></div>
+    <div class="cy-p"><div class="cy-p-w m">M</div><div><div class="cy-p-t">Dejar corriendo el agente CRO</div><div class="cy-p-d">Segmentos de las que compran, las que no y las que agendan. Compartido con Belén.</div></div><span class="bdg grey cy-p-tag">Semanal</span></div>
+    <div class="cy-p"><div class="cy-p-w p">P</div><div><div class="cy-p-t">Ejemplos de carrusel de producto</div><div class="cy-p-d">Referencias del paso a paso y de fotos de clientas, para que Belén diseñe encima.</div></div><span class="bdg violet cy-p-tag">Patricio</span></div>
+    <div class="cy-p"><div class="cy-p-w p">P</div><div><div class="cy-p-t">Meta por Cowork y Google por API</div><div class="cy-p-d">Leer las campañas sin entrar a la interfaz, y cargar la de Google con la colección de los 10.</div></div><span class="bdg violet cy-p-tag">Patricio</span></div>
     <div class="cy-p"><div class="cy-p-w p">P</div><div><div class="cy-p-t">Acompañamiento en vivo del 5 al 7</div><div class="cy-p-d">Revisión diaria para mover presupuesto y sacar los productos que no rinden.</div></div><span class="bdg violet cy-p-tag">Patricio</span></div>
   </div>
 
   <div class="slbl">Sin resolver</div>
   <div class="cy-str">
     <div class="cy-node">
-      <div class="cy-node-h">⏱️ Campaña de alcance previa en regiones</div>
+      <div class="cy-node-h">🧾 La venta de tienda no pasa por Shopify</div>
       <ul>
-        <li>Se frenó por la fuga de Meta, pero <b>la causa ya está identificada</b>.</li>
-        <li>En regiones no aplica la retracción: esa clienta no tiene tienda a la que esperar.</li>
+        <li>Por eso Claude no puede cruzar qué vestido se vende de verdad.</li>
+        <li>El POS de Shopify lo resolvería: falta sacar la cuenta de comisión contra horas de cruce a mano.</li>
+      </ul>
+    </div>
+    <div class="cy-node">
+      <div class="cy-node-h">💬 Por qué compran en región</div>
+      <ul>
+        <li>Nadie le ha preguntado a las de Antofagasta por qué compraron ni si necesitaron ayuda.</li>
+        <li>Con esa respuesta se deja de suponer qué poner en la PDP. Se trabaja después del evento.</li>
       </ul>
     </div>
     <div class="cy-node">
@@ -1586,9 +1709,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="slbl">Skills trabajando en paralelo al evento</div>
   <div class="cy-sk">
     <div class="cy-skc on"><div class="cy-skc-h">Evento Cyber <span class="cy-dot on"></span></div><div class="cy-skc-d">Levanta productos, regiones, tickets y proyección sola desde Shopify. Es la que armó este plan.</div></div>
-    <div class="cy-skc wait"><div class="cy-skc-h">CRO Audit <span class="cy-dot wait"></span></div><div class="cy-skc-d">Lee Clarity y marca dónde está la fuga. Se revisa semanal hasta el evento y durante el evento.</div></div>
-    <div class="cy-skc off"><div class="cy-skc-h">Conector de Meta <span class="cy-dot off"></span></div><div class="cy-skc-d">Sin esto no hay lectura de ROAS por campaña. Llega con video.</div></div>
-    <div class="cy-skc wait"><div class="cy-skc-h">Google Ads <span class="cy-dot wait"></span></div><div class="cy-skc-d">Se opera con Cowork, sin entrar a la interfaz. Próxima sesión.</div></div>
+    <div class="cy-skc on"><div class="cy-skc-h">Agente CRO <span class="cy-dot on"></span></div><div class="cy-skc-d">Lee las 3.030 sesiones de Clarity por el navegador y arma segmentos. Se revisa semanal hasta el evento.</div></div>
+    <div class="cy-skc wait"><div class="cy-skc-h">Meta por Cowork <span class="cy-dot wait"></span></div><div class="cy-skc-d">Cowork ya está en el navegador. Falta enseñarle a leer las campañas.</div></div>
+    <div class="cy-skc wait"><div class="cy-skc-h">Google Ads <span class="cy-dot wait"></span></div><div class="cy-skc-d">Se carga por API con la colección de los 10. Entra recién en el cyber, no en la fase previa.</div></div>
     <div class="cy-skc wait"><div class="cy-skc-h">SEO y blogs <span class="cy-dot wait"></span></div><div class="cy-skc-d">Recoge el tráfico orgánico que hoy llega y no se captura.</div></div>
   </div>
 
@@ -2041,18 +2164,26 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
     <div class="stk">
       <div class="stk-h"><span class="stk-i">🗂️</span><span class="stk-n">Proyectos en Claude</span><span class="cy-dot on"></span></div>
-      <div class="stk-d">Dos proyectos vivos: <b>Cyber</b> y <b>Cambios e-commerce</b>. Un chat fijo por proyecto — los chats sueltos pierden el contexto y gastan de más.</div>
+      <div class="stk-d">Tres proyectos vivos: <b>Cyber</b>, <b>Cambios e-commerce</b> y <b>Agente CRO</b>. Un chat fijo por proyecto — los chats sueltos pierden el contexto y gastan de más.</div>
       <div class="stk-w">Método de trabajo</div>
+    </div>
+  </div>
+
+  <div class="stk-grid">
+    <div class="stk">
+      <div class="stk-h"><span class="stk-i">🧭</span><span class="stk-n">Cowork en el navegador</span><span class="cy-dot on"></span></div>
+      <div class="stk-d">Instalado el 14. Claude usa tu sesión del navegador para leer herramientas que no tienen conector, como Clarity.</div>
+      <div class="stk-w">Lo operas <b>tú sola</b></div>
+    </div>
+    <div class="stk">
+      <div class="stk-h"><span class="stk-i">📊</span><span class="stk-n">Clarity · agente CRO</span><span class="cy-dot on"></span></div>
+      <div class="stk-d">Lee las 3.030 sesiones grabadas y las separa en segmentos: las que compran, las que no y las que agendan. Vive en su propio proyecto.</div>
+      <div class="stk-w">Lo operas <b>tú sola</b></div>
     </div>
   </div>
 
   <div class="slbl">Instalado, todavía sin leer solo</div>
   <div class="stk-grid">
-    <div class="stk">
-      <div class="stk-h"><span class="stk-i">📊</span><span class="stk-n">Clarity</span><span class="cy-dot wait"></span></div>
-      <div class="stk-d">Está midiendo, pero no tiene conector: se lee con Cowork. Llega leyéndose solo cuando entre la skill de CRO.</div>
-      <div class="stk-w">Depende de <b>Patricio</b></div>
-    </div>
     <div class="stk">
       <div class="stk-h"><span class="stk-i">🧰</span><span class="stk-n">FounderOS · 7 skills</span><span class="cy-dot wait"></span></div>
       <div class="stk-d">Seis listas y creativos en construcción. Instaladas no es lo mismo que en uso: la de growth-engine es la que conviene abrir primero.</div>
@@ -2063,14 +2194,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="slbl">Todavía apagado</div>
   <div class="stk-grid">
     <div class="stk">
-      <div class="stk-h"><span class="stk-i">📈</span><span class="stk-n">Conector de Meta</span><span class="cy-dot off"></span></div>
-      <div class="stk-d">Es el hueco que más pesa hoy: sin esto ninguna proyección ve la inversión real ni el ROAS por campaña.</div>
-      <div class="stk-w">Llega con <b>video</b></div>
+      <div class="stk-h"><span class="stk-i">📈</span><span class="stk-n">Meta</span><span class="cy-dot off"></span></div>
+      <div class="stk-d">Es el hueco que más pesa hoy: sin esto ninguna proyección ve la inversión real ni el ROAS por campaña. Se va a leer por Cowork.</div>
+      <div class="stk-w">Depende de <b>Patricio</b></div>
     </div>
     <div class="stk">
       <div class="stk-h"><span class="stk-i">🔎</span><span class="stk-n">Google Ads</span><span class="cy-dot off"></span></div>
-      <div class="stk-d">El canal que mejor convierte y el único sin pautar. Se opera con Cowork, sin entrar a la interfaz.</div>
-      <div class="stk-w">Próxima <b>sesión</b></div>
+      <div class="stk-d">El canal que mejor convierte y el único sin pautar. Se carga por API con la colección de los 10.</div>
+      <div class="stk-w">Depende de <b>Patricio</b></div>
     </div>
     <div class="stk">
       <div class="stk-h"><span class="stk-i">✍️</span><span class="stk-n">SEO y blogs</span><span class="cy-dot off"></span></div>
