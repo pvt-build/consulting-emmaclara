@@ -678,6 +678,18 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .cy-ci-m.to{background:var(--surf);border:1.5px solid var(--gold)}
 .cy-ci-t{font-size:12px;font-weight:600;color:var(--dark);line-height:1.35}
 .cy-ci-d{font-size:10.5px;color:var(--grey);line-height:1.4;margin-top:2px}
+
+/* respaldos de data del cyber */
+.cy-t{background:var(--surf);border:1px solid var(--border);border-radius:12px;overflow-x:auto;margin-bottom:10px}
+.cy-t table{width:100%;border-collapse:collapse;font-size:12px;min-width:520px}
+.cy-t th{text-align:left;padding:10px 12px;font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);border-bottom:0.5px solid var(--border);white-space:nowrap}
+.cy-t td{padding:9px 12px;border-bottom:0.5px solid var(--border);vertical-align:top;color:var(--ink);line-height:1.45}
+.cy-t tr:last-child td{border-bottom:none}
+.cy-t td.n{font-weight:700;white-space:nowrap;color:var(--dark)}
+.cy-t td.nil{color:var(--sand)}
+.cy-t td.f{white-space:nowrap;color:var(--grey);font-size:11px}
+.cy-t td.l{color:var(--grey);font-size:11.5px}
+.cy-src{display:inline-flex;font-size:9.5px;font-weight:600;padding:2px 7px;border-radius:20px;background:var(--beige);color:var(--grey);white-space:nowrap}
 </style>
 </head>
 <body>
@@ -898,6 +910,17 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
         <div class="rm-how-icon">✅</div>
         <div><div class="rm-how-title">Pendientes resueltos</div><div class="rm-how-text">Cada entregable completado avanza la etapa. Sin el entregable, la siguiente semana arranca a ciegas.</div></div>
       </div>
+    </div>
+  </div>
+
+  <div class="slbl">Cómo trabajamos desde ahora</div>
+  <div class="cy-flow" style="margin-bottom:14px">
+    <div class="cy-fl" style="min-width:520px">
+      <div class="cy-fs"><div class="cy-fs-n">01 · Tú</div><div class="cy-fs-t">Ejecutas con tus skills</div><div class="cy-fs-d">Tus proyectos en Claude arman los reportes y las piezas.</div></div>
+      <div class="cy-fa">→</div>
+      <div class="cy-fs key"><div class="cy-fs-n">02 · La sesión</div><div class="cy-fs-t">Revisa y apunta</div><div class="cy-fs-d">Se mira la data y se decide dónde moverte esa semana.</div></div>
+      <div class="cy-fa">→</div>
+      <div class="cy-fs end"><div class="cy-fs-n">03 · El panel</div><div class="cy-fs-t">Guarda el mapa</div><div class="cy-fs-d">Dónde estamos, qué se decidió y los datos que lo respaldan.</div></div>
     </div>
   </div>
 
@@ -1488,6 +1511,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div><div class="alert-title">La meta no se compra con presupuesto</div><div class="alert-text">Con $800K de pauta el piso es $8M. Llegar a $15M pide 100 pedidos a ticket completo y 45.000 sesiones más que el año pasado, en un año donde la conversión ya cayó 41% en julio y 70% en agosto con más tráfico que nunca.</div></div>
   </div>
 
+  <div class="sub">
+    <button class="sub-b on" onclick="sub('cy-plan',this)">🗺️ Plan</button>
+    <button class="sub-b" onclick="sub('cy-data',this)">📊 Respaldos de data</button>
+  </div>
+
+  <div class="sec on" id="cy-plan">
   <div class="slbl">Fase previa · el lobby, hasta el 27 de septiembre</div>
   <div class="cy-flow">
     <div class="cy-fl">
@@ -1713,6 +1742,24 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="cy-skc wait"><div class="cy-skc-h">Meta por Cowork <span class="cy-dot wait"></span></div><div class="cy-skc-d">Cowork ya está en el navegador. Falta enseñarle a leer las campañas.</div></div>
     <div class="cy-skc wait"><div class="cy-skc-h">Google Ads <span class="cy-dot wait"></span></div><div class="cy-skc-d">Se carga por API con la colección de los 10. Entra recién en el cyber, no en la fase previa.</div></div>
     <div class="cy-skc wait"><div class="cy-skc-h">SEO y blogs <span class="cy-dot wait"></span></div><div class="cy-skc-d">Recoge el tráfico orgánico que hoy llega y no se captura.</div></div>
+  </div>
+
+  </div>
+
+  <div class="sec" id="cy-data">
+    <div class="alert-box info" style="margin-top:0">
+      <span class="alert-icon">📊</span>
+      <div><div class="alert-title">Cada dato que se saque queda acá, con su fecha y su fuente</div><div class="alert-text">Shopify, Meta, Clarity o Google: lo que se lea en la semana se guarda en esta pestaña. Así cada decisión del evento se toma contra un número guardado y no contra la memoria.</div></div>
+    </div>
+
+    <div class="slbl">Evento día a día · 2026 contra 2025</div>
+    <div class="cy-t" id="cy-diario"></div>
+
+    <div class="slbl">Lobby · semana a semana</div>
+    <div class="cy-t" id="cy-lobby"></div>
+
+    <div class="slbl">Bitácora de datos · el más nuevo arriba</div>
+    <div class="cy-t" id="cy-log"></div>
   </div>
 
   <a class="wa-foot" href="https://wa.me/56978048922?text=Patricio%20sobre%20el%20cyber..." target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.005 2.001C6.474 2.001 2 6.476 2 12.007c0 1.771.462 3.463 1.338 4.952L2 22l5.188-1.359A9.944 9.944 0 0 0 12.005 22c5.531 0 10.005-4.476 10.005-10.007 0-2.674-1.041-5.188-2.931-7.079A9.953 9.953 0 0 0 12.005 2z"/></svg>¿Dudas? <b>Escríbele a Patricio</b></a>
@@ -2257,6 +2304,54 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
 
 <script>
+/* ── CYBER · RESPALDOS DE DATA ─────────────────────────────────
+   Para nutrir el tab se edita solo este objeto:
+   diario → facturación del evento por día (null = todavía no pasa)
+   lobby  → una fila por semana de la fase previa
+   log    → un dato por fila, con fecha y fuente. El más nuevo arriba.
+   ──────────────────────────────────────────────────────────────── */
+const CYBER={
+  diario:[
+    {dia:'Vie',nota:'Abre la venta',d25:800000,d26:null,pedidos:null,inversion:null},
+    {dia:'Sáb',nota:'',d25:2000000,d26:null,pedidos:null,inversion:null},
+    {dia:'Dom',nota:'',d25:2000000,d26:null,pedidos:null,inversion:null},
+    {dia:'Lun',nota:'Abre el evento',d25:3000000,d26:null,pedidos:null,inversion:null},
+    {dia:'Mar',nota:'',d25:null,d26:null,pedidos:null,inversion:null},
+    {dia:'Mié',nota:'Cierre',d25:null,d26:null,pedidos:null,inversion:null}
+  ],
+  lobby:[
+    {semana:'16 – 20 sep',inversion:null,sesiones:null,pdp:null,top:null,lectura:''},
+    {semana:'21 – 27 sep',inversion:null,sesiones:null,pdp:null,top:null,lectura:''}
+  ],
+  log:[
+    {fecha:'14 sep',fuente:'Clarity',dato:'3.030 sesiones grabadas, listas para que el agente CRO las segmente',lectura:'Base para leer por qué compran y por qué no'},
+    {fecha:'14 sep',fuente:'Tienda',dato:'Los 10 del lobby salen de la venta del semestre en tienda. Top: Violeta',lectura:'Shopify no ve esta venta: el lobby es la prueba online'},
+    {fecha:'8 sep',fuente:'Skill de evento',dato:'Proyección: conservador $5,6M · esperado $8M · declarado $13M – $15M',lectura:'Con $800K de pauta el piso es $8M'},
+    {fecha:'8 sep',fuente:'Shopify',dato:'Conversión 2026 contra 2025: −41% en julio y −70% en agosto',lectura:'Más tráfico que nunca, menos compra'},
+    {fecha:'8 sep',fuente:'Shopify',dato:'Cyber 2025: 85 piezas y 26.000 sesiones en la semana',lectura:'El tráfico se multiplicó por 5 contra el pre-evento'},
+    {fecha:'8 sep',fuente:'Shopify',dato:'El pre-evento (vie a dom) fue el 40% de la facturación del Cyber 2025',lectura:'Por eso este año la venta abre el viernes 2'},
+    {fecha:'8 sep',fuente:'Shopify',dato:'Conversión por región: RM 0,2% · Arica 2% · Atacama 0,8% · Coquimbo 0,75%',lectura:'80% del tráfico fue a la zona que menos convierte'},
+    {fecha:'8 sep',fuente:'Shopify',dato:'Google: 6.835 sesiones y 20 pedidos (ticket $149K). Redes: 20.000 y 15 (ticket $110K)',lectura:'Google convierte 4 veces mejor'},
+    {fecha:'8 sep',fuente:'Shopify',dato:'El correo aportó 5 sesiones en toda la ventana del cyber',lectura:'No hay base de datos que activar'},
+    {fecha:'8 sep',fuente:'Shopify',dato:'408 de 484 pedidos del último año sin tipo de producto',lectura:'La lectura de ganador y fantasma no es confiable'}
+  ]
+};
+function cyM(v){if(v==null)return null;return v>=1e6?'$'+(v/1e6).toFixed(v%1e6?1:0).replace('.',',')+'M':'$'+Math.round(v/1e3)+'K';}
+function cyC(v,f){const x=f?f(v):v;return x==null||x===''?'<td class="nil">—</td>':'<td class="n">'+x+'</td>';}
+(function(){
+  const d=document.getElementById('cy-diario');if(!d)return;
+  let t25=0,t26=0;
+  d.innerHTML='<table><thead><tr><th>Día</th><th>2025</th><th>2026</th><th>Pedidos</th><th>Inversión</th><th>Lectura</th></tr></thead><tbody>'+
+    CYBER.diario.map(r=>{t25+=r.d25||0;t26+=r.d26||0;
+      const dif=(r.d25&&r.d26)?Math.round((r.d26/r.d25-1)*100):null;
+      return '<tr><td class="n">'+r.dia+(r.nota?' <span class="cy-src">'+r.nota+'</span>':'')+'</td>'+cyC(r.d25,cyM)+cyC(r.d26,cyM)+cyC(r.pedidos)+cyC(r.inversion,cyM)+
+      '<td class="l">'+(dif==null?'':(dif>=0?'+':'')+dif+'% contra 2025')+'</td></tr>';}).join('')+
+    '<tr><td class="n">Total</td>'+cyC(t25||null,cyM)+cyC(t26||null,cyM)+'<td></td><td></td><td class="l">2025 sin martes ni miércoles registrados</td></tr></tbody></table>';
+  document.getElementById('cy-lobby').innerHTML='<table><thead><tr><th>Semana</th><th>Inversión</th><th>Sesiones lobby</th><th>Entradas a PDP</th><th>Vestido que más jala</th><th>Lectura</th></tr></thead><tbody>'+
+    CYBER.lobby.map(r=>'<tr><td class="n">'+r.semana+'</td>'+cyC(r.inversion,cyM)+cyC(r.sesiones)+cyC(r.pdp)+cyC(r.top)+'<td class="l">'+(r.lectura||'Por cargar')+'</td></tr>').join('')+'</tbody></table>';
+  document.getElementById('cy-log').innerHTML='<table><thead><tr><th>Fecha</th><th>Fuente</th><th>Dato</th><th>Lectura</th></tr></thead><tbody>'+
+    CYBER.log.map(r=>'<tr><td class="f">'+r.fecha+'</td><td><span class="cy-src">'+r.fuente+'</span></td><td>'+r.dato+'</td><td class="l">'+r.lectura+'</td></tr>').join('')+'</tbody></table>';
+})();
 document.querySelectorAll('[data-hasta]').forEach(el=>{
   const d=Math.ceil((new Date(el.dataset.hasta+'T00:00:00')-new Date(new Date().toDateString()))/864e5);
   el.textContent=d>0?d:(d===0?'Hoy':'✓');
