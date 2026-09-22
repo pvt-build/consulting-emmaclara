@@ -842,6 +842,60 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .cyg-qc[data-q="lose"] .cyg-qh{background:var(--gold)}
 .cyg-qc[data-q="dead"] .cyg-qh{background:var(--grey)}
 .cyg-qb{background:var(--surf);padding:11px 13px;font-size:11px;color:var(--grey);line-height:1.5;min-height:62px}
+
+/* ============ CYBER · campañas, specs y comunicación ============ */
+.lg{width:18px;height:18px;object-fit:contain;flex-shrink:0}
+.lg.sm{width:15px;height:15px}
+.lg.bg{width:24px;height:24px}
+/* guion de campañas */
+.cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:10px;margin-bottom:10px}
+.cmp-c{background:var(--surf);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:transform .18s,box-shadow .18s}
+.cmp-c:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(42,36,32,.08)}
+.cmp-h{padding:11px 14px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)}
+.cmp-h b{font-size:12.5px;font-weight:700;color:var(--dark);flex:1}
+.cmp-w{font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:2px 7px;border-radius:20px}
+.cmp-w.on{background:var(--teal-lt);color:var(--teal-dk)}
+.cmp-w.next{background:var(--gold-lt);color:var(--gold-dk)}
+.cmp-b{padding:12px 14px}
+.cmp-k{display:flex;justify-content:space-between;font-size:11px;padding:4px 0;border-bottom:0.5px dotted var(--border)}
+.cmp-k:last-of-type{border-bottom:none}
+.cmp-k span{color:var(--grey)}
+.cmp-k b{color:var(--dark);font-weight:700}
+.cmp-y{font-size:11px;color:var(--ink);line-height:1.45;margin-top:9px;padding-top:9px;border-top:0.5px solid var(--border)}
+.cmp-y i{font-style:normal;color:var(--grey)}
+.cmp-c.out{opacity:.62;background:var(--bg)}
+.cmp-c.out .cmp-h b{text-decoration:line-through;text-decoration-color:var(--sand)}
+/* specs */
+.spec{background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:10px}
+.spec-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:9px}
+.spec-i{background:var(--bg);border:0.5px solid var(--border);border-radius:10px;padding:11px 12px}
+.spec-n{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey)}
+.spec-v{font-family:'DM Mono',monospace;font-size:14px;font-weight:500;color:var(--dark);margin-top:5px}
+.spec-d{font-size:10px;color:var(--grey);margin-top:4px;line-height:1.4}
+.shot{width:100%;border-radius:11px;border:1px solid var(--border);display:block;margin-bottom:8px}
+.shot-c{font-size:11px;color:var(--grey);line-height:1.45;margin-bottom:12px}
+.shot-c b{color:var(--dark)}
+/* pendientes con semaforo */
+.pnd{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:8px;margin-bottom:12px}
+.pn{border-radius:11px;padding:12px 14px;display:grid;grid-template-columns:24px 1fr;gap:10px;align-items:start;border:1px solid}
+.pn.r{background:var(--red-lt);border-color:#F3C9C0}
+.pn.a{background:var(--gold-lt);border-color:#F0DDB4}
+.pn.g{background:var(--teal-lt);border-color:#BFE6D5}
+.pn-t{font-size:12px;font-weight:700;line-height:1.3}
+.pn.r .pn-t{color:var(--red-dk)}.pn.a .pn-t{color:var(--gold-dk)}.pn.g .pn-t{color:var(--teal-dk)}
+.pn-d{font-size:10.5px;color:var(--ink);opacity:.75;margin-top:3px;line-height:1.4}
+.pn-w{font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-top:6px;display:inline-block;padding:2px 7px;border-radius:20px;background:rgba(255,255,255,.7);color:var(--grey)}
+/* comunicacion */
+.com{background:var(--surf);border:1px solid var(--border);border-radius:12px;overflow-x:auto;margin-bottom:10px}
+.com table{width:100%;border-collapse:collapse;font-size:11.5px;min-width:620px}
+.com th{text-align:left;padding:10px 12px;font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);border-bottom:0.5px solid var(--border)}
+.com td{padding:10px 12px;border-bottom:0.5px solid var(--border);line-height:1.45;vertical-align:top}
+.com tr:last-child td{border-bottom:none}
+.com td.d{white-space:nowrap;font-weight:700;color:var(--dark)}
+.com td.q{color:var(--ink)}
+.com td.q em{font-style:normal;color:var(--grey);display:block;margin-top:2px;font-size:10.5px}
+.com tr.hot td{background:rgba(226,80,58,.05)}
+.com tr.mute td{color:var(--grey)}
 </style>
 </head>
 <body>
@@ -1111,8 +1165,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="rm-node"><div class="rm-dot done">13</div><div class="rm-lbl">Cierre agosto</div><div class="rm-sub">3 sep</div></div>
       <div class="rm-node"><div class="rm-dot done">14</div><div class="rm-lbl">Cyber: data</div><div class="rm-sub">8 sep</div></div>
       <div class="rm-node"><div class="rm-dot done">15</div><div class="rm-lbl">Lobby + CRO</div><div class="rm-sub">14 sep</div></div>
-      <div class="rm-node"><div class="rm-dot next">16</div><div class="rm-lbl">Lectura + Google</div><div class="rm-sub">21 sep</div></div>
-      <div class="rm-node"><div class="rm-dot future">17</div><div class="rm-lbl">Última pasada</div><div class="rm-sub">28 sep</div></div>
+      <div class="rm-node"><div class="rm-dot done">16</div><div class="rm-lbl">Campañas</div><div class="rm-sub">21 sep</div></div>
+      <div class="rm-node"><div class="rm-dot next">17</div><div class="rm-lbl">Google + montar</div><div class="rm-sub">28 sep</div></div>
       <div class="rm-node"><div class="rm-dot critical">18</div><div class="rm-lbl">CYBER</div><div class="rm-sub">5 oct</div></div>
       <div class="rm-node"><div class="rm-dot future">19</div><div class="rm-lbl mt">Last chance</div><div class="rm-sub">12 oct</div></div>
       <div class="rm-node"><div class="rm-dot future">20</div><div class="rm-lbl mt">Recompra</div><div class="rm-sub">19 oct</div></div>
@@ -1131,6 +1185,48 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
   <div class="slbl">Sesión activa</div>
   <div class="week-card open" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 16 — El guión de campañas del cyber</div><div class="week-date">Llamada 22 sep (49 min)</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="rn-grid" style="margin-bottom:12px">
+        <div class="rn-c"><div class="rn-l">Cyber 2025</div><div class="rn-v">$1,27M</div><div class="rn-s">de pauta, en 16 campañas</div></div>
+        <div class="rn-c up"><div class="rn-l">La más barata</div><div class="rn-v">$12.788</div><div class="rn-s">por compra · remarketing</div></div>
+        <div class="rn-c"><div class="rn-l">CPA tope</div><div class="rn-v">$23.000</div><div class="rn-s">para sostener el margen</div></div>
+        <div class="rn-c"><div class="rn-l">Tráfico previo</div><div class="rn-v">$80K</div><div class="rn-s">diarios, del 22 al 1</div></div>
+      </div>
+
+      <div class="week-sec">✅ Decisiones</div>
+      <div class="week-text"><ul>
+        <li><b>Fuera intereses y alcance.</b> Costaban más por compra y no cerraban.</li>
+        <li><b>El cyber abre en silencio el 2</b> con un correo a quien dejó su dato, y sale público el 3 a las 15:00.</li>
+        <li><b>El remarketing se parte en dos</b>: quien pasó por la landing y el resto del sitio.</li>
+      </ul></div>
+
+      <div class="week-sec">⚠️ Sin números de tienda no se dimensiona la pauta</div>
+      <div class="week-text">La tienda es la que subsidia al e-commerce. El detalle del evento está en el tab de Cyber.</div>
+
+      <a class="rec-link" href="https://fathom.video/share/gjASPCfBUBNbk2P1v91rE_MhCVKM5bSJ" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 16</a>
+    </div>
+  </div>
+
+  <div class="week-card critical open" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 17 — Montar Google y dejar todo cargado</div><div class="week-date">📅 Lunes 28 · última antes de abrir</div></div><span class="bdg red">Próxima</span></div>
+    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
+    <div class="week-body">
+      <div class="week-chips"><span class="bdg red">Cyber</span><span class="bdg grey">Google</span><span class="bdg grey">Creativos</span></div>
+      <div class="week-sec">🎯 Núcleo</div>
+      <div class="week-text">Se monta PMax en vivo con la skill y se dejan las campañas de Meta <b>cargadas y apagadas</b>, listas para prender el 3.</div>
+      <div class="week-sec">✅ Para llegar con esto listo</div>
+      <div class="week-text"><ul>
+        <li>Los números de tienda de septiembre.</li>
+        <li>La lectura de los primeros días de tráfico: costo por visita, carros y chats por vestido.</li>
+        <li>Los creativos en horizontal, cuadrado y video.</li>
+      </ul></div>
+    </div>
+  </div>
+
+  <div class="slbl">Bloque 2 · sesiones anteriores</div>
+  <div class="week-card done" onclick="toggleCard(this)">
     <div class="week-hd"><div class="week-info"><div class="week-title">Sem 15 — El lobby y la PDP de los 10</div><div class="week-date">Llamada 14 sep (60 min)</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
@@ -1158,23 +1254,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="week-card critical open" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 16 — Lo que dijo el lobby</div><div class="week-date">📅 21 sep · después de fiestas patrias</div></div><span class="bdg red">Próxima</span></div>
-    <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
-    <div class="week-body">
-      <div class="week-chips"><span class="bdg red">Cyber</span><span class="bdg grey">Google</span><span class="bdg grey">Pauta</span></div>
-      <div class="week-sec">🎯 Núcleo</div>
-      <div class="week-text">Leer qué vestidos jalaron tráfico y cuáles no, <b>antes de ponerles la plata del evento</b>. Con eso se montan Google y las tres campañas del cyber.</div>
-      <div class="week-sec">✅ Para llegar con esto listo</div>
-      <div class="week-text"><ul>
-        <li>El lobby publicado y la campaña previa corriendo.</li>
-        <li>Las audiencias por vestido creadas en Meta.</li>
-        <li>El presupuesto del evento decidido.</li>
-      </ul></div>
-    </div>
-  </div>
-
-  <div class="slbl">Bloque 2 · sesiones anteriores</div>
   <div class="week-card done" onclick="toggleCard(this)">
     <div class="week-hd"><div class="week-info"><div class="week-title">Sem 14 — Cyber: la data del año pasado y la estructura</div><div class="week-date">Llamada 8 sep (55 + 33 min)</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
@@ -1224,8 +1303,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
   <div class="slbl">Camino del bloque 2 · semana a semana</div>
   <div class="rm-uc-grid">
-    <div class="rm-uc next-call"><div class="rm-uc-num">Sem 16 · 21 sep</div><div class="rm-uc-title">Qué vestidos jalaron en el lobby + Google y campañas del evento</div><div class="rm-uc-chips"><span class="bdg red">Cyber</span><span class="bdg grey">Pauta</span></div></div>
-    <div class="rm-uc"><div class="rm-uc-num">Sem 17 · 28 sep</div><div class="rm-uc-title">Última pasada: stock, ruta /cyber y móvil</div><div class="rm-uc-chips"><span class="bdg red">Cyber</span><span class="bdg grey">E-comm</span></div></div>
+    <div class="rm-uc next-call"><div class="rm-uc-num">Sem 17 · 28 sep</div><div class="rm-uc-title">Montar Google PMax junto y dejar las campañas listas y apagadas</div><div class="rm-uc-chips"><span class="bdg red">Cyber</span><span class="bdg grey">Google</span></div></div>
     <div class="rm-uc"><div class="rm-uc-num">Sem 18 · 5 oct</div><div class="rm-uc-title">Cyber en vivo: monitoreo y ajuste diario</div><div class="rm-uc-chips"><span class="bdg red">Evento</span></div></div>
     <div class="rm-uc"><div class="rm-uc-num">Sem 19 · 12 oct</div><div class="rm-uc-title">Last chance, carros colgados y lectura de resultados</div><div class="rm-uc-chips"><span class="bdg grey">Cyber</span><span class="bdg grey">Datos</span></div></div>
     <div class="rm-uc"><div class="rm-uc-num">Sem 20 · 19 oct</div><div class="rm-uc-title">Recompra y referidos sobre quienes compraron</div><div class="rm-uc-chips"><span class="bdg grey">Recompra</span></div></div>
@@ -1647,12 +1725,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="cyv-hero">
     <div class="cyv-top">
       <div>
-        <div class="cyv-k">Cyber · 5 al 7 de octubre</div>
+        <div class="cyv-k">Cyber · abre el 2 · pico del 3 al 5</div>
         <div class="cyv-big">$30M<span>meta de octubre</span></div>
       </div>
       <div class="cy-cd">
         <div class="cy-cd-b"><div class="cy-cd-n hot" data-hasta="2026-10-02">17</div><div class="cy-cd-l">Para abrir</div></div>
-        <div class="cy-cd-b"><div class="cy-cd-n" data-hasta="2026-10-05">20</div><div class="cy-cd-l">Al evento</div></div>
+        <div class="cy-cd-b"><div class="cy-cd-n" data-hasta="2026-10-03">11</div><div class="cy-cd-l">Al pico</div></div>
       </div>
     </div>
     <div class="cyv-prog">
@@ -1690,44 +1768,44 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
 
     <div class="cyg-row">
-      <div><div class="cyg-t">Producto y precios</div><div class="cyg-rol">Rol: fijar el ahorro sin romper el margen</div><div class="cyg-ver">Verificar: los 10 con curva completa · tope 30% · saldos hasta 80%</div></div>
-      <div class="cyg-lane"><div class="cyg-band" style="left:71.43%;width:10.71%"></div><div class="cyg-bar def" style="left:0.00%;width:46.43%">Definir</div><div class="cyg-now" id="cyg-now"></div></div>
+      <div><div class="cyg-t">Producto y precios</div><div class="cyg-rol">Rol: fijar el ahorro sin romper el margen</div><div class="cyg-ver">Verificar: los 10 con curva XS a 2XL · suplentes listos · saldos hasta 80%</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:64.29%;width:17.86%"></div><div class="cyg-bar def" style="left:0.00%;width:46.43%">Definir</div><div class="cyg-now" id="cyg-now"></div></div>
     </div>
     <div class="cyg-row">
       <div><div class="cyg-t">Lobby y PDP</div><div class="cyg-rol">Rol: que la ficha cierre sola</div><div class="cyg-ver">Verificar: plazo de entrega · paso a paso · fotos de clientas · móvil</div></div>
-      <div class="cyg-lane"><div class="cyg-band" style="left:71.43%;width:10.71%"></div><div class="cyg-bar fix" style="left:3.57%;width:50.00%">Publicar y arreglar</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:64.29%;width:17.86%"></div><div class="cyg-bar fix" style="left:3.57%;width:50.00%">Publicar y arreglar</div></div>
     </div>
     <div class="cyg-row">
       <div><div class="cyg-t">Creativos</div><div class="cyg-rol">Rol: munición para que el anuncio no se canse</div><div class="cyg-ver">Verificar: 2 líneas (región y RM) · 3 por conjunto · listos el 30</div></div>
-      <div class="cyg-lane"><div class="cyg-band" style="left:71.43%;width:10.71%"></div><div class="cyg-bar prod" style="left:25.00%;width:28.57%">Producción</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:64.29%;width:17.86%"></div><div class="cyg-bar prod" style="left:25.00%;width:28.57%">Producción</div></div>
     </div>
     <div class="cyg-row">
-      <div><div class="cyg-t">Audiencias y calentamiento</div><div class="cyg-rol">Rol: llegar al evento con el aprendizaje resuelto</div><div class="cyg-ver">Verificar: audiencia del lobby y una por vestido · campaña previa corriendo</div></div>
-      <div class="cyg-lane"><div class="cyg-band" style="left:71.43%;width:10.71%"></div><div class="cyg-bar warm" style="left:3.57%;width:53.57%">Calentar</div></div>
+      <div><div class="cyg-t">Audiencias y calentamiento</div><div class="cyg-rol">Rol: llegar al evento con el aprendizaje resuelto</div><div class="cyg-ver">Verificar: $80.000 diarios · 4 días para enganchar el algoritmo · variación máx. 25%</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:64.29%;width:17.86%"></div><div class="cyg-bar warm" style="left:25.00%;width:32.14%">Calentar · tráfico al lobby</div></div>
     </div>
     <div class="cyg-row">
       <div><div class="cyg-t">Google y Merchant</div><div class="cyg-rol">Rol: capturar a la que ya está buscando vestido</div><div class="cyg-ver">Verificar: feed aprobado (tarda días) · PMax con la colección de los 10</div></div>
-      <div class="cyg-lane"><div class="cyg-band" style="left:71.43%;width:10.71%"></div><div class="cyg-bar prod" style="left:25.00%;width:32.14%">Aprobar y montar</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:64.29%;width:17.86%"></div><div class="cyg-bar prod" style="left:25.00%;width:32.14%">Aprobar y montar</div></div>
     </div>
     <div class="cyg-row">
-      <div><div class="cyg-t">Pre-evento</div><div class="cyg-rol">Rol: abrir antes que el resto</div><div class="cyg-ver">Verificar: el año pasado el 40% entró en estos días</div></div>
-      <div class="cyg-lane"><div class="cyg-band" style="left:71.43%;width:10.71%"></div><div class="cyg-bar pre" style="left:60.71%;width:10.71%">Abre vie 2</div></div>
+      <div><div class="cyg-t">Apertura silenciosa</div><div class="cyg-rol">Rol: premiar a la que dejó su correo</div><div class="cyg-ver">Verificar: el cyber sube al sitio y sale el correo con cupón. Sin pauta</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:64.29%;width:17.86%"></div><div class="cyg-bar pre" style="left:60.71%;width:3.57%">Correo</div></div>
     </div>
     <div class="cyg-row">
-      <div><div class="cyg-t">Evento · 5 al 7</div><div class="cyg-rol">Rol: ejecutar y mover presupuesto cada día</div><div class="cyg-ver">Verificar: ROAS por zona · stock por talla · sacar lo que no rinde</div></div>
-      <div class="cyg-lane"><div class="cyg-band" style="left:71.43%;width:10.71%"></div><div class="cyg-bar evt" style="left:71.43%;width:10.71%">CYBER</div></div>
+      <div><div class="cyg-t">Evento · 3 al 7</div><div class="cyg-rol">Rol: concentrar el tráfico del 3 al 5</div><div class="cyg-ver">Verificar: CPA bajo $23.000 · stock por talla · sacar lo que no rinde</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:64.29%;width:17.86%"></div><div class="cyg-bar evt" style="left:64.29%;width:17.86%">CYBER · pico 3 al 5</div></div>
     </div>
     <div class="cyg-row">
       <div><div class="cyg-t">Last chance y postventa</div><div class="cyg-rol">Rol: cerrar lo que quedó colgado y pedir la reseña</div><div class="cyg-ver">Verificar: carros abandonados · reseñas · por qué compró la de región</div></div>
-      <div class="cyg-lane"><div class="cyg-band" style="left:71.43%;width:10.71%"></div><div class="cyg-bar post" style="left:82.14%;width:17.86%">Recuperar</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:64.29%;width:17.86%"></div><div class="cyg-bar post" style="left:82.14%;width:17.86%">Recuperar</div></div>
     </div>
   </div></div>
 
   <div class="cyg-days">
-    <div class="cyg-day open"><div class="cyg-dn">Vie 2 – dom 4</div><div class="cyg-dt">Se abre en silencio</div><div class="cyg-dd">La venta parte al cerrar la tienda el viernes. El año pasado estos días fueron el 40% de la facturación.</div></div>
-    <div class="cyg-day peak"><div class="cyg-dn">Lun 5 · día 1</div><div class="cyg-dt">Todo arriba</div><div class="cyg-dd">Las tres campañas, Google encendido e historias con link. Es el día del pico.</div></div>
-    <div class="cyg-day"><div class="cyg-dn">Mar 6 · día 2</div><div class="cyg-dt">Se acaban las tallas</div><div class="cyg-dd">Stock real por talla, no escasez inventada. Se saca de la campaña lo que ya no se puede vender.</div></div>
-    <div class="cyg-day end"><div class="cyg-dn">Mié 7 · día 3</div><div class="cyg-dt">Últimas horas</div><div class="cyg-dd">Cierre con hora declarada y salida a los carros colgados. En 2025 acá la venta se cortó en seco.</div></div>
+    <div class="cyg-day"><div class="cyg-dn">22 sep – 1 oct</div><div class="cyg-dt">Solo tráfico</div><div class="cyg-dd">La landing de los 10 corre sin decir la palabra cyber. El pop-up junta los correos.</div></div>
+    <div class="cyg-day open"><div class="cyg-dn">Jue 2</div><div class="cyg-dt">Se abre en silencio</div><div class="cyg-dd">El cyber sube al sitio y sale el correo a las inscritas, con cupón de zapatos. Cero pauta.</div></div>
+    <div class="cyg-day peak"><div class="cyg-dn">Sáb 3, 15:00 – lun 5</div><div class="cyg-dt">El pico</div><div class="cyg-dd">Arranca la comunicación pública con los saldos. Acá se concentra el tráfico pagado.</div></div>
+    <div class="cyg-day end"><div class="cyg-dn">Mar 6 – mié 7</div><div class="cyg-dt">Últimas tallas</div><div class="cyg-dd">Manda el remarketing: la talla que queda, el carro colgado y el cierre con hora declarada.</div></div>
   </div>
 
   <div class="slbl">Qué pasa en cada canal</div>
@@ -1735,24 +1813,24 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <table>
       <thead><tr><th>Canal</th><th>Antes · hasta el 27</th><th>Evento · 2 al 7</th><th>Después · 8 al 12</th></tr></thead>
       <tbody>
-        <tr><td class="c">📸 Historias</td><td>Teaser de los 10, sin hablar de cyber</td><td class="hot">Loop de vestidos con link, todos los días</td><td>Clientas reales y reseñas</td></tr>
-        <tr><td class="c">📣 Meta Ads</td><td>Tráfico al lobby, 3 conjuntos por zona</td><td class="hot">3 campañas de conversión por zona</td><td>Carros abandonados</td></tr>
-        <tr><td class="c">🔎 Google</td><td class="nil">No entra: es más caro para tráfico</td><td class="hot">PMax con la colección de los 10</td><td class="nil">—</td></tr>
-        <tr><td class="c">💬 WhatsApp</td><td>Pedidos de colores sin stock</td><td class="hot">Responde y cierra · "lo necesito antes" va a tienda</td><td>Postventa y reseña</td></tr>
-        <tr><td class="c">🏪 Tienda</td><td>Agenda normal</td><td class="hot">Mismo descuento que la web, cierra en local</td><td>Retiros</td></tr>
-        <tr><td class="c">📧 Correo</td><td class="nil">No hay base todavía</td><td class="nil">—</td><td>Se empieza a juntar con cada compra</td></tr>
+        <tr><td class="c"><img class="lg sm" src="assets/logos/instagram.png" alt="Instagram" style="vertical-align:-3px;margin-right:6px">Historias</td><td>Teaser de los 10, sin hablar de cyber</td><td class="hot">Loop de vestidos con link, todos los días</td><td>Clientas reales y reseñas</td></tr>
+        <tr><td class="c"><img class="lg sm" src="assets/logos/meta.svg" alt="Meta" style="vertical-align:-3px;margin-right:6px">Meta Ads</td><td>Tráfico al lobby, 3 conjuntos por zona</td><td class="hot">3 campañas de conversión por zona</td><td>Carros abandonados</td></tr>
+        <tr><td class="c"><img class="lg sm" src="assets/logos/google.png" alt="Google" style="vertical-align:-3px;margin-right:6px">Google</td><td class="nil">No entra: es más caro para tráfico</td><td class="hot">PMax con la colección de los 10</td><td class="nil">—</td></tr>
+        <tr><td class="c"><img class="lg sm" src="assets/logos/whatsapp.svg" alt="WhatsApp" style="vertical-align:-3px;margin-right:6px">WhatsApp</td><td>Pedidos de colores sin stock</td><td class="hot">Responde y cierra · "lo necesito antes" va a tienda</td><td>Postventa y reseña</td></tr>
+        <tr><td class="c" style="padding-left:34px">Tienda</td><td>Agenda normal</td><td class="hot">Mismo descuento que la web, cierra en local</td><td>Retiros</td></tr>
+        <tr><td class="c"><img class="lg sm" src="assets/logos/gmail.png" alt="Correo" style="vertical-align:-3px;margin-right:6px">Correo</td><td class="nil">No hay base todavía</td><td class="nil">—</td><td>Se empieza a juntar con cada compra</td></tr>
       </tbody>
     </table>
   </div>
 
   <div class="slbl">Fuentes conectadas · todo medido, nada inventado</div>
   <div class="cyg-src">
-    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot on"></span>Shopify</div><div class="cyg-s-d">Ventas, sesiones, producto y stock</div></div>
-    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot on"></span>Clarity</div><div class="cyg-s-d">Cómo navegan y dónde se caen</div></div>
-    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot on"></span>Search Console</div><div class="cyg-s-d">Qué buscan para llegar</div></div>
-    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot wait"></span>Meta Ads</div><div class="cyg-s-d">Inversión y ROAS por campaña</div></div>
-    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot wait"></span>Google Ads</div><div class="cyg-s-d">Búsqueda con intención</div></div>
-    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot off"></span>Correo</div><div class="cyg-s-d">Sin base que activar</div></div>
+    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot on"></span><img class="lg sm" src="assets/logos/shopify.png" alt="Shopify" style="margin:0 5px 0 1px">Shopify</div><div class="cyg-s-d">Ventas, sesiones, producto y stock</div></div>
+    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot on"></span><img class="lg sm" src="assets/logos/clarity.png" alt="Clarity" style="margin:0 5px 0 1px">Clarity</div><div class="cyg-s-d">Cómo navegan y dónde se caen</div></div>
+    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot on"></span><img class="lg sm" src="assets/logos/searchconsole.png" alt="Search Console" style="margin:0 5px 0 1px">Search Console</div><div class="cyg-s-d">Qué buscan para llegar</div></div>
+    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot wait"></span><img class="lg sm" src="assets/logos/meta.svg" alt="Meta Ads" style="margin:0 5px 0 1px">Meta Ads</div><div class="cyg-s-d">Inversión y ROAS por campaña</div></div>
+    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot wait"></span><img class="lg sm" src="assets/logos/google.png" alt="Google Ads" style="margin:0 5px 0 1px">Google Ads</div><div class="cyg-s-d">Búsqueda con intención</div></div>
+    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot off"></span><img class="lg sm" src="assets/logos/gmail.png" alt="Correo" style="margin:0 5px 0 1px">Correo</div><div class="cyg-s-d">Sin base que activar</div></div>
   </div>
 
   <div class="slbl">El recorrido de la clienta</div>
@@ -1770,6 +1848,106 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
+  <div class="slbl">Cuánta pauta aguanta el evento</div>
+  <div class="spec">
+    <div class="spec-g">
+      <div class="spec-i"><div class="spec-n">Meta de web</div><div class="spec-v">$6M</div><div class="spec-d">Es lo que falta para llegar a los $30M si la tienda repite agosto.</div></div>
+      <div class="spec-i"><div class="spec-n">ROAS web · oct 2025</div><div class="spec-v">5,4×</div><div class="spec-d">$15,0M de web con $2,8M de pauta. Es el único dato real que hay.</div></div>
+      <div class="spec-i" style="background:var(--gold-lt);border-color:#F0DDB4"><div class="spec-n" style="color:var(--gold-dk)">Pauta que pide</div><div class="spec-v" style="color:var(--gold-dk)">$1,2M</div><div class="spec-d">$6M dividido por el ROAS del año pasado. Casi lo mismo que se gastó en 2025: $1,27M.</div></div>
+      <div class="spec-i" style="background:var(--red-lt);border-color:#F3C9C0"><div class="spec-n" style="color:var(--red-dk)">Con los $800K</div><div class="spec-v" style="color:var(--red-dk)">$4,3M</div><div class="spec-d">Quedaría en $28,5M el mes. Por debajo de la meta.</div></div>
+    </div>
+    <div style="font-size:11px;color:var(--grey);margin-top:11px;padding-top:10px;border-top:0.5px solid var(--border);line-height:1.5">Esta cuenta <b style="color:var(--ink)">supone que la tienda repite los $24,2M de agosto</b>. Septiembre no está cargado en la matriz, así que hoy no hay cómo saber si la tienda viene sosteniendo. Ese número es el que desbloquea la decisión de presupuesto.</div>
+  </div>
+
+  <div class="slbl">Ventas reales · lo último cargado</div>
+  <div class="cy-t">
+    <table>
+      <thead><tr><th>Mes</th><th>Tienda</th><th>Web</th><th>Total</th><th>Pauta</th><th>ROAS</th></tr></thead>
+      <tbody>
+        <tr><td class="n">Junio</td><td class="n">$5,4M</td><td class="n">$1,7M</td><td class="n">$7,8M</td><td class="n">$766K</td><td class="l">10×</td></tr>
+        <tr><td class="n">Julio</td><td class="n">$16,8M</td><td class="n">$0,6M</td><td class="n">$18,9M</td><td class="n">$1,1M</td><td class="l">17×</td></tr>
+        <tr><td class="n">Agosto</td><td class="n">$24,2M</td><td class="n">$0,9M</td><td class="n">$27,3M</td><td class="n">$1,8M</td><td class="l">15×</td></tr>
+        <tr><td class="n">Septiembre</td><td class="nil">—</td><td class="nil">—</td><td class="nil">—</td><td class="nil">—</td><td class="l" style="color:var(--red-dk)">Sin cargar</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="shot-c">La matriz llega hasta agosto. <b>Sin el cierre de septiembre no se puede proyectar la inversión del evento</b>, porque la tienda es la que financia lo que se puede gastar en la web.</div>
+
+  <div class="slbl">Guión de campañas · qué corre, cuándo y por qué</div>
+  <div class="cmp">
+    <div class="cmp-c">
+      <div class="cmp-h"><img class="lg" src="assets/logos/meta.svg" alt="Meta"><b>Tráfico al lobby</b><span class="cmp-w on">Corriendo</span></div>
+      <div class="cmp-b">
+        <div class="cmp-k"><span>Cuándo</span><b>22 sep – 1 oct</b></div>
+        <div class="cmp-k"><span>Presupuesto</span><b>$80.000 / día</b></div>
+        <div class="cmp-k"><span>Zonas</span><b>Todas, sin separar</b></div>
+        <div class="cmp-y">Calienta la audiencia y muestra qué vestidos traccionan antes de pagar por venderlos. <i>En 2025 costó $30 la visita y metió 4.523 personas con $135.227.</i></div>
+      </div>
+    </div>
+    <div class="cmp-c">
+      <div class="cmp-h"><img class="lg" src="assets/logos/meta.svg" alt="Meta"><b>Advantage+ Santiago</b><span class="cmp-w next">3 oct</span></div>
+      <div class="cmp-b">
+        <div class="cmp-k"><span>Cuándo</span><b>3 – 7 oct</b></div>
+        <div class="cmp-k"><span>2025</span><b>17 compras</b></div>
+        <div class="cmp-k"><span>Costo por compra</span><b>$15.132</b></div>
+        <div class="cmp-y">Fue la campaña más barata del cyber pasado. El algoritmo ya tiene la intención: no hace falta ayudarlo con intereses.</div>
+      </div>
+    </div>
+    <div class="cmp-c">
+      <div class="cmp-h"><img class="lg" src="assets/logos/meta.svg" alt="Meta"><b>Advantage+ Regiones</b><span class="cmp-w next">3 oct</span></div>
+      <div class="cmp-b">
+        <div class="cmp-k"><span>Cuándo</span><b>3 – 7 oct</b></div>
+        <div class="cmp-k"><span>2025</span><b>10 compras</b></div>
+        <div class="cmp-k"><span>Costo por compra</span><b>$24.024</b></div>
+        <div class="cmp-y">Más cara por compra, pero es donde está el ticket alto y la clienta que no puede venir a la tienda.</div>
+      </div>
+    </div>
+    <div class="cmp-c">
+      <div class="cmp-h"><img class="lg" src="assets/logos/meta.svg" alt="Meta"><b>Remarketing · 2 conjuntos</b><span class="cmp-w next">3 oct</span></div>
+      <div class="cmp-b">
+        <div class="cmp-k"><span>Cuándo</span><b>3 – 7 oct</b></div>
+        <div class="cmp-k"><span>2025</span><b>15 compras</b></div>
+        <div class="cmp-k"><span>Costo por compra</span><b>$12.788</b></div>
+        <div class="cmp-y">La más eficiente del año pasado. Se parte en dos: quien pasó por el lobby y el resto del sitio, para ver cuál convierte mejor.</div>
+      </div>
+    </div>
+    <div class="cmp-c">
+      <div class="cmp-h"><img class="lg" src="assets/logos/google.png" alt="Google"><b>Google · PMax</b><span class="cmp-w next">3 oct</span></div>
+      <div class="cmp-b">
+        <div class="cmp-k"><span>Cuándo</span><b>3 – 7 oct</b></div>
+        <div class="cmp-k"><span>Audiencias</span><b>Sitio + lobby</b></div>
+        <div class="cmp-k"><span>Se monta</span><b>Lunes 28</b></div>
+        <div class="cmp-y">Captura a la que ya está buscando vestido de cyber. Necesita el feed aprobado y los SKU enlazados.</div>
+      </div>
+    </div>
+    <div class="cmp-c out">
+      <div class="cmp-h"><img class="lg" src="assets/logos/meta.svg" alt="Meta"><b>Intereses</b><span class="cmp-w">Fuera</span></div>
+      <div class="cmp-b">
+        <div class="cmp-k"><span>2025 Santiago</span><b>$23.564</b></div>
+        <div class="cmp-k"><span>2025 Regiones</span><b>$41.564 · 0 compras</b></div>
+        <div class="cmp-y">Costaba $8.000 más por compra que Advantage+. Ese trabajo lo hace ahora la campaña de tráfico.</div>
+      </div>
+    </div>
+    <div class="cmp-c out">
+      <div class="cmp-h"><img class="lg" src="assets/logos/meta.svg" alt="Meta"><b>Alcance</b><span class="cmp-w">Fuera</span></div>
+      <div class="cmp-b">
+        <div class="cmp-k"><span>2025</span><b>145.461 personas</b></div>
+        <div class="cmp-k"><span>Costo</span><b>$70.394 · 0 compras</b></div>
+        <div class="cmp-y">No tiene botón: muestra y se va. En Santiago llena la tienda de gente que no compra online.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="slbl">Las tres métricas de la semana previa</div>
+  <div class="spec">
+    <div class="spec-g">
+      <div class="spec-i"><div class="spec-n">01 · Costo por visita</div><div class="spec-v">$30</div><div class="spec-d">Referencia del cyber pasado. Sin descuento va a estar más caro: hay que ver cuánto.</div></div>
+      <div class="spec-i"><div class="spec-n">02 · Agregados al carro</div><div class="spec-v">0,3%</div><div class="spec-d">Es el Add to Cart de hoy. De los 10, cuáles generan carro.</div></div>
+      <div class="spec-i"><div class="spec-n">03 · Chats por vestido</div><div class="spec-v">—</div><div class="spec-d">De Santiago llegan chats, de regiones llegan carros. Los dos cuentan como intención.</div></div>
+      <div class="spec-i" style="background:var(--red-lt);border-color:#F3C9C0"><div class="spec-n" style="color:var(--red-dk)">La regla</div><div class="spec-v" style="color:var(--red-dk);font-size:12.5px;line-height:1.3">Sin carro ni chat<br>en 4 días, sale</div><div class="spec-d">Entra un suplente antes del 3. Si no tracciona sin descuento, tampoco va a vender con descuento.</div></div>
+    </div>
+  </div>
+
   <div class="slbl">Las reglas del evento</div>
   <div class="cyv-chips">
     <div class="cyv-chip"><div class="cyv-ic">🗓️</div><div><div class="cyv-ct">Venta abre vie 2</div><div class="cyv-cd">El 40% entró antes del evento</div></div></div>
@@ -1780,7 +1958,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="cyv-chip"><div class="cyv-ic">🔎</div><div><div class="cyv-ct">Google entra en el cyber</div><div class="cyv-cd">Convierte 4× mejor</div></div></div>
   </div>
 
-  <div class="slbl">La inversión del evento</div>
+  <div class="slbl">Cómo se reparte el presupuesto del evento</div>
   <div class="cy-split">
     <div class="cy-split-bar">
       <div class="cy-sg rm" style="width:60%">RM · 60%</div>
@@ -1793,7 +1971,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="cy-sr sur"><div class="cy-sr-h">Zona Sur</div><div class="cy-sr-a">$160.000</div><div class="cy-sr-d">Se ajusta con lo que muestre el día 1.</div></div>
       <div class="cy-sr goog"><div class="cy-sr-h">Google · PMax</div><div class="cy-sr-a">$200.000</div><div class="cy-sr-d">Convierte 4× mejor que redes y con ticket más alto. Presupuesto aparte.</div></div>
     </div>
-  </div>
+    <div style="font-size:11px;color:var(--grey);margin-top:12px;padding-top:10px;border-top:0.5px solid var(--border);line-height:1.5">El reparto está sobre los <b style="color:var(--ink)">$800.000 declarados</b>. La cuenta de más arriba dice que para llegar a los $30M hacen falta cerca de <b style="color:var(--ink)">$1,2M</b>, que es casi lo mismo que se gastó en 2025. Los porcentajes no cambian: cambia el total.</div>
 
 
   <div class="slbl">Lo que puede romperlo</div>
@@ -1803,21 +1981,88 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="cyv-chip r"><div class="cyv-ic">🧾</div><div><div class="cyv-ct">Tienda fuera de Shopify</div><div class="cyv-cd">La web no ve qué se vende</div></div></div>
   </div>
 
+  <div class="slbl">La comunicación, día por día</div>
+  <div class="com">
+    <table>
+      <thead><tr><th>Cuándo</th><th>Qué se dice</th><th>Dónde</th></tr></thead>
+      <tbody>
+        <tr><td class="d">22 sep – 1 oct</td><td class="q">Tu vestido, tu momento<em>Los 10 seleccionados, la guía por tipo de cuerpo y cómo comprar sin miedo. Ni una vez la palabra cyber.</em></td><td>Landing + historias + tráfico pagado</td></tr>
+        <tr><td class="d">Todo el período</td><td class="q">Déjanos tu correo<em>El pop-up de la landing es lo único que pide algo. Es la base que después recibe el aviso.</em></td><td>Pop-up en la landing</td></tr>
+        <tr><td class="d">Jue 2</td><td class="q">El cyber ya está activo<em>Correo a las inscritas, con cupón de zapatos. Llegan un día antes que todo el mundo.</em></td><td>Correo, sin pauta</td></tr>
+        <tr class="hot"><td class="d">Sáb 3, 15:00</td><td class="q">Hasta 80% en saldos<em>El gancho público es la pata de liquidación, no los de gala. El descuento fuerte es el que mueve el clic.</em></td><td>Meta + Google + historias</td></tr>
+        <tr class="hot"><td class="d">Sáb 3 – lun 5</td><td class="q">Aprovecha que está la curva completa<em>Para los 10 de gala: XS a 2XL disponible hoy, mañana no. Urgencia real, no inventada.</em></td><td>Advantage+ y PMax</td></tr>
+        <tr><td class="d">Mar 6 – mié 7</td><td class="q">Queda tu talla<em>Remarketing por ángulo: la talla que queda, el precio, y que ahorra ahora lo que iba a gastar a fin de año.</em></td><td>Remarketing, 2 conjuntos</td></tr>
+        <tr><td class="d">Mié 7</td><td class="q">Cierra a las 20:00<em>Hora declarada. En 2025 la venta se cortó en seco sin avisar.</em></td><td>Historias + correo</td></tr>
+        <tr><td class="d">8 – 12 oct</td><td class="q">Se te quedó en el carro<em>Última pasada sobre carros colgados, y recién ahí se pide la reseña a quien ya recibió el vestido.</em></td><td>Remarketing + WhatsApp</td></tr>
+        <tr class="mute"><td class="d">Regla fija</td><td class="q">Oferta exclusiva digital<em>Todos los claims lo dicen. Es lo que evita que la clienta de Santiago se pruebe en tienda y compre online, o al revés.</em></td><td>Todos los canales</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <img class="shot" src="assets/mockups/comunicacion-historias.png" alt="Secuencia de historias del cyber">
+  <div class="shot-c">La secuencia en historias, de izquierda a derecha: <b>ya viene</b> con el contador, <b>cyber activo</b> con el enlace a la selección, y <b>últimas tallas</b> con el número real que queda. Las tres llevan enlace: una historia sin enlace no se puede medir.</div>
+
+  <div class="slbl">Google PMax · qué hay que entregar</div>
+  <div class="spec">
+    <div style="font-size:12px;font-weight:700;color:var(--dark);margin-bottom:10px">Creativos · los tres formatos que pide</div>
+    <div class="spec-g">
+      <div class="spec-i"><div class="spec-n">Horizontal · 1,91:1</div><div class="spec-v">1200 × 628</div><div class="spec-d">Mínimo 600 × 314. Es el que más se muestra en Display y Gmail.</div></div>
+      <div class="spec-i"><div class="spec-n">Cuadrado · 1:1</div><div class="spec-v">1200 × 1200</div><div class="spec-d">Mínimo 300 × 300. Obligatorio, sin él la campaña no publica.</div></div>
+      <div class="spec-i"><div class="spec-n">Vertical · 4:5</div><div class="spec-v">960 × 1200</div><div class="spec-d">Opcional, pero es el que rinde en móvil.</div></div>
+      <div class="spec-i"><div class="spec-n">Logo</div><div class="spec-v">1200 × 1200</div><div class="spec-d">Cuadrado obligatorio. El horizontal 4:1 (1200 × 300) es opcional.</div></div>
+      <div class="spec-i"><div class="spec-n">Video</div><div class="spec-v">10 s o más</div><div class="spec-d">Si no se sube, Google arma uno solo con las imágenes. Mejor subirlo: sirve para Shorts.</div></div>
+      <div class="spec-i"><div class="spec-n">Textos</div><div class="spec-v">30 / 90 / 90</div><div class="spec-d">Titulares de 30 caracteres, titular largo y descripciones de 90. Nombre del negocio, 25.</div></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1.91fr 1fr;gap:9px;margin-top:12px">
+      <div><img class="shot" style="margin-bottom:5px" src="assets/mockups/pmax-horizontal.png" alt="Creativo horizontal"><div class="shot-c" style="margin-bottom:0"><b>Horizontal</b> · el vestido a un lado y el texto al otro. Si el precio queda sobre el cuerpo, no se lee.</div></div>
+      <div><img class="shot" style="margin-bottom:5px" src="assets/mockups/pmax-cuadrado.png" alt="Creativo cuadrado"><div class="shot-c" style="margin-bottom:0"><b>Cuadrado</b> · el mismo vestido recompuesto, no la misma foto recortada.</div></div>
+    </div>
+    <div style="font-size:11px;color:var(--grey);margin-top:11px;padding-top:10px;border-top:0.5px solid var(--border);line-height:1.5">Las fotos de los 10 ya existen: el trabajo es <b style="color:var(--ink)">recortarlas a los tres formatos</b>, no producir de cero. Cada formato necesita que el vestido se lea completo sin que el texto lo tape.</div>
+  </div>
+
+  <div class="slbl">La configuración, en orden</div>
+  <div class="spec">
+    <div class="spec-g">
+      <div class="spec-i"><div class="spec-n">01 · Feed</div><div class="spec-v" style="font-size:12px">Merchant Center</div><div class="spec-d">Los 10 más los saldos, aprobados. La aprobación tarda días: es lo primero.</div></div>
+      <div class="spec-i"><div class="spec-n">02 · Grupos de recursos</div><div class="spec-v" style="font-size:12px">Dos</div><div class="spec-d">Uno para gala y otro para saldos. No se mezclan: tienen precio y mensaje distintos.</div></div>
+      <div class="spec-i"><div class="spec-n">03 · Señales de audiencia</div><div class="spec-v" style="font-size:12px">Sitio + lobby</div><div class="spec-d">Las dos mismas de Meta. Son señales, no límites: Google igual sale a buscar.</div></div>
+      <div class="spec-i"><div class="spec-n">04 · Expansión de URL</div><div class="spec-v" style="font-size:12px">Apagada</div><div class="spec-d">Si queda encendida, Google manda tráfico a cualquier página del sitio.</div></div>
+      <div class="spec-i"><div class="spec-n">05 · Conversión</div><div class="spec-v" style="font-size:12px">Compra</div><div class="spec-d">Solo compra. Si entra "agregar al carro", optimiza hacia gente que no paga.</div></div>
+      <div class="spec-i"><div class="spec-n">06 · Tope</div><div class="spec-v">$23.000</div><div class="spec-d">CPA máximo para que el margen aguante. Es el número que manda.</div></div>
+    </div>
+  </div>
+
+  <div class="slbl">Cómo se ve en Shopping y qué pasa con el precio</div>
+  <img class="shot" src="assets/mockups/google-shopping-clp.png" alt="Ficha de Shopping con precio tachado">
+  <div class="shot-c">Así se ve la ficha cuando el feed está bien: foto limpia, precio nuevo, <b>precio anterior tachado</b>, etiqueta de descuento y envío. El tachado no se escribe: lo pinta Google solo si el precio anterior estuvo cargado un tiempo antes. Si se sube el precio y se baja al otro día, no aparece.</div>
+  <div class="spec">
+    <div class="spec-g">
+      <div class="spec-i"><div class="spec-n">Precio</div><div class="spec-v" style="font-size:12px">price + sale_price</div><div class="spec-d">El de oferta va aparte. El tachado sale de la diferencia entre los dos.</div></div>
+      <div class="spec-i"><div class="spec-n">El feed y la web</div><div class="spec-v" style="font-size:12px">Tienen que coincidir</div><div class="spec-d">Si el sitio baja el precio el 3 a las 15:00 y el feed no se actualiza, Google desaprueba el producto ese mismo día.</div></div>
+      <div class="spec-i"><div class="spec-n">Sin código de barras</div><div class="spec-v" style="font-size:12px">identifier_exists: no</div><div class="spec-d">Los vestidos son propios y no tienen GTIN. Sin esta marca, el feed los rechaza.</div></div>
+      <div class="spec-i" style="background:var(--red-lt);border-color:#F3C9C0"><div class="spec-n" style="color:var(--red-dk)">El bloqueador</div><div class="spec-v" style="color:var(--red-dk);font-size:12px">408 de 484 sin tipo</div><div class="spec-d">Sin tipo de producto ni categoría, la ficha no compite por la búsqueda correcta.</div></div>
+    </div>
+  </div>
+
   <div class="slbl">Pendientes</div>
-  <div class="cyv-todo">
-    <div class="cyv-td"><div class="cy-p-w m">M</div><div><div class="cyv-td-t">Publicar el lobby y la colección</div><div class="cyv-td-f">Bloquea la campaña</div></div><div class="cyv-dot r"></div></div>
-    <div class="cyv-td"><div class="cy-p-w m">M</div><div><div class="cyv-td-t">Presupuesto del evento</div><div class="cyv-td-f">Bloquea el evento</div></div><div class="cyv-dot r"></div></div>
-    <div class="cyv-td"><div class="cy-p-w m">M</div><div><div class="cyv-td-t">Campaña previa corriendo</div><div class="cyv-td-f">Hasta el 27</div></div><div class="cyv-dot a"></div></div>
-    <div class="cyv-td"><div class="cy-p-w m">M</div><div><div class="cyv-td-t">Audiencias por vestido</div><div class="cyv-td-f">Con el lobby</div></div><div class="cyv-dot a"></div></div>
-    <div class="cyv-td"><div class="cy-p-w m">M</div><div><div class="cyv-td-t">Ajustes de la PDP</div><div class="cyv-td-f">6 de 8 por hacer</div></div><div class="cyv-dot a"></div></div>
-    <div class="cyv-td"><div class="cy-p-w m">M</div><div><div class="cyv-td-t">Agente CRO cada semana</div><div class="cyv-td-f">Corriendo</div></div><div class="cyv-dot g"></div></div>
-    <div class="cyv-td"><div class="cy-p-w p">P</div><div><div class="cyv-td-t">Ejemplos de carrusel</div><div class="cyv-td-f">21 sep</div></div><div class="cyv-dot a"></div></div>
-    <div class="cyv-td"><div class="cy-p-w p">P</div><div><div class="cyv-td-t">Meta por Cowork</div><div class="cyv-td-f">21 sep</div></div><div class="cyv-dot a"></div></div>
-    <div class="cyv-td"><div class="cy-p-w p">P</div><div><div class="cyv-td-t">Google por API</div><div class="cyv-td-f">28 sep</div></div><div class="cyv-dot a"></div></div>
-    <div class="cyv-td"><div class="cy-p-w p">P</div><div><div class="cyv-td-t">En vivo del 5 al 7</div><div class="cyv-td-f">Ajuste diario</div></div><div class="cyv-dot g"></div></div>
+  <div class="pnd">
+    <div class="pn r"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t">Números reales de tienda</div><div class="pn-d">Sin el dato de tienda no se puede dimensionar cuánta pauta aguanta el evento. La tienda es la que subsidia al e-commerce.</div><span class="pn-w">Marjorie · lunes 28</span></div></div>
+    <div class="pn r"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t">Suplentes de los 10</div><div class="pn-d">Si un vestido no genera carro ni chat en 4 días, tiene que entrar otro antes del 3.</div><span class="pn-w">Marjorie</span></div></div>
+    <div class="pn r"><img class="lg bg" src="assets/logos/google.png" alt="Google"><div><div class="pn-t">Skill de Google Ads y PMax</div><div class="pn-d">Se implementa junta el lunes 28. Es la que dice qué creativos hacen falta.</div><span class="pn-w">Patricio · antes del 28</span></div></div>
+    <div class="pn r"><img class="lg bg" src="assets/logos/meta.svg" alt="Meta"><div><div class="pn-t">Skill de Meta Ads</div><div class="pn-d">Para leer las campañas sin entrar a la interfaz y ver el CPA por zona durante el evento.</div><span class="pn-w">Patricio</span></div></div>
+    <div class="pn r"><img class="lg bg" src="assets/logos/claude.png" alt="Claude"><div><div class="pn-t">Skill del panel</div><div class="pn-d">Para que el panel se actualice con la data en vez de a mano.</div><span class="pn-w">Patricio</span></div></div>
+    <div class="pn a"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t">COGS por vestido</div><div class="pn-d">Cuánto cuesta vender cada uno. Sin eso, el tope de $23.000 es un supuesto.</div><span class="pn-w">Marjorie</span></div></div>
+    <div class="pn a"><img class="lg bg" src="assets/logos/gmail.png" alt="Correo"><div><div class="pn-t">Base de correos</div><div class="pn-d">Parte con la nativa de Shopify. Si el pop-up junta volumen, hay que decidir plan de envío.</div><span class="pn-w">Marjorie · decisión</span></div></div>
+    <div class="pn a"><img class="lg bg" src="assets/logos/instagram.png" alt="Instagram"><div><div class="pn-t">Creativos en los 3 formatos</div><div class="pn-d">Horizontal, cuadrado y video. Listos para la sesión del lunes 28.</div><span class="pn-w">Belén · lunes 28</span></div></div>
+    <div class="pn a"><img class="lg bg" src="assets/logos/meta.svg" alt="Meta"><div><div class="pn-t">Audiencia del lobby</div><div class="pn-d">El conjunto de remarketing de la URL de la landing, separado del sitio completo.</div><span class="pn-w">Marjorie</span></div></div>
+    <div class="pn g"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t">Landing de los 10 publicada</div><div class="pn-d">Con guía por tipo de cuerpo, accesorios y botón de WhatsApp.</div><span class="pn-w">Listo</span></div></div>
+    <div class="pn g"><img class="lg bg" src="assets/logos/clarity.png" alt="Clarity"><div><div class="pn-t">Agente CRO leyendo Clarity</div><div class="pn-d">Mide qué vestido de la landing recibe tráfico y dónde se cae.</div><span class="pn-w">Corriendo</span></div></div>
   </div>
 
   <div class="slbl">La PDP de los 10</div>
+  <img class="shot" src="assets/mockups/pdp-movil.png" alt="PDP en móvil" style="max-width:340px;margin:0 auto 8px">
+  <div class="shot-c">Cómo tiene que quedar en móvil, que es el 90% del tráfico: carrusel con frente, espalda y detalle, precio con el anterior tachado, tallas como botones, la medida de la modelo, el plazo escrito y el botón sin tener que bajar. <b>Ojo con un dato del ejemplo:</b> el plazo de Emma Clara es de 7 a 10 días hábiles, no de 2 a 4. Va declarado tal cual es.</div>
+
   <div class="cy-ck">
     <div class="cy-ci"><div class="cy-ci-m ok">✓</div><div><div class="cy-ci-t">Plantilla nueva</div></div></div>
     <div class="cy-ci"><div class="cy-ci-m ok">✓</div><div><div class="cy-ci-t">Pedido por WhatsApp prellenado</div></div></div>
