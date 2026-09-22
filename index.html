@@ -783,6 +783,65 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   .cyv-seg.wb{font-size:0}
   .cyv-seg.st{font-size:9px}
 }
+
+/* ============ GANTT DEL CYBER ============ */
+.cyg{background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:18px 16px 12px;margin-bottom:12px;overflow-x:auto}
+.cyg-in{min-width:720px}
+.cyg-head{display:grid;grid-template-columns:230px 1fr;gap:14px;padding-bottom:7px;border-bottom:0.5px solid var(--border)}
+.cyg-ax{position:relative;height:14px}
+.cyg-ax span{position:absolute;font-size:9.5px;font-weight:700;color:var(--grey);transform:translateX(-50%)}
+.cyg-ax span:first-child{transform:none}
+.cyg-ax span:last-child{transform:translateX(-100%)}
+.cyg-row{display:grid;grid-template-columns:230px 1fr;gap:14px;padding:9px 0;border-bottom:0.5px solid var(--border);align-items:center}
+.cyg-row:last-child{border-bottom:none}
+.cyg-t{font-size:12px;font-weight:700;color:var(--dark);line-height:1.25}
+.cyg-rol{font-size:10px;color:var(--brown);margin-top:3px;line-height:1.35}
+.cyg-ver{font-size:10px;color:var(--grey);margin-top:2px;line-height:1.35}
+.cyg-lane{position:relative;height:30px}
+.cyg-bar{position:absolute;top:3px;height:24px;border-radius:7px;display:flex;align-items:center;padding:0 10px;font-size:10.5px;font-weight:700;white-space:nowrap;overflow:hidden}
+.cyg-bar.def{background:var(--violet-lt);color:var(--brown);border:1px solid #D6CFFF}
+.cyg-bar.fix{background:var(--blue-lt);color:var(--blue-dk);border:1px solid #C9D8F0}
+.cyg-bar.prod{background:var(--gold-lt);color:var(--gold-dk);border:1px solid #F0DDB4}
+.cyg-bar.warm{background:var(--teal-lt);color:var(--teal-dk);border:1px solid #BFE6D5}
+.cyg-bar.pre{background:var(--dark);color:#fff}
+.cyg-bar.evt{background:var(--red);color:#fff}
+.cyg-bar.post{background:var(--beige);color:var(--ink);border:1px solid var(--sand)}
+.cyg-band{position:absolute;top:0;bottom:0;background:rgba(226,80,58,.06);border-left:1px solid rgba(226,80,58,.3);border-right:1px solid rgba(226,80,58,.3);z-index:0}
+.cyg-now{position:absolute;top:0;bottom:0;width:2px;background:var(--dark);z-index:4}
+.cyg-now::after{content:'hoy';position:absolute;top:-13px;left:-8px;font-size:9px;font-weight:700;color:var(--dark)}
+/* dias del evento */
+.cyg-days{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:9px;margin-bottom:12px}
+.cyg-day{background:var(--surf);border:1px solid var(--border);border-radius:11px;padding:13px 15px;border-top:3px solid var(--sand)}
+.cyg-day.peak{border-top-color:var(--red)}
+.cyg-day.open{border-top-color:var(--dark)}
+.cyg-day.end{border-top-color:var(--teal)}
+.cyg-dn{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+.cyg-dt{font-size:13px;font-weight:700;color:var(--dark);margin:5px 0 4px}
+.cyg-dd{font-size:11px;color:var(--grey);line-height:1.45}
+/* matriz por canal */
+.cyg-ch{background:var(--surf);border:1px solid var(--border);border-radius:12px;overflow-x:auto;margin-bottom:12px}
+.cyg-ch table{width:100%;border-collapse:collapse;font-size:11.5px;min-width:600px}
+.cyg-ch th{text-align:left;padding:9px 12px;font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);border-bottom:0.5px solid var(--border)}
+.cyg-ch td{padding:9px 12px;border-bottom:0.5px solid var(--border);line-height:1.4;color:var(--ink)}
+.cyg-ch tr:last-child td{border-bottom:none}
+.cyg-ch td.c{font-weight:700;color:var(--dark);white-space:nowrap}
+.cyg-ch td.nil{color:var(--sand)}
+.cyg-ch td.hot{background:rgba(226,80,58,.05)}
+/* fuentes conectadas */
+.cyg-src{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-bottom:12px}
+.cyg-s{background:var(--surf);border:1px solid var(--border);border-radius:10px;padding:11px 12px}
+.cyg-s-h{display:flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;color:var(--dark)}
+.cyg-s-d{font-size:10px;color:var(--grey);margin-top:4px;line-height:1.35}
+/* matriz de producto */
+.cyg-q{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-bottom:12px}
+.cyg-qc{border-radius:12px;overflow:hidden;border:1px solid var(--border)}
+.cyg-qh{padding:9px 13px;font-size:11.5px;font-weight:700;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.cyg-qh span{font-size:9px;font-weight:500;opacity:.8;letter-spacing:.06em}
+.cyg-qc[data-q="win"] .cyg-qh{background:var(--teal)}
+.cyg-qc[data-q="side"] .cyg-qh{background:var(--blue)}
+.cyg-qc[data-q="lose"] .cyg-qh{background:var(--gold)}
+.cyg-qc[data-q="dead"] .cyg-qh{background:var(--grey)}
+.cyg-qb{background:var(--surf);padding:11px 13px;font-size:11px;color:var(--grey);line-height:1.5;min-height:62px}
 </style>
 </head>
 <body>
@@ -1623,16 +1682,78 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="cyv-row"><div class="cyv-rl">Esperado</div><div class="cyv-track"><div class="cyv-seg st" style="width:69.1%">Tienda $24,2M</div><div class="cyv-seg wb" style="width:22.9%">Web $8M</div><div class="cyv-line" style="left:85.7%"></div></div><div class="cyv-rv ok">$32,2M</div></div>
   </div>
 
-  <div class="slbl">Calendario</div>
-  <div class="cyv-cal"><div class="cyv-cal-in">
-    <div class="cyv-axis" style="position:relative;height:18px;display:block">
-      <span style="position:absolute;left:0">14 sep</span><span style="position:absolute;left:24.1%">21 sep</span><span style="position:absolute;left:48.3%">28 sep</span><span style="position:absolute;left:72.4%">5 oct</span><span style="position:absolute;right:0">12 oct</span>
+  <div class="slbl">Cronograma · preparar, abrir y cerrar</div>
+  <div class="cyg"><div class="cyg-in">
+    <div class="cyg-head">
+      <div style="font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey)">Frente · rol · qué se verifica</div>
+      <div class="cyg-ax"><span style="left:0">15 sep</span><span style="left:25%">22 sep</span><span style="left:50%">29 sep</span><span style="left:75%">6 oct</span><span style="left:100%">13 oct</span></div>
     </div>
-    <div class="cyv-lane"><div class="cyv-evt lob" style="left:6.9%;width:41.4%">📣 Lobby · tráfico sin hablar de cyber</div></div>
-    <div class="cyv-lane"><div class="cyv-evt fp" style="left:10.3%;width:13.8%">Fiestas patrias</div><div class="cyv-evt lob" style="left:24.1%;width:3.4%;justify-content:center;padding:0">S16</div><div class="cyv-evt lob" style="left:48.3%;width:3.4%;justify-content:center;padding:0">S17</div></div>
-    <div class="cyv-lane"><div class="cyv-evt ven" style="left:62.1%;width:10.3%">Abre vie 2</div><div class="cyv-evt cy" style="left:72.4%;width:10.3%">CYBER</div><div class="cyv-evt lc" style="left:82.8%;width:17.2%">Last chance</div></div>
-    <div class="cyv-today" id="cyv-today"></div>
+
+    <div class="cyg-row">
+      <div><div class="cyg-t">Producto y precios</div><div class="cyg-rol">Rol: fijar el ahorro sin romper el margen</div><div class="cyg-ver">Verificar: los 10 con curva completa · tope 30% · saldos hasta 80%</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:71.43%;width:10.71%"></div><div class="cyg-bar def" style="left:0.00%;width:46.43%">Definir</div><div class="cyg-now" id="cyg-now"></div></div>
+    </div>
+    <div class="cyg-row">
+      <div><div class="cyg-t">Lobby y PDP</div><div class="cyg-rol">Rol: que la ficha cierre sola</div><div class="cyg-ver">Verificar: plazo de entrega · paso a paso · fotos de clientas · móvil</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:71.43%;width:10.71%"></div><div class="cyg-bar fix" style="left:3.57%;width:50.00%">Publicar y arreglar</div></div>
+    </div>
+    <div class="cyg-row">
+      <div><div class="cyg-t">Creativos</div><div class="cyg-rol">Rol: munición para que el anuncio no se canse</div><div class="cyg-ver">Verificar: 2 líneas (región y RM) · 3 por conjunto · listos el 30</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:71.43%;width:10.71%"></div><div class="cyg-bar prod" style="left:25.00%;width:28.57%">Producción</div></div>
+    </div>
+    <div class="cyg-row">
+      <div><div class="cyg-t">Audiencias y calentamiento</div><div class="cyg-rol">Rol: llegar al evento con el aprendizaje resuelto</div><div class="cyg-ver">Verificar: audiencia del lobby y una por vestido · campaña previa corriendo</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:71.43%;width:10.71%"></div><div class="cyg-bar warm" style="left:3.57%;width:53.57%">Calentar</div></div>
+    </div>
+    <div class="cyg-row">
+      <div><div class="cyg-t">Google y Merchant</div><div class="cyg-rol">Rol: capturar a la que ya está buscando vestido</div><div class="cyg-ver">Verificar: feed aprobado (tarda días) · PMax con la colección de los 10</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:71.43%;width:10.71%"></div><div class="cyg-bar prod" style="left:25.00%;width:32.14%">Aprobar y montar</div></div>
+    </div>
+    <div class="cyg-row">
+      <div><div class="cyg-t">Pre-evento</div><div class="cyg-rol">Rol: abrir antes que el resto</div><div class="cyg-ver">Verificar: el año pasado el 40% entró en estos días</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:71.43%;width:10.71%"></div><div class="cyg-bar pre" style="left:60.71%;width:10.71%">Abre vie 2</div></div>
+    </div>
+    <div class="cyg-row">
+      <div><div class="cyg-t">Evento · 5 al 7</div><div class="cyg-rol">Rol: ejecutar y mover presupuesto cada día</div><div class="cyg-ver">Verificar: ROAS por zona · stock por talla · sacar lo que no rinde</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:71.43%;width:10.71%"></div><div class="cyg-bar evt" style="left:71.43%;width:10.71%">CYBER</div></div>
+    </div>
+    <div class="cyg-row">
+      <div><div class="cyg-t">Last chance y postventa</div><div class="cyg-rol">Rol: cerrar lo que quedó colgado y pedir la reseña</div><div class="cyg-ver">Verificar: carros abandonados · reseñas · por qué compró la de región</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:71.43%;width:10.71%"></div><div class="cyg-bar post" style="left:82.14%;width:17.86%">Recuperar</div></div>
+    </div>
   </div></div>
+
+  <div class="cyg-days">
+    <div class="cyg-day open"><div class="cyg-dn">Vie 2 – dom 4</div><div class="cyg-dt">Se abre en silencio</div><div class="cyg-dd">La venta parte al cerrar la tienda el viernes. El año pasado estos días fueron el 40% de la facturación.</div></div>
+    <div class="cyg-day peak"><div class="cyg-dn">Lun 5 · día 1</div><div class="cyg-dt">Todo arriba</div><div class="cyg-dd">Las tres campañas, Google encendido e historias con link. Es el día del pico.</div></div>
+    <div class="cyg-day"><div class="cyg-dn">Mar 6 · día 2</div><div class="cyg-dt">Se acaban las tallas</div><div class="cyg-dd">Stock real por talla, no escasez inventada. Se saca de la campaña lo que ya no se puede vender.</div></div>
+    <div class="cyg-day end"><div class="cyg-dn">Mié 7 · día 3</div><div class="cyg-dt">Últimas horas</div><div class="cyg-dd">Cierre con hora declarada y salida a los carros colgados. En 2025 acá la venta se cortó en seco.</div></div>
+  </div>
+
+  <div class="slbl">Qué pasa en cada canal</div>
+  <div class="cyg-ch">
+    <table>
+      <thead><tr><th>Canal</th><th>Antes · hasta el 27</th><th>Evento · 2 al 7</th><th>Después · 8 al 12</th></tr></thead>
+      <tbody>
+        <tr><td class="c">📸 Historias</td><td>Teaser de los 10, sin hablar de cyber</td><td class="hot">Loop de vestidos con link, todos los días</td><td>Clientas reales y reseñas</td></tr>
+        <tr><td class="c">📣 Meta Ads</td><td>Tráfico al lobby, 3 conjuntos por zona</td><td class="hot">3 campañas de conversión por zona</td><td>Carros abandonados</td></tr>
+        <tr><td class="c">🔎 Google</td><td class="nil">No entra: es más caro para tráfico</td><td class="hot">PMax con la colección de los 10</td><td class="nil">—</td></tr>
+        <tr><td class="c">💬 WhatsApp</td><td>Pedidos de colores sin stock</td><td class="hot">Responde y cierra · "lo necesito antes" va a tienda</td><td>Postventa y reseña</td></tr>
+        <tr><td class="c">🏪 Tienda</td><td>Agenda normal</td><td class="hot">Mismo descuento que la web, cierra en local</td><td>Retiros</td></tr>
+        <tr><td class="c">📧 Correo</td><td class="nil">No hay base todavía</td><td class="nil">—</td><td>Se empieza a juntar con cada compra</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="slbl">Fuentes conectadas · todo medido, nada inventado</div>
+  <div class="cyg-src">
+    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot on"></span>Shopify</div><div class="cyg-s-d">Ventas, sesiones, producto y stock</div></div>
+    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot on"></span>Clarity</div><div class="cyg-s-d">Cómo navegan y dónde se caen</div></div>
+    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot on"></span>Search Console</div><div class="cyg-s-d">Qué buscan para llegar</div></div>
+    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot wait"></span>Meta Ads</div><div class="cyg-s-d">Inversión y ROAS por campaña</div></div>
+    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot wait"></span>Google Ads</div><div class="cyg-s-d">Búsqueda con intención</div></div>
+    <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot off"></span>Correo</div><div class="cyg-s-d">Sin base que activar</div></div>
+  </div>
 
   <div class="slbl">El recorrido de la clienta</div>
   <div class="cy-flow">
@@ -1708,13 +1829,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="cy-ci"><div class="cy-ci-m to"></div><div><div class="cy-ci-t">Una plantilla, revisada en móvil</div></div></div>
   </div>
 
-  <div class="slbl">Skills corriendo</div>
-  <div class="cy-sk">
-    <div class="cy-skc on"><div class="cy-skc-h">Evento Cyber <span class="cy-dot on"></span></div><div class="cy-skc-d">Proyección y producto</div></div>
-    <div class="cy-skc on"><div class="cy-skc-h">Agente CRO <span class="cy-dot on"></span></div><div class="cy-skc-d">Lee Clarity</div></div>
-    <div class="cy-skc wait"><div class="cy-skc-h">Meta por Cowork <span class="cy-dot wait"></span></div><div class="cy-skc-d">21 sep</div></div>
-    <div class="cy-skc wait"><div class="cy-skc-h">Google Ads <span class="cy-dot wait"></span></div><div class="cy-skc-d">28 sep</div></div>
-  </div>
   </div>
 
   <div class="sec" id="cy-base">
@@ -1808,6 +1922,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
     <div class="slbl">Lobby · semana a semana</div>
     <div class="cy-t" id="cy-lobby"></div>
+
+    <div class="slbl">Los 10, después del lobby</div>
+    <div class="cyg-q" id="cy-matriz"></div>
 
     <div class="slbl">Bitácora de datos · el más nuevo arriba</div>
     <div class="cy-t" id="cy-log"></div>
@@ -2370,6 +2487,9 @@ const CYBER={
     {dia:'Mar',nota:'',d25:null,d26:null,pedidos:null,inversion:null},
     {dia:'Mié',nota:'Cierre',d25:null,d26:null,pedidos:null,inversion:null}
   ],
+  matriz:{
+    ganadores:[], sidekicks:[], perdedores:[], zombies:[]
+  },
   lobby:[
     {semana:'16 – 20 sep',inversion:null,sesiones:null,pdp:null,top:null,lectura:''},
     {semana:'21 – 27 sep',inversion:null,sesiones:null,pdp:null,top:null,lectura:''}
@@ -2403,9 +2523,16 @@ function cyC(v,f){const x=f?f(v):v;return x==null||x===''?'<td class="nil">—</
     '<tr><td class="n">Total</td>'+cyC(t25||null,cyM)+cyC(t26||null,cyM)+'<td></td><td></td><td class="l">2025 sin martes ni miércoles registrados</td></tr></tbody></table>';
   document.getElementById('cy-lobby').innerHTML='<table><thead><tr><th>Semana</th><th>Inversión</th><th>Sesiones lobby</th><th>Entradas a PDP</th><th>Vestido que más jala</th><th>Lectura</th></tr></thead><tbody>'+
     CYBER.lobby.map(r=>'<tr><td class="n">'+r.semana+'</td>'+cyC(r.inversion,cyM)+cyC(r.sesiones)+cyC(r.pdp)+cyC(r.top)+'<td class="l">'+(r.lectura||'Por cargar')+'</td></tr>').join('')+'</tbody></table>';
+  const Q=[['win','Ganadores','estrella · empujar','ganadores'],['side','Acompañan','suben el ticket en el carro','sidekicks'],['lose','No cierran','traen tráfico y no venden','perdedores'],['dead','Sin movimiento','fuera de la campaña','zombies']];
+  document.getElementById('cy-matriz').innerHTML=Q.map(([k,t,sub,key])=>{
+    const v=(CYBER.matriz&&CYBER.matriz[key])||[];
+    return '<div class="cyg-qc" data-q="'+k+'"><div class="cyg-qh">'+t+'<span>'+sub+'</span></div><div class="cyg-qb">'+
+      (v.length?v.map(x=>'<b>'+x.n+'</b> · '+x.d).join('<br>'):'Se llena con lo que muestre el lobby')+'</div></div>';}).join('');
   document.getElementById('cy-log').innerHTML='<table><thead><tr><th>Fecha</th><th>Fuente</th><th>Dato</th><th>Lectura</th></tr></thead><tbody>'+
     CYBER.log.map(r=>'<tr><td class="f">'+r.fecha+'</td><td><span class="cy-src">'+r.fuente+'</span></td><td>'+r.dato+'</td><td class="l">'+r.lectura+'</td></tr>').join('')+'</tbody></table>';
 })();
+(function(){const g=document.getElementById('cyg-now');if(g){const d=(new Date(new Date().toDateString())-new Date('2026-09-15T00:00:00'))/864e5;
+  if(d<0||d>28){g.remove();}else{g.style.left=(d/28*100)+'%';}}})();
 (function(){const t=document.getElementById('cyv-today');if(!t)return;
   const d=(new Date(new Date().toDateString())-new Date('2026-09-14T00:00:00'))/864e5;
   if(d<0||d>29){t.remove();return;} t.style.left=(d/29*100)+'%';})();
