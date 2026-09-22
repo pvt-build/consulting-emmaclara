@@ -848,7 +848,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .lg.sm{width:15px;height:15px}
 .lg.bg{width:24px;height:24px}
 /* guion de campañas */
-.cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:10px;margin-bottom:10px}
+.cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:10px;margin-bottom:10px;max-width:940px}
+@media(min-width:900px){.cmp{grid-template-columns:1fr 1fr}}
 .cmp-c{background:var(--surf);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:transform .18s,box-shadow .18s}
 .cmp-c:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(42,36,32,.08)}
 .cmp-h{padding:11px 14px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)}
@@ -896,6 +897,31 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .com td.q em{font-style:normal;color:var(--grey);display:block;margin-top:2px;font-size:10.5px}
 .com tr.hot td{background:rgba(226,80,58,.05)}
 .com tr.mute td{color:var(--grey)}
+
+/* mapa de calor en tablas */
+.hm td.h1{background:rgba(62,180,137,.28)}
+.hm td.h2{background:rgba(62,180,137,.15)}
+.hm td.h3{background:rgba(232,162,55,.15)}
+.hm td.h4{background:rgba(226,80,58,.15)}
+.hm td.h5{background:rgba(226,80,58,.30)}
+.hm td.hx{background:repeating-linear-gradient(45deg,var(--beige),var(--beige) 4px,#fff 4px,#fff 8px);color:var(--grey)}
+.hm-key{display:flex;gap:10px;align-items:center;font-size:10px;color:var(--grey);margin:-4px 0 12px 2px;flex-wrap:wrap}
+.hm-sc{display:flex;border-radius:3px;overflow:hidden}
+.hm-sc i{width:16px;height:9px;display:block}
+/* estrategia en 3 movimientos */
+.est{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-bottom:12px}
+.est-c{border-radius:12px;padding:16px 17px;border:1px solid var(--border);background:var(--surf);position:relative}
+.est-c.a{border-top:3px solid var(--gold)}
+.est-c.b{border-top:3px solid var(--dark)}
+.est-c.c{border-top:3px solid var(--red)}
+.est-n{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:var(--grey)}
+.est-t{font-size:15px;font-weight:700;color:var(--dark);margin:6px 0 5px;letter-spacing:-.01em}
+.est-d{font-size:11.5px;color:var(--grey);line-height:1.5}
+.est-w{font-size:10.5px;color:var(--ink);margin-top:10px;padding-top:9px;border-top:0.5px solid var(--border);line-height:1.45}
+.est-w b{color:var(--dark)}
+.est-o{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:20px;margin-top:9px}
+.est-o.pat{background:var(--violet-lt);color:var(--brown)}
+.est-o.mar{background:var(--teal-lt);color:var(--teal-dk)}
 </style>
 </head>
 <body>
@@ -1760,6 +1786,107 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="cyv-row"><div class="cyv-rl">Esperado</div><div class="cyv-track"><div class="cyv-seg st" style="width:69.1%">Tienda $24,2M</div><div class="cyv-seg wb" style="width:22.9%">Web $8M</div><div class="cyv-line" style="left:85.7%"></div></div><div class="cyv-rv ok">$32,2M</div></div>
   </div>
 
+  <div class="slbl">La estrategia, en tres movimientos</div>
+  <div class="est">
+    <div class="est-c a">
+      <div class="est-n">01 · 24 SEP – 2 OCT</div>
+      <div class="est-t">Calentar sin descuento</div>
+      <div class="est-d">La landing de los 10 recibe tráfico pagado y no dice la palabra cyber. El pop-up junta correos.</div>
+      <div class="est-w"><b>Para qué:</b> llegar al evento con público que ya miró, y saber qué vestido tracciona antes de pagar por venderlo.</div>
+      <span class="est-o mar">Ejecuta el equipo</span>
+    </div>
+    <div class="est-c b">
+      <div class="est-n">02 · JUE 2</div>
+      <div class="est-t">Abrir a la base</div>
+      <div class="est-d">El cyber sube al sitio y solo se entera quien dejó su correo. Cupón de zapatos. Cero pauta.</div>
+      <div class="est-w"><b>Para qué:</b> premiar al que dejó el dato y estrenar la oferta con un público que ya confía, antes del ruido.</div>
+      <span class="est-o mar">Ejecuta el equipo</span>
+    </div>
+    <div class="est-c c">
+      <div class="est-n">03 · SÁB 3 – MAR 7</div>
+      <div class="est-t">Vender a quien ya miró</div>
+      <div class="est-d">Sale la comunicación pública con los saldos, y el remarketing le habla a quien pasó por la landing.</div>
+      <div class="est-w"><b>Para qué:</b> el peso que se gastó calentando se cobra acá. El remarketing fue la campaña más barata del cyber pasado.</div>
+      <span class="est-o mar">Ejecuta el equipo</span>
+    </div>
+  </div>
+  <div class="slbl">El camino: del anuncio a la venta</div>
+  <div class="cy-flow">
+    <div class="cy-fl">
+      <div class="cy-fs"><div class="cy-fs-n">01 · Anuncio</div><div class="cy-fs-t">Video aspiracional</div><div class="cy-fs-d">El que reventó el WhatsApp. Nada de cyber ni de precio.</div></div>
+      <div class="cy-fa">→</div>
+      <div class="cy-fs"><div class="cy-fs-n">02 · Lobby</div><div class="cy-fs-t">Los 10 seleccionados</div><div class="cy-fs-d">Banner, guía por tipo de cuerpo y complementa tu look.</div></div>
+      <div class="cy-fa">→</div>
+      <div class="cy-fs key"><div class="cy-fs-n">03 · Venta</div><div class="cy-fs-t">La PDP del vestido</div><div class="cy-fs-d">El lobby no vende: vende la ficha.</div></div>
+      <div class="cy-fa">→</div>
+      <div class="cy-fs"><div class="cy-fs-n">04 · Audiencia</div><div class="cy-fs-t">Una por vestido</div><div class="cy-fs-d">Quien entró al rojo, no quien pasó por el lobby.</div></div>
+      <div class="cy-fa">→</div>
+      <div class="cy-fs end"><div class="cy-fs-n">05 · Cyber</div><div class="cy-fs-t">Remarketing</div><div class="cy-fs-d">"Aquí está tu vestido", con el descuento.</div></div>
+    </div>
+  </div>
+
+  <div class="slbl">Proyección de venta · la que guía cuánta pauta poner</div>
+  <div class="cy-t hm">
+    <table>
+      <thead><tr><th>Pauta del evento</th><th>Compras</th><th>Web · piso</th><th>Web · si repite 2025</th><th>Mes · piso</th><th>Mes · si repite 2025</th></tr></thead>
+      <tbody>
+        <tr><td class="n">$800.000</td><td class="n">49</td><td class="n h4">$4,3M</td><td class="n h2">$7,6M</td><td class="n h4">$28,5M</td><td class="n h1">$31,8M</td></tr>
+        <tr><td class="n">$1.000.000</td><td class="n">61</td><td class="n h3">$5,4M</td><td class="n h1">$9,5M</td><td class="n h3">$29,6M</td><td class="n h1">$33,7M</td></tr>
+        <tr><td class="n">$1.200.000</td><td class="n">73</td><td class="n h2">$6,5M</td><td class="n h1">$11,4M</td><td class="n h2">$30,7M</td><td class="n h1">$35,6M</td></tr>
+        <tr><td class="n">Para los $30M</td><td class="n">38</td><td class="n" colspan="2">Hacen falta <b>$6M de web</b></td><td class="n" colspan="2">Con la tienda repitiendo agosto</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="hm-key"><span class="hm-sc"><i style="background:rgba(62,180,137,.28)"></i><i style="background:rgba(62,180,137,.15)"></i><i style="background:rgba(232,162,55,.15)"></i><i style="background:rgba(226,80,58,.15)"></i><i style="background:rgba(226,80,58,.30)"></i></span><span>Pasa la meta</span><span>·</span><span>Queda corto</span></div>
+  <div class="shot-c"><b>Las dos columnas son los dos extremos honestos.</b> El piso usa el ROAS de todo octubre 2025 (5,4×) y la otra usa el costo por compra real de las campañas del cyber ($16.442 ponderado, con ticket de $156.275). La verdad está en medio y depende de cuánto de la venta de octubre pasado fue el cyber y cuánto fue el mes normal. <b>Con $800.000 se llega solo si la eficiencia del año pasado se repite</b>: por eso el piso de la decisión es $1.000.000.</div>
+
+  <div class="slbl">Ventas reales · lo último cargado</div>
+  <div class="cy-t hm">
+    <table>
+      <thead><tr><th>Mes</th><th>Tienda</th><th>Web</th><th>Total</th><th>Pauta</th><th>ROAS</th></tr></thead>
+      <tbody>
+        <tr><td class="n">Junio</td><td class="n h5">$5,4M</td><td class="n h2">$1,7M</td><td class="n h5">$7,8M</td><td class="n">$766K</td><td class="n h3">10×</td></tr>
+        <tr><td class="n">Julio</td><td class="n h3">$16,8M</td><td class="n h5">$0,6M</td><td class="n h3">$18,9M</td><td class="n">$1,1M</td><td class="n h1">17×</td></tr>
+        <tr><td class="n">Agosto</td><td class="n h1">$24,2M</td><td class="n h4">$0,9M</td><td class="n h1">$27,3M</td><td class="n">$1,8M</td><td class="n h1">15×</td></tr>
+        <tr><td class="n">Septiembre</td><td class="hx">—</td><td class="hx">—</td><td class="hx">—</td><td class="hx">—</td><td class="n" style="color:var(--red-dk)">Sin cargar</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="shot-c">La matriz llega hasta agosto. <b>Sin el cierre de septiembre no se puede proyectar la inversión del evento</b>, porque la tienda es la que financia lo que se puede gastar en la web.</div>
+
+  <div class="alert-box info" style="margin-top:0">
+    <span class="alert-icon">🎯</span>
+    <div><div class="alert-title">Cada movimiento tiene una sola pregunta que lo cierra</div><div class="alert-text">El 2 de octubre: ¿qué vestidos traccionaron? El 2: ¿cuántas se inscribieron? El 7: ¿cuánto costó cada compra por zona? Si una no tiene respuesta, el siguiente movimiento sale a ciegas.</div></div>
+  </div>
+
+  <div class="slbl">Pendientes · lo tuyo y lo de ella</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px;margin-bottom:12px">
+    <div>
+      <div style="font-size:11px;font-weight:700;color:var(--brown);margin-bottom:7px;letter-spacing:.04em">PATRICIO · la claridad</div>
+      <div class="pnd" style="grid-template-columns:1fr;margin-bottom:0">
+        <div class="pn r"><img class="lg bg" src="assets/logos/google.png" alt="Google"><div><div class="pn-t">Skill de Google Ads y PMax</div><div class="pn-d">Se la pasa antes del lunes. La skill le dice qué creativos hacen falta y se monta junta el 28.</div><span class="pn-w">Antes del 28</span></div></div>
+        <div class="pn r"><img class="lg bg" src="assets/logos/meta.svg" alt="Meta"><div><div class="pn-t">Skill de Meta Ads</div><div class="pn-d">Para leer el costo por compra por zona durante el evento, sin entrar a la interfaz.</div><span class="pn-w">Antes del 3</span></div></div>
+        <div class="pn r"><img class="lg bg" src="assets/logos/claude.png" alt="Claude"><div><div class="pn-t">Skill del panel</div><div class="pn-d">Que el panel se actualice con la data en vez de a mano.</div><span class="pn-w">Sin fecha</span></div></div>
+        <div class="pn a"><img class="lg bg" src="assets/logos/instagram.png" alt="Creativos"><div><div class="pn-t">Ejemplos de carrusel de producto</div><div class="pn-d">El paso a paso post-compra y el bloque de fotos de clientas, para que Belén diseñe encima.</div><span class="pn-w">Vencido el 21</span></div></div>
+        <div class="pn a"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t">Acompañamiento del 3 al 7</div><div class="pn-d">Revisión diaria del costo por compra y del stock por talla.</div><span class="pn-w">Agendado</span></div></div>
+      </div>
+    </div>
+    <div>
+      <div style="font-size:11px;font-weight:700;color:var(--teal-dk);margin-bottom:7px;letter-spacing:.04em">MARJORIE Y BELÉN · la ejecución</div>
+      <div class="pnd" style="grid-template-columns:1fr;margin-bottom:0">
+        <div class="pn r"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t">Números de tienda de septiembre</div><div class="pn-d">Sin el cierre de la tienda no se puede decidir cuánta pauta aguanta el evento.</div><span class="pn-w">Lunes 28</span></div></div>
+        <div class="pn r"><img class="lg bg" src="assets/logos/meta.svg" alt="Meta"><div><div class="pn-t">Encender el tráfico al lobby</div><div class="pn-d">$80.000 diarios del 24 al 2. Cada día que no corre es un día menos de audiencia caliente.</div><span class="pn-w">Hoy</span></div></div>
+        <div class="pn a"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t">Suplentes de los 10</div><div class="pn-d">Para reemplazar al que no genere carro ni chat en los primeros 4 días.</div><span class="pn-w">Antes del 2</span></div></div>
+        <div class="pn a"><img class="lg bg" src="assets/logos/instagram.png" alt="Creativos"><div><div class="pn-t">Creativos en los 3 formatos</div><div class="pn-d">Horizontal, cuadrado y video. Los pide la skill de PMax.</div><span class="pn-w">Belén · 28</span></div></div>
+        <div class="pn a"><img class="lg bg" src="assets/logos/meta.svg" alt="Meta"><div><div class="pn-t">Audiencia del lobby</div><div class="pn-d">El conjunto de remarketing de esa URL, separado del sitio completo.</div><span class="pn-w">Con la campaña</span></div></div>
+        <div class="pn a"><img class="lg bg" src="assets/logos/gmail.png" alt="Correo"><div><div class="pn-t">Pop-up y base de correos</div><div class="pn-d">Parte con la nativa de Shopify. Si junta volumen, hay que decidir plan de envío.</div><span class="pn-w">Decisión suya</span></div></div>
+        <div class="pn a"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t">COGS por vestido</div><div class="pn-d">Sin eso, el tope de $23.000 por compra es un supuesto.</div><span class="pn-w">Sin fecha</span></div></div>
+        <div class="pn g"><img class="lg bg" src="assets/logos/clarity.png" alt="Clarity"><div><div class="pn-t">Landing publicada y agente CRO</div><div class="pn-d">Los 10 con su ficha, la guía por cuerpo y Clarity midiendo el comportamiento.</div><span class="pn-w">Listo</span></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="shot-c" style="margin-bottom:22px">La columna de la izquierda es lo que destraba la de la derecha. <b>Nada de lo suyo avanza si la skill de Google no llega antes del lunes</b>, y la decisión de presupuesto no se puede tomar sin el cierre de septiembre.</div>
+
   <div class="slbl">Cronograma · preparar, abrir y cerrar</div>
   <div class="cyg"><div class="cyg-in">
     <div class="cyg-head">
@@ -1781,7 +1908,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
     <div class="cyg-row">
       <div><div class="cyg-t">Audiencias y calentamiento</div><div class="cyg-rol">Rol: llegar al evento con el aprendizaje resuelto</div><div class="cyg-ver">Verificar: $80.000 diarios · 4 días para enganchar el algoritmo · variación máx. 25%</div></div>
-      <div class="cyg-lane"><div class="cyg-band" style="left:64.29%;width:17.86%"></div><div class="cyg-bar warm" style="left:25.00%;width:32.14%">Calentar · tráfico al lobby</div></div>
+      <div class="cyg-lane"><div class="cyg-band" style="left:64.29%;width:17.86%"></div><div class="cyg-bar warm" style="left:32.14%;width:28.57%">Calentar · tráfico al lobby</div></div>
     </div>
     <div class="cyg-row">
       <div><div class="cyg-t">Google y Merchant</div><div class="cyg-rol">Rol: capturar a la que ya está buscando vestido</div><div class="cyg-ver">Verificar: feed aprobado (tarda días) · PMax con la colección de los 10</div></div>
@@ -1802,7 +1929,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div></div>
 
   <div class="cyg-days">
-    <div class="cyg-day"><div class="cyg-dn">22 sep – 1 oct</div><div class="cyg-dt">Solo tráfico</div><div class="cyg-dd">La landing de los 10 corre sin decir la palabra cyber. El pop-up junta los correos.</div></div>
+    <div class="cyg-day"><div class="cyg-dn">24 sep – 2 oct</div><div class="cyg-dt">Solo tráfico</div><div class="cyg-dd">La landing de los 10 corre sin decir la palabra cyber, y cada vestido lleva a su ficha. El pop-up junta los correos.</div></div>
     <div class="cyg-day open"><div class="cyg-dn">Jue 2</div><div class="cyg-dt">Se abre en silencio</div><div class="cyg-dd">El cyber sube al sitio y sale el correo a las inscritas, con cupón de zapatos. Cero pauta.</div></div>
     <div class="cyg-day peak"><div class="cyg-dn">Sáb 3, 15:00 – lun 5</div><div class="cyg-dt">El pico</div><div class="cyg-dd">Arranca la comunicación pública con los saldos. Acá se concentra el tráfico pagado.</div></div>
     <div class="cyg-day end"><div class="cyg-dn">Mar 6 – mié 7</div><div class="cyg-dt">Últimas tallas</div><div class="cyg-dd">Manda el remarketing: la talla que queda, el carro colgado y el cierre con hora declarada.</div></div>
@@ -1833,52 +1960,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="cyg-s"><div class="cyg-s-h"><span class="cy-dot off"></span><img class="lg sm" src="assets/logos/gmail.png" alt="Correo" style="margin:0 5px 0 1px">Correo</div><div class="cyg-s-d">Sin base que activar</div></div>
   </div>
 
-  <div class="slbl">El recorrido de la clienta</div>
-  <div class="cy-flow">
-    <div class="cy-fl">
-      <div class="cy-fs"><div class="cy-fs-n">01 · Anuncio</div><div class="cy-fs-t">Video aspiracional</div><div class="cy-fs-d">El que reventó el WhatsApp. Nada de cyber ni de precio.</div></div>
-      <div class="cy-fa">→</div>
-      <div class="cy-fs"><div class="cy-fs-n">02 · Lobby</div><div class="cy-fs-t">Los 10 seleccionados</div><div class="cy-fs-d">Banner, guía por tipo de cuerpo y complementa tu look.</div></div>
-      <div class="cy-fa">→</div>
-      <div class="cy-fs key"><div class="cy-fs-n">03 · Venta</div><div class="cy-fs-t">La PDP del vestido</div><div class="cy-fs-d">El lobby no vende: vende la ficha.</div></div>
-      <div class="cy-fa">→</div>
-      <div class="cy-fs"><div class="cy-fs-n">04 · Audiencia</div><div class="cy-fs-t">Una por vestido</div><div class="cy-fs-d">Quien entró al rojo, no quien pasó por el lobby.</div></div>
-      <div class="cy-fa">→</div>
-      <div class="cy-fs end"><div class="cy-fs-n">05 · Cyber</div><div class="cy-fs-t">Remarketing</div><div class="cy-fs-d">"Aquí está tu vestido", con el descuento.</div></div>
-    </div>
-  </div>
-
-  <div class="slbl">Cuánta pauta aguanta el evento</div>
-  <div class="spec">
-    <div class="spec-g">
-      <div class="spec-i"><div class="spec-n">Meta de web</div><div class="spec-v">$6M</div><div class="spec-d">Es lo que falta para llegar a los $30M si la tienda repite agosto.</div></div>
-      <div class="spec-i"><div class="spec-n">ROAS web · oct 2025</div><div class="spec-v">5,4×</div><div class="spec-d">$15,0M de web con $2,8M de pauta. Es el único dato real que hay.</div></div>
-      <div class="spec-i" style="background:var(--gold-lt);border-color:#F0DDB4"><div class="spec-n" style="color:var(--gold-dk)">Pauta que pide</div><div class="spec-v" style="color:var(--gold-dk)">$1,2M</div><div class="spec-d">$6M dividido por el ROAS del año pasado. Casi lo mismo que se gastó en 2025: $1,27M.</div></div>
-      <div class="spec-i" style="background:var(--red-lt);border-color:#F3C9C0"><div class="spec-n" style="color:var(--red-dk)">Con los $800K</div><div class="spec-v" style="color:var(--red-dk)">$4,3M</div><div class="spec-d">Quedaría en $28,5M el mes. Por debajo de la meta.</div></div>
-    </div>
-    <div style="font-size:11px;color:var(--grey);margin-top:11px;padding-top:10px;border-top:0.5px solid var(--border);line-height:1.5">Esta cuenta <b style="color:var(--ink)">supone que la tienda repite los $24,2M de agosto</b>. Septiembre no está cargado en la matriz, así que hoy no hay cómo saber si la tienda viene sosteniendo. Ese número es el que desbloquea la decisión de presupuesto.</div>
-  </div>
-
-  <div class="slbl">Ventas reales · lo último cargado</div>
-  <div class="cy-t">
-    <table>
-      <thead><tr><th>Mes</th><th>Tienda</th><th>Web</th><th>Total</th><th>Pauta</th><th>ROAS</th></tr></thead>
-      <tbody>
-        <tr><td class="n">Junio</td><td class="n">$5,4M</td><td class="n">$1,7M</td><td class="n">$7,8M</td><td class="n">$766K</td><td class="l">10×</td></tr>
-        <tr><td class="n">Julio</td><td class="n">$16,8M</td><td class="n">$0,6M</td><td class="n">$18,9M</td><td class="n">$1,1M</td><td class="l">17×</td></tr>
-        <tr><td class="n">Agosto</td><td class="n">$24,2M</td><td class="n">$0,9M</td><td class="n">$27,3M</td><td class="n">$1,8M</td><td class="l">15×</td></tr>
-        <tr><td class="n">Septiembre</td><td class="nil">—</td><td class="nil">—</td><td class="nil">—</td><td class="nil">—</td><td class="l" style="color:var(--red-dk)">Sin cargar</td></tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="shot-c">La matriz llega hasta agosto. <b>Sin el cierre de septiembre no se puede proyectar la inversión del evento</b>, porque la tienda es la que financia lo que se puede gastar en la web.</div>
-
   <div class="slbl">Guión de campañas · qué corre, cuándo y por qué</div>
   <div class="cmp">
     <div class="cmp-c">
       <div class="cmp-h"><img class="lg" src="assets/logos/meta.svg" alt="Meta"><b>Tráfico al lobby</b><span class="cmp-w on">Corriendo</span></div>
       <div class="cmp-b">
-        <div class="cmp-k"><span>Cuándo</span><b>22 sep – 1 oct</b></div>
+        <div class="cmp-k"><span>Cuándo</span><b>24 sep – 2 oct</b></div>
         <div class="cmp-k"><span>Presupuesto</span><b>$80.000 / día</b></div>
         <div class="cmp-k"><span>Zonas</span><b>Todas, sin separar</b></div>
         <div class="cmp-y">Calienta la audiencia y muestra qué vestidos traccionan antes de pagar por venderlos. <i>En 2025 costó $30 la visita y metió 4.523 personas con $135.227.</i></div>
@@ -1938,15 +2025,21 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="slbl">Las tres métricas de la semana previa</div>
-  <div class="spec">
-    <div class="spec-g">
-      <div class="spec-i"><div class="spec-n">01 · Costo por visita</div><div class="spec-v">$30</div><div class="spec-d">Referencia del cyber pasado. Sin descuento va a estar más caro: hay que ver cuánto.</div></div>
-      <div class="spec-i"><div class="spec-n">02 · Agregados al carro</div><div class="spec-v">0,3%</div><div class="spec-d">Es el Add to Cart de hoy. De los 10, cuáles generan carro.</div></div>
-      <div class="spec-i"><div class="spec-n">03 · Chats por vestido</div><div class="spec-v">—</div><div class="spec-d">De Santiago llegan chats, de regiones llegan carros. Los dos cuentan como intención.</div></div>
-      <div class="spec-i" style="background:var(--red-lt);border-color:#F3C9C0"><div class="spec-n" style="color:var(--red-dk)">La regla</div><div class="spec-v" style="color:var(--red-dk);font-size:12.5px;line-height:1.3">Sin carro ni chat<br>en 4 días, sale</div><div class="spec-d">Entra un suplente antes del 3. Si no tracciona sin descuento, tampoco va a vender con descuento.</div></div>
-    </div>
+  <div class="slbl">Las métricas del lobby · 24 sep al 2 oct</div>
+  <div class="cy-t hm">
+    <table>
+      <thead><tr><th>Qué se mide</th><th>Referencia</th><th>Con $80.000 al día</th><th>Señal de alarma</th></tr></thead>
+      <tbody>
+        <tr><td class="n">Costo por visita</td><td>$30 en el cyber 2025, con descuento</td><td class="n">$40 a $60 sin descuento</td><td class="n h4">Sobre $80</td></tr>
+        <tr><td class="n">Visitas por día</td><td>—</td><td class="n">1.300 a 2.600</td><td class="n h4">Bajo 800</td></tr>
+        <tr><td class="n">Visitas en los 9 días</td><td>4.523 en el cyber 2025</td><td class="n h1">12.000 a 23.000</td><td class="n h4">Bajo 8.000</td></tr>
+        <tr><td class="n">Agregados al carro</td><td>0,3% del sitio hoy</td><td class="n">35 a 70 carros</td><td class="n h4">Bajo 20</td></tr>
+        <tr><td class="n">Chats desde la landing</td><td>$900 por chat en campaña de mamá</td><td class="n">Por vestido, no total</td><td class="n h5">Un vestido con cero</td></tr>
+        <tr><td class="n">Vestidos sin intención</td><td>—</td><td class="n">Se reemplazan por suplentes</td><td class="n h5">Más de 3 de los 10</td></tr>
+      </tbody>
+    </table>
   </div>
+  <div class="shot-c">Estas seis se miran <b>el viernes 26 y otra vez el 1</b>. No hace falta esperar a que termine: con dos días de datos ya se ve si el costo es razonable y qué vestido no despierta nada. El que no genere carro ni chat en 4 días sale y entra un suplente.</div>
 
   <div class="slbl">Las reglas del evento</div>
   <div class="cyv-chips">
@@ -1986,7 +2079,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <table>
       <thead><tr><th>Cuándo</th><th>Qué se dice</th><th>Dónde</th></tr></thead>
       <tbody>
-        <tr><td class="d">22 sep – 1 oct</td><td class="q">Tu vestido, tu momento<em>Los 10 seleccionados, la guía por tipo de cuerpo y cómo comprar sin miedo. Ni una vez la palabra cyber.</em></td><td>Landing + historias + tráfico pagado</td></tr>
+        <tr><td class="d">24 sep – 2 oct</td><td class="q">Tu vestido, tu momento<em>Los 10 seleccionados, la guía por tipo de cuerpo y cómo comprar sin miedo. Ni una vez la palabra cyber.</em></td><td>Landing + historias + tráfico pagado</td></tr>
         <tr><td class="d">Todo el período</td><td class="q">Déjanos tu correo<em>El pop-up de la landing es lo único que pide algo. Es la base que después recibe el aviso.</em></td><td>Pop-up en la landing</td></tr>
         <tr><td class="d">Jue 2</td><td class="q">El cyber ya está activo<em>Correo a las inscritas, con cupón de zapatos. Llegan un día antes que todo el mundo.</em></td><td>Correo, sin pauta</td></tr>
         <tr class="hot"><td class="d">Sáb 3, 15:00</td><td class="q">Hasta 80% en saldos<em>El gancho público es la pata de liquidación, no los de gala. El descuento fuerte es el que mueve el clic.</em></td><td>Meta + Google + historias</td></tr>
@@ -2042,21 +2135,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="spec-i"><div class="spec-n">Sin código de barras</div><div class="spec-v" style="font-size:12px">identifier_exists: no</div><div class="spec-d">Los vestidos son propios y no tienen GTIN. Sin esta marca, el feed los rechaza.</div></div>
       <div class="spec-i" style="background:var(--red-lt);border-color:#F3C9C0"><div class="spec-n" style="color:var(--red-dk)">El bloqueador</div><div class="spec-v" style="color:var(--red-dk);font-size:12px">408 de 484 sin tipo</div><div class="spec-d">Sin tipo de producto ni categoría, la ficha no compite por la búsqueda correcta.</div></div>
     </div>
-  </div>
-
-  <div class="slbl">Pendientes</div>
-  <div class="pnd">
-    <div class="pn r"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t">Números reales de tienda</div><div class="pn-d">Sin el dato de tienda no se puede dimensionar cuánta pauta aguanta el evento. La tienda es la que subsidia al e-commerce.</div><span class="pn-w">Marjorie · lunes 28</span></div></div>
-    <div class="pn r"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t">Suplentes de los 10</div><div class="pn-d">Si un vestido no genera carro ni chat en 4 días, tiene que entrar otro antes del 3.</div><span class="pn-w">Marjorie</span></div></div>
-    <div class="pn r"><img class="lg bg" src="assets/logos/google.png" alt="Google"><div><div class="pn-t">Skill de Google Ads y PMax</div><div class="pn-d">Se implementa junta el lunes 28. Es la que dice qué creativos hacen falta.</div><span class="pn-w">Patricio · antes del 28</span></div></div>
-    <div class="pn r"><img class="lg bg" src="assets/logos/meta.svg" alt="Meta"><div><div class="pn-t">Skill de Meta Ads</div><div class="pn-d">Para leer las campañas sin entrar a la interfaz y ver el CPA por zona durante el evento.</div><span class="pn-w">Patricio</span></div></div>
-    <div class="pn r"><img class="lg bg" src="assets/logos/claude.png" alt="Claude"><div><div class="pn-t">Skill del panel</div><div class="pn-d">Para que el panel se actualice con la data en vez de a mano.</div><span class="pn-w">Patricio</span></div></div>
-    <div class="pn a"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t">COGS por vestido</div><div class="pn-d">Cuánto cuesta vender cada uno. Sin eso, el tope de $23.000 es un supuesto.</div><span class="pn-w">Marjorie</span></div></div>
-    <div class="pn a"><img class="lg bg" src="assets/logos/gmail.png" alt="Correo"><div><div class="pn-t">Base de correos</div><div class="pn-d">Parte con la nativa de Shopify. Si el pop-up junta volumen, hay que decidir plan de envío.</div><span class="pn-w">Marjorie · decisión</span></div></div>
-    <div class="pn a"><img class="lg bg" src="assets/logos/instagram.png" alt="Instagram"><div><div class="pn-t">Creativos en los 3 formatos</div><div class="pn-d">Horizontal, cuadrado y video. Listos para la sesión del lunes 28.</div><span class="pn-w">Belén · lunes 28</span></div></div>
-    <div class="pn a"><img class="lg bg" src="assets/logos/meta.svg" alt="Meta"><div><div class="pn-t">Audiencia del lobby</div><div class="pn-d">El conjunto de remarketing de la URL de la landing, separado del sitio completo.</div><span class="pn-w">Marjorie</span></div></div>
-    <div class="pn g"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t">Landing de los 10 publicada</div><div class="pn-d">Con guía por tipo de cuerpo, accesorios y botón de WhatsApp.</div><span class="pn-w">Listo</span></div></div>
-    <div class="pn g"><img class="lg bg" src="assets/logos/clarity.png" alt="Clarity"><div><div class="pn-t">Agente CRO leyendo Clarity</div><div class="pn-d">Mide qué vestido de la landing recibe tráfico y dónde se cae.</div><span class="pn-w">Corriendo</span></div></div>
   </div>
 
   <div class="slbl">La PDP de los 10</div>
