@@ -922,6 +922,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .est-o{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:20px;margin-top:9px}
 .est-o.pat{background:var(--violet-lt);color:var(--brown)}
 .est-o.mar{background:var(--teal-lt);color:var(--teal-dk)}
+
+/* micro wins */
+.mw{display:grid;grid-template-columns:repeat(auto-fit,minmax(152px,1fr));gap:8px;margin-bottom:12px}
+.mw-c{background:var(--teal-lt);border:1px solid #BFE6D5;border-radius:11px;padding:13px 14px}
+.mw-v{font-size:19px;font-weight:700;color:var(--teal-dk);letter-spacing:-.02em;line-height:1.1}
+.mw-l{font-size:10.5px;color:var(--ink);opacity:.8;margin-top:5px;line-height:1.4}
+/* antiguedad del pendiente */
+.pn-age{font-size:9px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-top:6px;margin-left:5px;display:inline-block;padding:2px 7px;border-radius:20px;background:rgba(255,255,255,.7);color:var(--grey)}
+.pn-age.old{background:var(--red);color:#fff}
+.pn-age.mid{background:rgba(255,255,255,.9);color:var(--red-dk)}
 </style>
 </head>
 <body>
@@ -1794,7 +1804,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="slbl">El foco de esta semana · 3 frentes, no 10</div>
   <div class="est">
     <div class="est-c a">
-      <div class="est-n">FRENTE 1 · HOY</div>
+      <div class="est-n">FRENTE 1 · MAÑANA 24</div>
       <div class="est-t">Encender el tráfico</div>
       <div class="est-d">$80.000 diarios a la landing de los 10, del 24 al 2. Cada día que no corre es un día menos de audiencia caliente para el 3.</div>
       <span class="est-o mar">Marjorie</span>
@@ -1901,28 +1911,39 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div><div class="alert-title">Cada movimiento tiene una sola pregunta que lo cierra</div><div class="alert-text">El 2 de octubre: ¿qué vestidos traccionaron? El 2: ¿cuántas se inscribieron? El 7: ¿cuánto costó cada compra por zona? Si una no tiene respuesta, el siguiente movimiento sale a ciegas.</div></div>
   </div>
 
+  <div class="slbl">El camino que ya recorrieron</div>
+  <div class="mw">
+    <div class="mw-c"><div class="mw-v">5% → 36%</div><div class="mw-l">Cierre en tienda, en el primer bloque</div></div>
+    <div class="mw-c"><div class="mw-v">$63.9K → $19K</div><div class="mw-l">CAC corregido</div></div>
+    <div class="mw-c"><div class="mw-v">13% → 42%</div><div class="mw-l">Citas que pagan</div></div>
+    <div class="mw-c"><div class="mw-v">1 → 3</div><div class="mw-l">Equipo comercial</div></div>
+    <div class="mw-c"><div class="mw-v">+69%</div><div class="mw-l">Agosto contra agosto 2025</div></div>
+    <div class="mw-c"><div class="mw-v">3.030</div><div class="mw-l">Sesiones que Claude lee sola en Clarity</div></div>
+  </div>
+  <div class="shot-c" style="margin-bottom:20px">Nada de esto existía en junio. El cyber no se corre desde cero: se corre sobre una tienda que cierra el triple y un equipo que hoy son tres.</div>
+
   <div class="slbl">Pendientes · lo tuyo y lo de ella</div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px;margin-bottom:12px">
     <div>
       <div style="font-size:11px;font-weight:700;color:var(--brown);margin-bottom:7px;letter-spacing:.04em">PATRICIO · la claridad</div>
       <div class="pnd" style="grid-template-columns:1fr;margin-bottom:0">
-        <div class="pn r"><img class="lg bg" src="assets/logos/google.png" alt="Google"><div><div class="pn-t">Skill de Google Ads y PMax</div><div class="pn-d">Se la pasa antes del lunes. La skill le dice qué creativos hacen falta y se monta junta el 28.</div><span class="pn-w">Antes del 28</span></div></div>
-        <div class="pn r"><img class="lg bg" src="assets/logos/meta.svg" alt="Meta"><div><div class="pn-t">Skill de Meta Ads</div><div class="pn-d">Para leer el costo por compra por zona durante el evento, sin entrar a la interfaz.</div><span class="pn-w">Antes del 3</span></div></div>
-        <div class="pn r"><img class="lg bg" src="assets/logos/claude.png" alt="Claude"><div><div class="pn-t">Skill del panel</div><div class="pn-d">Que el panel se actualice con la data en vez de a mano.</div><span class="pn-w">Sin fecha</span></div></div>
-        <div class="pn a"><img class="lg bg" src="assets/logos/instagram.png" alt="Creativos"><div><div class="pn-t">Ejemplos de carrusel de producto</div><div class="pn-d">El paso a paso post-compra y el bloque de fotos de clientas, para que Belén diseñe encima.</div><span class="pn-w">Vencido el 21</span></div></div>
+        <div class="pn r"><img class="lg bg" src="assets/logos/google.png" alt="Google"><div><div class="pn-t" data-desde="2026-09-08">Skill de Google Ads y PMax</div><div class="pn-d">Se la pasa antes del lunes. La skill le dice qué creativos hacen falta y se monta junta el 28.</div><span class="pn-w">Antes del 28</span></div></div>
+        <div class="pn r"><img class="lg bg" src="assets/logos/meta.svg" alt="Meta"><div><div class="pn-t" data-desde="2026-09-08">Skill de Meta Ads</div><div class="pn-d">Para leer el costo por compra por zona durante el evento, sin entrar a la interfaz.</div><span class="pn-w">Antes del 3</span></div></div>
+        <div class="pn r"><img class="lg bg" src="assets/logos/claude.png" alt="Claude"><div><div class="pn-t" data-desde="2026-09-22">Skill del panel</div><div class="pn-d">Que el panel se actualice con la data en vez de a mano.</div><span class="pn-w">Sin fecha</span></div></div>
+        <div class="pn a"><img class="lg bg" src="assets/logos/instagram.png" alt="Creativos"><div><div class="pn-t" data-desde="2026-06-08">Ejemplos de carrusel de producto</div><div class="pn-d">El paso a paso post-compra y el bloque de fotos de clientas, para que Belén diseñe encima.</div><span class="pn-w">Vencido el 21</span></div></div>
         <div class="pn a"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t">Acompañamiento del 3 al 7</div><div class="pn-d">Revisión diaria del costo por compra y del stock por talla.</div><span class="pn-w">Agendado</span></div></div>
       </div>
     </div>
     <div>
       <div style="font-size:11px;font-weight:700;color:var(--teal-dk);margin-bottom:7px;letter-spacing:.04em">MARJORIE Y BELÉN · la ejecución</div>
       <div class="pnd" style="grid-template-columns:1fr;margin-bottom:0">
-        <div class="pn r"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t">Números de tienda de septiembre</div><div class="pn-d">Sin el cierre de la tienda no se puede decidir cuánta pauta aguanta el evento.</div><span class="pn-w">Lunes 28</span></div></div>
-        <div class="pn r"><img class="lg bg" src="assets/logos/meta.svg" alt="Meta"><div><div class="pn-t">Encender el tráfico al lobby</div><div class="pn-d">$80.000 diarios del 24 al 2. Cada día que no corre es un día menos de audiencia caliente.</div><span class="pn-w">Hoy</span></div></div>
-        <div class="pn a"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t">Suplentes de los 10</div><div class="pn-d">Para reemplazar al que no genere carro ni chat en los primeros 4 días.</div><span class="pn-w">Antes del 2</span></div></div>
-        <div class="pn a"><img class="lg bg" src="assets/logos/instagram.png" alt="Creativos"><div><div class="pn-t">Creativos en los 3 formatos</div><div class="pn-d">Horizontal, cuadrado y video. Los pide la skill de PMax.</div><span class="pn-w">Belén · 28</span></div></div>
-        <div class="pn a"><img class="lg bg" src="assets/logos/meta.svg" alt="Meta"><div><div class="pn-t">Audiencia del lobby</div><div class="pn-d">El conjunto de remarketing de esa URL, separado del sitio completo.</div><span class="pn-w">Con la campaña</span></div></div>
-        <div class="pn a"><img class="lg bg" src="assets/logos/gmail.png" alt="Correo"><div><div class="pn-t">Pop-up y base de correos</div><div class="pn-d">Parte con la nativa de Shopify. Si junta volumen, hay que decidir plan de envío.</div><span class="pn-w">Decisión suya</span></div></div>
-        <div class="pn a"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t">COGS por vestido</div><div class="pn-d">Sin eso, el tope de $23.000 por compra es un supuesto.</div><span class="pn-w">Sin fecha</span></div></div>
+        <div class="pn r"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t" data-desde="2026-09-14">Números de tienda de septiembre</div><div class="pn-d">Sin el cierre de la tienda no se puede decidir cuánta pauta aguanta el evento.</div><span class="pn-w">Lunes 28</span></div></div>
+        <div class="pn r"><img class="lg bg" src="assets/logos/meta.svg" alt="Meta"><div><div class="pn-t" data-desde="2026-09-14">Encender el tráfico al lobby</div><div class="pn-d">$80.000 diarios del 24 al 2. Cada día que no corre es un día menos de audiencia caliente.</div><span class="pn-w">Hoy</span></div></div>
+        <div class="pn a"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t" data-desde="2026-09-22">Suplentes de los 10</div><div class="pn-d">Para reemplazar al que no genere carro ni chat en los primeros 4 días.</div><span class="pn-w">Antes del 2</span></div></div>
+        <div class="pn a"><img class="lg bg" src="assets/logos/instagram.png" alt="Creativos"><div><div class="pn-t" data-desde="2026-09-14">Creativos en los 3 formatos</div><div class="pn-d">Horizontal, cuadrado y video. Los pide la skill de PMax.</div><span class="pn-w">Belén · 28</span></div></div>
+        <div class="pn a"><img class="lg bg" src="assets/logos/meta.svg" alt="Meta"><div><div class="pn-t" data-desde="2026-09-14">Audiencia del lobby</div><div class="pn-d">El conjunto de remarketing de esa URL, separado del sitio completo.</div><span class="pn-w">Con la campaña</span></div></div>
+        <div class="pn a"><img class="lg bg" src="assets/logos/gmail.png" alt="Correo"><div><div class="pn-t" data-desde="2026-09-14">Pop-up y base de correos</div><div class="pn-d">Parte con la nativa de Shopify. Si junta volumen, hay que decidir plan de envío.</div><span class="pn-w">Decisión suya</span></div></div>
+        <div class="pn a"><img class="lg bg" src="assets/logos/shopify.png" alt="Shopify"><div><div class="pn-t" data-desde="2026-09-22">COGS por vestido</div><div class="pn-d">Sin eso, el tope de $23.000 por compra es un supuesto.</div><span class="pn-w">Sin fecha</span></div></div>
         <div class="pn g"><img class="lg bg" src="assets/logos/clarity.png" alt="Clarity"><div><div class="pn-t">Landing publicada y agente CRO</div><div class="pn-d">Los 10 con su ficha, la guía por cuerpo y Clarity midiendo el comportamiento.</div><span class="pn-w">Listo</span></div></div>
       </div>
     </div>
@@ -2901,6 +2922,13 @@ function cyC(v,f){const x=f?f(v):v;return x==null||x===''?'<td class="nil">—</
 (function(){const t=document.getElementById('cyv-today');if(!t)return;
   const d=(new Date(new Date().toDateString())-new Date('2026-09-14T00:00:00'))/864e5;
   if(d<0||d>29){t.remove();return;} t.style.left=(d/29*100)+'%';})();
+(function(){document.querySelectorAll('[data-desde]').forEach(function(el){
+  var d=Math.floor((new Date(new Date().toDateString())-new Date(el.dataset.desde+'T00:00:00'))/864e5);
+  var sem=Math.floor(d/7), txt = d<7 ? 'esta semana' : (sem===1?'1 semana abierto':sem+' semanas abierto');
+  var cl = sem>=4 ? 'old' : (sem>=2 ? 'mid' : '');
+  var w=el.parentNode.querySelector('.pn-w');
+  if(w){var sp=document.createElement('span');sp.className='pn-age '+cl;sp.textContent=txt;w.after(sp);}
+});})();
 document.querySelectorAll('[data-hasta]').forEach(el=>{
   const d=Math.ceil((new Date(el.dataset.hasta+'T00:00:00')-new Date(new Date().toDateString()))/864e5);
   el.textContent=d>0?d:(d===0?'Hoy':'✓');
