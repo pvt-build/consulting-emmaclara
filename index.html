@@ -49,7 +49,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .ext-btn.locked{opacity:.2;cursor:not-allowed;pointer-events:none}
 
 /* PAGES */
-.page{display:none;max-width:900px;margin:0 auto;padding:24px 20px 40px}
+.page{display:none;max-width:1240px;margin:0 auto;padding:24px 22px 40px}
 .page.on{display:block}
 .slbl{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--warm);margin-bottom:8px;margin-top:24px}
 .slbl:first-child{margin-top:0}
@@ -134,7 +134,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 /* ═══ RADAR ═══ */
 .radar-wrap{background:var(--surf);border:0.5px solid var(--border);border-radius:13px;padding:16px 18px;margin-bottom:12px}
 .radar-grid{display:grid;grid-template-columns:1fr;gap:8px;justify-items:center}
-.radar-svg{width:100%;max-width:300px;height:auto;display:block}
+.radar-svg{width:100%;max-width:420px;height:auto;display:block}
 .radar-svg .ring{fill:none;stroke:var(--border);stroke-width:1}
 .radar-svg .spoke{stroke:var(--border);stroke-width:1}
 .radar-svg .ax{fill:var(--grey);font-size:10px;font-weight:600;letter-spacing:.02em}
@@ -275,7 +275,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .funnel-note strong{color:var(--ink)}
 
 /* BOTTLENECKS */
-.bn-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:9px;margin-bottom:20px}
+.bn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:9px;margin-bottom:20px}
 .bn-card{background:var(--surf);border:0.5px solid var(--border);border-radius:10px;padding:13px 15px;border-left:3px solid var(--border);min-width:0}
 .bn-card.c{border-left-color:var(--red)}.bn-card.w{border-left-color:var(--orange)}.bn-card.i{border-left-color:var(--teal)}
 .bn-head{display:flex;align-items:center;gap:7px;margin-bottom:5px}
@@ -417,7 +417,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .alert-text{font-size:11.5px;color:var(--grey);line-height:1.6}
 .alert-text a{color:var(--teal-dk)}
 
-.rm-uc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(165px,1fr));gap:8px;margin-top:14px}
+.rm-uc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:8px;margin-top:14px}
 .rm-uc{background:var(--bg);border:0.5px solid var(--border);border-radius:9px;padding:12px 14px;opacity:.6;min-width:0}
 .rm-uc-num{font-family:'DM Mono',monospace;font-size:9px;color:var(--grey);margin-bottom:4px}
 .rm-uc-title{font-size:12px;font-weight:500;color:var(--ink);margin-bottom:5px;line-height:1.3}
@@ -662,7 +662,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
 /* fase previa · flujo del lobby */
 .cy-flow{background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:18px 16px;margin-bottom:10px;overflow-x:auto}
-.cy-fl{display:flex;align-items:stretch;gap:6px;min-width:600px}
+.cy-fl{display:flex;align-items:stretch;gap:6px;min-width:560px}
 .cy-fs{flex:1;border-radius:10px;padding:11px 12px;background:var(--bg);border:0.5px solid var(--border);display:flex;flex-direction:column;gap:4px}
 .cy-fs.key{background:var(--gold-lt);border-color:#F0DDB4}
 .cy-fs.end{background:var(--teal-lt);border-color:#BFE6D5}
@@ -991,14 +991,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .blk-b{padding:16px 18px 18px}
 .blk-b>.slbl:first-child{margin-top:0}
 /* proyector de presupuesto */
-.pj-top{display:grid;grid-template-columns:1fr 240px;gap:18px;align-items:center;margin-bottom:16px}
+.pj-top{display:grid;grid-template-columns:1fr minmax(240px,330px);gap:18px;align-items:center;margin-bottom:16px}
 .pj-sl{width:100%;-webkit-appearance:none;appearance:none;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--teal) 0%,var(--gold) 55%,var(--red) 100%);outline:none;margin:14px 0 6px}
 .pj-sl::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--dark);border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:pointer}
 .pj-sl::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--dark);border:3px solid #fff;cursor:pointer}
 .pj-mark{display:flex;justify-content:space-between;font-size:10px;color:var(--grey)}
 .pj-big{font-size:32px;font-weight:700;letter-spacing:-.03em;color:var(--dark);line-height:1}
 .pj-lb{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
-.pj-out{background:var(--teal-lt);border:1px solid #BFE6D5;border-radius:11px;padding:14px 16px}
+.pj-out{background:var(--teal-lt);border:1px solid #BFE6D5;border-radius:11px;padding:16px 18px;align-self:stretch;display:flex;flex-direction:column;justify-content:center}
 .pj-out .pj-big{color:var(--teal-dk);font-size:26px}
 .pj-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(112px,1fr));gap:8px;margin-bottom:14px}
 .pj-k{background:var(--bg);border:0.5px solid var(--border);border-radius:10px;padding:11px 12px}
@@ -1025,6 +1025,25 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .dim{display:flex;justify-content:space-between;align-items:baseline;font-size:10.5px;color:var(--grey);margin:-4px 0 12px;padding:0 2px}
 .dim b{color:var(--dark);font-size:11.5px}
 .dim code{font-family:'DM Mono',monospace;color:var(--ink);background:var(--beige);padding:2px 7px;border-radius:5px;user-select:all}
+
+/* ── pantallas anchas: columnas fijas para no dejar filas huérfanas ── */
+@media(min-width:1080px){
+  .wn{grid-template-columns:repeat(4,1fr)}
+  .est{grid-template-columns:repeat(3,1fr)}
+  .rn-grid{grid-template-columns:repeat(4,1fr)}
+  .cyv-chips{grid-template-columns:repeat(3,1fr)}
+  .cyg-days{grid-template-columns:repeat(4,1fr)}
+  .spec-g{grid-template-columns:repeat(3,1fr)}
+  .cyg-src{grid-template-columns:repeat(3,1fr)}
+  .cy-ck{grid-template-columns:repeat(4,1fr)}
+  .cyg-q{grid-template-columns:repeat(4,1fr)}
+  .pj-kpi{grid-template-columns:repeat(4,1fr)}
+  .res-grid{grid-template-columns:repeat(3,1fr)}
+  .stk-grid{grid-template-columns:repeat(4,1fr)}
+}
+/* el texto largo no se estira a 1200px */
+.shot-c,.flow-note,.lead,.alert-text,.dim span{max-width:82ch}
+.blk-s{max-width:70ch}
 </style>
 </head>
 <body>
@@ -2037,27 +2056,29 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       </div>
     </div>
     <div class="pj-kpi">
-      <div class="pj-k"><div class="pj-kv" id="pj-vis">22.222</div><div class="pj-kl">Visitas · $45 c/u</div></div>
-      <div class="pj-k"><div class="pj-kv" id="pj-atc">222</div><div class="pj-kl">Agregan al carro · 1%</div></div>
-      <div class="pj-k"><div class="pj-kv" id="pj-wsp">333</div><div class="pj-kl">Escriben por WhatsApp</div></div>
-      <div class="pj-k"><div class="pj-kv" id="pj-ven">68</div><div class="pj-kl">Ventas</div></div>
+      <div class="pj-k"><div class="pj-kv" id="pj-vis">—</div><div class="pj-kl">Visitas</div></div>
+      <div class="pj-k"><div class="pj-kv" id="pj-cpc">—</div><div class="pj-kl">CPC global</div></div>
+      <div class="pj-k"><div class="pj-kv" id="pj-cr">—</div><div class="pj-kl">CR global</div></div>
+      <div class="pj-k"><div class="pj-kv" id="pj-cpa">—</div><div class="pj-kl">CPA global</div></div>
+      <div class="pj-k"><div class="pj-kv" id="pj-atc">—</div><div class="pj-kl">Agregan al carro · 1%</div></div>
+      <div class="pj-k"><div class="pj-kv" id="pj-wsp">—</div><div class="pj-kl">Escriben por WhatsApp</div></div>
+      <div class="pj-k"><div class="pj-kv" id="pj-ven">—</div><div class="pj-kl">Ventas</div></div>
     </div>
-
     <div class="ui">
       <div class="ui-bar">Administrador de anuncios · Campañas</div>
       <table class="ui-tb">
-        <thead><tr><th>Campaña</th><th>Entrega</th><th>Presupuesto</th><th>Costo por compra</th><th>Compras</th></tr></thead>
+        <thead><tr><th>Campaña</th><th>Presupuesto</th><th>CPC</th><th>CR</th><th>CPA</th><th>Compras</th></tr></thead>
         <tbody id="ui-meta"></tbody>
       </table>
     </div>
     <div class="ui">
       <div class="ui-bar g"><img class="lg sm" src="assets/logos/google.png" alt="Google"> Google Ads · Performance Max</div>
       <table class="ui-tb">
-        <thead><tr><th>Campaña · grupo de recursos</th><th>Estado</th><th>Presupuesto</th><th>Costo por compra</th><th>Compras</th></tr></thead>
+        <thead><tr><th>Campaña · grupo de recursos</th><th>Presupuesto</th><th>CPC</th><th>CR</th><th>CPA</th><th>Compras</th></tr></thead>
         <tbody id="ui-google"></tbody>
       </table>
     </div>
-    <div class="shot-c" style="margin-bottom:0">Los nombres se seleccionan y se copian tal cual. La campaña de tráfico al lobby va aparte: $80.000 diarios del 24 al 2, fuera de este presupuesto.</div>
+    <div class="shot-c" style="margin-bottom:0">El CPA sale del cyber 2025. La tasa de conversión es el supuesto: 0,30% en Santiago, 0,23% en regiones, 0,55% en remarketing del lobby y 1,2% en Google. <b>El CPC se deriva de los dos.</b> La campaña de tráfico al lobby va aparte: $80.000 diarios del 24 al 2.</div>
   </div>
 
   <div class="cyv-chips">
@@ -2070,7 +2091,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
   <div class="shot-c" style="margin-bottom:20px"><b>La regla del descuento cambió respecto de la primera versión del plan.</b> Antes iba simultáneo en web y tienda; ahora la tienda queda aislada y todos los claims dicen oferta exclusiva digital. Si no, la clienta se prueba en el local y compra online, y el trabajo de tienda se pierde.</div>
 
-  <div class="cy-flow"><div style="max-width:620px;margin:0 auto">
+  <div class="cy-flow"><div style="max-width:820px;margin:0 auto">
     <div style="background:var(--blue);color:#fff;border-radius:9px;padding:13px 16px;margin-bottom:5px;display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:9px;font-weight:700;letter-spacing:.09em;opacity:.7">01 · INVERSIÓN</div><div style="font-size:14px;font-weight:700;margin-top:2px">$80.000 al día · $720.000 en total</div></div><div style="font-size:11px;opacity:.85">9 días</div></div>
     <div style="text-align:center;color:var(--sand);font-size:13px;line-height:1">▼</div>
     <div style="background:var(--gold);color:#fff;border-radius:9px;padding:13px 16px;margin:5px 10% 5px 0;display:flex;justify-content:space-between;align-items:center"><div><div style="font-size:9px;font-weight:700;letter-spacing:.09em;opacity:.8">02 · VISITAS AL LOBBY</div><div style="font-size:14px;font-weight:700;margin-top:2px">12.000 a 18.000</div></div><div style="font-size:11px;opacity:.9">$40 a $60 c/u</div></div>
@@ -2160,7 +2181,7 @@ CONFIG        Feed            Merchant Center aprobado
   </div>
   <div class="dim"><b>La huincha superior</b><span>Fija en todas las páginas, con la hora de cierre</span></div>
 
-  <div style="display:grid;grid-template-columns:300px 1fr;gap:16px;align-items:start;margin-bottom:12px">
+  <div style="display:grid;grid-template-columns:minmax(260px,330px) 1fr;gap:18px;align-items:start;margin-bottom:12px">
     <img class="shot" style="margin:0" src="assets/mockups/pdp-completa.png" alt="Ficha de producto en móvil">
     <div>
       <div class="cyv-chips" style="grid-template-columns:1fr;gap:6px;margin-bottom:0">
@@ -2938,41 +2959,46 @@ function cyC(v,f){const x=f?f(v):v;return x==null||x===''?'<td class="nil">—</
   if(w){var sp=document.createElement('span');sp.className='pn-age '+cl;sp.textContent=txt;w.after(sp);}
 });})();
 /* ── PROYECTOR DE PRESUPUESTO ──────────────────────────────
-   Para cambiar el reparto o los costos, se edita solo CAMPS.
+   Para cambiar el reparto o los supuestos, se edita solo CAMPS.
    pct = porcion del presupuesto · cpa = costo por compra
+   cr  = tasa de conversion · el CPC sale de cpa x cr
    ──────────────────────────────────────────────────────── */
 const CAMPS=[
-  {n:'EM | Cyber | Ventas | Adv+ | Santiago', pct:.35, cpa:15132, on:false, g:0},
-  {n:'EM | Cyber | Ventas | Adv+ | Regiones', pct:.25, cpa:24024, on:false, g:0},
-  {n:'EM | Cyber | Remarketing | Lobby',      pct:.12, cpa:12788, on:false, g:0},
-  {n:'EM | Cyber | Remarketing | Sitio',      pct:.08, cpa:12788, on:false, g:0},
-  {n:'EM | Cyber | PMax | Gala',              pct:.13, cpa:10000, on:false, g:1},
-  {n:'EM | Cyber | PMax | Saldos',            pct:.07, cpa:10000, on:false, g:1}
+  {n:'EM | Cyber | Ventas | Adv+ | Santiago', pct:.35, cpa:15132, cr:.0030, g:0},
+  {n:'EM | Cyber | Ventas | Adv+ | Regiones', pct:.25, cpa:24024, cr:.0023, g:0},
+  {n:'EM | Cyber | Remarketing | Lobby',      pct:.12, cpa:12788, cr:.0055, g:0},
+  {n:'EM | Cyber | Remarketing | Sitio',      pct:.08, cpa:12788, cr:.0040, g:0},
+  {n:'EM | Cyber | PMax | Gala',              pct:.13, cpa:10000, cr:.0120, g:1},
+  {n:'EM | Cyber | PMax | Saldos',            pct:.07, cpa:10000, cr:.0100, g:1}
 ];
-const TICKET=156275, CPC=45;
+const TICKET=156275;
 function clp(v){return '$'+Math.round(v).toLocaleString('es-CL');}
 function corto(v){return v>=1e6?'$'+(v/1e6).toFixed(1).replace('.',',')+'M':clp(v);}
+function pct(v){return (v*100).toFixed(2).replace('.',',')+'%';}
 function pjRender(){
   const t=+document.getElementById('pj-slider').value;
   document.getElementById('pj-total').textContent=clp(t);
-  let ventas=0, filas=[[],[]];
+  const filas=[[],[]], tot=[{inv:0,cli:0,ven:0},{inv:0,cli:0,ven:0}];
   CAMPS.forEach(c=>{
-    const inv=t*c.pct, v=inv/c.cpa; ventas+=v;
-    filas[c.g].push('<tr><td><span class="ui-sw" data-on="'+(c.on?1:0)+'"></span><span class="ui-nm" data-g="'+c.g+'">'+c.n+'</span></td>'+
-      '<td class="ui-st">'+(c.on?'Activa':'En pausa')+'</td><td>'+clp(inv)+'<span class="ui-sub">total</span></td>'+
-      '<td>'+clp(c.cpa)+'</td><td><b>'+Math.round(v)+'</b><span class="ui-sub">compras</span></td></tr>');
+    const inv=t*c.pct, cpc=c.cpa*c.cr, cli=inv/cpc, ven=inv/c.cpa;
+    tot[c.g].inv+=inv; tot[c.g].cli+=cli; tot[c.g].ven+=ven;
+    filas[c.g].push('<tr><td><span class="ui-sw" data-on="0"></span><span class="ui-nm" data-g="'+c.g+'">'+c.n+'</span></td>'+
+      '<td>'+clp(inv)+'</td><td>'+clp(cpc)+'</td><td>'+pct(c.cr)+'</td><td>'+clp(c.cpa)+'</td>'+
+      '<td><b>'+Math.round(ven)+'</b></td></tr>');
   });
-  const vis=t/CPC, venta=ventas*TICKET;
-  document.getElementById('ui-meta').innerHTML=filas[0].join('')+
-    '<tr class="ui-tot"><td>Total Meta</td><td></td><td>'+clp(t*.8)+'</td><td></td><td>'+Math.round(CAMPS.filter(c=>!c.g).reduce((a,c)=>a+t*c.pct/c.cpa,0))+'</td></tr>';
-  document.getElementById('ui-google').innerHTML=filas[1].join('')+
-    '<tr class="ui-tot"><td>Total Google</td><td></td><td>'+clp(t*.2)+'</td><td></td><td>'+Math.round(CAMPS.filter(c=>c.g).reduce((a,c)=>a+t*c.pct/c.cpa,0))+'</td></tr>';
-  document.getElementById('pj-vis').textContent=Math.round(vis).toLocaleString('es-CL');
-  document.getElementById('pj-atc').textContent=Math.round(vis*.01).toLocaleString('es-CL');
-  document.getElementById('pj-wsp').textContent=Math.round(vis*.015).toLocaleString('es-CL');
-  document.getElementById('pj-ven').textContent=Math.round(ventas);
+  function totFila(x,et){return '<tr class="ui-tot"><td>'+et+'</td><td>'+clp(x.inv)+'</td><td>'+clp(x.inv/x.cli)+'</td><td>'+pct(x.ven/x.cli)+'</td><td>'+clp(x.inv/x.ven)+'</td><td>'+Math.round(x.ven)+'</td></tr>';}
+  document.getElementById('ui-meta').innerHTML=filas[0].join('')+totFila(tot[0],'Total Meta');
+  document.getElementById('ui-google').innerHTML=filas[1].join('')+totFila(tot[1],'Total Google');
+  const inv=tot[0].inv+tot[1].inv, cli=tot[0].cli+tot[1].cli, ven=tot[0].ven+tot[1].ven, venta=ven*TICKET;
+  document.getElementById('pj-vis').textContent=Math.round(cli).toLocaleString('es-CL');
+  document.getElementById('pj-cpc').textContent=clp(inv/cli);
+  document.getElementById('pj-cr').textContent=pct(ven/cli);
+  document.getElementById('pj-cpa').textContent=clp(inv/ven);
+  document.getElementById('pj-atc').textContent=Math.round(cli*.01).toLocaleString('es-CL');
+  document.getElementById('pj-wsp').textContent=Math.round(cli*.015).toLocaleString('es-CL');
+  document.getElementById('pj-ven').textContent=Math.round(ven);
   document.getElementById('pj-venta').textContent=corto(venta);
-  document.getElementById('pj-roas').textContent=(venta/t).toFixed(1).replace('.',',')+'×';
+  document.getElementById('pj-roas').textContent=(venta/inv).toFixed(1).replace('.',',')+'×';
 }
 if(document.getElementById('pj-slider')){document.getElementById('pj-slider').addEventListener('input',pjRender);pjRender();}
 
