@@ -1001,6 +1001,19 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .pj-spv b{color:var(--dark);font-size:16px}
 .pj-warm{margin-top:11px;padding-top:10px;border-top:0.5px solid #BFE6D5;font-size:10.5px;color:var(--teal-dk);line-height:1.5}
 .pj-warm b{font-weight:700}
+/* banda de alertas: lo que frena, arriba de todo */
+.alr{border:1.5px solid var(--red);border-radius:13px;background:var(--surf);margin-bottom:12px;overflow:hidden}
+.alr-hd{background:var(--red);color:#fff;padding:11px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.alr-t{font-size:13.5px;font-weight:700;letter-spacing:-.01em}
+.alr-c{font-size:10.5px;font-weight:600;opacity:.88}
+.alr-i{display:grid;grid-template-columns:20px 1fr auto;gap:12px;align-items:center;padding:12px 16px;border-top:0.5px solid var(--border)}
+.alr-i:first-of-type{border-top:none}
+.alr-n{font-family:'DM Mono',monospace;font-size:11px;color:var(--sand)}
+.alr-tx{font-size:12.5px;font-weight:700;color:var(--dark);line-height:1.35}
+.alr-d{display:block;font-size:10.5px;font-weight:400;color:var(--grey);margin-top:3px;max-width:78ch}
+.alr-w{font-size:9.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;background:var(--red);color:#fff}
+.alr-w[data-cal="0"]{background:var(--gold-lt);color:var(--gold-dk)}
+@media(max-width:640px){.alr-i{grid-template-columns:20px 1fr;row-gap:7px}.alr-w{grid-column:2;justify-self:start}}
 .flow-note{font-size:11.5px;color:var(--grey);margin-top:14px;padding-top:12px;border-top:0.5px solid var(--border);line-height:1.5}
 .flow-note b{color:var(--dark)}
 
@@ -1987,6 +2000,38 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="cyv-prog">
       <div class="cyv-bar"><div class="cyv-fill" style="width:94%"></div><div class="cyv-goal" style="left:100%"></div></div>
       <div class="cyv-leg"><span>Septiembre cerró en <b>$28,1M</b></span><span>Octubre 2024, temporada alta: <b>$51,4M</b></span></div>
+    </div>
+  </div>
+
+  <div class="alr">
+    <div class="alr-hd">
+      <span class="alr-t">⚠ Lo que frena el cyber</span>
+      <span class="alr-c">5 abiertas · quedan <b data-hasta="2026-10-02">—</b> días para abrir</span>
+    </div>
+    <div class="alr-i">
+      <div class="alr-n">01</div>
+      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>Los 2 vestidos con problema en Merchant<span class="alr-d">8 de los 10 ya están listos. La aprobación del feed tarda días: es lo único de la lista que no depende de nadie del equipo.</span></div>
+      <div class="alr-w" data-limite="2026-10-01">—</div>
+    </div>
+    <div class="alr-i">
+      <div class="alr-n">02</div>
+      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>Medición en el lobby<span class="alr-d">Sin píxel de Meta ni Clarity, la página que sostiene el evento no se puede leer. Y sin eso, la audiencia del punto 03 se arma sobre un dato incompleto.</span></div>
+      <div class="alr-w" data-limite="2026-10-02">—</div>
+    </div>
+    <div class="alr-i">
+      <div class="alr-n">03</div>
+      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>Audiencia del lobby en Meta<span class="alr-d">Las 1.971 sesiones reales más los 9 carros, con el nombre vestidos lobby cyber. Es la que alimenta el remarketing del 3.</span></div>
+      <div class="alr-w" data-limite="2026-10-02">—</div>
+    </div>
+    <div class="alr-i">
+      <div class="alr-n">04</div>
+      <div class="alr-tx"><span class="est-o pat" style="margin-right:7px">Private</span>Skills, MCP y command center<span class="alr-d">Google Ads y PMax instaladas, la lectura de Meta sin entrar a la interfaz, y un botón que actualiza toda la data.</span></div>
+      <div class="alr-w" data-limite="2026-09-30">—</div>
+    </div>
+    <div class="alr-i">
+      <div class="alr-n">05</div>
+      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>Seis cuotas y las tallas de Violeta y Mónica<span class="alr-d">La cuota de $109.000 es la fricción más cara de la ficha, y esos dos son los que más gustan y menos cierran.</span></div>
+      <div class="alr-w" data-limite="2026-10-02">—</div>
     </div>
   </div>
 
@@ -3280,6 +3325,19 @@ if(document.getElementById('pj-slider')){
   document.getElementById('pj-split').addEventListener('input',pjRender);
   pjRender();
 }
+
+
+/* la banda de alertas se pone al dia sola */
+document.querySelectorAll('[data-limite]').forEach(function(el){
+  var d=Math.ceil((new Date(el.dataset.limite+'T00:00:00')-new Date(new Date().toDateString()))/864e5);
+  var txt, cal='1';
+  if(d<0){ txt=(d===-1?'Vencido ayer':'Vencido hace '+(-d)+' días'); }
+  else if(d===0){ txt='Vence hoy'; }
+  else if(d===1){ txt='Mañana'; }
+  else if(d<=3){ txt='Quedan '+d+' días'; }
+  else { txt=d+' días'; cal='0'; }
+  el.textContent=txt; el.dataset.cal=cal;
+});
 
 document.querySelectorAll('[data-hasta]').forEach(el=>{
   const d=Math.ceil((new Date(el.dataset.hasta+'T00:00:00')-new Date(new Date().toDateString()))/864e5);
