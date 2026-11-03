@@ -1095,13 +1095,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 <header class="topbar">
   <div class="brand"><div class="brand-dot"></div>Emma Clara <span class="brand-sep">·</span> FounderOS<span class="brand-by">by PrivateBuild<sup>™</sup></span></div>
   <nav class="tabs-desktop">
-    <div class="tab on" onclick="sw('cyber',this)">🛒 Cyber</div>
-    <div class="tab" onclick="sw('overview',this)">🏠 Panel</div>
+    <div class="tab on" onclick="sw('overview',this)">🏠 Panel</div>
+    <div class="tab" onclick="sw('black',this)">🏷️ Black</div>
     <div class="tab" onclick="sw('roadmap',this)">🗺️ Roadmap</div>
     <div class="tab" onclick="sw('ventas',this)">💰 Ventas</div>
     <div class="tab" onclick="sw('recompra',this)">🔁 Recompra</div>
     <div class="tab" onclick="sw('engine',this)">⚙️ Flywheel</div>
     <div class="tab" onclick="sw('recursos',this)">📚 Recursos</div>
+    <div class="tab" onclick="sw('cyber',this)">🛒 Cyber · cerrado</div>
   </nav>
   <div class="topbar-right">
     <div class="ext-bar">
@@ -1119,19 +1120,47 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
   <div class="mob-drop" id="mob-drop">
-    <div class="mob-row on" onclick="sw('cyber',this,true)"><span class="mob-em">🛒</span> Cyber</div>
-    <div class="mob-row" onclick="sw('overview',this,true)"><span class="mob-em">🏠</span> Panel</div>
+    <div class="mob-row on" onclick="sw('overview',this,true)"><span class="mob-em">🏠</span> Panel</div>
+    <div class="mob-row" onclick="sw('black',this,true)"><span class="mob-em">🏷️</span> Black</div>
     <div class="mob-row" onclick="sw('roadmap',this,true)"><span class="mob-em">🗺️</span> Roadmap</div>
     <div class="mob-row" onclick="sw('ventas',this,true)"><span class="mob-em">💰</span> Ventas</div>
     <div class="mob-row" onclick="sw('recompra',this,true)"><span class="mob-em">🔁</span> Recompra</div>
     <div class="mob-row" onclick="sw('engine',this,true)"><span class="mob-em">⚙️</span> Flywheel</div>
     <div class="mob-row" onclick="sw('recursos',this,true)"><span class="mob-em">📚</span> Recursos</div>
+    <div class="mob-row" onclick="sw('cyber',this,true)"><span class="mob-em">🛒</span> Cyber · cerrado</div>
   </div>
 </header>
 
 
 <!-- ════════════ PANEL ════════════ -->
-<div class="page" id="pg-overview">
+<div class="page on" id="pg-overview">
+
+  <div class="alr">
+    <div class="alr-hd">
+      <span class="alr-t">⚠ Lo que está abierto</span>
+      <span class="alr-c">4 abiertas · quedan <b data-hasta="2026-11-27">—</b> días para el Black</span>
+    </div>
+    <div class="alr-i">
+      <div class="alr-n">01</div>
+      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>El remarketing encendido desde el primer día<span class="alr-d">En el cyber se prendió el tercer día de seis. Es el aprendizaje más caro del evento pasado y el más fácil de corregir: la audiencia de carro y de checkout se arma antes, no durante.</span></div>
+      <div class="alr-w" data-limite="2026-11-26">—</div>
+    </div>
+    <div class="alr-i">
+      <div class="alr-n">02</div>
+      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>Las tres campañas de Google que corren todo el año<span class="alr-d">En el cyber Google devolvió $2,7M con $160.000 invertidos. Es el canal más rentable que tiene y hoy sigue apagado entre evento y evento.</span></div>
+      <div class="alr-w" data-limite="2026-11-14">—</div>
+    </div>
+    <div class="alr-i">
+      <div class="alr-n">03</div>
+      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>Las reseñas, de 4,6 a 4,8<span class="alr-d">Las reseñas son lo que más mueve la conversión online y el ranking de Google. El incentivo se sortea entre quienes dejan reseña o mandan su foto con el vestido.</span></div>
+      <div class="alr-w" data-limite="2026-12-20">—</div>
+    </div>
+    <div class="alr-i">
+      <div class="alr-n">04</div>
+      <div class="alr-tx"><span class="est-o pat" style="margin-right:7px">Private</span>La guía de edición con IA para el equipo<span class="alr-d">Una página con el prompt y las reglas de marca, para que Belén edite sin pasar horas en la timeline. Se revisa en la próxima sesión.</span></div>
+      <div class="alr-w" data-limite="2026-11-07">—</div>
+    </div>
+  </div>
 
   <div class="neck">
     <span class="neck-k">Cuello hoy</span>
@@ -1284,6 +1313,122 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 </div>
 
 
+<!-- ════════════ BLACK FRIDAY ════════════ -->
+<div class="page" id="pg-black">
+
+  <details class="blk" open><summary><span class="blk-n">01</span><span class="blk-t">El Black no es el cyber<span class="blk-s">Mismo calendario, otra clienta y otro objetivo</span></span><span class="blk-x">▼</span></summary>
+  <div class="blk-b">
+  <div class="rn-grid">
+    <div class="rn-c"><div class="rn-l">Fechas</div><div class="rn-v">27 al 30 nov</div><div class="rn-s">4 días · pre el 26</div></div>
+    <div class="rn-c"><div class="rn-l">Objetivo</div><div class="rn-v">Matar stock</div><div class="rn-s">no es venta calzada por tiempo</div></div>
+    <div class="rn-c"><div class="rn-l">Base de datos</div><div class="rn-v">No hay</div><div class="rn-s">Meta exige 1.000 para armar audiencia</div></div>
+    <div class="rn-c up"><div class="rn-l">Canal del evento</div><div class="rn-v">Web</div><div class="rn-s">el showroom se comunica aparte</div></div>
+  </div>
+  <div class="alert-box info" style="margin-top:10px">
+    <span class="alert-icon">🏷️</span>
+    <div><div class="alert-title">La diferencia con el cyber, en una línea</div><div class="alert-text">El cyber vendió una selección por tiempo limitado. El Black mueve stock: la clienta de Black decide encima de la fecha, no se inscribe con tres semanas de anticipación. Por eso no hay campaña de registro y el presupuesto entra directo a venta.</div></div>
+  </div>
+  </div></details>
+
+  <details class="blk" open><summary><span class="blk-n">02</span><span class="blk-t">Qué aprendimos del cyber<span class="blk-s">Cuatro hallazgos y qué cambia cada uno</span></span><span class="blk-x">▼</span></summary>
+  <div class="blk-b">
+  <div class="rn-grid">
+    <div class="rn-c up"><div class="rn-l">Google · retorno 16,9×</div><div class="rn-v">$2,7M</div><div class="rn-s">con $160.000 invertidos</div></div>
+    <div class="rn-c"><div class="rn-l">Remarketing · tarde</div><div class="rn-v">Día 3 de 6</div><div class="rn-s">se perdió la mitad del evento</div></div>
+    <div class="rn-c"><div class="rn-l">Tienda · bajo</div><div class="rn-v">Sin mensaje</div><div class="rn-s">la comunicación fue 100% web</div></div>
+    <div class="rn-c"><div class="rn-l">Devoluciones</div><div class="rn-v">1</div><div class="rn-s">y fue por plazo de entrega, no por producto ni talla</div></div>
+  </div>
+  <div class="week-sec" style="margin-top:12px">Qué cambia en el Black</div>
+  <div class="week-text"><ul>
+    <li><b>Google sube a primer canal.</b> Deja de ser el complemento de Meta: es el más rentable que tienes y hoy está apagado entre evento y evento.</li>
+    <li><b>El remarketing se enciende el 26</b>, junto con el frío. La audiencia de carro y de checkout se arma antes del evento, no durante.</li>
+    <li><b>El showroom tiene su propio mensaje</b>, para quien tiene el evento encima y necesita el ajuste.</li>
+    <li><b>La ficha y el calce están resueltos.</b> Una devolución en todo el evento, y por logística: el cuello no está en el producto.</li>
+  </ul></div>
+  </div></details>
+
+  <details class="blk" open><summary><span class="blk-n">03</span><span class="blk-t">Presupuesto y proyección<span class="blk-s">Mueve las dos barras y se recalcula todo</span></span><span class="blk-x">▼</span></summary>
+  <div class="blk-b">
+  <div class="spec">
+    <div class="pj-top">
+      <div>
+        <div class="pj-lb">Presupuesto de los 5 días · 26 al 30 de noviembre</div>
+        <div class="pj-big" id="bk-total">$1.200.000</div>
+        <input type="range" class="pj-sl" id="bk-slider" min="600000" max="2500000" step="50000" value="1200000">
+        <div class="pj-mark"><span>$600K</span><span>cyber · $750K</span><span>$2,5M</span></div>
+        <div class="pj-lb" style="margin-top:16px">Reparto entre canales</div>
+        <div class="pj-spv"><b id="bk-sm">65%</b> Meta &nbsp;·&nbsp; <b id="bk-sg">35%</b> Google</div>
+        <input type="range" class="pj-sl sp" id="bk-split" min="40" max="85" step="5" value="65">
+        <div class="pj-mark"><span>40 / 60</span><span>65 / 35 · propuesto</span><span>85 / 15</span></div>
+      </div>
+      <div class="pj-out">
+        <div class="pj-lb" style="color:var(--teal-dk)">Venta web proyectada</div>
+        <div class="pj-big" id="bk-venta">—</div>
+        <div style="font-size:11.5px;color:var(--teal-dk);margin-top:7px">Retorno global <b id="bk-roas">—</b> · ticket $156.275</div>
+        <div class="pj-warm">Pedidos proyectados <b id="bk-ped">—</b><br>En el cyber: $750.000 invertidos, retorno 6,3×</div>
+      </div>
+    </div>
+    <div class="pj-kpi">
+      <div class="pj-k"><div class="pj-kv" id="bk-im">—</div><div class="pj-kl">Inversión Meta</div></div>
+      <div class="pj-k"><div class="pj-kv" id="bk-ig">—</div><div class="pj-kl">Inversión Google</div></div>
+      <div class="pj-k hi"><div class="pj-kv" id="bk-vf">—</div><div class="pj-kl">Venta · frío Advantage+</div></div>
+      <div class="pj-k hi"><div class="pj-kv" id="bk-vr">—</div><div class="pj-kl">Venta · remarketing</div></div>
+      <div class="pj-k hi"><div class="pj-kv" id="bk-vg">—</div><div class="pj-kl">Venta · PMax con tachado</div></div>
+    </div>
+    <div class="ui">
+      <div class="ui-bar">Las tres campañas del Black · con su supuesto de retorno</div>
+      <table class="ui-tb">
+        <thead><tr><th>Campaña</th><th>Canal</th><th>Presupuesto</th><th>Retorno supuesto</th><th>Venta proyectada</th></tr></thead>
+        <tbody id="bk-tb"></tbody>
+      </table>
+    </div>
+  </div>
+  <div class="alert-box" style="margin-top:10px">
+    <span class="alert-icon">⚠</span>
+    <div><div class="alert-title">Los tres retornos son supuestos, no promesas</div><div class="alert-text">Están anclados al rendimiento real del cyber y bajados a propósito, porque el retorno cae cuando se multiplica la inversión. El número que importa no es la proyección: es que el remarketing esté encendido el 26.</div></div>
+  </div>
+  </div></details>
+
+  <details class="blk"><summary><span class="blk-n">04</span><span class="blk-t">La secuencia de los cinco días<span class="blk-s">Qué pasa cada día, del 26 al 1 de diciembre</span></span><span class="blk-x">▼</span></summary>
+  <div class="blk-b">
+  <div class="cy-flow">
+    <div class="cy-fl" style="min-width:820px">
+      <div class="cy-fs"><div class="cy-fs-n">26 · Pre</div><div class="cy-fs-t">Sale el aviso</div><div class="cy-fs-d">Se encienden frío y remarketing el mismo día.</div></div>
+      <div class="cy-fa">→</div>
+      <div class="cy-fs key"><div class="cy-fs-n">27 · Black</div><div class="cy-fs-t">El día fuerte</div><div class="cy-fs-d">Presupuesto al máximo, sin tocar nada más.</div></div>
+      <div class="cy-fa">→</div>
+      <div class="cy-fs"><div class="cy-fs-n">28-29 · Sostener</div><div class="cy-fs-t">Mover al que rinde</div><div class="cy-fs-d">Se mira el costo por compra diario y se mueve presupuesto.</div></div>
+      <div class="cy-fa">→</div>
+      <div class="cy-fs"><div class="cy-fs-n">30 · Cierre</div><div class="cy-fs-t">Última unidad</div><div class="cy-fs-d">Urgencia real, no inventada.</div></div>
+      <div class="cy-fa">→</div>
+      <div class="cy-fs end"><div class="cy-fs-n">1 dic · Lectura</div><div class="cy-fs-t">Qué se guarda</div><div class="cy-fs-d">Qué vendió, de dónde vino y qué sirve para diciembre.</div></div>
+    </div>
+  </div>
+  </div></details>
+
+  <details class="blk" open><summary><span class="blk-n">05</span><span class="blk-t">Lo que cambia de público en noviembre<span class="blk-s">El mensaje del Black no es el descuento</span></span><span class="blk-x">▼</span></summary>
+  <div class="blk-b">
+  <div class="alert-box info" style="margin-top:0">
+    <span class="alert-icon">💍</span>
+    <div><div class="alert-title">Las galas se terminan, entran matrimonio y fiesta de empresa</div><div class="alert-text">Tus palabras en la sesión: <i>«Este año ya ha venido mucha gente de matrimonio y ha comprado»</i>. Dejó de ser el segmento que descartabas.</div></div>
+  </div>
+  <div class="week-sec">El dolor que llega en noviembre, en sus palabras</div>
+  <div class="week-text"><i>«Tengo guata, tengo brazos anchos, tengo mucha espalda, ¿cómo lo disimulo?»</i></div>
+  <div class="week-sec">Por qué importa para la campaña</div>
+  <div class="week-text">Ese es el mensaje del Black, no el descuento. La que llega en noviembre no está buscando precio: está buscando que alguien le resuelva cómo se va a ver. El tachado la trae; lo que la hace comprar es que entienda que acá sí le va a quedar.</div>
+  </div></details>
+
+  <details class="blk"><summary><span class="blk-n">06</span><span class="blk-t">Showroom y web, precios separados<span class="blk-s">El mismo vestido no vale lo mismo en los dos canales</span></span><span class="blk-x">▼</span></summary>
+  <div class="blk-b">
+  <div class="rn-grid">
+    <div class="rn-c"><div class="rn-l">Web</div><div class="rn-v">Ticket más bajo</div><div class="rn-s">tachado en Merchant, PMax, piezas traídas a propósito para Google</div></div>
+    <div class="rn-c up"><div class="rn-l">Showroom</div><div class="rn-v">Ticket más alto</div><div class="rn-s">atención dedicada, para quien tiene el evento encima y necesita el ajuste</div></div>
+  </div>
+  <div class="week-text" style="margin-top:10px">El mismo vestido puede valer distinto según el canal, porque lo que se vende en el showroom no es el vestido: es la hora de alguien que te lo ajusta.</div>
+  </div></details>
+
+</div>
+
 <!-- ════════════ HOJA DE RUTA ════════════ -->
 <div class="page" id="pg-roadmap">
 
@@ -1351,7 +1496,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="rm-track-wrap">
     <div style="font-size:12px;font-weight:600;color:var(--dark);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px">
       Recorrido del bloque 2
-      <span class="bdg red">🔴 Próxima: martes 3 de noviembre, 10:00 — temporada alta</span>
+      <span class="bdg red">🔴 Próxima: por fijar — preparar el Black</span>
     </div>
     <div class="rm-track">
       <div class="rm-node"><div class="rm-dot done">1</div><div class="rm-lbl">Cierre agosto</div><div class="rm-sub">3 sep</div></div>
@@ -1363,8 +1508,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="rm-node"><div class="rm-dot done">7</div><div class="rm-lbl">CYBER</div><div class="rm-sub">2 al 7 oct</div></div>
       <div class="rm-node"><div class="rm-dot done">8</div><div class="rm-lbl">Cierre del cyber</div><div class="rm-sub">14 oct</div></div>
       <div class="rm-node"><div class="rm-dot critical">9</div><div class="rm-lbl">No realizada</div><div class="rm-sub">2 nov</div></div>
-      <div class="rm-node"><div class="rm-dot next">10</div><div class="rm-lbl">Temporada alta</div><div class="rm-sub">3 nov</div></div>
-      <div class="rm-node"><div class="rm-dot future">11</div><div class="rm-lbl">Por fijar</div><div class="rm-sub">—</div></div>
+      <div class="rm-node"><div class="rm-dot done">10</div><div class="rm-lbl">Temporada alta</div><div class="rm-sub">3 nov</div></div>
+      <div class="rm-node"><div class="rm-dot next">11</div><div class="rm-lbl">Black</div><div class="rm-sub">por fijar</div></div>
       <div class="rm-node"><div class="rm-dot future">12</div><div class="rm-lbl">Por fijar</div><div class="rm-sub">—</div></div>
     </div>
   </div>
@@ -1400,38 +1545,33 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="slbl">Sesión activa</div>
-  <div class="week-card critical open" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sesión 10 — Entrar a temporada alta con la web operando</div><div class="week-date">📅 Martes 3 de noviembre · 10:00 a 11:30</div></div><span class="bdg red">Mañana</span></div>
+  <div class="slbl">Última sesión</div>
+  <div class="week-card done open" onclick="toggleCard(this)">
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sesión 10 — Entrar a temporada alta con la web operando</div><div class="week-date">Llamada 3 nov (60 min) · la primera en tres semanas</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
-      <div class="week-chips"><span class="bdg red">Temporada alta</span><span class="bdg grey">Google</span><span class="bdg grey">Checkout</span><span class="bdg grey">Equipo</span></div>
-      <div class="week-sec">🎯 Núcleo</div>
-      <div class="week-text">Dejar el canal web funcionando <b>sin depender de la llamada semanal</b>. Noviembre, diciembre y enero son el pico del año — graduaciones, matrimonios de verano y fiestas de fin de año — y entran con el Black Friday el 27 de noviembre adelante. El trabajo de la sesión es instalar criterio y dueños, no ejecutar una lista.</div>
+      <div class="week-chips"><span class="bdg red">Black Friday</span><span class="bdg grey">Google</span><span class="bdg grey">Contenido con IA</span><span class="bdg grey">Success</span></div>
 
-      <div class="week-sec">1 · El acceso a Cloud, en vivo (10:00)</div>
-      <div class="week-text">No se vuelve a hablar de él: se da durante la llamada. Es el candado de todo el resto — sin acceso no se monta el command center, que convierte la revisión de Meta, Google, la web, el carro y Clarity en un solo prompt.</div>
-
-      <div class="week-sec">2 · Las tres campañas que corren todo el año (10:15)</div>
+      <div class="week-sec">🎯 Lo que se decidió</div>
       <div class="week-text"><ul>
-        <li>PMax de colección vigente con descuento.</li>
-        <li>PMax de outlet con las piezas de sesión de fotos.</li>
-        <li>Search de marca.</li>
-      </ul></div>
-      <div class="week-text">Google cerró el cyber a $10.000 por compra. Es el canal más barato que tiene y hoy está apagado.</div>
-
-      <div class="week-sec">3 · El checkout, antes del Black (10:40)</div>
-      <div class="week-text"><ul>
-        <li>El campo de instrucciones especiales al vendedor, que es el principal sospechoso de los carros que no cierran.</li>
-        <li>Las seis cuotas visibles en la ficha.</li>
-        <li>Los dos productos con problema en Merchant.</li>
+        <li>El <b>Black va del 27 al 30</b>, con el aviso saliendo el 26 y <b>sin campaña de registro</b>: no hay base de datos ni las 1.000 personas que Meta exige para armar audiencia.</li>
+        <li>El <b>remarketing se enciende el primer día</b>. En el cyber se prendió el tercero de seis y eso costó la mitad del evento.</li>
+        <li><b>Google sube a primer canal.</b> Devolvió $2,7M con $160.000 invertidos.</li>
+        <li>El <b>showroom se comunica aparte</b>, para quien tiene el evento encima. En el cyber el mensaje fue 100% web y la tienda quedó baja.</li>
       </ul></div>
 
-      <div class="week-sec">4 · Las redes necesitan dueño (11:00)</div>
-      <div class="week-text">Belén elige a la persona part time y la lidera, con su propio incentivo. Es una decisión de la sesión, no un tema a discutir otra vez: el Black se comunica desde ahí y hoy no hay nadie.</div>
+      <div class="week-sec">✅ Lo que se desbloqueó</div>
+      <div class="week-text">El <b>acceso a tu Cloud</b>, después de tres semanas trabado. Con eso se puede ordenar el setup y montar el command center: un prompt que actualiza Meta, Google, la web, el carro y Clarity sin entrar a cada plataforma.</div>
 
-      <div class="week-sec">5 · El calendario de la temporada y las fechas fijas (11:15)</div>
-      <div class="week-text">Qué sale cuándo entre el Black del 27, Navidad y las graduaciones. Y el cierre de la sesión: día y hora fijos para las dos sesiones que quedan.</div>
+      <div class="week-sec">🔁 El reencuadre de la sesión</div>
+      <div class="week-text"><i>«El problema no está en vender. El problema está en qué pasa después de que te compran.»</i><br><br>La venta está suelta — con más presupuesto en Google llegas a todo Chile. Lo que está flojo es el feedback: las reseñas, las fotos de las clientas, el club de beneficios. Eso es lo que hace que vuelvan y que hablen de ti.</div>
+
+      <div class="week-sec">📋 Tus tareas</div>
+      <div class="week-text"><ul>
+        <li>Los <b>lineamientos de marca</b> y <b>cinco referencias de video</b> que te gusten, más los crudos de lo que están grabando.</li>
+        <li><b>Revisar Clarity con la extensión de Claude</b>, cada dos semanas, al menos las sesiones que terminaron en venta.</li>
+        <li>La <b>agenda de proveedores</b>, para sacar los costos reales.</li>
+      </ul></div>
     </div>
   </div>
 
@@ -1994,7 +2134,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
 
 <!-- ════════════ DIAGRAMA ════════════ -->
-<div class="page on" id="pg-cyber">
+<div class="page" id="pg-cyber">
 
   <div class="cyv-hero">
     <div class="cyv-top">
@@ -2013,39 +2153,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="alr">
-    <div class="alr-hd">
-      <span class="alr-t">⚠ Lo que está abierto</span>
-      <span class="alr-c">5 abiertas · quedan <b data-hasta="2026-11-27">—</b> días para el Black</span>
-    </div>
-    <div class="alr-i">
-      <div class="alr-n">01</div>
-      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>El acceso a Cloud<span class="alr-d">Se da en la sesión del martes, en vivo. Es el candado del command center: un prompt que actualiza Meta, Google, la web, el carro y Clarity sin entrar a cada plataforma.</span></div>
-      <div class="alr-w" data-limite="2026-11-03">—</div>
-    </div>
-    <div class="alr-i">
-      <div class="alr-n">02</div>
-      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>El checkout, antes del Black<span class="alr-d">El campo de instrucciones al vendedor, las seis cuotas y los dos productos con problema en Merchant. Es lo que convierte el carro en compra, y el Black entra en tres semanas.</span></div>
-      <div class="alr-w" data-limite="2026-11-07">—</div>
-    </div>
-    <div class="alr-i">
-      <div class="alr-n">03</div>
-      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>Las tres campañas de Google que corren todo el año<span class="alr-d">PMax de colección vigente, PMax de outlet y Search de marca. Google cerró el cyber a $10.000 por compra: es el canal más barato que tiene y hoy está apagado.</span></div>
-      <div class="alr-w" data-limite="2026-11-07">—</div>
-    </div>
-    <div class="alr-i">
-      <div class="alr-n">04</div>
-      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>Las redes, sin dueño<span class="alr-d">Una persona part time que Belén elija y lidere, con su propio incentivo. Es el único frente del negocio sin nadie a cargo, y el Black se comunica desde ahí.</span></div>
-      <div class="alr-w" data-limite="2026-11-10">—</div>
-    </div>
-    <div class="alr-i">
-      <div class="alr-n">05</div>
-      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>Día y hora fijos para las dos sesiones que quedan<span class="alr-d">El bloque se está consumiendo en reagendamientos. Con día fijo, la sesión deja de competir con la semana.</span></div>
-      <div class="alr-w" data-limite="2026-11-03">—</div>
-    </div>
+  <div class="alert-box info" style="margin-top:0">
+    <span class="alert-icon">✓</span>
+    <div><div class="alert-title">Este evento ya cerró — queda como referencia</div><div class="alert-text">El cyber fue del 2 al 7 de octubre. Lo que se aprendió está arriba, en el tab del Black. Esta pestaña se queda con el detalle completo para no perder los números ni la estructura de campañas.</div></div>
   </div>
 
-  <details class="blk" open><summary><span class="blk-n">01</span><span class="blk-t">La meta de octubre<span class="blk-s">$30M · lo que tiene que cerrar el mes</span></span><span class="blk-x">▼</span></summary>
+  <details class="blk" open><summary><span class="blk-n">01</span><span class="blk-t">La meta de octubre<span class="blk-s">Cerrada por sobre la meta</span></span><span class="blk-x">▼</span></summary>
   <div class="blk-b">
   <div class="gr"><div class="gr-in">
     <div class="gr-plot">
@@ -2056,7 +2169,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
         <div class="gr-col"><div class="gr-tot">$17,4M</div><div class="gr-stack"><div class="gr-seg w" style="height:4px"></div><div class="gr-seg t" style="height:110px"></div></div><div class="gr-x">Julio</div></div>
         <div class="gr-col"><div class="gr-tot">$25,1M</div><div class="gr-stack"><div class="gr-seg w" style="height:6px"></div><div class="gr-seg t" style="height:159px"></div></div><div class="gr-x">Agosto</div></div>
         <div class="gr-col"><div class="gr-tot">$28,1M</div><div class="gr-stack"><div class="gr-seg w" style="height:10px"></div><div class="gr-seg t" style="height:175px"></div></div><div class="gr-x">Septiembre<br><b>cerrado</b></div></div>
-        <div class="gr-col"><div class="gr-tot" style="color:var(--teal-dk)">$30M</div><div class="gr-stack"><div class="gr-seg w meta" style="height:39px"></div><div class="gr-seg t meta" style="height:158px"></div></div><div class="gr-x">Octubre<br><b>con el cyber</b></div></div>
+        <div class="gr-col"><div class="gr-tot" style="color:var(--teal-dk)">✓</div><div class="gr-stack"><div class="gr-seg w meta" style="height:39px"></div><div class="gr-seg t meta" style="height:158px"></div></div><div class="gr-x">Octubre<br><b>cerrado</b></div></div>
       </div>
     </div>
     <div class="gr-key"><span><i style="background:var(--blue)"></i>Tienda</span><span><i style="background:var(--gold)"></i>Web</span><span><i style="background:repeating-linear-gradient(45deg,#8FA9D6,#8FA9D6 3px,#A9BEE0 3px,#A9BEE0 6px)"></i>Proyectado</span></div>
@@ -3337,6 +3450,44 @@ if(document.getElementById('pj-slider')){
 }
 
 
+/* ── proyector del Black Friday ── */
+const BK_CAMPS=[
+  {n:'Black | Frío | Advantage+',            ca:'Meta',   pct:.62, roas:5.0,  g:0},
+  {n:'Black | Remarketing | Carro y checkout',ca:'Meta',   pct:.38, roas:9.0,  g:0},
+  {n:'Black | PMax | Stock con tachado',      ca:'Google', pct:1,   roas:12.0, g:1}
+];
+const BK_TICKET=156275;
+function bkRender(){
+  const tot=+document.getElementById('bk-slider').value;
+  const sm=+document.getElementById('bk-split').value;
+  const inv=[tot*sm/100, tot*(100-sm)/100];
+  document.getElementById('bk-total').textContent=clp(tot);
+  document.getElementById('bk-sm').textContent=sm+'%';
+  document.getElementById('bk-sg').textContent=(100-sm)+'%';
+  document.getElementById('bk-im').textContent=clp(Math.round(inv[0]));
+  document.getElementById('bk-ig').textContent=clp(Math.round(inv[1]));
+  let venta=0, filas='', outs=[];
+  BK_CAMPS.forEach(c=>{
+    const i=inv[c.g]*c.pct, v=i*c.roas;
+    venta+=v; outs.push(v);
+    filas+='<tr><td><span class="ui-sw" data-on="1"></span><span class="ui-nm" data-g="'+c.g+'">'+c.n+'</span></td>'+
+      '<td>'+c.ca+'</td><td>'+clp(Math.round(i))+'</td><td>'+c.roas.toFixed(1).replace('.',',')+'×</td>'+
+      '<td><b>'+clp(Math.round(v))+'</b></td></tr>';
+  });
+  document.getElementById('bk-tb').innerHTML=filas;
+  document.getElementById('bk-vf').textContent=corto(outs[0]);
+  document.getElementById('bk-vr').textContent=corto(outs[1]);
+  document.getElementById('bk-vg').textContent=corto(outs[2]);
+  document.getElementById('bk-venta').textContent=corto(venta);
+  document.getElementById('bk-roas').textContent=(venta/tot).toFixed(1).replace('.',',')+'×';
+  document.getElementById('bk-ped').textContent=Math.round(venta/BK_TICKET);
+}
+if(document.getElementById('bk-slider')){
+  document.getElementById('bk-slider').addEventListener('input',bkRender);
+  document.getElementById('bk-split').addEventListener('input',bkRender);
+  bkRender();
+}
+
 /* la banda de alertas se pone al dia sola */
 document.querySelectorAll('[data-limite]').forEach(function(el){
   var d=Math.ceil((new Date(el.dataset.limite+'T00:00:00')-new Date(new Date().toDateString()))/864e5);
@@ -3353,7 +3504,7 @@ document.querySelectorAll('[data-hasta]').forEach(el=>{
   const d=Math.ceil((new Date(el.dataset.hasta+'T00:00:00')-new Date(new Date().toDateString()))/864e5);
   el.textContent=d>0?d:(d===0?'Hoy':'✓');
 });
-const PAGES=['cyber','overview','roadmap','ventas','recompra','engine','recursos'];
+const PAGES=['overview','black','roadmap','ventas','recompra','engine','recursos','cyber'];
 function sw(id,el,isMob){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('on'));
   document.querySelectorAll('.tab,.mob-row').forEach(t=>t.classList.remove('on'));
