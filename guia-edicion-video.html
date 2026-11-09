@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Emma Clara · Editar tus reels con IA</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap');
+
+:root{
+  --bg:#F7F5F2;--surf:#FFFFFF;
+  --beige:#F0EDE8;--sand:#E0D8CE;
+  --dark:#1A1A1A;--ink:#2A2420;
+  --teal:#3EB489;--teal-lt:#EAF7F2;--teal-dk:#1E8A5C;
+  --gold:#E8A237;--gold-lt:#FDF4E3;--gold-dk:#A06810;
+  --red:#E2503A;--red-lt:#FDF0ED;--red-dk:#A02A18;
+  --grey:#8A8076;--border:#E4DDD4;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font-size:14px;line-height:1.6;padding-bottom:70px}
+
+.topbar{position:sticky;top:0;z-index:30;background:var(--dark);display:flex;align-items:center;padding:0 16px;height:52px;box-shadow:0 2px 12px rgba(0,0,0,.2)}
+.brand{display:flex;align-items:center;gap:7px;font-size:14px;font-weight:600;color:#fff}
+.brand-dot{width:7px;height:7px;border-radius:50%;background:var(--teal)}
+.back{margin-left:auto;font-size:12px;font-weight:500;color:rgba(255,255,255,.5);text-decoration:none}
+.back:hover{color:#fff}
+
+.wrap{max-width:780px;margin:0 auto;padding:26px 18px 0}
+.hd-k{font-family:'DM Mono',monospace;font-size:10.5px;letter-spacing:.09em;color:var(--grey);text-transform:uppercase;margin-bottom:9px}
+h1{font-size:25px;font-weight:600;color:var(--dark);line-height:1.22;letter-spacing:-.01em;margin-bottom:12px}
+.lede{font-size:15px;color:var(--grey);margin-bottom:26px}
+
+.thesis{background:var(--dark);color:#fff;border-radius:12px;padding:20px 22px;margin-bottom:30px}
+.thesis-q{font-size:17px;font-weight:500;line-height:1.45;margin-bottom:9px}
+.thesis-s{font-size:12.5px;color:rgba(255,255,255,.55)}
+
+h2{font-size:12px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;color:var(--grey);margin:34px 0 13px;padding-bottom:7px;border-bottom:1px solid var(--border)}
+h2 .n{font-family:'DM Mono',monospace;color:var(--teal-dk);margin-right:8px}
+
+.card{background:var(--surf);border:1px solid var(--border);border-radius:11px;padding:16px 18px;margin-bottom:11px}
+.card-t{font-size:14.5px;font-weight:600;color:var(--dark);margin-bottom:5px}
+.card-d{font-size:13.5px;color:var(--ink)}
+.card-d b{font-weight:600}
+.card-w{font-family:'DM Mono',monospace;font-size:10.5px;color:var(--grey);margin-top:9px;padding-top:9px;border-top:1px dashed var(--border)}
+
+p{margin-bottom:11px}
+ul,ol{margin:0 0 11px 19px}
+li{margin-bottom:6px}
+
+.pr{background:var(--dark);border-radius:11px;overflow:hidden;margin-bottom:12px}
+.pr-bar{display:flex;align-items:center;justify-content:space-between;padding:10px 15px;background:rgba(255,255,255,.06);font-family:'DM Mono',monospace;font-size:10.5px;color:rgba(255,255,255,.5);letter-spacing:.05em}
+.pr-cp{font-size:10.5px;font-weight:500;color:var(--teal);cursor:pointer;background:none;border:1px solid rgba(62,180,137,.4);border-radius:5px;padding:4px 10px;font-family:'DM Mono',monospace}
+.pr-cp:hover{background:rgba(62,180,137,.14)}
+.pr-b{padding:16px 18px;font-family:'DM Mono',monospace;font-size:12px;line-height:1.75;color:rgba(255,255,255,.9);white-space:pre-wrap;word-break:break-word}
+.pr-b .v{color:var(--gold)}
+
+.rule{display:flex;gap:12px;background:var(--surf);border:1px solid var(--border);border-left:3px solid var(--red);border-radius:0 11px 11px 0;padding:14px 16px;margin-bottom:9px}
+.rule-n{font-family:'DM Mono',monospace;font-size:11px;color:var(--red-dk);font-weight:500;flex-shrink:0;padding-top:2px}
+.rule-t{font-size:14px;font-weight:600;color:var(--dark);margin-bottom:3px}
+.rule-d{font-size:13px;color:var(--ink)}
+
+.box{border-radius:11px;padding:15px 17px;margin-bottom:12px;display:flex;gap:12px}
+.box-i{font-size:18px;flex-shrink:0}
+.box-t{font-size:14px;font-weight:600;margin-bottom:3px}
+.box-d{font-size:13px}
+.box.tl{background:var(--teal-lt)}.box.tl .box-t,.box.tl .box-d{color:var(--teal-dk)}
+.box.gd{background:var(--gold-lt)}.box.gd .box-t,.box.gd .box-d{color:var(--gold-dk)}
+.box.rd{background:var(--red-lt)}.box.rd .box-t,.box.rd .box-d{color:var(--red-dk)}
+
+.chk{background:var(--surf);border:1px solid var(--border);border-radius:11px;overflow:hidden;margin-bottom:12px}
+.chk-r{display:flex;gap:11px;padding:12px 16px;border-bottom:1px solid var(--border);font-size:13.5px}
+.chk-r:last-child{border-bottom:none}
+.chk-b{width:15px;height:15px;border:1.5px solid var(--sand);border-radius:4px;flex-shrink:0;margin-top:2px}
+
+.foot{text-align:center;font-size:12px;color:var(--grey);margin-top:34px;padding-top:18px;border-top:1px solid var(--border)}
+.foot a{color:var(--teal-dk);font-weight:500;text-decoration:none}
+
+@media(max-width:600px){
+  .wrap{padding:20px 14px 0}
+  h1{font-size:21px}
+  .thesis-q{font-size:15.5px}
+}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="brand"><div class="brand-dot"></div>Emma Clara <span style="color:rgba(255,255,255,.3)">·</span> Guía</div>
+  <a class="back" href="index.html">← Volver al panel</a>
+</div>
+
+<div class="wrap">
+
+  <div class="hd-k">Guía de equipo · noviembre 2026</div>
+  <h1>Editar tus reels con IA</h1>
+  <p class="lede">Para que Belén deje de pasar horas en la timeline y el video salga parecido cada vez. No es magia: es darle tres cosas y revisar seis.</p>
+
+  <div class="thesis">
+    <div class="thesis-q">«Con Claude son tres cosas: referencias, tu base de información y reglas. Sin reglas, todo se va al carajo.»</div>
+    <div class="thesis-s">Patricio, sesión del 3 de noviembre</div>
+  </div>
+
+  <h2><span class="n">01</span> Lo que tienes que juntar antes</h2>
+  <p>Sin estos tres, la herramienta adivina. Y cuando adivina, sale el mismo video genérico que publica todo el mundo.</p>
+
+  <div class="card">
+    <div class="card-t">Los lineamientos de la marca</div>
+    <div class="card-d">Colores exactos, la tipografía, cómo se escribe <b>Emma Clara</b>, el logo en PNG con fondo transparente. Si existe un brand book, ese mismo.</div>
+    <div class="card-w">Se sube una vez al proyecto de Claude y queda para siempre</div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Cinco referencias de video que te gusten</div>
+    <div class="card-d">No tienen que ser de vestidos. Son los cinco que viste y pensaste <b>«este quedó increíble y nunca pudimos hacer algo así»</b>. Guarda el link o el archivo, y al lado una línea de qué te gustó: el ritmo, el tipo de texto, cómo entra la música.</div>
+    <div class="card-w">Esa línea es lo que más sirve. Sin ella la referencia es solo un video bonito</div>
+  </div>
+
+  <div class="card">
+    <div class="card-t">Los crudos, sin subtítulos quemados</div>
+    <div class="card-d">Lo que graben se exporta <b>sin los subtítulos encima</b>. Si el archivo ya los trae pegados no se pueden quitar, y la IA termina poniendo texto sobre texto.</div>
+    <div class="card-w">Si la app con que graban los pega sola, hay que buscar la opción de exportar limpio</div>
+  </div>
+
+  <h2><span class="n">02</span> El prompt</h2>
+  <p>Se pega una vez en un proyecto nuevo de Claude, con los tres insumos de arriba adjuntos. Después, para cada video, solo se suben los crudos y se dice de qué se trata.</p>
+
+  <div class="pr">
+    <div class="pr-bar"><span>PROMPT · pegar en el proyecto de Claude</span><button class="pr-cp" onclick="cp(this)">Copiar</button></div>
+    <div class="pr-b" id="prompt">Eres el editor de video de Emma Clara, una tienda de vestidos de gala y fiesta en Santiago de Chile.
+
+QUIÉN NOS VE
+Mujeres de 18 a 30 que tienen un evento encima: graduación, matrimonio, fiesta de empresa. Llegan asustadas de cómo se van a ver, no buscando precio. Lo que más preguntan antes de comprar: <span class="v">«tengo guata, tengo brazos anchos, tengo mucha espalda, ¿cómo lo disimulo?»</span>
+
+QUÉ TE DOY
+- Los lineamientos de marca adjuntos.
+- Las referencias de video que nos gustan, con una nota de qué nos gustó de cada una.
+- Los crudos del video de hoy.
+
+QUÉ QUIERO
+Un reel vertical 1080×1920 para Instagram, de 20 a 40 segundos.
+
+CÓMO LO ARMAS
+1. Los primeros 3 segundos los ocupa el gancho en texto grande, sin subtítulos todavía. Quien pasa scrolleando tiene que entender de qué trata sin escuchar nada.
+2. Después entran los subtítulos y la animación que desarrolla la idea.
+3. El cierre invita a escribir o a visitar el showroom, nunca repite el gancho.
+
+REGLAS QUE NO SE NEGOCIAN
+- Nada de texto sobre el rostro. Los subtítulos van bajo el mentón, medidos en esa toma, o justo sobre la cabeza. Nunca encima de la cara.
+- Nada de 3D ni de efectos de videojuego. Nuestra clienta no es 3D.
+- Sin temblor de cámara, sin giros, sin vibración. El movimiento sirve para que se lea mejor, no para llamar la atención.
+- Nada que tape el vestido. El vestido es el producto: si hay que elegir entre un texto y que se vea la tela, se ve la tela.
+- Márgenes de seguridad de Instagram respetados arriba y abajo, para que ni el nombre de la cuenta ni los botones tapen nada.
+- La tipografía es la de la marca. Sin glow, sin sombras, sin degradados.
+- El primer frame del crudo no se toca.
+
+ANTES DE DARME EL RESULTADO
+Dime en cinco líneas: qué gancho usaste y por qué, cuántos cortes tiene, dónde pusiste los subtítulos, qué dejaste fuera del crudo y qué regla te costó más respetar.</div>
+  </div>
+
+  <div class="box tl">
+    <span class="box-i">💡</span>
+    <div><div class="box-t">Por qué el prompt pide que te explique lo que hizo</div><div class="box-d">Porque así sabes qué corregir. Si el resultado no te gusta y no sabes por qué, esas cinco líneas te lo dicen.</div></div>
+  </div>
+
+  <h2><span class="n">03</span> Las reglas, explicadas</h2>
+  <p>Están dentro del prompt, pero vale saber de dónde salen. Son las que más se rompen.</p>
+
+  <div class="rule">
+    <div class="rule-n">01</div>
+    <div><div class="rule-t">Nada sobre la cara</div><div class="rule-d">Es la regla más dura y la que toda herramienta rompe sola. El subtítulo va bajo el mentón o sobre la cabeza, medido en esa toma, nunca a ojo.</div></div>
+  </div>
+  <div class="rule">
+    <div class="rule-n">02</div>
+    <div><div class="rule-t">Los primeros 3 segundos deciden todo</div><div class="rule-d">Gancho en texto, grande, sin subtítulos encima. Si en 3 segundos no se entiende de qué trata, lo demás no se ve.</div></div>
+  </div>
+  <div class="rule">
+    <div class="rule-n">03</div>
+    <div><div class="rule-t">Sin 3D y sin cámara temblorosa</div><div class="rule-d">Se ve hecho con IA a un kilómetro y no se parece a la marca. El movimiento ayuda a leer; si distrae, está de más.</div></div>
+  </div>
+  <div class="rule">
+    <div class="rule-n">04</div>
+    <div><div class="rule-t">El vestido manda</div><div class="rule-d">Entre un texto lindo y que se vea la caída de la tela, gana la tela. Es lo que la clienta vino a mirar.</div></div>
+  </div>
+  <div class="rule">
+    <div class="rule-n">05</div>
+    <div><div class="rule-t">Un video a la vez</div><div class="rule-d">Se termina uno, se aprueba, y entonces empieza el siguiente. Pedir cinco juntos entrega cinco a medias y ninguno publicable.</div></div>
+  </div>
+
+  <h2><span class="n">04</span> Antes de publicar</h2>
+  <p>Seis puntos. Si uno falla, vuelve a la herramienta con el punto exacto en vez de pedir «mejóralo».</p>
+
+  <div class="chk">
+    <div class="chk-r"><div class="chk-b"></div><div>El video pausado en cualquier segundo <b>se entiende</b>: el texto se lee completo y no está cortado.</div></div>
+    <div class="chk-r"><div class="chk-b"></div><div>Ningún texto toca una cara, en ningún frame.</div></div>
+    <div class="chk-r"><div class="chk-b"></div><div>Se ve en el celular con Instagram abierto: el nombre de la cuenta y los botones <b>no tapan nada</b>.</div></div>
+    <div class="chk-r"><div class="chk-b"></div><div>En los primeros 3 segundos se entiende de qué trata, <b>con el sonido apagado</b>.</div></div>
+    <div class="chk-r"><div class="chk-b"></div><div>El vestido se ve bien: color real, caída de la tela, sin pixelarse.</div></div>
+    <div class="chk-r"><div class="chk-b"></div><div>Se parece a Emma Clara y no a una plantilla. Si lo pudiera publicar cualquier tienda, falta marca.</div></div>
+  </div>
+
+  <div class="box gd">
+    <span class="box-i">⚠</span>
+    <div><div class="box-t">Lo que pasó en octubre, para que no se repita</div><div class="box-d">Las chicas probaron editar por Claude y el resultado salió de mala calidad. Casi siempre es el crudo: si se sube comprimido o ya con subtítulos pegados, no hay prompt que lo arregle. Sube el archivo original.</div></div>
+  </div>
+
+  <h2><span class="n">05</span> Cómo iterar sin perder el día</h2>
+  <p>El primer video va a costar. Del tercero en adelante baja a minutos, porque las reglas ya están escritas y no hay que volver a explicarlas.</p>
+
+  <ol>
+    <li><b>Primer intento:</b> sale a medias. Normal.</li>
+    <li><b>Corriges apuntando a un punto de la lista de arriba</b>, no diciendo «no me gusta». Ejemplo: «el subtítulo del segundo 12 está sobre la cara, bájalo bajo el mentón».</li>
+    <li><b>Cuando una corrección se repite dos veces, se escribe como regla</b> dentro del prompt. Así no se vuelve a pedir nunca más.</li>
+    <li><b>El prompt es tuyo y va creciendo.</b> A los diez videos es un manual de edición de la marca que no depende de quién esté editando ese día.</li>
+  </ol>
+
+  <div class="box rd">
+    <span class="box-i">🎯</span>
+    <div><div class="box-t">Lo que se revisa en la próxima sesión</div><div class="box-d">Un video armado con esto, con las cinco líneas que la herramienta devolvió. No importa si quedó bueno o malo: importa ver dónde se rompió para escribir la regla que falta.</div></div>
+  </div>
+
+  <div class="foot">
+    Dudas antes de la próxima sesión → <a href="https://wa.me/56978048922?text=Patricio%20sobre%20la%20gu%C3%ADa%20de%20edici%C3%B3n..." target="_blank">escríbele a Patricio</a><br>
+    <span style="font-size:11px">Emma Clara × Private Build™ · noviembre 2026</span>
+  </div>
+
+</div>
+
+<script>
+function cp(b){
+  var t=document.getElementById('prompt').innerText;
+  navigator.clipboard.writeText(t).then(function(){
+    b.textContent='Copiado ✓';
+    setTimeout(function(){b.textContent='Copiar';},1800);
+  }).catch(function(){
+    b.textContent='Selecciona y copia';
+    setTimeout(function(){b.textContent='Copiar';},1800);
+  });
+}
+</script>
+
+</body>
+</html>
