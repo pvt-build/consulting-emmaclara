@@ -31,7 +31,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .brand-dot{width:7px;height:7px;border-radius:50%;background:var(--teal);flex-shrink:0}
 .tabs-desktop{display:flex;align-items:stretch;flex:1;overflow-x:auto;scrollbar-width:none}
 .tabs-desktop::-webkit-scrollbar{display:none}
-.tab{display:flex;align-items:center;gap:5px;padding:0 12px;height:52px;font-size:11.5px;font-weight:500;color:rgba(255,255,255,.38);cursor:pointer;white-space:nowrap;flex-shrink:0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s,background .15s;text-decoration:none;user-select:none}
+.tab{display:flex;align-items:center;gap:5px;padding:0 12px;height:52px;font-size:14px;font-weight:500;color:rgba(255,255,255,.38);cursor:pointer;white-space:nowrap;flex-shrink:0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s,background .15s;text-decoration:none;user-select:none}
 .tab:hover{color:rgba(255,255,255,.72);background:rgba(255,255,255,.04)}
 .tab.on{color:#fff;border-bottom-color:var(--teal);background:rgba(62,180,137,.07)}
 .mob-btn{display:none;align-items:center;justify-content:center;width:36px;height:36px;cursor:pointer;color:rgba(255,255,255,.7);border:1px solid rgba(255,255,255,.15);border-radius:7px;background:rgba(255,255,255,.06);flex-shrink:0}
@@ -43,7 +43,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .mob-em{font-size:18px;width:24px;text-align:center}
 .topbar-right{display:flex;align-items:center;gap:8px;margin-left:auto;flex-shrink:0}
 .ext-bar{display:flex;align-items:center;flex-shrink:0;border-left:1px solid rgba(255,255,255,.1);margin-left:4px}
-.ext-btn{display:flex;align-items:center;gap:6px;padding:0 12px;height:52px;font-size:12px;font-weight:500;color:rgba(255,255,255,.45);cursor:pointer;text-decoration:none;border-right:1px solid rgba(255,255,255,.08);transition:color .15s,background .15s;white-space:nowrap}
+.ext-btn{display:flex;align-items:center;gap:6px;padding:0 12px;height:52px;font-size:14.5px;font-weight:500;color:rgba(255,255,255,.45);cursor:pointer;text-decoration:none;border-right:1px solid rgba(255,255,255,.08);transition:color .15s,background .15s;white-space:nowrap}
 .ext-btn svg{width:16px;height:16px;flex-shrink:0}
 .ext-btn:hover{color:rgba(255,255,255,.8);background:rgba(255,255,255,.05)}
 .ext-btn.locked{opacity:.2;cursor:not-allowed;pointer-events:none}
@@ -51,12 +51,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 /* PAGES */
 .page{display:none;max-width:1240px;margin:0 auto;padding:24px 22px 40px}
 .page.on{display:block}
-.slbl{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--warm);margin-bottom:8px;margin-top:24px}
+.slbl{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--warm);margin-bottom:8px;margin-top:24px}
 .slbl:first-child{margin-top:0}
 
 /* CHIPS */
 .chips-row{display:flex;gap:4px;margin-bottom:22px;flex-wrap:wrap}
-.sch{width:40px;height:26px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:10px;font-weight:500;cursor:default;flex-shrink:0}
+.sch{width:40px;height:26px;border-radius:5px;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:13.5px;font-weight:500;cursor:default;flex-shrink:0}
 .sch.done{background:var(--teal);color:#fff}
 .sch.now{background:var(--gold);color:#fff;box-shadow:0 0 0 3px rgba(232,162,55,.2)}
 .sch.todo{background:var(--surf);color:var(--grey);border:0.5px solid var(--border)}
@@ -65,7 +65,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .week-card.critical{border:1.5px solid var(--red)!important;animation:pulse-red 2s ease-in-out infinite}
 
 /* BADGES */
-.bdg{display:inline-flex;align-items:center;font-size:10px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:normal;line-height:1.4}
+.bdg{display:inline-flex;align-items:center;font-size:13.5px;font-weight:500;padding:2px 8px;border-radius:20px;white-space:normal;line-height:1.4}
 .bdg.teal{background:var(--teal-lt);color:var(--teal-dk)}
 .bdg.amber{background:var(--gold-lt);color:var(--gold-dk)}
 .bdg.red{background:var(--red-lt);color:var(--red-dk)}
@@ -82,11 +82,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .ov-row3{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:22px}
 .ov-card{background:var(--surf);border:0.5px solid var(--border);border-radius:10px;padding:13px 15px;min-width:0}
 .ov-card.dark{background:var(--dark);border-color:transparent}
-.ov-lbl{font-size:10.5px;color:var(--grey);margin-bottom:5px}
+.ov-lbl{font-size:13.5px;color:var(--grey);margin-bottom:5px}
 .ov-card.dark .ov-lbl{color:rgba(255,255,255,.4)}
 .ov-num{font-size:24px;font-weight:500;line-height:1;margin-bottom:4px}
 .ov-num.teal{color:var(--teal)}.ov-num.amber{color:var(--gold)}.ov-num.red{color:var(--red)}.ov-num.green{color:var(--teal)}.ov-num.violet{color:var(--violet)}
-.ov-sub{font-size:10.5px;color:var(--grey);line-height:1.4}
+.ov-sub{font-size:13.5px;color:var(--grey);line-height:1.4}
 .ov-card.dark .ov-sub{color:rgba(255,255,255,.38)}
 
 /* CHANNEL SPLIT */
@@ -95,8 +95,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .ch-card.store{border-top:3px solid var(--red)}
 .ch-card.ecomm{border-top:3px solid var(--teal)}
 .ch-card.hybrid{border-top:3px solid var(--violet)}
-.ch-head{font-size:12px;font-weight:600;color:var(--dark);margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
-.ch-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:0.5px solid var(--border);font-size:12px}
+.ch-head{font-size:14.5px;font-weight:600;color:var(--dark);margin-bottom:10px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px}
+.ch-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:0.5px solid var(--border);font-size:14.5px}
 .ch-row:last-child{border-bottom:none;padding-bottom:0}
 .ch-k{color:var(--grey)}
 .ch-v{font-weight:600;color:var(--dark)}
@@ -106,11 +106,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .problem-card{background:var(--dark);border-radius:12px;padding:18px 20px;margin-bottom:20px;display:flex;align-items:flex-start;gap:14px}
 .prob-icon{font-size:26px;flex-shrink:0;margin-top:2px}
 .prob-title{font-size:14px;font-weight:600;color:#fff;margin-bottom:5px}
-.prob-text{font-size:12px;color:rgba(255,255,255,.55);line-height:1.65}
+.prob-text{font-size:14.5px;color:rgba(255,255,255,.55);line-height:1.65}
 .prob-text strong{color:rgba(255,255,255,.85)}
 .prob-stats{display:flex;gap:16px;margin-top:12px;flex-wrap:wrap}
 .prob-sv{font-size:20px;font-weight:500;color:var(--teal);line-height:1}
-.prob-sl{font-size:9px;color:rgba(255,255,255,.35);font-family:'DM Mono',monospace;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
+.prob-sl{font-size:13px;color:rgba(255,255,255,.35);font-family:'DM Mono',monospace;letter-spacing:.06em;text-transform:uppercase;margin-top:2px}
 
 /* SLIDER BOXES — cuello de botella → oportunidad, pareados */
 .slider-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:10px;margin-bottom:20px}
@@ -120,16 +120,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .slide-box.o{border-left-color:var(--violet)}
 .slide-box.g{border-left-color:var(--teal)}
 .slide-icon{font-size:17px;margin-bottom:6px;line-height:1}
-.slide-title{font-size:12px;font-weight:600;color:var(--dark);margin-bottom:4px;line-height:1.3}
-.slide-text{font-size:11px;color:var(--grey);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
-.slide-lbl{font-family:'DM Mono',monospace;font-size:8.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
+.slide-title{font-size:14.5px;font-weight:600;color:var(--dark);margin-bottom:4px;line-height:1.3}
+.slide-text{font-size:14px;color:var(--grey);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.slide-lbl{font-family:'DM Mono',monospace;font-size:13px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-bottom:2px}
 .slide-lbl.cuello{color:var(--red-dk)}
 .slide-lbl.op{color:var(--teal-dk)}
 .slide-pair{margin-top:7px;padding-top:7px;border-top:0.5px dashed var(--border)}
 
 /* FUNNEL */
-.brand-by{font-size:9.5px;font-weight:400;color:rgba(255,255,255,.42);margin-left:7px;letter-spacing:.02em}
-.brand-by sup{font-size:7px;vertical-align:super;opacity:.8}
+.brand-by{font-size:13px;font-weight:400;color:rgba(255,255,255,.42);margin-left:7px;letter-spacing:.02em}
+.brand-by sup{font-size:13px;vertical-align:super;opacity:.8}
 .brand-sep{color:rgba(255,255,255,.28);margin:0 2px}
 /* ═══ RADAR ═══ */
 .radar-wrap{background:var(--surf);border:0.5px solid var(--border);border-radius:13px;padding:16px 18px;margin-bottom:12px}
@@ -137,44 +137,44 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .radar-svg{width:100%;max-width:420px;height:auto;display:block}
 .radar-svg .ring{fill:none;stroke:var(--border);stroke-width:1}
 .radar-svg .spoke{stroke:var(--border);stroke-width:1}
-.radar-svg .ax{fill:var(--grey);font-size:10px;font-weight:600;letter-spacing:.02em}
+.radar-svg .ax{fill:var(--grey);font-size:13.5px;font-weight:600;letter-spacing:.02em}
 .radar-svg .pt{stroke:var(--surf);stroke-width:1.5}
 .rd-legend{display:flex;gap:16px;margin-bottom:14px;flex-wrap:wrap}
-.rd-li{display:flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:var(--dark)}
+.rd-li{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:600;color:var(--dark)}
 .rd-sw{width:11px;height:11px;border-radius:3px}
 .rd-rows{display:flex;flex-direction:column;gap:0}
 .rd-row{display:grid;grid-template-columns:1fr auto auto;gap:12px;align-items:center;padding:8px 0;border-top:0.5px solid var(--border)}
 .rd-row:first-child{border-top:none}
-.rd-area{font-size:12px;font-weight:600;color:var(--dark);min-width:0}
+.rd-area{font-size:14.5px;font-weight:600;color:var(--dark);min-width:0}
 .rd-bar{display:flex;gap:2px}
 .rd-seg{width:9px;height:7px;border-radius:1.5px;background:var(--border)}
 .rd-seg.t{background:var(--teal)} .rd-seg.w{background:#5B9BD5}
-.rd-lbl{font-size:9.5px;color:var(--grey);width:44px;text-align:right}
+.rd-lbl{font-size:13px;color:var(--grey);width:44px;text-align:right}
 @media(max-width:680px){.radar-grid{grid-template-columns:1fr;gap:16px}}
 /* ═══ QUICK WIN ═══ */
 .qw{background:linear-gradient(180deg,rgba(232,179,57,.08),rgba(232,179,57,.03));border:1px solid rgba(232,179,57,.42);border-radius:13px;padding:18px 20px;margin-bottom:12px}
 .qw-top{display:flex;align-items:center;gap:9px;margin-bottom:11px;flex-wrap:wrap}
-.qw-k{font-size:9.5px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#9A7420;background:rgba(232,179,57,.2);padding:3px 9px;border-radius:999px}
+.qw-k{font-size:13px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:#9A7420;background:rgba(232,179,57,.2);padding:3px 9px;border-radius:999px}
 .qw-t{font-size:14.5px;font-weight:700;color:var(--dark)}
-.qw-txt{font-size:12.5px;color:var(--ink);line-height:1.5}
+.qw-txt{font-size:14.5px;color:var(--ink);line-height:1.5}
 .qw-txt b{color:var(--dark)}
 .qw-flow{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:13px;padding-top:13px;border-top:0.5px solid rgba(232,179,57,.3)}
-.qw-step{font-size:11px;font-weight:600;color:var(--dark);background:var(--surf);border:0.5px solid var(--border);border-radius:7px;padding:6px 11px}
-.qw-arw{color:var(--grey);font-size:11px}
+.qw-step{font-size:14px;font-weight:600;color:var(--dark);background:var(--surf);border:0.5px solid var(--border);border-radius:7px;padding:6px 11px}
+.qw-arw{color:var(--grey);font-size:14px}
 /* ═══ CARDS DE METRICA (reusable) ═══ */
 .rn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));gap:9px}
 .rn-c{background:var(--bg);border:0.5px solid var(--border);border-radius:10px;padding:12px 13px;min-width:0;display:flex;flex-direction:column;gap:5px}
 .rn-c.up{border-top:2px solid var(--teal)}
-.rn-l{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey)}
+.rn-l{font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey)}
 .rn-v{font-size:20px;font-weight:700;letter-spacing:-.02em;color:var(--dark);line-height:1}
 .rn-c.up .rn-v{color:var(--teal)}
-.rn-s{font-size:10px;color:var(--grey);line-height:1.35;margin-top:auto}
+.rn-s{font-size:13.5px;color:var(--grey);line-height:1.35;margin-top:auto}
 /* ═══ SLIDER DE FUNNELS ═══ */
 .fsw{background:var(--surf);border:0.5px solid var(--border);border-radius:13px;overflow:hidden;margin-bottom:12px}
 .fsw-nav{display:flex;border-bottom:0.5px solid var(--border)}
-.fsw-btn{flex:1;padding:13px 10px;font-size:12.5px;font-weight:600;color:var(--grey);cursor:pointer;text-align:center;background:var(--bg);border:none;border-bottom:2px solid transparent;transition:color .15s,background .15s,border-color .15s;user-select:none}
+.fsw-btn{flex:1;padding:13px 10px;font-size:14.5px;font-weight:600;color:var(--grey);cursor:pointer;text-align:center;background:var(--bg);border:none;border-bottom:2px solid transparent;transition:color .15s,background .15s,border-color .15s;user-select:none}
 .fsw-btn.on{color:var(--dark);background:var(--surf);border-bottom-color:var(--dark)}
-.fsw-btn .st{display:block;font-size:9.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-top:3px;color:var(--red)}
+.fsw-btn .st{display:block;font-size:13px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;margin-top:3px;color:var(--red)}
 .fsw-btn.on.t .st{color:var(--teal)} .fsw-btn.on.w .st{color:#3F7CB4}
 .fsw-panel{display:none;padding:18px 20px}
 .fsw-panel.on{display:block}
@@ -182,35 +182,35 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 @media(max-width:680px){.fsw-grid{grid-template-columns:1fr;gap:14px}}
 .fst{display:flex;flex-direction:column;gap:0;min-width:150px}
 .fst-row{display:flex;align-items:center;gap:10px;padding:9px 0}
-.fst-n{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;flex-shrink:0;background:var(--beige);color:var(--grey)}
+.fst-n{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13.5px;font-weight:700;flex-shrink:0;background:var(--beige);color:var(--grey)}
 .fst-row.ok .fst-n{background:var(--green-lt);color:var(--green-dk)}
 .fst-row.bad .fst-n{background:var(--red-lt);color:var(--red)}
-.fst-l{display:block;font-size:12.5px;font-weight:600;color:var(--dark);line-height:1.2}
-.fst-v{display:block;font-size:10.5px;color:var(--grey);margin-top:2px}
+.fst-l{display:block;font-size:14.5px;font-weight:600;color:var(--dark);line-height:1.2}
+.fst-v{display:block;font-size:13.5px;color:var(--grey);margin-top:2px}
 .fst-row.bad .fst-v{color:var(--red);font-weight:600}
 .fst-bar{width:2px;height:12px;background:var(--border);margin-left:10px}
 .fx{background:var(--bg);border:0.5px solid var(--border);border-radius:10px;padding:14px 16px}
-.fx-k{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-bottom:9px}
-.fx-i{display:flex;gap:9px;padding:7px 0;border-top:0.5px solid var(--border);font-size:12px;color:var(--ink);line-height:1.4}
+.fx-k{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--grey);margin-bottom:9px}
+.fx-i{display:flex;gap:9px;padding:7px 0;border-top:0.5px solid var(--border);font-size:14.5px;color:var(--ink);line-height:1.4}
 .fx-i:first-of-type{border-top:none}
 .fx-i b{color:var(--dark)}
 .fx-d{color:var(--teal);flex-shrink:0;font-weight:700}
 /* ═══ SUB-NAV INTERNA ═══ */
 .sub{display:flex;gap:6px;overflow-x:auto;padding-bottom:10px;margin-bottom:14px;-webkit-overflow-scrolling:touch}
-.sub-b{flex-shrink:0;padding:7px 14px;border-radius:999px;font-size:11.5px;font-weight:600;color:var(--grey);background:var(--surf);border:0.5px solid var(--border);cursor:pointer;white-space:nowrap;transition:all .15s;user-select:none}
+.sub-b{flex-shrink:0;padding:7px 14px;border-radius:999px;font-size:14px;font-weight:600;color:var(--grey);background:var(--surf);border:0.5px solid var(--border);cursor:pointer;white-space:nowrap;transition:all .15s;user-select:none}
 .sub-b.on{background:var(--dark);color:#fff;border-color:var(--dark)}
 .sec{display:none} .sec.on{display:block}
 /* ═══ CUELLO ACTUAL ═══ */
 .neck{display:flex;align-items:center;gap:14px;background:var(--red-lt);border:1px solid rgba(226,80,58,.35);border-radius:13px;padding:15px 18px;margin-bottom:10px}
-.neck-k{font-size:9px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);background:rgba(226,80,58,.14);padding:4px 9px;border-radius:999px;flex-shrink:0}
+.neck-k{font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--red);background:rgba(226,80,58,.14);padding:4px 9px;border-radius:999px;flex-shrink:0}
 .neck-t{font-size:13.5px;font-weight:600;color:var(--dark);line-height:1.4;min-width:0}
 .neck-t b{color:var(--red)}
 /* ═══ QUICK WINS ═══ */
 .qws{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
 .qw2{background:var(--surf);border:0.5px solid var(--border);border-left:3px solid var(--gold);border-radius:11px;padding:14px 16px;min-width:0}
-.qw2-n{font-size:9px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:5px}
+.qw2-n{font-size:13px;font-weight:700;letter-spacing:.11em;text-transform:uppercase;color:var(--gold-dk);margin-bottom:5px}
 .qw2-t{font-size:13.5px;font-weight:700;color:var(--dark);margin-bottom:4px}
-.qw2-d{font-size:11.5px;color:var(--grey);line-height:1.42}
+.qw2-d{font-size:14px;color:var(--grey);line-height:1.42}
 @media(max-width:680px){.qws{grid-template-columns:1fr}}
 /* ═══ FILTRO DUAL ═══ */
 .dual{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:12px}
@@ -219,29 +219,29 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .ch.tienda::before{background:var(--teal)} .ch.web::before{background:#5B9BD5}
 .ch-top{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px;flex-wrap:wrap}
 .ch-name{font-size:14px;font-weight:700;color:var(--dark)}
-.ch-job{font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
+.ch-job{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:3px 9px;border-radius:999px}
 .ch.tienda .ch-job{background:rgba(62,180,137,.13);color:var(--teal)}
 .ch.web .ch-job{background:rgba(91,155,213,.14);color:#3F7CB4}
 .ch-big{font-size:25px;font-weight:700;letter-spacing:-.02em;color:var(--dark);line-height:1}
-.ch-vs{font-size:11px;color:var(--grey);margin-top:5px}
+.ch-vs{font-size:14px;color:var(--grey);margin-top:5px}
 .ch-div{height:0.5px;background:var(--border);margin:11px 0}
 .ch-kpi{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin-bottom:7px}
-.ch-kpi-l{font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);font-weight:600}
+.ch-kpi-l{font-size:13.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--grey);font-weight:600}
 .ch-kpi-v{font-size:16px;font-weight:700;color:var(--dark);white-space:nowrap}
 .ch-kpi-v.warn{color:var(--red)}
-.ch-kpi-s{font-size:10.5px;color:var(--grey)}
-.ch-lev{font-size:11.5px;color:var(--ink);line-height:1.4;margin-top:10px;padding-top:10px;border-top:0.5px solid var(--border)}
+.ch-kpi-s{font-size:13.5px;color:var(--grey)}
+.ch-lev{font-size:14px;color:var(--ink);line-height:1.4;margin-top:10px;padding-top:10px;border-top:0.5px solid var(--border)}
 .ch-lev b{color:var(--dark)}
 @media(max-width:680px){.dual{grid-template-columns:1fr}}
 .funnel-wrap{background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:20px;margin-bottom:20px}
 .funnel-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:16px}
-.funnel-title{font-size:12px;font-weight:600;color:var(--dark)}
+.funnel-title{font-size:14.5px;font-weight:600;color:var(--dark)}
 .funnel-svg-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
 .funnel-svg-wrap svg{min-width:600px;width:100%}
-.funnel-note{margin-top:12px;padding:10px 13px;background:var(--bg);border-radius:7px;font-size:11.5px;color:var(--grey);line-height:1.65;border:0.5px solid var(--border)}
+.funnel-note{margin-top:12px;padding:10px 13px;background:var(--bg);border-radius:7px;font-size:14px;color:var(--grey);line-height:1.65;border:0.5px solid var(--border)}
 
 /* DIAGRAMA — FLUJO COMPLETO DEL NEGOCIO */
-.dg-stage-lbl{font-family:'DM Mono',monospace;font-size:9.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--warm);text-align:center;margin-bottom:8px}
+.dg-stage-lbl{font-family:'DM Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--warm);text-align:center;margin-bottom:8px}
 .dg-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;width:100%;margin-bottom:4px}
 .dg-box{background:var(--surf);border:1.5px solid var(--border);border-radius:11px;padding:12px 14px;min-width:135px;max-width:200px;text-align:center;flex:1}
 .dg-box.source{border-color:var(--violet);background:var(--violet-lt)}
@@ -251,22 +251,22 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .dg-box.success{border-color:var(--teal);background:var(--teal-lt)}
 @keyframes pulse-red{0%,100%{box-shadow:0 0 0 0 rgba(226,80,58,.4)}50%{box-shadow:0 0 0 7px rgba(226,80,58,0)}}
 @keyframes pulse-blue{0%,100%{box-shadow:0 0 0 0 rgba(42,91,173,.45)}50%{box-shadow:0 0 0 8px rgba(42,91,173,0)}}
-.cat-tag{display:inline-block;font-family:'DM Mono',monospace;font-size:8.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:5px;margin-bottom:8px}
+.cat-tag{display:inline-block;font-family:'DM Mono',monospace;font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:2px 8px;border-radius:5px;margin-bottom:8px}
 .cat-tag.showroom{background:var(--gold-lt);color:var(--gold-dk)}
 .cat-tag.ecommerce{background:var(--red-lt);color:var(--red-dk)}
 .dg-box.neutral{border-color:var(--sand)}
-.dg-title{font-size:12px;font-weight:700;color:var(--dark);margin-bottom:3px;line-height:1.3}
-.dg-sub{font-size:10px;color:var(--grey);line-height:1.4}
+.dg-title{font-size:14.5px;font-weight:700;color:var(--dark);margin-bottom:3px;line-height:1.3}
+.dg-sub{font-size:13.5px;color:var(--grey);line-height:1.4}
 .dg-arrow{font-size:20px;color:var(--sand);text-align:center;line-height:1;margin:2px 0 6px}
 .dg-cols{display:flex;gap:22px;width:100%;justify-content:center;flex-wrap:wrap;align-items:flex-start;margin-bottom:6px}
 .dg-col{display:flex;flex-direction:column;align-items:center;gap:0;flex:1;min-width:220px;max-width:300px;border-radius:14px;padding:14px 12px 10px}
 .dg-col.tienda{background:rgba(232,162,55,.06);border:1px dashed var(--gold)}
 .dg-col.web{background:rgba(226,80,58,.05);border:1px dashed var(--red)}
-.dg-col-lbl{font-family:'DM Mono',monospace;font-size:9.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;text-align:center}
+.dg-col-lbl{font-family:'DM Mono',monospace;font-size:13px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;text-align:center}
 .dg-col.tienda .dg-col-lbl{color:var(--gold-dk)}
 .dg-col.web .dg-col-lbl{color:var(--red-dk)}
 .dg-col .dg-box{width:100%;max-width:none}
-.dg-loop{margin:14px auto 0;padding:10px 18px;border:1.5px dashed var(--violet);border-radius:10px;color:var(--violet);font-size:11.5px;font-weight:600;text-align:center;max-width:480px}
+.dg-loop{margin:14px auto 0;padding:10px 18px;border:1.5px dashed var(--violet);border-radius:10px;color:var(--violet);font-size:14px;font-weight:600;text-align:center;max-width:480px}
 .dg-wrap{background:var(--surf);border:0.5px solid var(--border);border-radius:14px;padding:22px 16px;margin-bottom:20px;overflow-x:auto}
 @media(max-width:680px){
   .dg-cols{flex-direction:column;align-items:stretch}
@@ -279,11 +279,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .bn-card{background:var(--surf);border:0.5px solid var(--border);border-radius:10px;padding:13px 15px;border-left:3px solid var(--border);min-width:0}
 .bn-card.c{border-left-color:var(--red)}.bn-card.w{border-left-color:var(--orange)}.bn-card.i{border-left-color:var(--teal)}
 .bn-head{display:flex;align-items:center;gap:7px;margin-bottom:5px}
-.bn-n{width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:600;color:#fff;flex-shrink:0}
+.bn-n{width:19px;height:19px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:600;color:#fff;flex-shrink:0}
 .bn-n.c{background:var(--red)}.bn-n.w{background:var(--orange)}.bn-n.i{background:var(--teal)}
-.bn-title{font-size:12px;font-weight:600;color:var(--dark)}
-.bn-text{font-size:11.5px;color:var(--grey);line-height:1.6;margin-bottom:5px}
-.bn-imp{font-size:10.5px;font-weight:500;font-family:'DM Mono',monospace}
+.bn-title{font-size:14.5px;font-weight:600;color:var(--dark)}
+.bn-text{font-size:14px;color:var(--grey);line-height:1.6;margin-bottom:5px}
+.bn-imp{font-size:13.5px;font-weight:500;font-family:'DM Mono',monospace}
 .bn-imp.c{color:var(--red-dk)}.bn-imp.w{color:var(--orange-dk)}.bn-imp.i{color:var(--teal-dk)}
 
 /* RECURSOS — biblioteca */
@@ -291,15 +291,15 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .res-card{background:var(--surf);border:0.5px solid var(--border);border-radius:14px;padding:20px;display:flex;flex-direction:column;gap:4px;min-width:0}
 .res-icon{font-size:26px;margin-bottom:6px}
 .res-title{font-size:14px;font-weight:600;color:var(--dark);margin-bottom:4px}
-.res-desc{font-size:12px;color:var(--grey);line-height:1.6;margin-bottom:10px}
-.res-steps{font-size:12px;color:var(--ink);line-height:1.9;margin:0 0 12px 18px}
+.res-desc{font-size:14.5px;color:var(--grey);line-height:1.6;margin-bottom:10px}
+.res-steps{font-size:14.5px;color:var(--ink);line-height:1.9;margin:0 0 12px 18px}
 .res-steps li{margin-bottom:2px}
-.res-cta{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;color:#fff;text-decoration:none;padding:9px 14px;background:var(--dark);border-radius:8px;align-self:flex-start;transition:opacity .15s}
+.res-cta{margin-top:auto;display:inline-flex;align-items:center;gap:6px;font-size:14.5px;font-weight:600;color:#fff;text-decoration:none;padding:9px 14px;background:var(--dark);border-radius:8px;align-self:flex-start;transition:opacity .15s}
 .res-cta:hover{opacity:.8}
 
 /* STACK */
 .stack-wrap{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:20px}
-.sp{display:flex;align-items:center;gap:6px;background:var(--surf);border:0.5px solid var(--border);border-radius:7px;padding:6px 10px;font-size:11.5px;color:var(--ink)}
+.sp{display:flex;align-items:center;gap:6px;background:var(--surf);border:0.5px solid var(--border);border-radius:7px;padding:6px 10px;font-size:14px;color:var(--ink)}
 .sp-fav{width:14px;height:14px;border-radius:3px;flex-shrink:0;object-fit:contain}
 .sd{width:6px;height:6px;border-radius:50%;flex-shrink:0}
 .sd.on{background:var(--green)}.sd.warn{background:var(--orange)}.sd.off{background:var(--sand)}
@@ -309,14 +309,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .rm-track{display:flex;align-items:flex-start;min-width:660px;position:relative}
 .rm-track::before{content:'';position:absolute;top:16px;left:17px;right:17px;height:2px;background:var(--border);z-index:0}
 .rm-node{display:flex;flex-direction:column;align-items:center;flex:1;min-width:52px;position:relative;z-index:1}
-.rm-dot{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:10px;font-weight:500;margin-bottom:7px;border:2px solid transparent;flex-shrink:0}
+.rm-dot{width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:13.5px;font-weight:500;margin-bottom:7px;border:2px solid transparent;flex-shrink:0}
 .rm-dot.done{background:var(--teal);border-color:var(--teal);color:#fff}
 .rm-dot.now{background:var(--gold);border-color:var(--gold);color:#fff;box-shadow:0 0 0 5px rgba(232,162,55,.18)}
 .rm-dot.next{background:var(--surf);border-color:var(--sand);color:var(--grey)}
 .rm-dot.future{background:var(--bg);border-color:var(--border);color:var(--grey)}
-.rm-lbl{font-size:9px;font-weight:600;color:var(--ink);text-align:center;line-height:1.3;margin-bottom:2px;max-width:60px}
+.rm-lbl{font-size:13px;font-weight:600;color:var(--ink);text-align:center;line-height:1.3;margin-bottom:2px;max-width:60px}
 .rm-lbl.mt{color:var(--grey);font-weight:400}
-.rm-sub{font-family:'DM Mono',monospace;font-size:8px;color:var(--grey);text-align:center}
+.rm-sub{font-family:'DM Mono',monospace;font-size:13px;color:var(--grey);text-align:center}
 
 /* PHASE CARDS */
 .phase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px}
@@ -325,9 +325,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .phase-card.m2{border-top-color:var(--gold)}
 .phase-card.m3{border-top-color:var(--violet)}
 .phase-hd{display:flex;align-items:center;justify-content:space-between;gap:6px;margin-bottom:8px;flex-wrap:wrap}
-.phase-tag{font-family:'DM Mono',monospace;font-size:10px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--grey)}
+.phase-tag{font-family:'DM Mono',monospace;font-size:13.5px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--grey)}
 .phase-title{font-size:13.5px;font-weight:600;color:var(--dark);line-height:1.35;margin-bottom:6px}
-.phase-text{font-size:11.5px;color:var(--grey);line-height:1.6;margin-bottom:10px}
+.phase-text{font-size:14px;color:var(--grey);line-height:1.6;margin-bottom:10px}
 .phase-tags{display:flex;flex-wrap:wrap;gap:4px}
 
 /* HOW */
@@ -338,8 +338,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .rm-how-item:last-child{padding-right:0}
 .rm-how-div{width:1px;background:rgba(255,255,255,.1);flex-shrink:0;align-self:stretch;margin:4px 0}
 .rm-how-icon{font-size:20px;flex-shrink:0;margin-top:2px}
-.rm-how-title{font-size:12px;font-weight:600;color:#fff;margin-bottom:2px}
-.rm-how-text{font-size:11px;color:rgba(255,255,255,.45);line-height:1.55}
+.rm-how-title{font-size:14.5px;font-weight:600;color:#fff;margin-bottom:2px}
+.rm-how-text{font-size:14px;color:rgba(255,255,255,.45);line-height:1.55}
 
 /* WEEK CARDS */
 .week-card{background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:16px 20px;margin-bottom:10px;cursor:pointer;transition:box-shadow .2s;user-select:none}
@@ -351,17 +351,17 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .week-hd{display:flex;align-items:flex-start;gap:10px}
 .week-info{flex:1}
 .week-title{font-size:13.5px;font-weight:600;color:var(--dark);line-height:1.3;margin-bottom:2px}
-.week-date{font-family:'DM Mono',monospace;font-size:9.5px;color:var(--grey)}
-.week-toggle{font-size:10.5px;color:var(--teal);font-weight:500;margin-top:8px;display:flex;align-items:center;gap:4px}
+.week-date{font-family:'DM Mono',monospace;font-size:13px;color:var(--grey)}
+.week-toggle{font-size:13.5px;color:var(--teal);font-weight:500;margin-top:8px;display:flex;align-items:center;gap:4px}
 .week-toggle-icon{transition:transform .2s;display:inline-block}
 .week-card.open .week-toggle-icon{transform:rotate(180deg)}
 .week-body{margin-top:10px;padding-top:10px;border-top:0.5px solid var(--border);display:none}
 .week-card.open .week-body{display:block}
 .week-chips{display:flex;flex-wrap:wrap;gap:4px;margin-bottom:8px}
-.rec-link{display:inline-flex;align-items:center;gap:6px;background:var(--violet-lt);color:var(--violet);border:0.5px solid var(--violet);border-radius:7px;padding:6px 12px;font-size:11.5px;font-weight:600;text-decoration:none;margin-bottom:10px}
+.rec-link{display:inline-flex;align-items:center;gap:6px;background:var(--violet-lt);color:var(--violet);border:0.5px solid var(--violet);border-radius:7px;padding:6px 12px;font-size:14px;font-weight:600;text-decoration:none;margin-bottom:10px}
 .rec-links{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px}
-.week-sec{font-size:10px;font-weight:600;color:var(--grey);text-transform:uppercase;letter-spacing:.08em;margin:8px 0 4px}
-.week-text{font-size:12px;color:var(--grey);line-height:1.65}
+.week-sec{font-size:13.5px;font-weight:600;color:var(--grey);text-transform:uppercase;letter-spacing:.08em;margin:8px 0 4px}
+.week-text{font-size:14.5px;color:var(--grey);line-height:1.65}
 .week-text strong{color:var(--ink);font-weight:600}
 .week-text ul{padding-left:16px;margin-top:4px}
 .week-text li{margin-bottom:3px}
@@ -373,39 +373,39 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .qa-card:hover{box-shadow:0 2px 12px rgba(0,0,0,.06)}
 .qa-card.broken-q{border-left:3px solid var(--red)}
 .qa-hd{display:flex;align-items:center;gap:10px}
-.qa-n{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;font-weight:600;color:#fff;flex-shrink:0}
+.qa-n{width:24px;height:24px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:14px;font-weight:600;color:#fff;flex-shrink:0}
 .qa-title{font-size:14px;font-weight:600;color:var(--dark)}
-.qa-icon{font-size:11px;color:var(--grey);transition:transform .2s;flex-shrink:0;margin-left:8px}
+.qa-icon{font-size:14px;color:var(--grey);transition:transform .2s;flex-shrink:0;margin-left:8px}
 .qa-card.open .qa-icon{transform:rotate(180deg)}
 .qa-body{display:none;margin-top:10px;padding-top:10px;border-top:0.5px solid var(--border)}
 .qa-card.open .qa-body{display:block}
 .qa-body ul{padding-left:18px;margin:0}
-.qa-body li{font-size:12.5px;color:var(--grey);line-height:1.6;margin-bottom:6px}
+.qa-body li{font-size:14.5px;color:var(--grey);line-height:1.6;margin-bottom:6px}
 .qa-body li:last-child{margin-bottom:0}
 
 /* ENGINE TABLE */
 .eng-table{width:100%;border-collapse:collapse;background:var(--surf);border-radius:12px;overflow:hidden;border:0.5px solid var(--border);margin-bottom:20px}
 .eng-table thead{background:var(--dark)}
-.eng-table thead th{padding:10px 13px;text-align:left;font-family:'DM Mono',monospace;font-size:8.5px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);font-weight:500}
+.eng-table thead th{padding:10px 13px;text-align:left;font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.35);font-weight:500}
 .eng-table tbody tr{border-bottom:0.5px solid var(--border);transition:background .12s}
 .eng-table tbody tr:last-child{border-bottom:none}
 .eng-table tbody tr:hover{background:var(--bg)}
 .eng-table tbody tr.broken{background:rgba(226,80,58,.025)}
-.eng-table td{padding:11px 13px;font-size:11.5px;vertical-align:top}
-.sdot{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:8px;font-weight:500;color:#fff;flex-shrink:0}
-.sname{font-size:12.5px;font-weight:600;color:var(--dark)}
-.sgap{font-size:11px;color:var(--grey);line-height:1.5}
+.eng-table td{padding:11px 13px;font-size:14px;vertical-align:top}
+.sdot{width:20px;height:20px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:13px;font-weight:500;color:#fff;flex-shrink:0}
+.sname{font-size:14.5px;font-weight:600;color:var(--dark)}
+.sgap{font-size:14px;color:var(--grey);line-height:1.5}
 
 /* TASKS */
-.tg-hd{font-size:12px;font-weight:600;color:var(--ink);margin:18px 0 9px;display:flex;align-items:center;gap:8px}
+.tg-hd{font-size:14.5px;font-weight:600;color:var(--ink);margin:18px 0 9px;display:flex;align-items:center;gap:8px}
 .tg-hd::after{content:'';flex:1;height:0.5px;background:var(--border)}
 .task{display:flex;align-items:flex-start;gap:10px;background:var(--surf);border:0.5px solid var(--border);border-radius:9px;padding:10px 13px;margin-bottom:6px;transition:box-shadow .15s}
 .task:hover{box-shadow:0 2px 10px rgba(0,0,0,.05)}
 .task-ring{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--border);flex-shrink:0;margin-top:2px}
 .task-body{flex:1;min-width:0}
-.task-title{font-size:12.5px;font-weight:500;color:var(--ink);margin-bottom:2px;line-height:1.35}
-.task-desc{font-size:11px;color:var(--grey);line-height:1.5}
-.task-note{margin-top:6px;padding:6px 9px;background:var(--beige);border-radius:5px;font-size:10.5px;color:var(--brown);line-height:1.5}
+.task-title{font-size:14.5px;font-weight:500;color:var(--ink);margin-bottom:2px;line-height:1.35}
+.task-desc{font-size:14px;color:var(--grey);line-height:1.5}
+.task-note{margin-top:6px;padding:6px 9px;background:var(--beige);border-radius:5px;font-size:13.5px;color:var(--brown);line-height:1.5}
 
 /* ALERT */
 .alert-box{display:flex;gap:10px;padding:11px 14px;border-radius:9px;margin-bottom:10px;align-items:flex-start}
@@ -413,14 +413,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .alert-box.warn{background:var(--gold-lt);border:0.5px solid #F0D88A}
 .alert-box.red-bg{background:var(--red-lt);border:0.5px solid #F5BFBB}
 .alert-icon{font-size:15px;flex-shrink:0;margin-top:1px}
-.alert-title{font-size:12.5px;font-weight:600;color:var(--dark);margin-bottom:2px}
-.alert-text{font-size:11.5px;color:var(--grey);line-height:1.6}
+.alert-title{font-size:14.5px;font-weight:600;color:var(--dark);margin-bottom:2px}
+.alert-text{font-size:14px;color:var(--grey);line-height:1.6}
 .alert-text a{color:var(--teal-dk)}
 
 .rm-uc-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:8px;margin-top:14px}
 .rm-uc{background:var(--bg);border:0.5px solid var(--border);border-radius:9px;padding:12px 14px;opacity:.6;min-width:0}
-.rm-uc-num{font-family:'DM Mono',monospace;font-size:9px;color:var(--grey);margin-bottom:4px}
-.rm-uc-title{font-size:12px;font-weight:500;color:var(--ink);margin-bottom:5px;line-height:1.3}
+.rm-uc-num{font-family:'DM Mono',monospace;font-size:13px;color:var(--grey);margin-bottom:4px}
+.rm-uc-title{font-size:14.5px;font-weight:500;color:var(--ink);margin-bottom:5px;line-height:1.3}
 .rm-uc-chips{display:flex;flex-wrap:wrap;gap:3px}
 .rm-uc.next-call{opacity:1;border:1.5px solid var(--blue);background:var(--blue-lt);animation:pulse-blue 2s ease-in-out infinite}
 .rm-uc.next-call .rm-uc-num{color:var(--blue-dk);font-weight:700}
@@ -429,46 +429,46 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 /* VENTAS — DIAGRAMA AÍSLA → OFRECE */
 .flow-wrap{display:flex;align-items:center;gap:14px;background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:18px 20px;margin-bottom:20px}
 .flow-col{flex:1;min-width:0}
-.flow-col-title{font-family:'DM Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.1em;color:var(--grey);margin-bottom:10px}
+.flow-col-title{font-family:'DM Mono',monospace;font-size:13.5px;font-weight:600;letter-spacing:.1em;color:var(--grey);margin-bottom:10px}
 .flow-step{display:flex;align-items:center;gap:9px;margin-bottom:8px}
 .flow-step:last-child{margin-bottom:0}
-.flow-n{width:22px;height:22px;border-radius:50%;background:var(--beige);color:var(--grey);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:10.5px;font-weight:600;flex-shrink:0}
+.flow-n{width:22px;height:22px;border-radius:50%;background:var(--beige);color:var(--grey);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:13.5px;font-weight:600;flex-shrink:0}
 .flow-n.opt{background:var(--dark);color:#fff}
-.flow-txt{font-size:11.5px;color:var(--ink);line-height:1.4}
-.flow-tag{display:inline-block;font-family:'DM Mono',monospace;font-size:9px;color:var(--grey);background:var(--bg);border:0.5px solid var(--border);border-radius:4px;padding:1px 6px;margin-left:5px;vertical-align:middle}
+.flow-txt{font-size:14px;color:var(--ink);line-height:1.4}
+.flow-tag{display:inline-block;font-family:'DM Mono',monospace;font-size:13px;color:var(--grey);background:var(--bg);border:0.5px solid var(--border);border-radius:4px;padding:1px 6px;margin-left:5px;vertical-align:middle}
 .flow-arrow{font-size:20px;color:var(--sand);flex-shrink:0}
 
 /* VENTAS — CARD TRAINING (QUIZ) */
 .quiz-card{background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:15px 17px;margin-bottom:10px}
-.quiz-situation{font-size:12.5px;font-weight:600;color:var(--dark);margin-bottom:11px;line-height:1.45}
+.quiz-situation{font-size:14.5px;font-weight:600;color:var(--dark);margin-bottom:11px;line-height:1.45}
 .quiz-opts{display:flex;flex-direction:column;gap:7px}
-.quiz-opt{text-align:left;background:var(--bg);border:0.5px solid var(--border);border-radius:9px;padding:10px 13px;font-size:11.5px;color:var(--ink);line-height:1.5;cursor:pointer;font-family:inherit;transition:background .15s,border-color .15s}
+.quiz-opt{text-align:left;background:var(--bg);border:0.5px solid var(--border);border-radius:9px;padding:10px 13px;font-size:14px;color:var(--ink);line-height:1.5;cursor:pointer;font-family:inherit;transition:background .15s,border-color .15s}
 .quiz-opt:hover{border-color:var(--sand)}
 .quiz-card.answered .quiz-opt{cursor:default}
 .quiz-opt.correct{background:var(--teal-lt);border-color:var(--teal);color:var(--teal-dk)}
 .quiz-opt.wrong{background:var(--red-lt);border-color:var(--red);color:var(--red-dk)}
-.quiz-feedback{margin-top:9px;padding:9px 12px;background:var(--beige);border-radius:8px;font-size:11px;color:var(--ink);line-height:1.6;display:none}
+.quiz-feedback{margin-top:9px;padding:9px 12px;background:var(--beige);border-radius:8px;font-size:14px;color:var(--ink);line-height:1.6;display:none}
 .quiz-card.answered .quiz-feedback{display:block}
 
 /* VENTAS — SUGERENCIAS */
 .sug-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:9px;margin-bottom:20px}
 .sug-card{background:var(--surf);border:0.5px solid var(--border);border-radius:10px;padding:13px 15px;border-left:3px solid var(--teal);min-width:0}
-.sug-n{font-family:'DM Mono',monospace;font-size:10px;color:var(--teal-dk);margin-bottom:4px}
-.sug-title{font-size:12px;font-weight:600;color:var(--dark);margin-bottom:4px;line-height:1.35}
-.sug-text{font-size:11.5px;color:var(--grey);line-height:1.6}
+.sug-n{font-family:'DM Mono',monospace;font-size:13.5px;color:var(--teal-dk);margin-bottom:4px}
+.sug-title{font-size:14.5px;font-weight:600;color:var(--dark);margin-bottom:4px;line-height:1.35}
+.sug-text{font-size:14px;color:var(--grey);line-height:1.6}
 
 /* VENTAS — SEÑALES PARA CERRAR */
 .sig-wrap{display:flex;flex-direction:column;gap:12px;margin-bottom:20px}
 .sig-block{background:var(--surf);border:0.5px solid var(--border);border-radius:12px;padding:16px 18px}
 .sig-hd{display:flex;align-items:center;gap:9px;margin-bottom:12px;flex-wrap:wrap}
-.sig-tag{font-family:'DM Mono',monospace;font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--dark);color:#fff;padding:4px 9px;border-radius:5px;flex-shrink:0}
-.sig-hdtitle{font-size:12px;font-weight:600;color:var(--dark)}
-.sig-pending{font-size:11.5px;color:var(--gold-dk);background:var(--gold-lt);border:0.5px solid #F0D88A;border-radius:8px;padding:10px 12px;line-height:1.6}
+.sig-tag{font-family:'DM Mono',monospace;font-size:13.5px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;background:var(--dark);color:#fff;padding:4px 9px;border-radius:5px;flex-shrink:0}
+.sig-hdtitle{font-size:14.5px;font-weight:600;color:var(--dark)}
+.sig-pending{font-size:14px;color:var(--gold-dk);background:var(--gold-lt);border:0.5px solid #F0D88A;border-radius:8px;padding:10px 12px;line-height:1.6}
 .sig-step{display:flex;gap:10px;margin-bottom:12px}
 .sig-step:last-child{margin-bottom:0}
-.sig-step-n{width:20px;height:20px;border-radius:50%;background:var(--beige);color:var(--grey);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:10px;font-weight:600;flex-shrink:0;margin-top:1px}
-.sig-step-title{font-size:12px;font-weight:600;color:var(--dark);margin-bottom:3px}
-.sig-step-text{font-size:11.5px;color:var(--grey);line-height:1.65}
+.sig-step-n{width:20px;height:20px;border-radius:50%;background:var(--beige);color:var(--grey);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:13.5px;font-weight:600;flex-shrink:0;margin-top:1px}
+.sig-step-title{font-size:14.5px;font-weight:600;color:var(--dark);margin-bottom:3px}
+.sig-step-text{font-size:14px;color:var(--grey);line-height:1.65}
 .sig-score{margin-bottom:4px}
 .sig-score:last-child{margin-bottom:0}
 
@@ -476,34 +476,34 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .policy-box{background:var(--dark);border-radius:12px;padding:18px 20px;margin-bottom:20px;display:flex;gap:14px;align-items:flex-start}
 .policy-icon{font-size:24px;flex-shrink:0;margin-top:2px}
 .policy-title{font-size:13.5px;font-weight:600;color:#fff;margin-bottom:5px}
-.policy-text{font-size:12px;color:rgba(255,255,255,.6);line-height:1.65}
+.policy-text{font-size:14.5px;color:rgba(255,255,255,.6);line-height:1.65}
 .policy-text strong{color:#fff}
 
 /* VENTAS — ROLEPLAY ACCORDIONS */
 .rp-card{background:var(--surf);border:0.5px solid var(--border);border-radius:12px;margin-bottom:9px;overflow:hidden}
 .rp-hd{display:flex;align-items:center;gap:11px;padding:13px 15px;cursor:pointer;user-select:none}
-.rp-num{width:26px;height:26px;border-radius:50%;background:var(--beige);color:var(--grey);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:11px;font-weight:600;flex-shrink:0}
+.rp-num{width:26px;height:26px;border-radius:50%;background:var(--beige);color:var(--grey);display:flex;align-items:center;justify-content:center;font-family:'DM Mono',monospace;font-size:14px;font-weight:600;flex-shrink:0}
 .rp-info{flex:1;min-width:0}
 .rp-title{font-size:13px;font-weight:600;color:var(--dark);line-height:1.3}
-.rp-meta{font-size:10.5px;color:var(--grey);margin-top:2px}
-.rp-cat{font-family:'DM Mono',monospace;font-size:9px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:4px 8px;border-radius:5px;flex-shrink:0;white-space:nowrap}
+.rp-meta{font-size:13.5px;color:var(--grey);margin-top:2px}
+.rp-cat{font-family:'DM Mono',monospace;font-size:13px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:4px 8px;border-radius:5px;flex-shrink:0;white-space:nowrap}
 .rp-cat.producto{background:var(--teal-lt);color:var(--teal-dk)}
 .rp-cat.decision{background:var(--violet-lt);color:var(--violet)}
 .rp-cat.presupuesto{background:var(--gold-lt);color:var(--gold-dk)}
 .rp-cat.tiempo{background:var(--blue-lt);color:var(--blue-dk)}
-.rp-icon{font-size:10px;color:var(--grey);transition:transform .2s;flex-shrink:0}
+.rp-icon{font-size:13.5px;color:var(--grey);transition:transform .2s;flex-shrink:0}
 .rp-card.open .rp-icon{transform:rotate(180deg)}
 .rp-body{display:none;padding:0 15px 16px}
 .rp-card.open .rp-body{display:block}
 .rp-tags{display:flex;gap:5px;flex-wrap:wrap;margin-bottom:10px;padding-top:2px}
 .chat{display:flex;flex-direction:column;gap:6px;background:#E9DFD3;border-radius:10px;padding:14px 12px}
-.msg{max-width:82%;padding:8px 12px;border-radius:13px;font-size:12px;line-height:1.55}
+.msg{max-width:82%;padding:8px 12px;border-radius:13px;font-size:14.5px;line-height:1.55}
 .msg.client{align-self:flex-start;background:#fff;color:var(--ink);border-bottom-left-radius:3px;box-shadow:0 1px 1px rgba(0,0,0,.06)}
 .msg.advisor{align-self:flex-end;background:#DCF3D6;color:var(--ink);border-bottom-right-radius:3px;box-shadow:0 1px 1px rgba(0,0,0,.06)}
-.msg.pause{align-self:center;background:transparent;color:var(--grey);font-family:'DM Mono',monospace;font-size:9.5px;text-transform:uppercase;letter-spacing:.1em;padding:3px 0}
+.msg.pause{align-self:center;background:transparent;color:var(--grey);font-family:'DM Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:.1em;padding:3px 0}
 
 /* WA FAB */
-.wa-foot{display:flex;align-items:center;justify-content:center;gap:8px;margin:26px 0 4px;padding-top:18px;border-top:0.5px solid var(--border);font-size:11.5px;color:var(--grey);text-decoration:none;transition:color .18s}
+.wa-foot{display:flex;align-items:center;justify-content:center;gap:8px;margin:26px 0 4px;padding-top:18px;border-top:0.5px solid var(--border);font-size:14px;color:var(--grey);text-decoration:none;transition:color .18s}
 .wa-foot:hover{color:var(--wa)}
 .wa-foot svg{width:14px;height:14px;flex-shrink:0;opacity:.75}
 .wa-foot:hover svg{opacity:1}
@@ -556,18 +556,18 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .cy-hero::after{content:'';position:absolute;top:-70px;right:-50px;width:220px;height:220px;border-radius:50%;background:radial-gradient(circle,rgba(232,162,55,.2),transparent 68%)}
 .cy-hero-top{display:flex;align-items:flex-start;gap:16px;flex-wrap:wrap;justify-content:space-between;position:relative;z-index:2}
 .cy-hero-t{font-size:19px;font-weight:700;letter-spacing:-.01em}
-.cy-hero-s{font-size:12.5px;color:rgba(255,255,255,.55);margin-top:5px;max-width:400px;line-height:1.5}
+.cy-hero-s{font-size:14.5px;color:rgba(255,255,255,.55);margin-top:5px;max-width:400px;line-height:1.5}
 .cy-cd{display:flex;gap:7px;flex-shrink:0}
 .cy-cd-b{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.13);border-radius:9px;padding:9px 13px;text-align:center;min-width:64px}
 .cy-cd-n{font-size:20px;font-weight:700;line-height:1;letter-spacing:-.02em}
 .cy-cd-n.hot{color:var(--gold)}
-.cy-cd-l{font-size:8.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:5px}
+.cy-cd-l{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:5px}
 
 /* curva de 6 dias */
 .cy-curve{background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:18px 16px 14px;margin-bottom:10px;overflow-x:auto}
 .cy-bars{display:flex;align-items:flex-end;gap:7px;height:132px;min-width:430px}
 .cy-bar{flex:1;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;height:100%}
-.cy-bar-v{font-size:11px;font-weight:700;color:var(--dark);margin-bottom:5px;white-space:nowrap}
+.cy-bar-v{font-size:14px;font-weight:700;color:var(--dark);margin-bottom:5px;white-space:nowrap}
 .cy-bar-f{width:100%;border-radius:6px 6px 0 0;background:var(--sand);transition:opacity .18s}
 .cy-bar:hover .cy-bar-f{opacity:.75}
 .cy-bar.pre .cy-bar-f{background:var(--gold)}
@@ -575,33 +575,33 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .cy-bar.off .cy-bar-f{background:var(--beige);border:1px dashed var(--sand);border-bottom:none}
 .cy-legend{display:flex;gap:8px;min-width:430px;margin-top:7px}
 .cy-leg{flex:1;text-align:center}
-.cy-leg-d{font-size:10px;font-weight:700;color:var(--dark)}
-.cy-leg-s{font-size:9px;color:var(--grey);margin-top:2px;line-height:1.3}
-.cy-curve-note{font-size:11.5px;color:var(--grey);line-height:1.5;margin-top:12px;padding-top:11px;border-top:0.5px solid var(--border)}
+.cy-leg-d{font-size:13.5px;font-weight:700;color:var(--dark)}
+.cy-leg-s{font-size:13px;color:var(--grey);margin-top:2px;line-height:1.3}
+.cy-curve-note{font-size:14px;color:var(--grey);line-height:1.5;margin-top:12px;padding-top:11px;border-top:0.5px solid var(--border)}
 .cy-curve-note b{color:var(--dark)}
 
 /* regiones · barra doble */
 .cy-reg{background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:10px}
 .cy-reg-row{display:grid;grid-template-columns:120px 1fr 52px;gap:10px;align-items:center;padding:7px 0;border-bottom:0.5px solid var(--border)}
 .cy-reg-row:last-of-type{border-bottom:none}
-.cy-reg-n{font-size:12px;font-weight:600;color:var(--dark)}
-.cy-reg-n span{display:block;font-size:9.5px;font-weight:400;color:var(--grey)}
+.cy-reg-n{font-size:14.5px;font-weight:600;color:var(--dark)}
+.cy-reg-n span{display:block;font-size:13px;font-weight:400;color:var(--grey)}
 .cy-reg-track{display:flex;flex-direction:column;gap:3px}
 .cy-reg-b{height:8px;border-radius:4px;min-width:3px;transition:opacity .18s}
 .cy-reg-row:hover .cy-reg-b{opacity:.78}
 .cy-reg-b.traf{background:var(--sand)}
 .cy-reg-b.conv{background:var(--teal)}
 .cy-reg-row.bad .cy-reg-b.conv{background:var(--red)}
-.cy-reg-v{font-size:12px;font-weight:700;text-align:right;color:var(--teal-dk)}
+.cy-reg-v{font-size:14.5px;font-weight:700;text-align:right;color:var(--teal-dk)}
 .cy-reg-row.bad .cy-reg-v{color:var(--red-dk)}
 .cy-reg-key{display:flex;gap:14px;margin-top:11px;padding-top:11px;border-top:0.5px solid var(--border)}
-.cy-reg-k{display:flex;align-items:center;gap:5px;font-size:10px;color:var(--grey)}
+.cy-reg-k{display:flex;align-items:center;gap:5px;font-size:13.5px;color:var(--grey)}
 .cy-reg-sw{width:16px;height:7px;border-radius:4px}
 
 /* inversion */
 .cy-split{background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:10px}
 .cy-split-bar{display:flex;height:38px;border-radius:9px;overflow:hidden;margin-bottom:11px}
-.cy-sg{display:flex;align-items:center;justify-content:center;font-size:11.5px;font-weight:700;color:#fff;transition:opacity .18s}
+.cy-sg{display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:700;color:#fff;transition:opacity .18s}
 .cy-sg:hover{opacity:.85}
 .cy-sg.rm{background:var(--blue)}
 .cy-sg.norte{background:var(--gold)}
@@ -612,28 +612,28 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .cy-sr.norte{border-top:2px solid var(--gold)}
 .cy-sr.sur{border-top:2px solid var(--sand)}
 .cy-sr.goog{border-top:2px solid var(--teal)}
-.cy-sr-h{font-size:11.5px;font-weight:700;color:var(--dark);margin-bottom:4px}
+.cy-sr-h{font-size:14px;font-weight:700;color:var(--dark);margin-bottom:4px}
 .cy-sr-a{font-size:16px;font-weight:700;letter-spacing:-.02em;color:var(--dark);line-height:1}
-.cy-sr-d{font-size:10.5px;color:var(--grey);line-height:1.4;margin-top:6px}
+.cy-sr-d{font-size:13.5px;color:var(--grey);line-height:1.4;margin-top:6px}
 
 /* estructura de campana */
 .cy-str{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:9px;margin-bottom:10px}
 .cy-node{background:var(--surf);border:1px solid var(--border);border-radius:11px;padding:14px 15px;transition:transform .18s,box-shadow .18s}
 .cy-node:hover{transform:translateY(-2px);box-shadow:0 7px 20px rgba(42,36,32,.07)}
-.cy-node-h{font-size:12.5px;font-weight:700;color:var(--dark);margin-bottom:8px;display:flex;align-items:center;gap:6px}
+.cy-node-h{font-size:14.5px;font-weight:700;color:var(--dark);margin-bottom:8px;display:flex;align-items:center;gap:6px}
 .cy-node ul{padding-left:15px;margin:0}
-.cy-node li{font-size:11.5px;color:var(--grey);line-height:1.45;margin-bottom:4px}
+.cy-node li{font-size:14px;color:var(--grey);line-height:1.45;margin-bottom:4px}
 .cy-node li b{color:var(--dark);font-weight:600}
 
 /* pendientes */
 .cy-pend{background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:6px 18px;margin-bottom:10px}
 .cy-p{display:grid;grid-template-columns:22px 1fr auto;gap:11px;align-items:start;padding:11px 0;border-bottom:0.5px solid var(--border)}
 .cy-p:last-child{border-bottom:none}
-.cy-p-w{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:700;color:#fff;flex-shrink:0;margin-top:1px}
+.cy-p-w{width:22px;height:22px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:#fff;flex-shrink:0;margin-top:1px}
 .cy-p-w.m{background:var(--violet)}
 .cy-p-w.p{background:var(--dark)}
-.cy-p-t{font-size:12.5px;font-weight:600;color:var(--dark);line-height:1.4}
-.cy-p-d{font-size:11px;color:var(--grey);line-height:1.45;margin-top:2px}
+.cy-p-t{font-size:14.5px;font-weight:600;color:var(--dark);line-height:1.4}
+.cy-p-d{font-size:14px;color:var(--grey);line-height:1.45;margin-top:2px}
 .cy-p-tag{flex-shrink:0}
 
 /* skills en simultaneo */
@@ -642,8 +642,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .cy-skc.on{border-left-color:var(--teal)}
 .cy-skc.wait{border-left-color:var(--gold)}
 .cy-skc.off{border-left-color:var(--red)}
-.cy-skc-h{font-size:11.5px;font-weight:700;color:var(--dark);display:flex;align-items:center;justify-content:space-between;gap:7px}
-.cy-skc-d{font-size:10.5px;color:var(--grey);line-height:1.45;margin-top:5px}
+.cy-skc-h{font-size:14px;font-weight:700;color:var(--dark);display:flex;align-items:center;justify-content:space-between;gap:7px}
+.cy-skc-d{font-size:13.5px;color:var(--grey);line-height:1.45;margin-top:5px}
 .cy-dot{width:7px;height:7px;border-radius:50%;flex-shrink:0}
 .cy-dot.on{background:var(--teal)}
 .cy-dot.wait{background:var(--gold)}
@@ -655,9 +655,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .stk:hover{transform:translateY(-2px);box-shadow:0 7px 20px rgba(42,36,32,.07)}
 .stk-h{display:flex;align-items:center;gap:7px;margin-bottom:7px}
 .stk-i{font-size:16px;line-height:1}
-.stk-n{font-size:12.5px;font-weight:700;color:var(--dark);flex:1}
-.stk-d{font-size:11px;color:var(--grey);line-height:1.45}
-.stk-w{font-size:10px;color:var(--grey);margin-top:8px;padding-top:7px;border-top:0.5px solid var(--border);display:flex;align-items:center;gap:5px}
+.stk-n{font-size:14.5px;font-weight:700;color:var(--dark);flex:1}
+.stk-d{font-size:14px;color:var(--grey);line-height:1.45}
+.stk-w{font-size:13.5px;color:var(--grey);margin-top:8px;padding-top:7px;border-top:0.5px solid var(--border);display:flex;align-items:center;gap:5px}
 .stk-w b{color:var(--dark);font-weight:600}
 
 /* fase previa · flujo del lobby */
@@ -666,43 +666,43 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .cy-fs{flex:1;border-radius:10px;padding:11px 12px;background:var(--bg);border:0.5px solid var(--border);display:flex;flex-direction:column;gap:4px}
 .cy-fs.key{background:var(--gold-lt);border-color:#F0DDB4}
 .cy-fs.end{background:var(--teal-lt);border-color:#BFE6D5}
-.cy-fs-n{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey)}
-.cy-fs-t{font-size:12px;font-weight:700;color:var(--dark);line-height:1.3}
-.cy-fs-d{font-size:10.5px;color:var(--grey);line-height:1.4}
+.cy-fs-n{font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey)}
+.cy-fs-t{font-size:14.5px;font-weight:700;color:var(--dark);line-height:1.3}
+.cy-fs-d{font-size:13.5px;color:var(--grey);line-height:1.4}
 .cy-fa{display:flex;align-items:center;color:var(--sand);font-size:15px;flex-shrink:0}
 /* checklist de la PDP */
 .cy-ck{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:8px;margin-bottom:10px}
 .cy-ci{background:var(--surf);border:1px solid var(--border);border-radius:10px;padding:11px 13px;display:grid;grid-template-columns:18px 1fr;gap:9px;align-items:start}
-.cy-ci-m{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;margin-top:1px}
+.cy-ci-m{width:18px;height:18px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13.5px;font-weight:700;color:#fff;margin-top:1px}
 .cy-ci-m.ok{background:var(--teal)}
 .cy-ci-m.to{background:var(--surf);border:1.5px solid var(--gold)}
-.cy-ci-t{font-size:12px;font-weight:600;color:var(--dark);line-height:1.35}
-.cy-ci-d{font-size:10.5px;color:var(--grey);line-height:1.4;margin-top:2px}
+.cy-ci-t{font-size:14.5px;font-weight:600;color:var(--dark);line-height:1.35}
+.cy-ci-d{font-size:13.5px;color:var(--grey);line-height:1.4;margin-top:2px}
 
 /* respaldos de data del cyber */
 .cy-t{background:var(--surf);border:1px solid var(--border);border-radius:12px;overflow-x:auto;margin-bottom:10px}
-.cy-t table{width:100%;border-collapse:collapse;font-size:12px;min-width:520px}
-.cy-t th{text-align:left;padding:10px 12px;font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);border-bottom:0.5px solid var(--border);white-space:nowrap}
+.cy-t table{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
+.cy-t th{text-align:left;padding:10px 12px;font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);border-bottom:0.5px solid var(--border);white-space:nowrap}
 .cy-t td{padding:9px 12px;border-bottom:0.5px solid var(--border);vertical-align:top;color:var(--ink);line-height:1.45}
 .cy-t tr:last-child td{border-bottom:none}
 .cy-t td.n{font-weight:700;white-space:nowrap;color:var(--dark)}
 .cy-t td.nil{color:var(--sand)}
-.cy-t td.f{white-space:nowrap;color:var(--grey);font-size:11px}
-.cy-t td.l{color:var(--grey);font-size:11.5px}
-.cy-src{display:inline-flex;font-size:9.5px;font-weight:600;padding:2px 7px;border-radius:20px;background:var(--beige);color:var(--grey);white-space:nowrap}
+.cy-t td.f{white-space:nowrap;color:var(--grey);font-size:14px}
+.cy-t td.l{color:var(--grey);font-size:14px}
+.cy-src{display:inline-flex;font-size:13px;font-weight:600;padding:2px 7px;border-radius:20px;background:var(--beige);color:var(--grey);white-space:nowrap}
 
 /* ============ CYBER v2 · visual ============ */
 .cyv-hero{background:linear-gradient(135deg,#1A1A1A 0%,#2A2420 100%);color:#fff;border-radius:16px;padding:22px 22px 20px;margin-bottom:12px;position:relative;overflow:hidden}
 .cyv-hero::after{content:'';position:absolute;top:-80px;right:-60px;width:260px;height:260px;border-radius:50%;background:radial-gradient(circle,rgba(232,162,55,.22),transparent 68%)}
 .cyv-top{display:flex;justify-content:space-between;align-items:flex-start;gap:14px;flex-wrap:wrap;position:relative;z-index:2}
-.cyv-k{font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.cyv-k{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
 .cyv-big{font-size:46px;font-weight:700;letter-spacing:-.03em;line-height:1;margin-top:8px}
 .cyv-big span{font-size:14px;font-weight:500;color:rgba(255,255,255,.5);letter-spacing:0;margin-left:6px}
 .cyv-prog{position:relative;z-index:2;margin-top:18px}
 .cyv-bar{height:12px;border-radius:6px;background:rgba(255,255,255,.1);position:relative;overflow:visible}
 .cyv-fill{height:100%;border-radius:6px;background:linear-gradient(90deg,var(--teal),#6FD3AE)}
 .cyv-goal{position:absolute;top:-5px;bottom:-5px;width:2px;background:var(--gold)}
-.cyv-leg{display:flex;justify-content:space-between;font-size:10.5px;color:rgba(255,255,255,.55);margin-top:7px}
+.cyv-leg{display:flex;justify-content:space-between;font-size:13.5px;color:rgba(255,255,255,.55);margin-top:7px}
 .cyv-leg b{color:#fff;font-weight:600}
 /* ecuacion */
 .cyv-eq{display:flex;align-items:stretch;gap:8px;margin-bottom:12px;flex-wrap:wrap}
@@ -711,53 +711,53 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .cyv-term.web{border-top:3px solid var(--gold)}
 .cyv-term.tot{background:var(--teal-lt);border-color:#BFE6D5;border-top:3px solid var(--teal)}
 .cyv-term.st{border-top:3px solid var(--blue)}
-.cyv-tl{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+.cyv-tl{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
 .cyv-tv{font-size:26px;font-weight:700;letter-spacing:-.02em;color:var(--dark);line-height:1.1;margin-top:5px}
 .cyv-term.tot .cyv-tv{color:var(--teal-dk)}
-.cyv-ts{font-size:10.5px;color:var(--grey);margin-top:4px}
+.cyv-ts{font-size:13.5px;color:var(--grey);margin-top:4px}
 .cyv-op{display:flex;align-items:center;font-size:22px;font-weight:300;color:var(--sand)}
 /* escenarios apilados */
 .cyv-sc{background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:12px}
 .cyv-row{display:grid;grid-template-columns:92px 1fr 64px;gap:10px;align-items:center;margin-bottom:10px}
 .cyv-row:last-of-type{margin-bottom:0}
-.cyv-rl{font-size:11.5px;font-weight:600;color:var(--dark)}
+.cyv-rl{font-size:14px;font-weight:600;color:var(--dark)}
 .cyv-track{position:relative;height:22px;background:var(--bg);border-radius:6px;display:flex;overflow:visible}
-.cyv-seg{height:100%;display:flex;align-items:center;justify-content:center;font-size:10px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden}
+.cyv-seg{height:100%;display:flex;align-items:center;justify-content:center;font-size:13.5px;font-weight:700;color:#fff;white-space:nowrap;overflow:hidden}
 .cyv-seg.st{background:var(--blue);border-radius:6px 0 0 6px}
 .cyv-seg.wb{background:var(--gold);border-radius:0 6px 6px 0}
 .cyv-line{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--dark)}
-.cyv-line.lbl::after{content:'$30M';position:absolute;top:-15px;left:-12px;font-size:9px;font-weight:700;color:var(--dark)}
+.cyv-line.lbl::after{content:'$30M';position:absolute;top:-15px;left:-12px;font-size:13px;font-weight:700;color:var(--dark)}
 .cyv-sc{padding-top:22px}
 .cyv-rv{font-size:13px;font-weight:700;text-align:right}
 .cyv-rv.ok{color:var(--teal-dk)}.cyv-rv.no{color:var(--red-dk)}
 /* calendario */
 .cyv-cal{background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:16px 16px 12px;margin-bottom:12px;overflow-x:auto}
 .cyv-cal-in{min-width:560px;position:relative}
-.cyv-axis{display:flex;justify-content:space-between;font-size:9.5px;font-weight:600;color:var(--grey);padding-bottom:6px;border-bottom:0.5px solid var(--border);margin-bottom:10px}
+.cyv-axis{display:flex;justify-content:space-between;font-size:13px;font-weight:600;color:var(--grey);padding-bottom:6px;border-bottom:0.5px solid var(--border);margin-bottom:10px}
 .cyv-lane{position:relative;height:26px;margin-bottom:6px}
-.cyv-evt{position:absolute;top:0;height:26px;border-radius:7px;display:flex;align-items:center;padding:0 9px;font-size:10.5px;font-weight:700;white-space:nowrap;overflow:hidden}
+.cyv-evt{position:absolute;top:0;height:26px;border-radius:7px;display:flex;align-items:center;padding:0 9px;font-size:13.5px;font-weight:700;white-space:nowrap;overflow:hidden}
 .cyv-evt.lob{background:var(--gold-lt);color:var(--gold-dk);border:1px solid #F0DDB4}
 .cyv-evt.fp{background:repeating-linear-gradient(45deg,var(--beige),var(--beige) 5px,#fff 5px,#fff 10px);color:var(--grey);border:1px dashed var(--sand)}
 .cyv-evt.ven{background:var(--blue-lt);color:var(--blue-dk);border:1px solid #C9D8F0}
 .cyv-evt.cy{background:var(--red);color:#fff}
 .cyv-evt.lc{background:var(--teal-lt);color:var(--teal-dk);border:1px solid #BFE6D5}
 .cyv-today{position:absolute;top:22px;bottom:0;width:2px;background:var(--dark);z-index:3}
-.cyv-today::before{content:'hoy';position:absolute;bottom:-15px;left:-8px;font-size:9px;font-weight:700;color:var(--dark)}
+.cyv-today::before{content:'hoy';position:absolute;bottom:-15px;left:-8px;font-size:13px;font-weight:700;color:var(--dark)}
 .cyv-cal{padding-bottom:22px}
 /* barras comparadas */
 .cyv-two{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;margin-bottom:12px}
 .cyv-card{background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:15px 16px}
-.cyv-ch{font-size:12px;font-weight:700;color:var(--dark);margin-bottom:3px}
-.cyv-cs{font-size:10.5px;color:var(--grey);margin-bottom:12px}
+.cyv-ch{font-size:14.5px;font-weight:700;color:var(--dark);margin-bottom:3px}
+.cyv-cs{font-size:13.5px;color:var(--grey);margin-bottom:12px}
 .cyv-cols{display:flex;align-items:flex-end;gap:10px;height:120px}
 .cyv-col{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
-.cyv-cv{font-size:10.5px;font-weight:700;color:var(--dark);margin-bottom:4px;white-space:nowrap}
+.cyv-cv{font-size:13.5px;font-weight:700;color:var(--dark);margin-bottom:4px;white-space:nowrap}
 .cyv-cb{width:100%;max-width:46px;border-radius:5px 5px 0 0;background:var(--sand)}
 .cyv-cb.a{background:#CFC6BB}.cyv-cb.b{background:var(--red)}.cyv-cb.g{background:var(--teal)}.cyv-cb.o{background:var(--gold)}
-.cyv-cl{font-size:9.5px;color:var(--grey);margin-top:5px;text-align:center;line-height:1.25}
+.cyv-cl{font-size:13px;color:var(--grey);margin-top:5px;text-align:center;line-height:1.25}
 .cyv-pair{display:flex;gap:3px;align-items:flex-end;width:100%;justify-content:center;height:100%}
 .cyv-pair .cyv-cb{max-width:20px}
-.cyv-key{display:flex;gap:12px;margin-top:10px;font-size:10px;color:var(--grey)}
+.cyv-key{display:flex;gap:12px;margin-top:10px;font-size:13.5px;color:var(--grey)}
 .cyv-key i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:4px;vertical-align:-1px}
 /* reglas y riesgos en chips */
 .cyv-chips{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:8px;margin-bottom:12px}
@@ -766,14 +766,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .cyv-chip{background:var(--surf);border:1px solid var(--border);border-radius:10px;padding:11px 12px;display:flex;gap:9px;align-items:flex-start}
 .cyv-chip.r{border-color:#F3C9C0;background:var(--red-lt)}
 .cyv-ic{font-size:17px;line-height:1}
-.cyv-ct{font-size:11.5px;font-weight:700;color:var(--dark);line-height:1.3}
-.cyv-cd{font-size:10px;color:var(--grey);margin-top:2px;line-height:1.35}
+.cyv-ct{font-size:14px;font-weight:700;color:var(--dark);line-height:1.3}
+.cyv-cd{font-size:13.5px;color:var(--grey);margin-top:2px;line-height:1.35}
 .cyv-chip.r .cyv-ct{color:var(--red-dk)}
 /* semaforo de pendientes */
 .cyv-todo{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:7px;margin-bottom:12px}
 .cyv-td{background:var(--surf);border:1px solid var(--border);border-radius:10px;padding:10px 12px;display:grid;grid-template-columns:22px 1fr 9px;gap:9px;align-items:center}
-.cyv-td-t{font-size:11.5px;font-weight:600;color:var(--dark);line-height:1.3}
-.cyv-td-f{font-size:9.5px;color:var(--grey);margin-top:1px}
+.cyv-td-t{font-size:14px;font-weight:600;color:var(--dark);line-height:1.3}
+.cyv-td-f{font-size:13px;color:var(--grey);margin-top:1px}
 .cyv-dot{width:9px;height:9px;border-radius:50%}
 .cyv-dot.r{background:var(--red)}.cyv-dot.a{background:var(--gold)}.cyv-dot.g{background:var(--teal)}
 
@@ -783,7 +783,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   .cyv-op{justify-content:center;font-size:16px;line-height:1}
   .cyv-row{grid-template-columns:74px 1fr 56px;gap:7px}
   .cyv-seg.wb{font-size:0}
-  .cyv-seg.st{font-size:9px}
+  .cyv-seg.st{font-size:13px}
 }
 
 /* ============ GANTT DEL CYBER ============ */
@@ -791,16 +791,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .cyg-in{min-width:720px}
 .cyg-head{display:grid;grid-template-columns:230px 1fr;gap:14px;padding-bottom:7px;border-bottom:0.5px solid var(--border)}
 .cyg-ax{position:relative;height:14px}
-.cyg-ax span{position:absolute;font-size:9.5px;font-weight:700;color:var(--grey);transform:translateX(-50%)}
+.cyg-ax span{position:absolute;font-size:13px;font-weight:700;color:var(--grey);transform:translateX(-50%)}
 .cyg-ax span:first-child{transform:none}
 .cyg-ax span:last-child{transform:translateX(-100%)}
 .cyg-row{display:grid;grid-template-columns:230px 1fr;gap:14px;padding:9px 0;border-bottom:0.5px solid var(--border);align-items:center}
 .cyg-row:last-child{border-bottom:none}
-.cyg-t{font-size:12px;font-weight:700;color:var(--dark);line-height:1.25}
-.cyg-rol{font-size:10px;color:var(--brown);margin-top:3px;line-height:1.35}
-.cyg-ver{font-size:10px;color:var(--grey);margin-top:2px;line-height:1.35}
+.cyg-t{font-size:14.5px;font-weight:700;color:var(--dark);line-height:1.25}
+.cyg-rol{font-size:13.5px;color:var(--brown);margin-top:3px;line-height:1.35}
+.cyg-ver{font-size:13.5px;color:var(--grey);margin-top:2px;line-height:1.35}
 .cyg-lane{position:relative;height:30px}
-.cyg-bar{position:absolute;top:3px;height:24px;border-radius:7px;display:flex;align-items:center;padding:0 10px;font-size:10.5px;font-weight:700;white-space:nowrap;overflow:hidden}
+.cyg-bar{position:absolute;top:3px;height:24px;border-radius:7px;display:flex;align-items:center;padding:0 10px;font-size:13.5px;font-weight:700;white-space:nowrap;overflow:hidden}
 .cyg-bar.def{background:var(--violet-lt);color:var(--brown);border:1px solid #D6CFFF}
 .cyg-bar.fix{background:var(--blue-lt);color:var(--blue-dk);border:1px solid #C9D8F0}
 .cyg-bar.prod{background:var(--gold-lt);color:var(--gold-dk);border:1px solid #F0DDB4}
@@ -810,20 +810,20 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .cyg-bar.post{background:var(--beige);color:var(--ink);border:1px solid var(--sand)}
 .cyg-band{position:absolute;top:0;bottom:0;background:rgba(226,80,58,.06);border-left:1px solid rgba(226,80,58,.3);border-right:1px solid rgba(226,80,58,.3);z-index:0}
 .cyg-now{position:absolute;top:0;bottom:0;width:2px;background:var(--dark);z-index:4}
-.cyg-now::after{content:'hoy';position:absolute;top:-13px;left:-8px;font-size:9px;font-weight:700;color:var(--dark)}
+.cyg-now::after{content:'hoy';position:absolute;top:-13px;left:-8px;font-size:13px;font-weight:700;color:var(--dark)}
 /* dias del evento */
 .cyg-days{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:9px;margin-bottom:12px}
 .cyg-day{background:var(--surf);border:1px solid var(--border);border-radius:11px;padding:13px 15px;border-top:3px solid var(--sand)}
 .cyg-day.peak{border-top-color:var(--red)}
 .cyg-day.open{border-top-color:var(--dark)}
 .cyg-day.end{border-top-color:var(--teal)}
-.cyg-dn{font-size:9px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+.cyg-dn{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
 .cyg-dt{font-size:13px;font-weight:700;color:var(--dark);margin:5px 0 4px}
-.cyg-dd{font-size:11px;color:var(--grey);line-height:1.45}
+.cyg-dd{font-size:14px;color:var(--grey);line-height:1.45}
 /* matriz por canal */
 .cyg-ch{background:var(--surf);border:1px solid var(--border);border-radius:12px;overflow-x:auto;margin-bottom:12px}
-.cyg-ch table{width:100%;border-collapse:collapse;font-size:11.5px;min-width:600px}
-.cyg-ch th{text-align:left;padding:9px 12px;font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);border-bottom:0.5px solid var(--border)}
+.cyg-ch table{width:100%;border-collapse:collapse;font-size:14px;min-width:600px}
+.cyg-ch th{text-align:left;padding:9px 12px;font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);border-bottom:0.5px solid var(--border)}
 .cyg-ch td{padding:9px 12px;border-bottom:0.5px solid var(--border);line-height:1.4;color:var(--ink)}
 .cyg-ch tr:last-child td{border-bottom:none}
 .cyg-ch td.c{font-weight:700;color:var(--dark);white-space:nowrap}
@@ -832,18 +832,18 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 /* fuentes conectadas */
 .cyg-src{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:8px;margin-bottom:12px}
 .cyg-s{background:var(--surf);border:1px solid var(--border);border-radius:10px;padding:11px 12px}
-.cyg-s-h{display:flex;align-items:center;gap:6px;font-size:11.5px;font-weight:700;color:var(--dark)}
-.cyg-s-d{font-size:10px;color:var(--grey);margin-top:4px;line-height:1.35}
+.cyg-s-h{display:flex;align-items:center;gap:6px;font-size:14px;font-weight:700;color:var(--dark)}
+.cyg-s-d{font-size:13.5px;color:var(--grey);margin-top:4px;line-height:1.35}
 /* matriz de producto */
 .cyg-q{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:10px;margin-bottom:12px}
 .cyg-qc{border-radius:12px;overflow:hidden;border:1px solid var(--border)}
-.cyg-qh{padding:9px 13px;font-size:11.5px;font-weight:700;color:#fff;display:flex;justify-content:space-between;align-items:center}
-.cyg-qh span{font-size:9px;font-weight:500;opacity:.8;letter-spacing:.06em}
+.cyg-qh{padding:9px 13px;font-size:14px;font-weight:700;color:#fff;display:flex;justify-content:space-between;align-items:center}
+.cyg-qh span{font-size:13px;font-weight:500;opacity:.8;letter-spacing:.06em}
 .cyg-qc[data-q="win"] .cyg-qh{background:var(--teal)}
 .cyg-qc[data-q="side"] .cyg-qh{background:var(--blue)}
 .cyg-qc[data-q="lose"] .cyg-qh{background:var(--gold)}
 .cyg-qc[data-q="dead"] .cyg-qh{background:var(--grey)}
-.cyg-qb{background:var(--surf);padding:11px 13px;font-size:11px;color:var(--grey);line-height:1.5;min-height:62px}
+.cyg-qb{background:var(--surf);padding:11px 13px;font-size:14px;color:var(--grey);line-height:1.5;min-height:62px}
 
 /* ============ CYBER · campañas, specs y comunicación ============ */
 .lg{width:18px;height:18px;object-fit:contain;flex-shrink:0}
@@ -855,16 +855,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .cmp-c{background:var(--surf);border:1px solid var(--border);border-radius:12px;overflow:hidden;transition:transform .18s,box-shadow .18s}
 .cmp-c:hover{transform:translateY(-2px);box-shadow:0 8px 22px rgba(42,36,32,.08)}
 .cmp-h{padding:11px 14px;display:flex;align-items:center;gap:8px;border-bottom:1px solid var(--border)}
-.cmp-h b{font-size:12.5px;font-weight:700;color:var(--dark);flex:1}
-.cmp-w{font-size:9px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:2px 7px;border-radius:20px}
+.cmp-h b{font-size:14.5px;font-weight:700;color:var(--dark);flex:1}
+.cmp-w{font-size:13px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;padding:2px 7px;border-radius:20px}
 .cmp-w.on{background:var(--teal-lt);color:var(--teal-dk)}
 .cmp-w.next{background:var(--gold-lt);color:var(--gold-dk)}
 .cmp-b{padding:12px 14px}
-.cmp-k{display:flex;justify-content:space-between;font-size:11px;padding:4px 0;border-bottom:0.5px dotted var(--border)}
+.cmp-k{display:flex;justify-content:space-between;font-size:14px;padding:4px 0;border-bottom:0.5px dotted var(--border)}
 .cmp-k:last-of-type{border-bottom:none}
 .cmp-k span{color:var(--grey)}
 .cmp-k b{color:var(--dark);font-weight:700}
-.cmp-y{font-size:11px;color:var(--ink);line-height:1.45;margin-top:9px;padding-top:9px;border-top:0.5px solid var(--border)}
+.cmp-y{font-size:14px;color:var(--ink);line-height:1.45;margin-top:9px;padding-top:9px;border-top:0.5px solid var(--border)}
 .cmp-y i{font-style:normal;color:var(--grey)}
 .cmp-c.out{opacity:.62;background:var(--bg)}
 .cmp-c.out .cmp-h b{text-decoration:line-through;text-decoration-color:var(--sand)}
@@ -872,11 +872,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .spec{background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:16px 18px;margin-bottom:10px}
 .spec-g{display:grid;grid-template-columns:repeat(auto-fit,minmax(175px,1fr));gap:9px}
 .spec-i{background:var(--bg);border:0.5px solid var(--border);border-radius:10px;padding:11px 12px}
-.spec-n{font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey)}
+.spec-n{font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey)}
 .spec-v{font-family:'DM Mono',monospace;font-size:14px;font-weight:500;color:var(--dark);margin-top:5px}
-.spec-d{font-size:10px;color:var(--grey);margin-top:4px;line-height:1.4}
+.spec-d{font-size:13.5px;color:var(--grey);margin-top:4px;line-height:1.4}
 .shot{width:100%;border-radius:11px;border:1px solid var(--border);display:block;margin-bottom:8px}
-.shot-c{font-size:11px;color:var(--grey);line-height:1.45;margin-bottom:12px}
+.shot-c{font-size:14px;color:var(--grey);line-height:1.45;margin-bottom:12px}
 .shot-c b{color:var(--dark)}
 /* pendientes con semaforo */
 .pnd{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:8px;margin-bottom:12px}
@@ -884,19 +884,19 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .pn.r{background:var(--red-lt);border-color:#F3C9C0}
 .pn.a{background:var(--gold-lt);border-color:#F0DDB4}
 .pn.g{background:var(--teal-lt);border-color:#BFE6D5}
-.pn-t{font-size:12px;font-weight:700;line-height:1.3}
+.pn-t{font-size:14.5px;font-weight:700;line-height:1.3}
 .pn.r .pn-t{color:var(--red-dk)}.pn.a .pn-t{color:var(--gold-dk)}.pn.g .pn-t{color:var(--teal-dk)}
-.pn-d{font-size:10.5px;color:var(--ink);opacity:.75;margin-top:3px;line-height:1.4}
-.pn-w{font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-top:6px;display:inline-block;padding:2px 7px;border-radius:20px;background:rgba(255,255,255,.7);color:var(--grey)}
+.pn-d{font-size:13.5px;color:var(--ink);opacity:.75;margin-top:3px;line-height:1.4}
+.pn-w{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-top:6px;display:inline-block;padding:2px 7px;border-radius:20px;background:rgba(255,255,255,.7);color:var(--grey)}
 /* comunicacion */
 .com{background:var(--surf);border:1px solid var(--border);border-radius:12px;overflow-x:auto;margin-bottom:10px}
-.com table{width:100%;border-collapse:collapse;font-size:11.5px;min-width:620px}
-.com th{text-align:left;padding:10px 12px;font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);border-bottom:0.5px solid var(--border)}
+.com table{width:100%;border-collapse:collapse;font-size:14px;min-width:620px}
+.com th{text-align:left;padding:10px 12px;font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey);border-bottom:0.5px solid var(--border)}
 .com td{padding:10px 12px;border-bottom:0.5px solid var(--border);line-height:1.45;vertical-align:top}
 .com tr:last-child td{border-bottom:none}
 .com td.d{white-space:nowrap;font-weight:700;color:var(--dark)}
 .com td.q{color:var(--ink)}
-.com td.q em{font-style:normal;color:var(--grey);display:block;margin-top:2px;font-size:10.5px}
+.com td.q em{font-style:normal;color:var(--grey);display:block;margin-top:2px;font-size:13.5px}
 .com tr.hot td{background:rgba(226,80,58,.05)}
 .com tr.mute td{color:var(--grey)}
 
@@ -907,7 +907,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .hm td.h4{background:rgba(226,80,58,.15)}
 .hm td.h5{background:rgba(226,80,58,.30)}
 .hm td.hx{background:repeating-linear-gradient(45deg,var(--beige),var(--beige) 4px,#fff 4px,#fff 8px);color:var(--grey)}
-.hm-key{display:flex;gap:10px;align-items:center;font-size:10px;color:var(--grey);margin:-4px 0 12px 2px;flex-wrap:wrap}
+.hm-key{display:flex;gap:10px;align-items:center;font-size:13.5px;color:var(--grey);margin:-4px 0 12px 2px;flex-wrap:wrap}
 .hm-sc{display:flex;border-radius:3px;overflow:hidden}
 .hm-sc i{width:16px;height:9px;display:block}
 /* estrategia en 3 movimientos */
@@ -916,12 +916,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .est-c.a{border-top:3px solid var(--gold)}
 .est-c.b{border-top:3px solid var(--dark)}
 .est-c.c{border-top:3px solid var(--red)}
-.est-n{font-family:'DM Mono',monospace;font-size:9.5px;letter-spacing:.12em;color:var(--grey)}
+.est-n{font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.12em;color:var(--grey)}
 .est-t{font-size:15px;font-weight:700;color:var(--dark);margin:6px 0 5px;letter-spacing:-.01em}
-.est-d{font-size:11.5px;color:var(--grey);line-height:1.5}
-.est-w{font-size:10.5px;color:var(--ink);margin-top:10px;padding-top:9px;border-top:0.5px solid var(--border);line-height:1.45}
+.est-d{font-size:14px;color:var(--grey);line-height:1.5}
+.est-w{font-size:13.5px;color:var(--ink);margin-top:10px;padding-top:9px;border-top:0.5px solid var(--border);line-height:1.45}
 .est-w b{color:var(--dark)}
-.est-o{display:inline-block;font-size:9px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:20px;margin-top:9px}
+.est-o{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:2px 8px;border-radius:20px;margin-top:9px}
 .est-o.pat{background:var(--violet-lt);color:var(--brown)}
 .est-o.mar{background:var(--teal-lt);color:var(--teal-dk)}
 
@@ -929,9 +929,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .mw{display:grid;grid-template-columns:repeat(auto-fit,minmax(152px,1fr));gap:8px;margin-bottom:12px}
 .mw-c{background:var(--teal-lt);border:1px solid #BFE6D5;border-radius:11px;padding:13px 14px}
 .mw-v{font-size:19px;font-weight:700;color:var(--teal-dk);letter-spacing:-.02em;line-height:1.1}
-.mw-l{font-size:10.5px;color:var(--ink);opacity:.8;margin-top:5px;line-height:1.4}
+.mw-l{font-size:13.5px;color:var(--ink);opacity:.8;margin-top:5px;line-height:1.4}
 /* antiguedad del pendiente */
-.pn-age{font-size:9px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-top:6px;margin-left:5px;display:inline-block;padding:2px 7px;border-radius:20px;background:rgba(255,255,255,.7);color:var(--grey)}
+.pn-age{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;margin-top:6px;margin-left:5px;display:inline-block;padding:2px 7px;border-radius:20px;background:rgba(255,255,255,.7);color:var(--grey)}
 .pn-age.old{background:var(--red);color:#fff}
 .pn-age.mid{background:rgba(255,255,255,.9);color:var(--red-dk)}
 
@@ -947,13 +947,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .gr-seg.w{background:var(--gold);border-radius:4px 4px 0 0}
 .gr-seg.t.meta{background:repeating-linear-gradient(45deg,#8FA9D6,#8FA9D6 5px,#A9BEE0 5px,#A9BEE0 10px)}
 .gr-seg.w.meta{background:repeating-linear-gradient(45deg,#EFC985,#EFC985 5px,#F5DCAE 5px,#F5DCAE 10px);border-radius:4px 4px 0 0}
-.gr-tot{font-size:12.5px;font-weight:700;color:var(--dark);margin-bottom:6px;white-space:nowrap}
-.gr-x{font-size:11px;color:var(--grey);margin-top:9px;text-align:center;line-height:1.35}
+.gr-tot{font-size:14.5px;font-weight:700;color:var(--dark);margin-bottom:6px;white-space:nowrap}
+.gr-x{font-size:14px;color:var(--grey);margin-top:9px;text-align:center;line-height:1.35}
 .gr-line{position:absolute;left:0;right:-62px;border-top:1px dashed var(--sand);z-index:1}
-.gr-line span{position:absolute;right:0;top:-7px;font-size:10px;font-weight:700;color:var(--grey);background:var(--surf);padding:0 0 0 8px;white-space:nowrap}
+.gr-line span{position:absolute;right:0;top:-7px;font-size:13.5px;font-weight:700;color:var(--grey);background:var(--surf);padding:0 0 0 8px;white-space:nowrap}
 .gr-line.meta{border-top-color:var(--teal);border-top-style:solid}
 .gr-line.meta span{color:var(--teal-dk)}
-.gr-key{display:flex;gap:16px;font-size:10.5px;color:var(--grey);margin-top:14px;padding-top:12px;border-top:0.5px solid var(--border)}
+.gr-key{display:flex;gap:16px;font-size:13.5px;color:var(--grey);margin-top:14px;padding-top:12px;border-top:0.5px solid var(--border)}
 .gr-key i{display:inline-block;width:11px;height:11px;border-radius:3px;margin-right:6px;vertical-align:-1px}
 /* wins con antes y despues */
 .wn{display:grid;grid-template-columns:repeat(auto-fit,minmax(178px,1fr));gap:8px;margin-bottom:12px}
@@ -963,58 +963,58 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .wn-c.flat{border-left:3px solid var(--sand)}
 .wn-r{display:flex;align-items:baseline;gap:6px;justify-content:center;flex-wrap:wrap}
 .wn-a{font-size:13px;color:var(--grey);text-decoration:line-through;text-decoration-color:var(--sand)}
-.wn-ar{color:var(--sand);font-size:11px}
+.wn-ar{color:var(--sand);font-size:14px}
 .wn-b{font-size:22px;font-weight:700;letter-spacing:-.02em}
 .wn-c.up .wn-b{color:var(--teal-dk)}
 .wn-c.down .wn-b{color:var(--red-dk)}
 .wn-c.flat .wn-b{color:var(--dark)}
-.wn-l{font-size:11px;color:var(--grey);margin-top:7px;line-height:1.35;max-width:22ch}
-.wn-d{font-size:9.5px;font-weight:700;margin-top:6px;display:inline-block;padding:2px 7px;border-radius:20px}
+.wn-l{font-size:14px;color:var(--grey);margin-top:7px;line-height:1.35;max-width:22ch}
+.wn-d{font-size:13px;font-weight:700;margin-top:6px;display:inline-block;padding:2px 7px;border-radius:20px}
 .wn-c.up .wn-d{background:var(--teal-lt);color:var(--teal-dk)}
 .wn-c.down .wn-d{background:var(--red-lt);color:var(--red-dk)}
 .wn-c.flat .wn-d{background:var(--beige);color:var(--grey)}
 
 /* embudo con la piel del admin de Shopify */
 .shf{background:#F1F1F1;border:1px solid #E3E3E3;border-radius:14px;padding:13px;margin-bottom:10px;font-family:-apple-system,'Helvetica Neue',sans-serif}
-.shf-tp{display:flex;align-items:center;gap:7px;padding:2px 5px 11px;font-size:11.5px;color:#616161;font-weight:600}
+.shf-tp{display:flex;align-items:center;gap:7px;padding:2px 5px 11px;font-size:14px;color:#616161;font-weight:600}
 .shf-tp i{width:9px;height:9px;border-radius:2px;background:#008060;display:inline-block}
 .shf-card{background:#fff;border:1px solid #E3E3E3;border-radius:12px;box-shadow:0 1px 0 rgba(26,26,26,.07);padding:16px 18px 14px}
 .shf-h{font-size:14px;font-weight:700;color:#303030;letter-spacing:-.01em}
-.shf-s{font-size:11.5px;color:#616161;margin:2px 0 12px}
+.shf-s{font-size:14px;color:#616161;margin:2px 0 12px}
 .shf-st{display:grid;grid-template-columns:132px 1fr 132px;gap:12px;align-items:center;padding:8px 0;border-top:1px solid #F1F1F1}
 .shf-st:first-of-type{border-top:none}
 .shf-st[data-br="1"]{opacity:.92}
-.shf-n{font-size:11.5px;font-weight:650;color:#303030;line-height:1.3}
-.shf-n span{display:block;font-size:9.5px;color:#8A8A8A;font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin-bottom:2px}
+.shf-n{font-size:14px;font-weight:650;color:#303030;line-height:1.3}
+.shf-n span{display:block;font-size:13px;color:#8A8A8A;font-weight:600;letter-spacing:.07em;text-transform:uppercase;margin-bottom:2px}
 .shf-tr{height:30px;border-radius:7px;background:#F1F1F1;overflow:hidden}
-.shf-f{height:100%;border-radius:7px;background:#008060;display:flex;align-items:center;padding:0 11px;font-size:12.5px;font-weight:700;color:#fff;white-space:nowrap}
+.shf-f{height:100%;border-radius:7px;background:#008060;display:flex;align-items:center;padding:0 11px;font-size:14.5px;font-weight:700;color:#fff;white-space:nowrap}
 .shf-f[data-c="d"]{background:#303030}.shf-f[data-c="g"]{background:#B98900}.shf-f[data-c="k"]{background:#005C45}
 .shf-st[data-br="1"] .shf-tr{background:transparent;border:1px dashed #D5D5D5}
 .shf-st[data-br="1"] .shf-f{background:#FFF1D6;color:#8A6116;border:1px solid #F0DDB4}
-.shf-v{text-align:right;font-size:11.5px;color:#616161;line-height:1.35}
+.shf-v{text-align:right;font-size:14px;color:#616161;line-height:1.35}
 .shf-v b{display:block;font-size:13px;color:#303030}
-.shf-ft{margin-top:11px;padding-top:11px;border-top:1px solid #F1F1F1;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:11px;color:#616161}
+.shf-ft{margin-top:11px;padding-top:11px;border-top:1px solid #F1F1F1;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:14px;color:#616161}
 .shf-ft b{color:#303030}
 @media(max-width:700px){.shf-st{grid-template-columns:1fr;gap:5px}.shf-v{text-align:left}}
 .pj-sl.sp{background:linear-gradient(90deg,#0866FF 0%,#0866FF 62%,#FBBC04 62%,#FBBC04 100%)}
 .pj-spv{font-size:13px;color:var(--grey);margin-top:4px}
 .pj-spv b{color:var(--dark);font-size:16px}
-.pj-warm{margin-top:11px;padding-top:10px;border-top:0.5px solid #BFE6D5;font-size:10.5px;color:var(--teal-dk);line-height:1.5}
+.pj-warm{margin-top:11px;padding-top:10px;border-top:0.5px solid #BFE6D5;font-size:13.5px;color:var(--teal-dk);line-height:1.5}
 .pj-warm b{font-weight:700}
 /* banda de alertas: lo que frena, arriba de todo */
 .alr{border:1.5px solid var(--red);border-radius:13px;background:var(--surf);margin-bottom:12px;overflow:hidden}
 .alr-hd{background:var(--red);color:#fff;padding:11px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
 .alr-t{font-size:13.5px;font-weight:700;letter-spacing:-.01em}
-.alr-c{font-size:10.5px;font-weight:600;opacity:.88}
+.alr-c{font-size:13.5px;font-weight:600;opacity:.88}
 .alr-i{display:grid;grid-template-columns:20px 1fr auto;gap:12px;align-items:center;padding:12px 16px;border-top:0.5px solid var(--border)}
 .alr-i:first-of-type{border-top:none}
-.alr-n{font-family:'DM Mono',monospace;font-size:11px;color:var(--sand)}
-.alr-tx{font-size:12.5px;font-weight:700;color:var(--dark);line-height:1.35}
-.alr-d{display:block;font-size:10.5px;font-weight:400;color:var(--grey);margin-top:3px;max-width:78ch}
-.alr-w{font-size:9.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;background:var(--red);color:#fff}
+.alr-n{font-family:'DM Mono',monospace;font-size:14px;color:var(--sand)}
+.alr-tx{font-size:14.5px;font-weight:700;color:var(--dark);line-height:1.35}
+.alr-d{display:block;font-size:13.5px;font-weight:400;color:var(--grey);margin-top:3px;max-width:78ch}
+.alr-w{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:3px 9px;border-radius:20px;white-space:nowrap;background:var(--red);color:#fff}
 .alr-w[data-cal="0"]{background:var(--gold-lt);color:var(--gold-dk)}
 @media(max-width:640px){.alr-i{grid-template-columns:20px 1fr;row-gap:7px}.alr-w{grid-column:2;justify-self:start}}
-.flow-note{font-size:11.5px;color:var(--grey);margin-top:14px;padding-top:12px;border-top:0.5px solid var(--border);line-height:1.5}
+.flow-note{font-size:14px;color:var(--grey);margin-top:14px;padding-top:12px;border-top:0.5px solid var(--border);line-height:1.5}
 .flow-note b{color:var(--dark)}
 
 /* ═══ BLOQUES NUMERADOS Y PLEGABLES ═══ */
@@ -1022,10 +1022,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .blk>summary{list-style:none;cursor:pointer;padding:15px 18px;display:flex;align-items:center;gap:11px;user-select:none;transition:background .15s}
 .blk>summary::-webkit-details-marker{display:none}
 .blk>summary:hover{background:var(--beige)}
-.blk-n{font-family:'DM Mono',monospace;font-size:11px;font-weight:500;color:var(--grey);background:var(--bg);border:0.5px solid var(--border);border-radius:6px;padding:3px 7px;flex-shrink:0}
+.blk-n{font-family:'DM Mono',monospace;font-size:14px;font-weight:500;color:var(--grey);background:var(--bg);border:0.5px solid var(--border);border-radius:6px;padding:3px 7px;flex-shrink:0}
 .blk-t{font-size:16px;font-weight:700;color:var(--dark);letter-spacing:-.015em;line-height:1.25;flex:1}
-.blk-s{font-size:11.5px;color:var(--grey);font-weight:400;display:block;margin-top:2px;letter-spacing:0}
-.blk-x{color:var(--sand);font-size:12px;transition:transform .2s;flex-shrink:0}
+.blk-s{font-size:14px;color:var(--grey);font-weight:400;display:block;margin-top:2px;letter-spacing:0}
+.blk-x{color:var(--sand);font-size:14.5px;transition:transform .2s;flex-shrink:0}
 .blk[open]>summary .blk-x{transform:rotate(180deg)}
 .blk[open]>summary{border-bottom:1px solid var(--border)}
 .blk-b{padding:16px 18px 18px}
@@ -1035,25 +1035,25 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .pj-sl{width:100%;-webkit-appearance:none;appearance:none;height:6px;border-radius:3px;background:linear-gradient(90deg,var(--teal) 0%,var(--gold) 55%,var(--red) 100%);outline:none;margin:14px 0 6px}
 .pj-sl::-webkit-slider-thumb{-webkit-appearance:none;width:22px;height:22px;border-radius:50%;background:var(--dark);border:3px solid #fff;box-shadow:0 2px 8px rgba(0,0,0,.25);cursor:pointer}
 .pj-sl::-moz-range-thumb{width:22px;height:22px;border-radius:50%;background:var(--dark);border:3px solid #fff;cursor:pointer}
-.pj-mark{display:flex;justify-content:space-between;font-size:10px;color:var(--grey)}
+.pj-mark{display:flex;justify-content:space-between;font-size:13.5px;color:var(--grey)}
 .pj-big{font-size:32px;font-weight:700;letter-spacing:-.03em;color:var(--dark);line-height:1}
-.pj-lb{font-size:10px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
+.pj-lb{font-size:13.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--grey)}
 .pj-out{background:var(--teal-lt);border:1px solid #BFE6D5;border-radius:11px;padding:16px 18px;align-self:stretch;display:flex;flex-direction:column;justify-content:center}
 .pj-out .pj-big{color:var(--teal-dk);font-size:26px}
 .pj-kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:9px;margin-bottom:14px}
 .pj-k{background:var(--bg);border:0.5px solid var(--border);border-radius:10px;padding:15px 14px;text-align:center}
 .pj-kv{font-size:27px;font-weight:700;color:var(--dark);letter-spacing:-.03em;line-height:1}
-.pj-kl{font-size:10.5px;color:var(--grey);margin-top:7px;line-height:1.3}
+.pj-kl{font-size:13.5px;color:var(--grey);margin-top:7px;line-height:1.3}
 .pj-k.hi{background:var(--teal-lt);border-color:#BFE6D5}
 .pj-k.hi .pj-kv{color:var(--teal-dk)}
 .pj-k.wr{background:var(--gold-lt);border-color:#F0DDB4}
 .pj-k.wr .pj-kv{color:var(--gold-dk)}
 /* interfaz meta en codigo */
 .ui{border:1px solid #DADDE1;border-radius:10px;overflow:hidden;background:#fff;margin-bottom:8px}
-.ui-bar{background:#0866FF;color:#fff;padding:9px 14px;font-size:12px;font-weight:600;display:flex;align-items:center;gap:8px}
+.ui-bar{background:#0866FF;color:#fff;padding:9px 14px;font-size:14.5px;font-weight:600;display:flex;align-items:center;gap:8px}
 .ui-bar.g{background:#fff;color:#3c4043;border-bottom:1px solid #DADCE0;font-weight:500}
-.ui-tb{width:100%;border-collapse:collapse;font-size:11.5px;font-family:-apple-system,'Helvetica Neue',sans-serif}
-.ui-tb th{background:#F5F6F7;text-align:left;padding:8px 12px;font-size:10px;font-weight:600;color:#65676B;border-bottom:1px solid #DADDE1;white-space:nowrap}
+.ui-tb{width:100%;border-collapse:collapse;font-size:14px;font-family:-apple-system,'Helvetica Neue',sans-serif}
+.ui-tb th{background:#F5F6F7;text-align:left;padding:8px 12px;font-size:13.5px;font-weight:600;color:#65676B;border-bottom:1px solid #DADDE1;white-space:nowrap}
 .ui-tb td{padding:9px 12px;border-bottom:1px solid #EBEDF0;vertical-align:middle;color:#1C1E21;white-space:nowrap}
 .ui-tb tr:last-child td{border-bottom:none}
 .ui-nm{color:#0866FF;font-weight:500;user-select:all;cursor:text}
@@ -1062,12 +1062,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .ui-sw[data-on="1"]{background:#31A24C}
 .ui-sw::after{content:'';position:absolute;top:2px;left:2px;width:11px;height:11px;border-radius:50%;background:#fff;transition:left .15s}
 .ui-sw[data-on="1"]::after{left:13px}
-.ui-st{font-size:11px;color:#65676B}
-.ui-sub{font-size:10px;color:#8A8D91;display:block}
+.ui-st{font-size:14px;color:#65676B}
+.ui-sub{font-size:13.5px;color:#8A8D91;display:block}
 .ui-tot td{background:#F5F6F7;font-weight:700}
 /* dimension pegada a la imagen */
-.dim{display:flex;justify-content:space-between;align-items:baseline;font-size:10.5px;color:var(--grey);margin:-4px 0 12px;padding:0 2px}
-.dim b{color:var(--dark);font-size:11.5px}
+.dim{display:flex;justify-content:space-between;align-items:baseline;font-size:13.5px;color:var(--grey);margin:-4px 0 12px;padding:0 2px}
+.dim b{color:var(--dark);font-size:14px}
 .dim code{font-family:'DM Mono',monospace;color:var(--ink);background:var(--beige);padding:2px 7px;border-radius:5px;user-select:all}
 
 /* ── pantallas anchas: columnas fijas para no dejar filas huérfanas ── */
@@ -1138,30 +1138,35 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="alr">
     <div class="alr-hd">
       <span class="alr-t">⚠ Lo que está abierto</span>
-      <span class="alr-c">5 abiertas · quedan <b data-hasta="2026-11-27">—</b> días para el Black</span>
+      <span class="alr-c">6 abiertas · quedan <b data-hasta="2026-11-27">—</b> días para el Black</span>
     </div>
     <div class="alr-i">
       <div class="alr-n">01</div>
-      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>El remarketing encendido desde el primer día<span class="alr-d">En el cyber se prendió el tercer día de seis. Es el aprendizaje más caro del evento pasado y el más fácil de corregir: la audiencia de carro y de checkout se arma antes, no durante.</span></div>
+      <div class="alr-tx"><span class="est-o pat" style="margin-right:7px">Agendar</span>Queda 1 sesión del bloque<span class="alr-d">El bloque 2 cerró el 16 de noviembre de 2026 con 11 de 12 sesiones usadas. La última está sin agendar, y es donde se arma el bloque 3.</span></div>
       <div class="alr-w" data-limite="2026-11-26">—</div>
     </div>
     <div class="alr-i">
       <div class="alr-n">02</div>
+      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>El remarketing encendido desde el primer día<span class="alr-d">En el cyber se prendió el tercer día de seis. Es el aprendizaje más caro del evento pasado y el más fácil de corregir: la audiencia de carro y de checkout se arma antes, no durante.</span></div>
+      <div class="alr-w" data-limite="2026-11-26">—</div>
+    </div>
+    <div class="alr-i">
+      <div class="alr-n">03</div>
       <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>Las tres campañas de Google que corren todo el año<span class="alr-d">En el cyber Google devolvió $2,7M con $160.000 invertidos. Es el canal más rentable que tiene y hoy sigue apagado entre evento y evento.</span></div>
       <div class="alr-w" data-limite="2026-11-14">—</div>
     </div>
     <div class="alr-i">
-      <div class="alr-n">03</div>
+      <div class="alr-n">04</div>
       <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>La mecánica del pre, antes del 16<span class="alr-d">Arranca el lunes 16 y todavía no está armada. Selección de vestidos en el lobby, botón de WhatsApp en la ficha y el presupuesto de tráfico cargado. Lo que no esté montado el domingo, no corre.</span></div>
       <div class="alr-w" data-limite="2026-11-15">—</div>
     </div>
     <div class="alr-i">
-      <div class="alr-n">04</div>
+      <div class="alr-n">05</div>
       <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>Las redes, con dueño<span class="alr-d">Una persona part time que Belén elija y lidere, con su propio incentivo. Es el único frente del negocio sin nadie a cargo, y el Black se comunica desde ahí.</span></div>
       <div class="alr-w" data-limite="2026-11-14">—</div>
     </div>
     <div class="alr-i">
-      <div class="alr-n">05</div>
+      <div class="alr-n">06</div>
       <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>Conectar Agenda Pro y WhatsApp a tu Cloud<span class="alr-d">Son las dos fuentes donde se agenda y se cierra, y son las dos que la IA no ve. Mientras falten, cada sugerencia de presupuesto llega con la mitad del negocio a la vista.</span></div>
       <div class="alr-w" data-limite="2026-11-28">—</div>
     </div>
@@ -1190,7 +1195,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
   <div class="alert-box info" style="margin-top:10px">
     <span class="alert-icon">📅</span>
-    <div><div class="alert-title">El bloque 2 cerró el 16 de noviembre</div><div class="alert-text">Queda una sesión por usar. El bloque 3 son tres meses con el foco puesto en que la IA haga la parte operativa: el contenido, la edición, la lectura de campañas y el seguimiento por WhatsApp. Lo conversamos en la última sesión del bloque.</div></div>
+    <div><div class="alert-title">El bloque 2 cerró el 16 de noviembre de 2026</div><div class="alert-text">Queda una sesión por usar. El bloque 3 son tres meses con el foco puesto en que la IA haga la parte operativa: el contenido, la edición, la lectura de campañas y el seguimiento por WhatsApp. Lo conversamos en la última sesión del bloque.</div></div>
   </div>
 
   <div class="slbl">Cómo creciste desde junio</div>
@@ -1337,7 +1342,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="slbl">Stack y costo por canal</div>
   <div class="dual">
     <div class="ch tienda" style="padding:14px 16px">
-      <div class="ch-top" style="margin-bottom:9px"><span class="ch-name" style="font-size:12.5px">🏪 Tienda</span><span class="ch-kpi-v">$1,3M / mes</span></div>
+      <div class="ch-top" style="margin-bottom:9px"><span class="ch-name" style="font-size:14.5px">🏪 Tienda</span><span class="ch-kpi-v">$1,3M / mes</span></div>
       <div class="stack-wrap">
         <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=facebook.com" alt="">Meta Ads</div>
         <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=agendapro.com" alt="">Agenda Pro</div>
@@ -1346,7 +1351,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       </div>
     </div>
     <div class="ch web" style="padding:14px 16px">
-      <div class="ch-top" style="margin-bottom:9px"><span class="ch-name" style="font-size:12.5px">💻 Web</span><span class="ch-kpi-v" style="color:var(--teal)">$0 / mes</span></div>
+      <div class="ch-top" style="margin-bottom:9px"><span class="ch-name" style="font-size:14.5px">💻 Web</span><span class="ch-kpi-v" style="color:var(--teal)">$0 / mes</span></div>
       <div class="stack-wrap">
         <div class="sp"><img class="sp-fav" src="https://www.google.com/s2/favicons?sz=64&domain=shopify.com" alt="">Shopify <span class="bdg amber" style="margin-left:3px">sin Claude</span></div>
         <div class="sp"><div class="sd off"></div>SEO</div>
@@ -1366,9 +1371,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <details class="blk" open><summary><span class="blk-n">01</span><span class="blk-t">El Black no es el cyber<span class="blk-s">Mismo calendario, otra clienta y otro objetivo</span></span><span class="blk-x">▼</span></summary>
   <div class="blk-b">
   <div class="rn-grid">
-    <div class="rn-c"><div class="rn-l">Fechas</div><div class="rn-v">27 al 30 nov</div><div class="rn-s">4 días · pre el 26</div></div>
+    <div class="rn-c"><div class="rn-l">Fechas</div><div class="rn-v">27 al 30 nov 2026</div><div class="rn-s">4 días · pre el 26</div></div>
     <div class="rn-c"><div class="rn-l">Objetivo</div><div class="rn-v">Matar stock</div><div class="rn-s">no es venta calzada por tiempo</div></div>
-    <div class="rn-c"><div class="rn-l">Pre</div><div class="rn-v">16 al 25 nov</div><div class="rn-s">tráfico a los vestidos, no lista de inscripción</div></div>
+    <div class="rn-c"><div class="rn-l">Pre</div><div class="rn-v">16 al 25 nov 2026</div><div class="rn-s">tráfico a los vestidos, no lista de inscripción</div></div>
     <div class="rn-c up"><div class="rn-l">Canal del evento</div><div class="rn-v">Web</div><div class="rn-s">el showroom se comunica aparte</div></div>
   </div>
   <div class="alert-box info" style="margin-top:10px">
@@ -1399,7 +1404,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="spec">
     <div class="pj-top">
       <div>
-        <div class="pj-lb">Presupuesto de los 5 días · 26 al 30 de noviembre</div>
+        <div class="pj-lb">Presupuesto de los 5 días · 26 al 30 de noviembre de 2026</div>
         <div class="pj-big" id="bk-total">$1.200.000</div>
         <input type="range" class="pj-sl" id="bk-slider" min="600000" max="2500000" step="50000" value="1200000">
         <div class="pj-mark"><span>$600K</span><span>nov 2024 · $3M</span><span>$2,5M</span></div>
@@ -1411,7 +1416,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="pj-out">
         <div class="pj-lb" style="color:var(--teal-dk)">Venta web proyectada</div>
         <div class="pj-big" id="bk-venta">—</div>
-        <div style="font-size:11.5px;color:var(--teal-dk);margin-top:7px">Retorno global <b id="bk-roas">—</b> · ticket $156.275</div>
+        <div style="font-size:14px;color:var(--teal-dk);margin-top:7px">Retorno global <b id="bk-roas">—</b> · ticket $156.275</div>
         <div class="pj-warm">Pedidos proyectados <b id="bk-ped">—</b><br>Noviembre 2024: $2,4M en Meta y $560K en Google<br>Noviembre 2026 hasta hoy: $707.000 en Meta, $420 por mensaje</div>
       </div>
     </div>
@@ -1436,7 +1441,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
   </div></details>
 
-  <details class="blk"><summary><span class="blk-n">04</span><span class="blk-t">La secuencia completa<span class="blk-s">Del 16 de noviembre al 1 de diciembre</span></span><span class="blk-x">▼</span></summary>
+  <details class="blk"><summary><span class="blk-n">04</span><span class="blk-t">La secuencia completa<span class="blk-s">Del 16 de noviembre de 2026 al 1 de diciembre de 2026</span></span><span class="blk-x">▼</span></summary>
   <div class="blk-b">
   <div class="cy-flow">
     <div class="cy-fl" style="min-width:980px">
@@ -1450,7 +1455,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="cy-fa">→</div>
       <div class="cy-fs"><div class="cy-fs-n">30 · Cierre</div><div class="cy-fs-t">Última unidad</div><div class="cy-fs-d">Urgencia real, no inventada.</div></div>
       <div class="cy-fa">→</div>
-      <div class="cy-fs end"><div class="cy-fs-n">1 dic · Lectura</div><div class="cy-fs-t">Qué se guarda</div><div class="cy-fs-d">Qué vendió, de dónde vino y qué sirve para diciembre.</div></div>
+      <div class="cy-fs end"><div class="cy-fs-n">1 dic 2026 · Lectura</div><div class="cy-fs-t">Qué se guarda</div><div class="cy-fs-d">Qué vendió, de dónde vino y qué sirve para diciembre.</div></div>
     </div>
   </div>
   </div></details>
@@ -1556,12 +1561,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
 
-  <div class="slbl">Bloque 2 · septiembre a noviembre · 12 sesiones</div>
+  <div class="slbl">Bloque 2 · septiembre a noviembre de 2026 · 12 sesiones</div>
   <div class="phase-grid">
     <div class="phase-card m1">
       <div class="phase-hd"><span class="phase-tag">Fase 1 · Sem 13–17</span><span class="bdg red">En curso</span></div>
       <div class="phase-title">Activar el e-commerce y llegar armadas al cyber</div>
-      <div class="phase-text">La web hizo $692K en agosto contra los ~$5M de septiembre del año pasado. Se separa la atribución real, se recupera la conversión antes de mandar tráfico, y todo eso aterriza en el evento del 5 de octubre.</div>
+      <div class="phase-text">La web hizo $692K en agosto contra los ~$5M de septiembre del año pasado. Se separa la atribución real, se recupera la conversión antes de mandar tráfico, y todo eso aterriza en el evento del 5 de octubre de 2026.</div>
       <div class="phase-tags"><span class="bdg grey">Atribución</span><span class="bdg grey">Add-to-Cart</span><span class="bdg grey">Preparación</span></div>
     </div>
     <div class="phase-card m2">
@@ -1583,27 +1588,27 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
   <div class="rm-track-wrap">
-    <div style="font-size:12px;font-weight:600;color:var(--dark);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px">
+    <div style="font-size:14.5px;font-weight:600;color:var(--dark);margin-bottom:14px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:6px">
       Recorrido del bloque 2
-      <span class="bdg red">🔴 Bloque 2 cerrado el 16 nov · queda 1 sesión por usar</span>
+      <span class="bdg red">🔴 Bloque 2 cerrado el 16 nov 2026 · queda 1 sesión por usar</span>
     </div>
     <div class="rm-track">
-      <div class="rm-node"><div class="rm-dot done">1</div><div class="rm-lbl">Cierre agosto</div><div class="rm-sub">3 sep</div></div>
-      <div class="rm-node"><div class="rm-dot done">2</div><div class="rm-lbl">Cyber: data</div><div class="rm-sub">8 sep</div></div>
-      <div class="rm-node"><div class="rm-dot done">3</div><div class="rm-lbl">Lobby + CRO</div><div class="rm-sub">14 sep</div></div>
-      <div class="rm-node"><div class="rm-dot done">4</div><div class="rm-lbl">Campañas</div><div class="rm-sub">22 sep</div></div>
-      <div class="rm-node"><div class="rm-dot done">5</div><div class="rm-lbl">Google + montar</div><div class="rm-sub">28 sep</div></div>
-      <div class="rm-node"><div class="rm-dot done">6</div><div class="rm-lbl">Cargar todo</div><div class="rm-sub">30 sep</div></div>
-      <div class="rm-node"><div class="rm-dot done">7</div><div class="rm-lbl">CYBER</div><div class="rm-sub">2 al 7 oct</div></div>
-      <div class="rm-node"><div class="rm-dot done">8</div><div class="rm-lbl">Cierre del cyber</div><div class="rm-sub">14 oct</div></div>
-      <div class="rm-node"><div class="rm-dot critical">9</div><div class="rm-lbl">No realizada</div><div class="rm-sub">2 nov</div></div>
-      <div class="rm-node"><div class="rm-dot done">10</div><div class="rm-lbl">Temporada alta</div><div class="rm-sub">3 nov</div></div>
-      <div class="rm-node"><div class="rm-dot done">11</div><div class="rm-lbl">Mecánica Black</div><div class="rm-sub">10 nov</div></div>
+      <div class="rm-node"><div class="rm-dot done">1</div><div class="rm-lbl">Cierre agosto</div><div class="rm-sub">3 sep 2026</div></div>
+      <div class="rm-node"><div class="rm-dot done">2</div><div class="rm-lbl">Cyber: data</div><div class="rm-sub">8 sep 2026</div></div>
+      <div class="rm-node"><div class="rm-dot done">3</div><div class="rm-lbl">Lobby + CRO</div><div class="rm-sub">14 sep 2026</div></div>
+      <div class="rm-node"><div class="rm-dot done">4</div><div class="rm-lbl">Campañas</div><div class="rm-sub">22 sep 2026</div></div>
+      <div class="rm-node"><div class="rm-dot done">5</div><div class="rm-lbl">Google + montar</div><div class="rm-sub">28 sep 2026</div></div>
+      <div class="rm-node"><div class="rm-dot done">6</div><div class="rm-lbl">Cargar todo</div><div class="rm-sub">30 sep 2026</div></div>
+      <div class="rm-node"><div class="rm-dot done">7</div><div class="rm-lbl">CYBER</div><div class="rm-sub">2 al 7 oct 2026</div></div>
+      <div class="rm-node"><div class="rm-dot done">8</div><div class="rm-lbl">Cierre del cyber</div><div class="rm-sub">14 oct 2026</div></div>
+      <div class="rm-node"><div class="rm-dot critical">9</div><div class="rm-lbl">No realizada</div><div class="rm-sub">2 nov 2026</div></div>
+      <div class="rm-node"><div class="rm-dot done">10</div><div class="rm-lbl">Temporada alta</div><div class="rm-sub">3 nov 2026</div></div>
+      <div class="rm-node"><div class="rm-dot done">11</div><div class="rm-lbl">Mecánica Black</div><div class="rm-sub">10 nov 2026</div></div>
       <div class="rm-node"><div class="rm-dot next">12</div><div class="rm-lbl">Última del bloque</div><div class="rm-sub">por agendar</div></div>
     </div>
   </div>
 
-  <div class="slbl">Bloque 1 · junio a agosto · completado</div>
+  <div class="slbl">Bloque 1 · junio a agosto de 2026 · completado</div>
   <div class="alert-box info" style="margin-top:0">
     <span class="alert-icon">✓</span>
     <div><div class="alert-title">12 sesiones cerradas — de 5% a 36% de cierre en tienda</div><div class="alert-text">CAC corregido de $63.9K a ~$19K · citas que pagan de 13% a 42% · equipo comercial de 1 a 3 · julio cerrado en $19M. El detalle sesión por sesión está más abajo.</div></div>
@@ -1611,7 +1616,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
   <div class="slbl">Última sesión</div>
   <div class="week-card done open" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sesión 11 — La mecánica del Black, con la data de cómo te pagan</div><div class="week-date">Llamada 10 nov (59 min)</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sesión 11 — La mecánica del Black, con la data de cómo te pagan</div><div class="week-date">Llamada 10 nov 2026 (59 min)</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg red">Black</span><span class="bdg grey">Cuotas</span><span class="bdg grey">Públicos</span><span class="bdg grey">Feedback</span></div>
@@ -1637,7 +1642,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
   <div class="slbl">Sesión 10</div>
   <div class="week-card done" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sesión 10 — Entrar a temporada alta con la web operando</div><div class="week-date">Llamada 3 nov (60 min) · la primera en tres semanas</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sesión 10 — Entrar a temporada alta con la web operando</div><div class="week-date">Llamada 3 nov 2026 (60 min) · la primera en tres semanas</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg red">Black Friday</span><span class="bdg grey">Google</span><span class="bdg grey">Contenido con IA</span><span class="bdg grey">Success</span></div>
@@ -1667,7 +1672,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
   <div class="slbl">Sesión no realizada</div>
   <div class="week-card critical open" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sesión 9 — No se realizó</div><div class="week-date">📅 Lunes 2 de noviembre · se descuenta del bloque</div></div><span class="bdg red">Descontada</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sesión 9 — No se realizó</div><div class="week-date">📅 Lunes 2 de noviembre de 2026 · se descuenta del bloque</div></div><span class="bdg red">Descontada</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg red">Reagendada 4 veces</span><span class="bdg grey">19 días sin sesión</span><span class="bdg grey">Quedan 3 de 12</span></div>
@@ -1675,7 +1680,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="week-text">Se reagendó cuatro veces en dos semanas y no se alcanzó a tomar. La sesión se descuenta del bloque: quedan 3 de 12.</div>
 
       <div class="week-sec">Lo que costó</div>
-      <div class="week-text">Desde el 14 de octubre no hay sesión. Son 19 días sin revisar el canal web, justo en la entrada a la temporada más alta del año.</div>
+      <div class="week-text">Desde el 14 de octubre de 2026 no hay sesión. Son 19 días sin revisar el canal web, justo en la entrada a la temporada más alta del año.</div>
 
       <div class="week-sec">Lo que quedó sin ver</div>
       <div class="week-text"><ul>
@@ -1686,13 +1691,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       </ul></div>
 
       <div class="week-sec">Cómo no se repite</div>
-      <div class="week-text">Las dos sesiones que quedan se fijan con día y hora fija en la sesión del 3 de noviembre. Un bloque de 12 sesiones sin día fijo se consume en reagendamientos.</div>
+      <div class="week-text">Las dos sesiones que quedan se fijan con día y hora fija en la sesión del 3 de noviembre de 2026. Un bloque de 12 sesiones sin día fijo se consume en reagendamientos.</div>
     </div>
   </div>
 
   <div class="slbl">Bloque 2 · sesiones anteriores</div>
   <div class="week-card done" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 17 — Montar Google y dejar todo cargado</div><div class="week-date">Llamada 28 sep (60 + 33 min)</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 17 — Montar Google y dejar todo cargado</div><div class="week-date">Llamada 28 sep 2026 (60 + 33 min)</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg red">Cyber</span><span class="bdg grey">Medición</span><span class="bdg grey">Google</span></div>
@@ -1724,7 +1729,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
 <div class="week-card done" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 16 — El guión de campañas del cyber</div><div class="week-date">Llamada 22 sep (49 min)</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 16 — El guión de campañas del cyber</div><div class="week-date">Llamada 22 sep 2026 (49 min)</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg red">Cyber</span><span class="bdg grey">Campañas</span><span class="bdg grey">Presupuesto</span></div>
@@ -1754,7 +1759,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
   </div>
   <div class="week-card done" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 15 — El lobby y la PDP de los 10</div><div class="week-date">Llamada 14 sep (60 min)</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 15 — El lobby y la PDP de los 10</div><div class="week-date">Llamada 14 sep 2026 (60 min)</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg red">Cyber</span><span class="bdg grey">Lobby</span><span class="bdg grey">PDP</span></div>
@@ -1783,7 +1788,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
   <div class="week-card done" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 14 — Cyber: la data del año pasado y la estructura</div><div class="week-date">Llamada 8 sep (55 + 33 min)</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 14 — Cyber: la data del año pasado y la estructura</div><div class="week-date">Llamada 8 sep 2026 (55 + 33 min)</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg red">Cyber</span><span class="bdg grey">Data 2025</span><span class="bdg grey">Estructura</span></div>
@@ -1801,7 +1806,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
   <div class="week-card done" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 13 — Cierre de agosto y el filtro de la pauta</div><div class="week-date">Llamada 3 sep (58 min)</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 13 — Cierre de agosto y el filtro de la pauta</div><div class="week-date">Llamada 3 sep 2026 (58 min)</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="rn-grid" style="margin-bottom:12px">
@@ -1832,14 +1837,14 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
   <div class="slbl">Camino del bloque 2 · semana a semana</div>
   <div class="rm-uc-grid">
-    <div class="rm-uc next-call"><div class="rm-uc-num">Sem 17 · 28 sep</div><div class="rm-uc-title">Montar Google PMax junto y dejar las campañas listas y apagadas</div><div class="rm-uc-chips"><span class="bdg red">Cyber</span><span class="bdg grey">Google</span></div></div>
-    <div class="rm-uc"><div class="rm-uc-num">Sem 18 · 5 oct</div><div class="rm-uc-title">Cyber en vivo: monitoreo y ajuste diario</div><div class="rm-uc-chips"><span class="bdg red">Evento</span></div></div>
-    <div class="rm-uc"><div class="rm-uc-num">Sem 19 · 12 oct</div><div class="rm-uc-title">Last chance, carros colgados y lectura de resultados</div><div class="rm-uc-chips"><span class="bdg grey">Cyber</span><span class="bdg grey">Datos</span></div></div>
-    <div class="rm-uc"><div class="rm-uc-num">Sem 20 · 19 oct</div><div class="rm-uc-title">Recompra y referidos sobre quienes compraron</div><div class="rm-uc-chips"><span class="bdg grey">Recompra</span></div></div>
-    <div class="rm-uc"><div class="rm-uc-num">Sem 21 · 26 oct</div><div class="rm-uc-title">SEO y PDP: contenido por dolor de búsqueda</div><div class="rm-uc-chips"><span class="bdg grey">E-comm</span><span class="bdg grey">SEO</span></div></div>
-    <div class="rm-uc"><div class="rm-uc-num">Sem 22 · 2 nov</div><div class="rm-uc-title">Nicho bodas: pauta separada de gala</div><div class="rm-uc-chips"><span class="bdg grey">Pauta</span><span class="bdg grey">Nicho</span></div></div>
-    <div class="rm-uc"><div class="rm-uc-num">Sem 23 · 9 nov</div><div class="rm-uc-title">Skills de Claude instaladas en ti y el equipo</div><div class="rm-uc-chips"><span class="bdg grey">AI Leverage</span></div></div>
-    <div class="rm-uc"><div class="rm-uc-num">Sem 24 · 16 nov</div><div class="rm-uc-title">Contenido y SEO con IA + cierre del bloque</div><div class="rm-uc-chips"><span class="bdg grey">AI Leverage</span><span class="bdg grey">Cierre</span></div></div>
+    <div class="rm-uc next-call"><div class="rm-uc-num">Sem 17 · 28 sep 2026</div><div class="rm-uc-title">Montar Google PMax junto y dejar las campañas listas y apagadas</div><div class="rm-uc-chips"><span class="bdg red">Cyber</span><span class="bdg grey">Google</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 18 · 5 oct 2026</div><div class="rm-uc-title">Cyber en vivo: monitoreo y ajuste diario</div><div class="rm-uc-chips"><span class="bdg red">Evento</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 19 · 12 oct 2026</div><div class="rm-uc-title">Last chance, carros colgados y lectura de resultados</div><div class="rm-uc-chips"><span class="bdg grey">Cyber</span><span class="bdg grey">Datos</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 20 · 19 oct 2026</div><div class="rm-uc-title">Recompra y referidos sobre quienes compraron</div><div class="rm-uc-chips"><span class="bdg grey">Recompra</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 21 · 26 oct 2026</div><div class="rm-uc-title">SEO y PDP: contenido por dolor de búsqueda</div><div class="rm-uc-chips"><span class="bdg grey">E-comm</span><span class="bdg grey">SEO</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 22 · 2 nov 2026</div><div class="rm-uc-title">Nicho bodas: pauta separada de gala</div><div class="rm-uc-chips"><span class="bdg grey">Pauta</span><span class="bdg grey">Nicho</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 23 · 9 nov 2026</div><div class="rm-uc-title">Skills de Claude instaladas en ti y el equipo</div><div class="rm-uc-chips"><span class="bdg grey">AI Leverage</span></div></div>
+    <div class="rm-uc"><div class="rm-uc-num">Sem 24 · 16 nov 2026</div><div class="rm-uc-title">Contenido y SEO con IA + cierre del bloque</div><div class="rm-uc-chips"><span class="bdg grey">AI Leverage</span><span class="bdg grey">Cierre</span></div></div>
   </div>
 
   <div class="slbl">Bloque 1 · sesión por sesión</div>
@@ -1856,10 +1861,10 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
   <div class="week-card done" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 2 — Evento 27 jun + Guión de cierre</div><div class="week-date">Lead magnet para madres · nuevo proceso de venta en tienda</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 2 — Evento 27 jun 2026 + Guión de cierre</div><div class="week-date">Lead magnet para madres · nuevo proceso de venta en tienda</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
-      <div class="week-chips"><span class="bdg teal">Evento 27 jun</span><span class="bdg teal">Guión fases</span><span class="bdg teal">Cápsulas</span><span class="bdg amber">Pendientes Marjorie</span></div>
+      <div class="week-chips"><span class="bdg teal">Evento 27 jun 2026</span><span class="bdg teal">Guión fases</span><span class="bdg teal">Cápsulas</span><span class="bdg amber">Pendientes Marjorie</span></div>
       <a class="rec-link" href="https://fathom.video/calls/710151248" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 2 (90 min)</a>
       <div class="week-sec">Estrategia del evento definida</div>
       <div class="week-text">Público: madres de graduados (tomadoras de decisión y presupuesto). Oferta: servicios gratuitos ~$60K (colometría exprés + styling + obsequio). Cupos: 20 (escasez real). Meta: captar ~200 leads vía Facebook Lead Form para llenar los 20 cupos y crear base para nutrición futura.</div>
@@ -1868,7 +1873,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="week-sec">Pendientes de Marjorie</div>
       <div class="week-text">
         <ul>
-          <li><span class="pend">Pendiente:</span> Lanzar campaña del evento 27 jun dirigida a madres</li>
+          <li><span class="pend">Pendiente:</span> Lanzar campaña del evento 27 jun 2026 dirigida a madres</li>
           <li><span class="pend">Pendiente:</span> Implementar nuevo guión de ventas por fases en tienda</li>
           <li><span class="pend">Pendiente:</span> Actualizar mensajes WhatsApp a madres sobre el evento</li>
           <li><span class="pend">Pendiente:</span> Lanzar Cápsula 1 (colometría) en IG/TikTok</li>
@@ -1887,7 +1892,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
   <div class="week-card done" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 3 — CAC, no-shows y cierre en tienda</div><div class="week-date">Llamada 23 jun · revisión de desempeño de junio</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 3 — CAC, no-shows y cierre en tienda</div><div class="week-date">Llamada 23 jun 2026 · revisión de desempeño de junio</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg red">CAC</span><span class="bdg red">Inasistencia</span><span class="bdg red">Cierre tienda</span><span class="bdg grey">Expansión pausada</span></div>
@@ -1915,7 +1920,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
   <div class="week-card done" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 4 — Resultados evento + escala de cierre 1–10</div><div class="week-date">Llamada 6 jul · dos bloques: evento/reservas y técnica de cierre</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 4 — Resultados evento + escala de cierre 1–10</div><div class="week-date">Llamada 6 jul 2026 · dos bloques: evento/reservas y técnica de cierre</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg green">Evento 20%</span><span class="bdg red">Reserva $20K</span><span class="bdg amber">Escala 1–10</span><span class="bdg grey">Vestido a medida</span></div>
@@ -1951,13 +1956,13 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
   <div class="week-card done" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 5 — Mejor eficiencia histórica, momento de escalar</div><div class="week-date">Llamada 13 jul · panel de métricas + entrenamiento de cierre en vivo</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 5 — Mejor eficiencia histórica, momento de escalar</div><div class="week-date">Llamada 13 jul 2026 · panel de métricas + entrenamiento de cierre en vivo</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg green">CPA $2.4K</span><span class="bdg green">ROAS 15x</span><span class="bdg green">Cierre 20%</span><span class="bdg amber">Escalar gasto</span></div>
       <a class="rec-link" href="https://fathom.video/calls/743134398" target="_blank" onclick="event.stopPropagation()">▶ Grabación Sem 5</a>
       <div class="week-sec">Julio va -$3M vs. el año pasado — pero es volumen, no performance</div>
-      <div class="week-text">Comparando fecha con fecha (13 jul), 2025 llevaba $8,2M y 2026 lleva $4,5M. La causa: julio 2026 solo invirtió <strong>1/6 del presupuesto</strong> de julio 2025 ($300K vs $1,8-2M), aunque el costo por conversación es prácticamente igual (~$480 vs $500). Menos plata invertida, mismo costo unitario → menos volumen total.</div>
+      <div class="week-text">Comparando fecha con fecha (13 jul 2026), 2025 llevaba $8,2M y 2026 lleva $4,5M. La causa: julio 2026 solo invirtió <strong>1/6 del presupuesto</strong> de julio 2025 ($300K vs $1,8-2M), aunque el costo por conversación es prácticamente igual (~$480 vs $500). Menos plata invertida, mismo costo unitario → menos volumen total.</div>
       <div class="week-sec">Pero la eficiencia está en su mejor momento histórico</div>
       <div class="week-text">Costo por cita agendada: <strong>$2.400</strong> (vs $8.000–13.000 histórico). ROAS: <strong>15x</strong> (vs 6x-12x el año pasado). Tasa de cierre en tienda: <strong>20%</strong> (vs 5% histórico, meta ahora 50%). Cada peso invertido hoy rinde 3-4 veces más que hace un año.</div>
       <div class="week-sec">Decisión: subir el gasto 20% cada 5 días</div>
@@ -1986,7 +1991,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
   <div class="week-card done" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 6 — Add-to-Cart móvil + giro estratégico del sitio</div><div class="week-date">Llamada 20 jul · dos bloques: diagnóstico del funnel y plan de acción</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 6 — Add-to-Cart móvil + giro estratégico del sitio</div><div class="week-date">Llamada 20 jul 2026 · dos bloques: diagnóstico del funnel y plan de acción</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg red">Add-to-Cart 0.3%</span><span class="bdg green">Citas pagadas 30%</span><span class="bdg amber">Giro por dolor</span><span class="bdg grey">SEO</span></div>
@@ -2028,7 +2033,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
   <div class="week-card done" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 7 — PDP y carrusel: resolver "¿cómo me va a quedar?"</div><div class="week-date">Llamada 27 jul (47 min) · se suma Belu al equipo</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 7 — PDP y carrusel: resolver "¿cómo me va a quedar?"</div><div class="week-date">Llamada 27 jul 2026 (47 min) · se suma Belu al equipo</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg amber">PDP/Carrusel</span><span class="bdg violet">AI Shopping</span><span class="bdg red">WhatsApp fuera</span><span class="bdg red">Ajuste oculto</span></div>
@@ -2065,7 +2070,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
   <div class="week-card done" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 8 — Cierre de proyecciones: julio completo en números</div><div class="week-date">Llamada 28 jul, extensión (29 min)</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 8 — Cierre de proyecciones: julio completo en números</div><div class="week-date">Llamada 28 jul 2026, extensión (29 min)</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg green">Cierre 25%</span><span class="bdg green">ROAS 16x</span><span class="bdg amber">Regiones</span><span class="bdg violet">Sistemas > headcount</span></div>
@@ -2093,7 +2098,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
   <div class="week-card done" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 9 — Capacidad, comisiones y meta $30M</div><div class="week-date">Llamada 4 ago (54 min)</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 9 — Capacidad, comisiones y meta $30M</div><div class="week-date">Llamada 4 ago 2026 (54 min)</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg green">Cierre 36%</span><span class="bdg amber">Comisiones</span><span class="bdg amber">Meta $30M</span><span class="bdg grey">SOPs</span></div>
@@ -2126,7 +2131,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
   <div class="week-card done" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 10 — Economía de tiempo: cita gratis vs experiencia</div><div class="week-date">Llamada 10 ago (58 min)</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 10 — Economía de tiempo: cita gratis vs experiencia</div><div class="week-date">Llamada 10 ago 2026 (58 min)</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg green">42% citas pagadas</span><span class="bdg amber">Cierre 24%</span><span class="bdg violet">Ratio 2,08x</span><span class="bdg grey">Nueva vendedora</span></div>
@@ -2156,7 +2161,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   
 
   <div class="week-card open" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 11 — Desequilibrio de pauta y nicho bodas</div><div class="week-date">Llamada 18 ago (57 min)</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 11 — Desequilibrio de pauta y nicho bodas</div><div class="week-date">Llamada 18 ago 2026 (57 min)</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg red">Pauta desequilibrada</span><span class="bdg teal">Nicho bodas</span><span class="bdg grey">Cyber Monday oct</span></div>
@@ -2172,7 +2177,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       </ul></div>
 
       <div class="week-sec">🎯 Núcleo — la pauta está comprando la cita equivocada</div>
-      <div class="week-text">Subir el gasto en $350.000 trajo <b>50 citas gratis adicionales y solo 11 pagadas</b>. No es problema de volumen ni de costo (los dos mejoraron): la campaña sigue optimizando hacia el perfil que históricamente no cierra — exactamente lo que se decidió dejar de hacer en la sesión del 10 de agosto. Cada peso extra hoy agranda el cuello en vez de destaparlo.</div>
+      <div class="week-text">Subir el gasto en $350.000 trajo <b>50 citas gratis adicionales y solo 11 pagadas</b>. No es problema de volumen ni de costo (los dos mejoraron): la campaña sigue optimizando hacia el perfil que históricamente no cierra — exactamente lo que se decidió dejar de hacer en la sesión del 10 de agosto de 2026. Cada peso extra hoy agranda el cuello en vez de destaparlo.</div>
 
       <div class="week-sec">💎 Hallazgo — el nicho de bodas ya está entrando solo</div>
       <div class="week-text"><b>12 de 14</b> proyectos de confección personalizada son para madres de novios y novias, con ticket promedio de <b>$500.000</b>. Ese perfil llega por los anuncios de gala, sin campaña propia: es demanda que ya existe y no se está capturando. Se valida con una campaña en la sombra, segmentada, con presupuesto acotado de $500.000 (el costo de una sola confección) antes de escalar.</div>
@@ -2220,7 +2225,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
   <div class="week-card open" onclick="toggleCard(this)">
-    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 12 — Cierre del bloque 1</div><div class="week-date">Llamada 24 ago (60 min)</div></div><span class="bdg teal">✓</span></div>
+    <div class="week-hd"><div class="week-info"><div class="week-title">Sem 12 — Cierre del bloque 1</div><div class="week-date">Llamada 24 ago 2026 (60 min)</div></div><span class="bdg teal">✓</span></div>
     <div class="week-toggle"><span class="week-toggle-icon">▼</span> Ver detalle</div>
     <div class="week-body">
       <div class="week-chips"><span class="bdg teal">Bloque 1 cerrado</span><span class="bdg grey">Cita de pago</span><span class="bdg grey">Atribución web</span></div>
@@ -2254,7 +2259,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="cyv-hero">
     <div class="cyv-top">
       <div>
-        <div class="cyv-k">Cyber cerrado · $10M · próximo evento: Black, 27 de noviembre</div>
+        <div class="cyv-k">Cyber cerrado · $10M · próximo evento: Black, 27 de noviembre de 2026</div>
         <div class="cyv-big">$30M<span>meta de octubre</span></div>
       </div>
       <div class="cy-cd">
@@ -2270,7 +2275,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
   <div class="alert-box info" style="margin-top:0">
     <span class="alert-icon">✓</span>
-    <div><div class="alert-title">Este evento ya cerró — queda como referencia</div><div class="alert-text">El cyber fue del 2 al 7 de octubre. Lo que se aprendió está arriba, en el tab del Black. Esta pestaña se queda con el detalle completo para no perder los números ni la estructura de campañas.</div></div>
+    <div><div class="alert-title">Este evento ya cerró — queda como referencia</div><div class="alert-text">El cyber fue del 2 al 7 de octubre de 2026. Lo que se aprendió está arriba, en el tab del Black. Esta pestaña se queda con el detalle completo para no perder los números ni la estructura de campañas.</div></div>
   </div>
 
   <details class="blk" open><summary><span class="blk-n">01</span><span class="blk-t">La meta de octubre<span class="blk-s">Cerrada por sobre la meta</span></span><span class="blk-x">▼</span></summary>
@@ -2362,12 +2367,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
   </div></details>
 
-  <details class="blk"><summary><span class="blk-n">04</span><span class="blk-t">Gantt del evento<span class="blk-s">Ocho frentes, del 15 de septiembre al 13 de octubre</span></span><span class="blk-x">▼</span></summary>
+  <details class="blk"><summary><span class="blk-n">04</span><span class="blk-t">Gantt del evento<span class="blk-s">Ocho frentes, del 15 de septiembre de 2026 al 13 de octubre de 2026</span></span><span class="blk-x">▼</span></summary>
   <div class="blk-b">
   <div class="cyg"><div class="cyg-in">
     <div class="cyg-head">
-      <div style="font-size:9px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey)">Frente · rol · qué se verifica</div>
-      <div class="cyg-ax"><span style="left:0">15 sep</span><span style="left:25%">22 sep</span><span style="left:50%">29 sep</span><span style="left:75%">6 oct</span><span style="left:100%">13 oct</span></div>
+      <div style="font-size:13px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;color:var(--grey)">Frente · rol · qué se verifica</div>
+      <div class="cyg-ax"><span style="left:0">15 sep 2026</span><span style="left:25%">22 sep 2026</span><span style="left:50%">29 sep 2026</span><span style="left:75%">6 oct 2026</span><span style="left:100%">13 oct 2026</span></div>
     </div>
 
     <div class="cyg-row">
@@ -2405,7 +2410,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div></div>
 
   <div class="cyg-days">
-    <div class="cyg-day"><div class="cyg-dn">24 sep – 2 oct</div><div class="cyg-dt">Solo tráfico</div><div class="cyg-dd">La landing de los 10 corre sin decir la palabra cyber, y cada vestido lleva a su ficha. El pop-up junta los correos.</div></div>
+    <div class="cyg-day"><div class="cyg-dn">24 sep 2026 – 2 oct 2026</div><div class="cyg-dt">Solo tráfico</div><div class="cyg-dd">La landing de los 10 corre sin decir la palabra cyber, y cada vestido lleva a su ficha. El pop-up junta los correos.</div></div>
     <div class="cyg-day open"><div class="cyg-dn">Jue 2</div><div class="cyg-dt">Se abre en silencio</div><div class="cyg-dd">El cyber sube al sitio y sale el correo a las inscritas, con cupón de zapatos. Cero pauta.</div></div>
     <div class="cyg-day peak"><div class="cyg-dn">Sáb 3, 15:00 – lun 5</div><div class="cyg-dt">El peak</div><div class="cyg-dd">Arranca la comunicación pública con los saldos. Acá se concentra el tráfico pagado.</div></div>
     <div class="cyg-day end"><div class="cyg-dn">Mar 6 – mié 7</div><div class="cyg-dt">Últimas tallas</div><div class="cyg-dd">Manda el remarketing: la talla que queda, el carro colgado y el cierre con hora declarada.</div></div>
@@ -2433,7 +2438,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="spec">
     <div class="pj-top">
       <div>
-        <div class="pj-lb">Presupuesto del evento · 3 al 7 de octubre</div>
+        <div class="pj-lb">Presupuesto del evento · 3 al 7 de octubre de 2026</div>
         <div class="pj-big" id="pj-total">$1.000.000</div>
         <input type="range" class="pj-sl" id="pj-slider" min="600000" max="2000000" step="50000" value="1000000">
         <div class="pj-mark"><span>$600K</span><span>2025 · $1,27M</span><span>$2M</span></div>
@@ -2445,8 +2450,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div class="pj-out">
         <div class="pj-lb" style="color:var(--teal-dk)">Venta web proyectada</div>
         <div class="pj-big" id="pj-venta">$10,6M</div>
-        <div style="font-size:11.5px;color:var(--teal-dk);margin-top:7px">ROAS <b id="pj-roas">—</b> · ticket $156.275</div>
-        <div class="pj-warm">Calentamiento al lobby <b>$250.000</b> · $50.000 al día hasta el 2 oct<br>Inversión total del cyber <b id="pj-tot2">—</b></div>
+        <div style="font-size:14px;color:var(--teal-dk);margin-top:7px">ROAS <b id="pj-roas">—</b> · ticket $156.275</div>
+        <div class="pj-warm">Calentamiento al lobby <b>$250.000</b> · $50.000 al día hasta el 2 oct 2026<br>Inversión total del cyber <b id="pj-tot2">—</b></div>
       </div>
     </div>
     <div class="pj-kpi">
@@ -2478,9 +2483,9 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
   <div class="spec">
-    <div style="font-size:12px;font-weight:700;color:var(--dark);margin-bottom:10px">Lo que midió el calentamiento</div>
+    <div style="font-size:14.5px;font-weight:700;color:var(--dark);margin-bottom:10px">Lo que midió el calentamiento</div>
     <div class="rn-grid">
-      <div class="rn-c"><div class="rn-l">Invertido</div><div class="rn-v">$380.597</div><div class="rn-s">Del 24 al 28 de septiembre</div></div>
+      <div class="rn-c"><div class="rn-l">Invertido</div><div class="rn-v">$380.597</div><div class="rn-s">Del 24 al 28 de septiembre de 2026</div></div>
       <div class="rn-c"><div class="rn-l">Visitas que reporta Meta</div><div class="rn-v">17.164</div><div class="rn-s">$22 cada una. El número no sirve</div></div>
       <div class="rn-c up"><div class="rn-l">Sesiones reales en Clarity</div><div class="rn-v">1.971</div><div class="rn-s">$193 cada una. Este es el número</div></div>
       <div class="rn-c"><div class="rn-l">Agregados al carro</div><div class="rn-v">9</div><div class="rn-s">Todos de zona norte. Shopify no los registró</div></div>
@@ -2502,7 +2507,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <div id="shf-rows"></div>
       <div class="shf-ft">
         <div>Carros que quedan colgados: <b id="shf-col">—</b> · se recuperan del 8 al 12 por correo</div>
-        <div>Alarma: visita sobre <b>$80</b> · menos de <b>8.000</b> visitas al 2 de octubre · menos de <b>20</b> carros</div>
+        <div>Alarma: visita sobre <b>$80</b> · menos de <b>8.000</b> visitas al 2 de octubre de 2026 · menos de <b>20</b> carros</div>
       </div>
     </div>
   </div>
@@ -2556,7 +2561,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
   <div class="spec">
-    <div style="font-size:12px;font-weight:700;color:var(--dark);margin-bottom:10px">Creativos · los tres formatos que pide</div>
+    <div style="font-size:14.5px;font-weight:700;color:var(--dark);margin-bottom:10px">Creativos · los tres formatos que pide</div>
     <div class="spec-g">
       <div class="spec-i"><div class="spec-n">Horizontal · 1,91:1</div><div class="spec-v">1200 × 628</div><div class="spec-d">Mínimo 600 × 314</div></div>
       <div class="spec-i"><div class="spec-n">Cuadrado · 1:1</div><div class="spec-v">1200 × 1200</div><div class="spec-d">Obligatorio. Sin él no publica</div></div>
@@ -2567,22 +2572,22 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     </div>
     <img class="shot" style="margin-top:12px;margin-bottom:5px" src="assets/mockups/creativos-variaciones.png" alt="Variaciones de creativo">
     <div class="dim"><b>Seis variaciones · los dos formatos</b><span>El cuadrado no es el horizontal recortado</span></div>
-    <div style="font-size:11px;color:var(--grey);margin-top:11px;padding-top:10px;border-top:0.5px solid var(--border);line-height:1.5">Las fotos de los 10 ya existen: el trabajo es <b style="color:var(--ink)">recortarlas a los tres formatos</b>, no producir de cero. Cada formato necesita que el vestido se lea completo sin que el texto lo tape.</div>
+    <div style="font-size:14px;color:var(--grey);margin-top:11px;padding-top:10px;border-top:0.5px solid var(--border);line-height:1.5">Las fotos de los 10 ya existen: el trabajo es <b style="color:var(--ink)">recortarlas a los tres formatos</b>, no producir de cero. Cada formato necesita que el vestido se lea completo sin que el texto lo tape.</div>
   </div>
 
   <div class="spec">
     <div class="spec-g">
-      <div class="spec-i"><div class="spec-n">01 · Feed</div><div class="spec-v" style="font-size:12px">Merchant Center</div><div class="spec-d">Los 10 más los saldos, aprobados. La aprobación tarda días: es lo primero.</div></div>
-      <div class="spec-i"><div class="spec-n">02 · Grupos de recursos</div><div class="spec-v" style="font-size:12px">Dos</div><div class="spec-d">Uno para gala y otro para saldos. No se mezclan: tienen precio y mensaje distintos.</div></div>
-      <div class="spec-i"><div class="spec-n">03 · Señales de audiencia</div><div class="spec-v" style="font-size:12px">Sitio + lobby</div><div class="spec-d">Las dos mismas de Meta. Son señales, no límites: Google igual sale a buscar.</div></div>
-      <div class="spec-i"><div class="spec-n">04 · Expansión de URL</div><div class="spec-v" style="font-size:12px">Apagada</div><div class="spec-d">Si queda encendida, Google manda tráfico a cualquier página del sitio.</div></div>
-      <div class="spec-i"><div class="spec-n">05 · Conversión</div><div class="spec-v" style="font-size:12px">Compra</div><div class="spec-d">Solo compra. Si entra "agregar al carro", optimiza hacia gente que no paga.</div></div>
+      <div class="spec-i"><div class="spec-n">01 · Feed</div><div class="spec-v" style="font-size:14.5px">Merchant Center</div><div class="spec-d">Los 10 más los saldos, aprobados. La aprobación tarda días: es lo primero.</div></div>
+      <div class="spec-i"><div class="spec-n">02 · Grupos de recursos</div><div class="spec-v" style="font-size:14.5px">Dos</div><div class="spec-d">Uno para gala y otro para saldos. No se mezclan: tienen precio y mensaje distintos.</div></div>
+      <div class="spec-i"><div class="spec-n">03 · Señales de audiencia</div><div class="spec-v" style="font-size:14.5px">Sitio + lobby</div><div class="spec-d">Las dos mismas de Meta. Son señales, no límites: Google igual sale a buscar.</div></div>
+      <div class="spec-i"><div class="spec-n">04 · Expansión de URL</div><div class="spec-v" style="font-size:14.5px">Apagada</div><div class="spec-d">Si queda encendida, Google manda tráfico a cualquier página del sitio.</div></div>
+      <div class="spec-i"><div class="spec-n">05 · Conversión</div><div class="spec-v" style="font-size:14.5px">Compra</div><div class="spec-d">Solo compra. Si entra "agregar al carro", optimiza hacia gente que no paga.</div></div>
       <div class="spec-i"><div class="spec-n">06 · Tope</div><div class="spec-v">$23.000</div><div class="spec-d">CPA máximo para que el margen aguante. Es el número que manda.</div></div>
     </div>
   </div>
 
   <div class="spec" style="background:var(--dark);border-color:var(--dark)">
-    <pre style="margin:0;font-family:'DM Mono',monospace;font-size:11px;line-height:1.85;color:#EDEAE5;white-space:pre-wrap;user-select:all">IMÁGENES      1.91:1 → 1200x628   (mín 600x314)
+    <pre style="margin:0;font-family:'DM Mono',monospace;font-size:14px;line-height:1.85;color:#EDEAE5;white-space:pre-wrap;user-select:all">IMÁGENES      1.91:1 → 1200x628   (mín 600x314)
               1:1    → 1200x1200  (mín 300x300, obligatoria)
               4:5    → 960x1200   (opcional, la que rinde en móvil)
 LOGO          1:1    → 1200x1200  (mín 128x128, obligatorio)
@@ -2607,9 +2612,9 @@ CONFIG        Feed            Merchant Center aprobado
   <details class="blk"><summary><span class="blk-n">08</span><span class="blk-t">CRO y PDP<span class="blk-s">Lo que no puede faltar en la ficha</span></span><span class="blk-x">▼</span></summary>
   <div class="blk-b">
   <div style="border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:8px">
-    <div style="background:var(--red);color:#fff;text-align:center;padding:9px;font-size:12.5px;font-weight:700;letter-spacing:.02em">CYBER EMMA CLARA · hasta 80% · termina el miércoles 20:00 →</div>
-    <div style="background:#fff;padding:13px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)"><span style="font-weight:700;font-size:13px">EMMA CLARA</span><span style="color:var(--grey);font-size:11px">☰&nbsp;&nbsp;♡&nbsp;&nbsp;🛒</span></div>
-    <div style="background:var(--bg);padding:22px 16px;text-align:center;color:var(--sand);font-size:11px">la página, abajo</div>
+    <div style="background:var(--red);color:#fff;text-align:center;padding:9px;font-size:14.5px;font-weight:700;letter-spacing:.02em">CYBER EMMA CLARA · hasta 80% · termina el miércoles 20:00 →</div>
+    <div style="background:#fff;padding:13px 16px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--border)"><span style="font-weight:700;font-size:13px">EMMA CLARA</span><span style="color:var(--grey);font-size:14px">☰&nbsp;&nbsp;♡&nbsp;&nbsp;🛒</span></div>
+    <div style="background:var(--bg);padding:22px 16px;text-align:center;color:var(--sand);font-size:14px">la página, abajo</div>
   </div>
   <div class="dim"><b>La huincha superior</b><span>Fija en todas las páginas, con la hora de cierre</span></div>
 
@@ -2659,10 +2664,10 @@ CONFIG        Feed            Merchant Center aprobado
   <div class="dim"><b>Ficha de Shopping</b><span>El tachado lo pinta Google, no se escribe</span></div>
   <div class="spec">
     <div class="spec-g">
-      <div class="spec-i"><div class="spec-n">Precio</div><div class="spec-v" style="font-size:12px">price + sale_price</div><div class="spec-d">El de oferta va aparte. El tachado sale de la diferencia entre los dos.</div></div>
-      <div class="spec-i"><div class="spec-n">El feed y la web</div><div class="spec-v" style="font-size:12px">Tienen que coincidir</div><div class="spec-d">Si el sitio baja el precio el 3 a las 15:00 y el feed no se actualiza, Google desaprueba el producto ese mismo día.</div></div>
-      <div class="spec-i"><div class="spec-n">Sin código de barras</div><div class="spec-v" style="font-size:12px">identifier_exists: no</div><div class="spec-d">Los vestidos son propios y no tienen GTIN. Sin esta marca, el feed los rechaza.</div></div>
-      <div class="spec-i" style="background:var(--red-lt);border-color:#F3C9C0"><div class="spec-n" style="color:var(--red-dk)">El bloqueador</div><div class="spec-v" style="color:var(--red-dk);font-size:12px">408 de 484 sin tipo</div><div class="spec-d">Sin tipo de producto ni categoría, la ficha no compite por la búsqueda correcta.</div></div>
+      <div class="spec-i"><div class="spec-n">Precio</div><div class="spec-v" style="font-size:14.5px">price + sale_price</div><div class="spec-d">El de oferta va aparte. El tachado sale de la diferencia entre los dos.</div></div>
+      <div class="spec-i"><div class="spec-n">El feed y la web</div><div class="spec-v" style="font-size:14.5px">Tienen que coincidir</div><div class="spec-d">Si el sitio baja el precio el 3 a las 15:00 y el feed no se actualiza, Google desaprueba el producto ese mismo día.</div></div>
+      <div class="spec-i"><div class="spec-n">Sin código de barras</div><div class="spec-v" style="font-size:14.5px">identifier_exists: no</div><div class="spec-d">Los vestidos son propios y no tienen GTIN. Sin esta marca, el feed los rechaza.</div></div>
+      <div class="spec-i" style="background:var(--red-lt);border-color:#F3C9C0"><div class="spec-n" style="color:var(--red-dk)">El bloqueador</div><div class="spec-v" style="color:var(--red-dk);font-size:14.5px">408 de 484 sin tipo</div><div class="spec-d">Sin tipo de producto ni categoría, la ficha no compite por la búsqueda correcta.</div></div>
     </div>
   </div>
 
@@ -2781,13 +2786,13 @@ CONFIG        Feed            Merchant Center aprobado
   <div class="dim"><b>Los días van a la derecha, las métricas hacia abajo</b><span>Las dos primeras filas son el plan; el resto se llena cada noche</span></div>
 
   <div class="cyg-days" style="grid-template-columns:repeat(auto-fit,minmax(215px,1fr))">
-    <div class="cyg-day"><div class="cyg-dn">24 sep – 2 oct</div><div class="cyg-dt">Tu vestido, tu momento</div><div class="cyg-dd">Los 10, la guía por tipo de cuerpo y cómo comprar sin miedo. Ni una vez la palabra cyber. El pop-up pide el correo.</div></div>
+    <div class="cyg-day"><div class="cyg-dn">24 sep 2026 – 2 oct 2026</div><div class="cyg-dt">Tu vestido, tu momento</div><div class="cyg-dd">Los 10, la guía por tipo de cuerpo y cómo comprar sin miedo. Ni una vez la palabra cyber. El pop-up pide el correo.</div></div>
     <div class="cyg-day open"><div class="cyg-dn">Jue 2 · solo correo</div><div class="cyg-dt">El cyber ya está activo</div><div class="cyg-dd">A las inscritas, con cupón de zapatos. Llegan un día antes que todo el mundo y sin un peso de pauta.</div></div>
     <div class="cyg-day peak"><div class="cyg-dn">Sáb 3, 15:00</div><div class="cyg-dt">Hasta 80% en saldos</div><div class="cyg-dd">El gancho público es la liquidación, no los de gala. El descuento fuerte es el que mueve el clic.</div></div>
     <div class="cyg-day peak"><div class="cyg-dn">Sáb 3 – lun 5</div><div class="cyg-dt">Está la curva completa</div><div class="cyg-dd">Para los 10: XS a 2XL disponible hoy, mañana no. Urgencia real, no inventada.</div></div>
     <div class="cyg-day"><div class="cyg-dn">Mar 6 – mié 7</div><div class="cyg-dt">Queda tu talla</div><div class="cyg-dd">Remarketing por ángulo: la talla que queda, el precio, y que ahorra ahora lo que iba a gastar a fin de año.</div></div>
     <div class="cyg-day end"><div class="cyg-dn">Mié 7, 20:00</div><div class="cyg-dt">Cierra con hora</div><div class="cyg-dd">Declarada, no sorpresa. En 2025 la venta se cortó en seco sin avisar.</div></div>
-    <div class="cyg-day end"><div class="cyg-dn">8 – 12 oct</div><div class="cyg-dt">Se te quedó en el carro</div><div class="cyg-dd">Última pasada sobre los carros colgados. Recién ahí se pide la reseña a quien ya recibió el vestido.</div></div>
+    <div class="cyg-day end"><div class="cyg-dn">8 – 12 oct 2026</div><div class="cyg-dt">Se te quedó en el carro</div><div class="cyg-dd">Última pasada sobre los carros colgados. Recién ahí se pide la reseña a quien ya recibió el vestido.</div></div>
     <div class="cyg-day" style="border-top-color:var(--violet)"><div class="cyg-dn">Regla fija</div><div class="cyg-dt">El descuento es solo web</div><div class="cyg-dd">Todos los claims dicen oferta exclusiva digital. A la clienta de Santiago que pregunta expresamente, y solo a ella, se le respeta el precio en tienda. Regiones no tiene esa puerta: ahí la web es el único canal</div></div>
   </div>
 
@@ -2844,7 +2849,7 @@ CONFIG        Feed            Merchant Center aprobado
 
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px;margin-bottom:12px">
     <div>
-      <div style="font-size:11px;font-weight:700;color:var(--brown);margin-bottom:7px;letter-spacing:.04em">PENDIENTES PRIVATE · 6</div>
+      <div style="font-size:14px;font-weight:700;color:var(--brown);margin-bottom:7px;letter-spacing:.04em">PENDIENTES PRIVATE · 6</div>
       <div class="pnd" style="grid-template-columns:1fr;margin-bottom:0">
         <div class="pn r"><img class="lg bg" src="assets/logos/meta.svg" alt="Meta"><div><div class="pn-t" data-desde="2026-09-28"><span style="color:var(--grey);font-weight:400;margin-right:5px">01</span>Tutorial del MCP de Meta</div><div class="pn-d">Para que la data de campañas entre sola y no por pantallazo</div><span class="pn-w">Antes del miércoles</span></div></div>
         <div class="pn r"><img class="lg bg" src="assets/logos/google.png" alt="Google"><div><div class="pn-t" data-desde="2026-09-08"><span style="color:var(--grey);font-weight:400;margin-right:5px">02</span>Skill de Google Ads y PMax</div><div class="pn-d">Se monta el miércoles junto con las campañas</div><span class="pn-w">Miércoles 30</span></div></div>
@@ -2855,7 +2860,7 @@ CONFIG        Feed            Merchant Center aprobado
       </div>
     </div>
     <div>
-      <div style="font-size:11px;font-weight:700;color:var(--teal-dk);margin-bottom:7px;letter-spacing:.04em">PENDIENTES EMMA CLARA · 8</div>
+      <div style="font-size:14px;font-weight:700;color:var(--teal-dk);margin-bottom:7px;letter-spacing:.04em">PENDIENTES EMMA CLARA · 8</div>
       <div class="pnd" style="grid-template-columns:1fr;margin-bottom:0">
         <div class="pn r"><img class="lg bg" src="assets/logos/clarity.png" alt="Clarity"><div><div class="pn-t" data-desde="2026-09-28"><span style="color:var(--grey);font-weight:400;margin-right:5px">01</span>Medición en el lobby</div><div class="pn-d">Sin píxel de Meta ni Clarity, la página que sostiene el evento no se puede leer</div><span class="pn-w">Antes del 2</span></div></div>
         <div class="pn r"><img class="lg bg" src="assets/logos/meta.svg" alt="Meta"><div><div class="pn-t" data-desde="2026-09-14"><span style="color:var(--grey);font-weight:400;margin-right:5px">02</span>Audiencia del lobby en Meta</div><div class="pn-d">Las 1.971 sesiones reales más los 9 carros. Se llama vestidos lobby cyber</div><span class="pn-w">Antes del 2</span></div></div>
@@ -2890,7 +2895,7 @@ CONFIG        Feed            Merchant Center aprobado
     </div>
   </div>
 
-  <div class="slbl" style="margin-top:0">Métricas globales · última llamada (4 ago)</div>
+  <div class="slbl" style="margin-top:0">Métricas globales · última llamada (4 ago 2026)</div>
   <div class="ov-row1">
     <div class="ov-card"><div class="ov-lbl">Cierre en tienda</div><div class="ov-num green">36%</div><div class="ov-sub">71 vestidos · 194 citas jul</div></div>
     <div class="ov-card"><div class="ov-lbl">Costo por conversación</div><div class="ov-num amber">$586</div><div class="ov-sub">Cifra final de julio</div></div>
@@ -3004,7 +3009,7 @@ CONFIG        Feed            Merchant Center aprobado
       </div>
     </div>
     <div class="sig-block">
-      <div class="sig-hd"><span class="sig-tag">Closing</span><span class="sig-hdtitle">Cómo aislar la objeción real antes de que la clienta se vaya — llamada del 6 jul</span></div>
+      <div class="sig-hd"><span class="sig-tag">Closing</span><span class="sig-hdtitle">Cómo aislar la objeción real antes de que la clienta se vaya — llamada del 6 jul 2026</span></div>
       <div class="sig-step">
         <div class="sig-step-n">1</div>
         <div><div class="sig-step-title">Pregunta la escala del 1 al 10</div><div class="sig-step-text">"En una escala del 1 al 10, ¿qué tanto te gustó este vestido?" — obliga a la clienta a poner en palabras lo que realmente siente, antes de que se vaya a "solo mirar".</div></div>
@@ -3068,7 +3073,7 @@ CONFIG        Feed            Merchant Center aprobado
 
   <div class="alert-box info" style="margin-top:0">
     <span class="alert-icon">🚧</span>
-    <div><div class="alert-title">Sistema en construcción — se sigue sistematizando desde la llamada del 6 jul</div><div class="alert-text">Ya llegaron las primeras reseñas post-evento vía Google. El resto sigue en definición — esta pestaña documenta las decisiones tomadas para que el equipo las sistematice paso a paso, no para presentarlas como un sistema terminado.</div></div>
+    <div><div class="alert-title">Sistema en construcción — se sigue sistematizando desde la llamada del 6 jul 2026</div><div class="alert-text">Ya llegaron las primeras reseñas post-evento vía Google. El resto sigue en definición — esta pestaña documenta las decisiones tomadas para que el equipo las sistematice paso a paso, no para presentarlas como un sistema terminado.</div></div>
   </div>
 
   <div class="slbl" style="margin-top:0">El journey después de la compra</div>
@@ -3192,11 +3197,11 @@ CONFIG        Feed            Merchant Center aprobado
     <thead><tr><th>#</th><th>Etapa</th><th>Estado</th><th>Situación actual</th><th>Cuándo</th></tr></thead>
     <tbody>
       <tr><td><div class="sdot" style="background:#7B61FF">1</div></td><td class="sname">Foundations</td><td><span class="bdg teal">✓ Cerrada</span></td><td class="sgap">ICP real. Modelo híbrido entendido. Brecha de tienda diagnosticada. Prioridades definidas.</td><td class="sgap">Mes 1 ✓</td></tr>
-      <tr><td><div class="sdot" style="background:#3B9EE8">2</div></td><td class="sname">Atracción</td><td><span class="bdg amber">🔄 Activa</span></td><td class="sgap">Meta + TikTok activos. Serie Cápsulas lanzando. Evento 27 jun como lead magnet con Facebook Lead Form.</td><td class="sgap">Mes 1–2</td></tr>
+      <tr><td><div class="sdot" style="background:#3B9EE8">2</div></td><td class="sname">Atracción</td><td><span class="bdg amber">🔄 Activa</span></td><td class="sgap">Meta + TikTok activos. Serie Cápsulas lanzando. Evento 27 jun 2026 como lead magnet con Facebook Lead Form.</td><td class="sgap">Mes 1–2</td></tr>
       <tr class="broken"><td><div class="sdot" style="background:#E2503A">3</div></td><td class="sname">Activación web</td><td><span class="bdg red">✗ Roto — diagnóstico específico</span></td><td class="sgap">Add-to-Cart móvil 0.3% (90% del tráfico es móvil). Causa: describe por características, no por dolor/necesidad de búsqueda. Plan: menú por evento + PDP declarando qué resuelve cada vestido + 4 artículos SEO.</td><td class="sgap"><span class="bdg amber">En curso — Sem 7</span></td></tr>
       <tr><td><div class="sdot" style="background:#E8A237">4</div></td><td class="sname">Conversión tienda</td><td><span class="bdg amber">🔄 En progreso — subiendo</span></td><td class="sgap">Cierre en tienda: 5% histórico → 20% actual. Inasistencia: 5% (subió de 3%, vigilar). Guión, reserva de $20.000 y roleplays de objeciones ya en uso. Meta: 50% cierre (1 de 2 mínimo).</td><td class="sgap">Mes 1 · validado</td></tr>
       <tr class="broken"><td><div class="sdot" style="background:#E05599">5</div></td><td class="sname">Conversión web</td><td><span class="bdg red">✗ Roto</span></td><td class="sgap">80% abandona checkout. Sin recuperación de carritos. Formulario largo, costos ocultos. El ticket de $67K se pierde sin sistema de rescate.</td><td class="sgap"><span class="bdg grey">Mes 2</span></td></tr>
-      <tr class="broken"><td><div class="sdot" style="background:#3EB489">6</div></td><td class="sname">Retención</td><td><span class="bdg amber">🔄 Recién arrancando</span></td><td class="sgap">La relación terminaba con el pago. Ahora en definición: reseñas post-evento con regalo físico, cuadernillo de beneficios y vestido a medida como upsell. Ver pestaña Recompra.</td><td class="sgap"><span class="bdg grey">Empezó 6 jul</span></td></tr>
+      <tr class="broken"><td><div class="sdot" style="background:#3EB489">6</div></td><td class="sname">Retención</td><td><span class="bdg amber">🔄 Recién arrancando</span></td><td class="sgap">La relación terminaba con el pago. Ahora en definición: reseñas post-evento con regalo físico, cuadernillo de beneficios y vestido a medida como upsell. Ver pestaña Recompra.</td><td class="sgap"><span class="bdg grey">Empezó 6 jul 2026</span></td></tr>
       <tr class="broken"><td><div class="sdot" style="background:#AA6E28">7</div></td><td class="sname">Referidos</td><td><span class="bdg red">✗ Por construir</span></td><td class="sgap">Sin reseñas en ficha. Sin programa de referidos. UGC no sistematizado. Word-of-mouth existe pero no se capitaliza.</td><td class="sgap"><span class="bdg grey">Mes 3</span></td></tr>
       <tr style="opacity:.5"><td><div class="sdot" style="background:#aaa">8</div></td><td class="sname">Systems</td><td><span class="bdg grey">Post 90d · DFY</span></td><td class="sgap">Se activa cuando 1–7 estén validadas. Automatización de lo que ya funciona. No se automatiza lo que no está probado.</td><td class="sgap">—</td></tr>
     </tbody>
@@ -3218,7 +3223,7 @@ CONFIG        Feed            Merchant Center aprobado
     <div class="qa-body"><ul>
       <li>¿El contenido de TikTok genera intención de compra o solo entretiene?</li>
       <li>¿Las Cápsulas (colometría, maquillaje) están construyendo autoridad y dirigiendo al evento?</li>
-      <li>¿El evento del 27 jun está captando 200 leads de madres de alta intención?</li>
+      <li>¿El evento del 27 jun 2026 está captando 200 leads de madres de alta intención?</li>
     </ul></div>
   </div>
 
@@ -3280,7 +3285,7 @@ CONFIG        Feed            Merchant Center aprobado
 
   <div class="alert-box info" style="margin-top:18px">
     <span class="alert-icon">ℹ️</span>
-    <div><div class="alert-title">El orden importa: primero tienda, luego web</div><div class="alert-text">La brecha más grande está en la tienda (-82%). Antes de optimizar el CVR web (0.12%), hay que llenar el showroom con el evento del 27 jun y mejorar el cierre presencial. El CRO web se prioriza en el Mes 2, cuando la tienda ya esté estabilizada.</div></div>
+    <div><div class="alert-title">El orden importa: primero tienda, luego web</div><div class="alert-text">La brecha más grande está en la tienda (-82%). Antes de optimizar el CVR web (0.12%), hay que llenar el showroom con el evento del 27 jun 2026 y mejorar el cierre presencial. El CRO web se prioriza en el Mes 2, cuando la tienda ya esté estabilizada.</div></div>
   </div>
   <a class="wa-foot" href="https://wa.me/56978048922?text=Patricio%20tengo%20dudas%20sobre..." target="_blank"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.005 2.001C6.474 2.001 2 6.476 2 12.007c0 1.771.462 3.463 1.338 4.952L2 22l5.188-1.359A9.944 9.944 0 0 0 12.005 22c5.531 0 10.005-4.476 10.005-10.007 0-2.674-1.041-5.188-2.931-7.079A9.953 9.953 0 0 0 12.005 2z"/></svg>¿Dudas? <b>Escríbele a Patricio</b></a>
 </div>
@@ -3311,7 +3316,7 @@ CONFIG        Feed            Merchant Center aprobado
     </div>
     <div class="stk">
       <div class="stk-h"><span class="stk-i">🔍</span><span class="stk-n">Search Console</span><span class="cy-dot on"></span></div>
-      <div class="stk-d">Conectado el 8 de septiembre. Ahí están las 10 a 15 mil personas de tráfico orgánico que llegaban sin capturarse.</div>
+      <div class="stk-d">Conectado el 8 de septiembre de 2026. Ahí están las 10 a 15 mil personas de tráfico orgánico que llegaban sin capturarse.</div>
       <div class="stk-w">Lo operas <b>tú sola</b></div>
     </div>
     <div class="stk">
@@ -3377,7 +3382,7 @@ CONFIG        Feed            Merchant Center aprobado
     <div class="res-card">
       <div class="res-icon">🎬</div>
       <div class="res-title">Editar tus reels con IA — la guía</div>
-      <div class="res-desc">Lo que quedó de la sesión del 3 de noviembre: el prompt para pegar en Claude, las reglas que no se negocian y los seis puntos a revisar antes de publicar. Para que Belén deje la timeline.</div>
+      <div class="res-desc">Lo que quedó de la sesión del 3 de noviembre de 2026: el prompt para pegar en Claude, las reglas que no se negocian y los seis puntos a revisar antes de publicar. Para que Belén deje la timeline.</div>
       <ol class="res-steps">
         <li>Junta los <b>tres insumos</b>: lineamientos de marca, cinco referencias y los crudos sin subtítulos quemados.</li>
         <li>Abre un <b>proyecto nuevo</b> en Claude y sube ahí los lineamientos y las referencias.</li>
@@ -3445,23 +3450,23 @@ const CYBER={
     ganadores:[], sidekicks:[], perdedores:[], zombies:[]
   },
   lobby:[
-    {semana:'16 – 20 sep',inversion:null,sesiones:null,pdp:null,top:null,lectura:''},
-    {semana:'21 – 27 sep',inversion:null,sesiones:null,pdp:null,top:null,lectura:''}
+    {semana:'16 – 20 sep 2026',inversion:null,sesiones:null,pdp:null,top:null,lectura:''},
+    {semana:'21 – 27 sep 2026',inversion:null,sesiones:null,pdp:null,top:null,lectura:''}
   ],
   log:[
-    {fecha:'15 sep',fuente:'Matriz',dato:'Agosto 2026: $27,3M recaudado (tienda $24,2M · web $0,9M) con $1,8M de pauta',lectura:'La base contra la que se mide la meta de $30M'},
-    {fecha:'15 sep',fuente:'Matriz',dato:'Octubre 2025: web $15,0M, 91 ventas, pauta $2,8M. La venta de tienda de oct 25 a may 26 no está cargada',lectura:'Octubre 2025 completo no se puede comparar hasta llenar ese hueco'},
-    {fecha:'15 sep',fuente:'Matriz',dato:'Octubre 2024: $51,4M recaudado (tienda $47,7M)',lectura:'Octubre es temporada alta de galas'},
-    {fecha:'14 sep',fuente:'Clarity',dato:'3.030 sesiones grabadas, listas para que el agente CRO las segmente',lectura:'Base para leer por qué compran y por qué no'},
-    {fecha:'14 sep',fuente:'Tienda',dato:'Los 10 del lobby salen de la venta del semestre en tienda. Top: Violeta',lectura:'Shopify no ve esta venta: el lobby es la prueba online'},
-    {fecha:'8 sep',fuente:'Skill de evento',dato:'Proyección: conservador $5,6M · esperado $8M · declarado $13M – $15M',lectura:'Con $800K de pauta el piso es $8M'},
-    {fecha:'8 sep',fuente:'Shopify',dato:'Conversión 2026 contra 2025: −41% en julio y −70% en agosto',lectura:'Más tráfico que nunca, menos compra'},
-    {fecha:'8 sep',fuente:'Shopify',dato:'Cyber 2025: 85 piezas y 26.000 sesiones en la semana',lectura:'El tráfico se multiplicó por 5 contra el pre-evento'},
-    {fecha:'8 sep',fuente:'Shopify',dato:'El pre-evento (vie a dom) fue el 40% de la facturación del Cyber 2025',lectura:'Por eso este año la venta abre el viernes 2'},
-    {fecha:'8 sep',fuente:'Shopify',dato:'Conversión por región: RM 0,2% · Arica 2% · Atacama 0,8% · Coquimbo 0,75%',lectura:'80% del tráfico fue a la zona que menos convierte'},
-    {fecha:'8 sep',fuente:'Shopify',dato:'Google: 6.835 sesiones y 20 pedidos (ticket $149K). Redes: 20.000 y 15 (ticket $110K)',lectura:'Google convierte 4 veces mejor'},
-    {fecha:'8 sep',fuente:'Shopify',dato:'El correo aportó 5 sesiones en toda la ventana del cyber',lectura:'No hay base de datos que activar'},
-    {fecha:'8 sep',fuente:'Shopify',dato:'408 de 484 pedidos del último año sin tipo de producto',lectura:'La lectura de ganador y fantasma no es confiable'}
+    {fecha:'15 sep 2026',fuente:'Matriz',dato:'Agosto 2026: $27,3M recaudado (tienda $24,2M · web $0,9M) con $1,8M de pauta',lectura:'La base contra la que se mide la meta de $30M'},
+    {fecha:'15 sep 2026',fuente:'Matriz',dato:'Octubre 2025: web $15,0M, 91 ventas, pauta $2,8M. La venta de tienda de oct 25 a may 26 no está cargada',lectura:'Octubre 2025 completo no se puede comparar hasta llenar ese hueco'},
+    {fecha:'15 sep 2026',fuente:'Matriz',dato:'Octubre 2024: $51,4M recaudado (tienda $47,7M)',lectura:'Octubre es temporada alta de galas'},
+    {fecha:'14 sep 2026',fuente:'Clarity',dato:'3.030 sesiones grabadas, listas para que el agente CRO las segmente',lectura:'Base para leer por qué compran y por qué no'},
+    {fecha:'14 sep 2026',fuente:'Tienda',dato:'Los 10 del lobby salen de la venta del semestre en tienda. Top: Violeta',lectura:'Shopify no ve esta venta: el lobby es la prueba online'},
+    {fecha:'8 sep 2026',fuente:'Skill de evento',dato:'Proyección: conservador $5,6M · esperado $8M · declarado $13M – $15M',lectura:'Con $800K de pauta el piso es $8M'},
+    {fecha:'8 sep 2026',fuente:'Shopify',dato:'Conversión 2026 contra 2025: −41% en julio y −70% en agosto',lectura:'Más tráfico que nunca, menos compra'},
+    {fecha:'8 sep 2026',fuente:'Shopify',dato:'Cyber 2025: 85 piezas y 26.000 sesiones en la semana',lectura:'El tráfico se multiplicó por 5 contra el pre-evento'},
+    {fecha:'8 sep 2026',fuente:'Shopify',dato:'El pre-evento (vie a dom) fue el 40% de la facturación del Cyber 2025',lectura:'Por eso este año la venta abre el viernes 2'},
+    {fecha:'8 sep 2026',fuente:'Shopify',dato:'Conversión por región: RM 0,2% · Arica 2% · Atacama 0,8% · Coquimbo 0,75%',lectura:'80% del tráfico fue a la zona que menos convierte'},
+    {fecha:'8 sep 2026',fuente:'Shopify',dato:'Google: 6.835 sesiones y 20 pedidos (ticket $149K). Redes: 20.000 y 15 (ticket $110K)',lectura:'Google convierte 4 veces mejor'},
+    {fecha:'8 sep 2026',fuente:'Shopify',dato:'El correo aportó 5 sesiones en toda la ventana del cyber',lectura:'No hay base de datos que activar'},
+    {fecha:'8 sep 2026',fuente:'Shopify',dato:'408 de 484 pedidos del último año sin tipo de producto',lectura:'La lectura de ganador y fantasma no es confiable'}
   ]
 };
 function cyM(v){if(v==null)return null;return v>=1e6?'$'+(v/1e6).toFixed(v%1e6?1:0).replace('.',',')+'M':'$'+Math.round(v/1e3)+'K';}
@@ -3523,7 +3528,7 @@ function pjRender(){
   // el calentamiento no compra: arma la audiencia y suma visitas
   const W={inv:CALENT.inv, cli:CALENT.inv/CALENT.cpc};
   filas[0].push('<tr><td><span class="ui-sw" data-on="1"></span><span class="ui-nm" data-g="0">'+CALENT.n+'</span>'+
-    '<span class="ui-sub">$50.000 al día · 24 sep al 2 oct · fuera del reparto</span></td><td>'+CALENT.ob+'</td>'+
+    '<span class="ui-sub">$50.000 al día · 24 sep 2026 al 2 oct 2026 · fuera del reparto</span></td><td>'+CALENT.ob+'</td>'+
     '<td>'+clp(CALENT.inv)+'</td><td>'+clp(CALENT.cpc)+'</td><td>—</td><td>—</td><td>—</td></tr>');
   CAMPS.forEach(c=>{
     const inv=canal[c.g]*c.pct, cpc=c.cpa*c.cr, cli=inv/cpc, ven=inv/c.cpa;
