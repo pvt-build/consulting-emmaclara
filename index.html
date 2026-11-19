@@ -60,6 +60,25 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .sch.done{background:var(--teal);color:#fff}
 .sch.now{background:var(--gold);color:#fff;box-shadow:0 0 0 3px rgba(232,162,55,.2)}
 .sch.todo{background:var(--surf);color:var(--grey);border:0.5px solid var(--border)}
+.pb-next{display:flex;align-items:center;gap:10px;flex-wrap:wrap;background:var(--dark);color:#fff;border-radius:12px;padding:10px 14px;margin:0 0 18px}
+.pb-next-tag{display:inline-flex;align-items:center;gap:6px;font-family:'DM Mono',monospace;font-size:13px;font-weight:500;line-height:1;letter-spacing:.08em;color:rgba(255,255,255,.6);white-space:nowrap}
+.pb-next-tag .ic{width:14px;height:14px;stroke:currentColor;fill:none}
+.pb-next-d{font-size:14px;font-weight:600;flex:1 1 auto;min-width:210px}
+.pb-next-l{display:flex;gap:8px;flex-wrap:wrap}
+.pb-next-b{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:#fff;background:rgba(255,255,255,.08);border-radius:8px;padding:5px 10px;text-decoration:none}
+.pb-next-b:hover{background:rgba(255,255,255,.16)}
+.pb-next-b .ic{width:14px;height:14px;stroke:currentColor;fill:none}
+.res-item{display:flex;align-items:center;gap:10px;background:var(--surf);border:0.5px solid var(--border);border-radius:9px;padding:10px 13px;margin-bottom:6px;text-decoration:none;transition:box-shadow .15s;cursor:pointer}
+.res-item:hover{box-shadow:0 2px 10px rgba(0,0,0,.05)}
+.res-ico{font-size:18px;flex-shrink:0;width:24px;display:flex;justify-content:center}
+.res-body{flex:1;min-width:0}
+.res-item .res-title{font-size:14px;font-weight:600;color:var(--ink);margin:0}
+.res-item .res-desc{font-size:13px;color:var(--grey);margin:1px 0 0;line-height:1.45}
+.pb-cta{display:flex;align-items:center;gap:14px;justify-content:space-between;background:var(--dark);color:#fff;border-radius:14px;padding:18px 20px;margin:24px 0 8px;cursor:pointer;transition:transform .12s}
+.pb-cta:hover{transform:translateY(-1px)}.pb-cta:focus-visible{outline:2px solid var(--red);outline-offset:3px}
+.pb-ctal{display:block;font-family:'DM Mono',monospace;font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:rgba(255,255,255,.55)}
+.pb-cta b{display:block;font-size:19px;margin:3px 0 2px}.pb-cta span:last-child{font-size:13px;color:rgba(255,255,255,.7)}
+.pb-ctaf{font-size:22px;flex:none}
 .sch.critical{background:var(--red);color:#fff;animation:pulse-red 2s ease-in-out infinite}
 .rm-dot.critical{background:var(--red);animation:pulse-red 2s ease-in-out infinite}
 .week-card.critical{border:1.5px solid var(--red)!important;animation:pulse-red 2s ease-in-out infinite}
@@ -741,8 +760,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .cyv-evt.ven{background:var(--blue-lt);color:var(--blue-dk);border:1px solid #C9D8F0}
 .cyv-evt.cy{background:var(--red);color:#fff}
 .cyv-evt.lc{background:var(--teal-lt);color:var(--teal-dk);border:1px solid #BFE6D5}
-.cyv-today{position:absolute;top:22px;bottom:0;width:2px;background:var(--dark);z-index:3}
-.cyv-today::before{content:'hoy';position:absolute;bottom:-15px;left:-8px;font-size:13px;font-weight:700;color:var(--dark)}
 .cyv-cal{padding-bottom:22px}
 /* barras comparadas */
 .cyv-two{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;margin-bottom:12px}
@@ -809,8 +826,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .cyg-bar.evt{background:var(--red);color:#fff}
 .cyg-bar.post{background:var(--beige);color:var(--ink);border:1px solid var(--sand)}
 .cyg-band{position:absolute;top:0;bottom:0;background:rgba(226,80,58,.06);border-left:1px solid rgba(226,80,58,.3);border-right:1px solid rgba(226,80,58,.3);z-index:0}
-.cyg-now{position:absolute;top:0;bottom:0;width:2px;background:var(--dark);z-index:4}
-.cyg-now::after{content:'hoy';position:absolute;top:-13px;left:-8px;font-size:13px;font-weight:700;color:var(--dark)}
 /* dias del evento */
 .cyg-days{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:9px;margin-bottom:12px}
 .cyg-day{background:var(--surf);border:1px solid var(--border);border-radius:11px;padding:13px 15px;border-top:3px solid var(--sand)}
@@ -846,9 +861,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 .cyg-qb{background:var(--surf);padding:11px 13px;font-size:14px;color:var(--grey);line-height:1.5;min-height:62px}
 
 /* ============ CYBER · campañas, specs y comunicación ============ */
-.lg{width:18px;height:18px;object-fit:contain;flex-shrink:0}
+.lg{width:18px;height:18px;object-fit:contain;flex-shrink:0;background-position:center;background-size:contain;background-repeat:no-repeat;display:inline-block}
 .lg.sm{width:15px;height:15px}
 .lg.bg{width:24px;height:24px}
+.res-ico .lg{width:22px;height:22px}
+.lg-meta{background-image:url(assets/logos/meta.png)}
+.lg-google{background-image:url(assets/logos/googleads.svg)}
+.lg-higgsfield{background-image:url(assets/logos/higgsfield.png)}
+.lg-claude{background-image:url(assets/logos/claude.svg)}
+.lg-forms{background-image:url(assets/logos/googleforms.svg)}
+.brand-mark{display:inline-flex;align-items:center;gap:6px;white-space:nowrap}
 /* guion de campañas */
 .cmp{display:grid;grid-template-columns:repeat(auto-fit,minmax(330px,1fr));gap:10px;margin-bottom:10px;max-width:940px}
 @media(min-width:900px){.cmp{grid-template-columns:1fr 1fr}}
@@ -1195,91 +1217,81 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 
 <div class="page on" id="pg-overview">
 
-  <div class="alr">
-    <div class="alr-hd">
-      <span class="alr-t">⚠ Lo que está abierto</span>
-      <span class="alr-c">6 abiertas · quedan <b data-hasta="2026-11-27">—</b> días para el Black</span>
-    </div>
-    <div class="alr-i">
-      <div class="alr-n">01</div>
-      <div class="alr-tx"><span class="est-o pat" style="margin-right:7px">Agendar</span>Queda 1 sesión del bloque<span class="alr-d">El bloque 2 cerró el 16 de noviembre de 2026 con 11 de 12 sesiones usadas. La última está sin agendar, y es donde se arma el bloque 3.</span></div>
-      <div class="alr-w" data-limite="2026-11-26">—</div>
-    </div>
-    <div class="alr-i">
-      <div class="alr-n">02</div>
-      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>El remarketing encendido desde el primer día<span class="alr-d">En el cyber se prendió el tercer día de seis. Es el aprendizaje más caro del evento pasado y el más fácil de corregir: la audiencia de carro y de checkout se arma antes, no durante.</span></div>
-      <div class="alr-w" data-limite="2026-11-26">—</div>
-    </div>
-    <div class="alr-i">
-      <div class="alr-n">03</div>
-      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>Las tres campañas de Google que corren todo el año<span class="alr-d">En el cyber Google devolvió $2,7M con $160.000 invertidos. Es el canal más rentable que tiene y hoy sigue apagado entre evento y evento.</span></div>
-      <div class="alr-w" data-limite="2026-11-14">—</div>
-    </div>
-    <div class="alr-i">
-      <div class="alr-n">04</div>
-      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>La mecánica del pre, antes del 16<span class="alr-d">Arranca el lunes 16 y todavía no está armada. Selección de vestidos en el lobby, botón de WhatsApp en la ficha y el presupuesto de tráfico cargado. Lo que no esté montado el domingo, no corre.</span></div>
-      <div class="alr-w" data-limite="2026-11-15">—</div>
-    </div>
-    <div class="alr-i">
-      <div class="alr-n">05</div>
-      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>Las redes, con dueño<span class="alr-d">Una persona part time que Belén elija y lidere, con su propio incentivo. Es el único frente del negocio sin nadie a cargo, y el Black se comunica desde ahí.</span></div>
-      <div class="alr-w" data-limite="2026-11-14">—</div>
-    </div>
-    <div class="alr-i">
-      <div class="alr-n">06</div>
-      <div class="alr-tx"><span class="est-o mar" style="margin-right:7px">Emma Clara</span>Conectar Agenda Pro y WhatsApp a tu Claude<span class="alr-d">Son las dos fuentes donde se agenda y se cierra, y son las dos que la IA no ve. Mientras falten, cada sugerencia de presupuesto llega con la mitad del negocio a la vista.</span></div>
-      <div class="alr-w" data-limite="2026-11-28">—</div>
-    </div>
+  <div class="slbl">Tus 24 sesiones · dos bloques</div>
+  <div class='chips-row' aria-label="Bloque 1">
+    <div class="sch done">1</div>
+    <div class="sch done">2</div>
+    <div class="sch done">3</div>
+    <div class="sch done">4</div>
+    <div class="sch done">5</div>
+    <div class="sch done">6</div>
+    <div class="sch done">7</div>
+    <div class="sch done">8</div>
+    <div class="sch done">9</div>
+    <div class="sch done">10</div>
+    <div class="sch done">11</div>
+    <div class="sch done">12</div>
   </div>
+  <div class='chips-row' aria-label="Bloque 2">
+    <div class="sch done">13</div>
+    <div class="sch done">14</div>
+    <div class="sch done">15</div>
+    <div class="sch done">16</div>
+    <div class="sch done">17</div>
+    <div class="sch done">18</div>
+    <div class="sch done">19</div>
+    <div class="sch done">20</div>
+    <div class="sch done">21</div>
+    <div class="sch done">22</div>
+    <div class="sch done">23</div>
+    <div class="sch now">24</div>
+  </div>
+  <div class="pb-next"><span class="pb-next-tag"><svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>PRÓXIMA · S24</span><span class="pb-next-d">lunes 23 de noviembre de 2026 · hora por confirmar</span><span class="pb-next-l"><a class="pb-next-b" href="https://meet.google.com/yqo-ppoq-zpb" target="_blank" rel="noopener">Entrar</a><a class="pb-next-b" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Sesi%C3%B3n+24+%C2%B7+Private+Build&amp;dates=20261123%2F20261124&amp;details=Activar+Black+Friday+%C2%B7+https%3A%2F%2Fmeet.google.com%2Fyqo-ppoq-zpb&amp;ctz=America%2FSantiago" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" class="ic" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Agendar</a></span></div>
 
-  <div class="slbl">Tu recorrido en el programa</div>
+  <div class="slbl">Dónde vamos</div>
   <div class="rn-grid">
-    <div class="rn-c"><div class="rn-l">Desde</div><div class="rn-v">Junio 2026</div><div class="rn-s">seis meses de acompañamiento</div></div>
-    <div class="rn-c"><div class="rn-l">Sesiones contratadas</div><div class="rn-v">24</div><div class="rn-s">dos bloques de 12</div></div>
-    <div class="rn-c"><div class="rn-l">Realizadas</div><div class="rn-v">22</div><div class="rn-s">más una descontada por reagendamientos</div></div>
-    <div class="rn-c up"><div class="rn-l">Disponible</div><div class="rn-v">1</div><div class="rn-s">la última del bloque 2</div></div>
+    <div class="rn-c up"><div class="rn-l">Black Friday</div><div class="rn-v">Se activa el 23</div><div class="rn-s">arranca el 27 de noviembre de 2026</div></div>
+    <div class="rn-c"><div class="rn-l">Ventana Shanghái</div><div class="rn-v">4 al 27 feb 2027</div><div class="rn-s">23 días fuera · lo pesado queda antes del 4 o después del 27; durante el viaje sólo corre lo que ya funciona solo</div></div>
   </div>
 
-  <div class="rm-track-wrap" style="margin-top:12px">
-    <div class="rm-track">
-      <div class="rm-node"><div class="rm-dot done">1</div><div class="rm-lbl">Bloque 1</div><div class="rm-sub">jun a ago · 12 de 12</div></div>
-      <div class="rm-node"><div class="rm-dot done">2</div><div class="rm-lbl">Bloque 2</div><div class="rm-sub">sep a nov · 11 + 1 descontada</div></div>
-      <div class="rm-node"><div class="rm-dot next">3</div><div class="rm-lbl">Bloque 3</div><div class="rm-sub">arranca ahora · foco en IA</div></div>
-    </div>
+  <div class="slbl">Hitos</div>
+  <div class="rn-grid">
+    <div class="rn-c up"><div class="rn-l">Campañas</div><div class="rn-v">De cero a 10×</div><div class="rn-s">retorno global del cyber de octubre de 2026</div></div>
+    <div class="rn-c up"><div class="rn-l">Cierre en tienda</div><div class="rn-v">5% → 36%</div><div class="rn-s">el guion y los roleplays ya probaron el cambio</div></div>
+    <div class="rn-c up"><div class="rn-l">Operación</div><div class="rn-v">Tu propio Claude</div><div class="rn-s">montas campañas y cambias la web sola</div></div>
+    <div class="rn-c up"><div class="rn-l">Producto</div><div class="rn-v">1 devolución</div><div class="rn-s">en 101 pedidos · fue por plazo de entrega</div></div>
   </div>
 
-  <div class="rn-grid" style="margin-top:12px">
-    <div class="rn-c"><div class="rn-l">Bloque 1 · lo que cambió</div><div class="rn-v">5% → 36%</div><div class="rn-s">cierre en tienda · CAC de $63.900 a $19.000 · citas que pagan de 13% a 42% · el equipo comercial pasó de 1 a 3</div></div>
-    <div class="rn-c up"><div class="rn-l">Bloque 2 · lo que cambió</div><div class="rn-v">La web dejó de depender de ti</div><div class="rn-s">montas campañas sola desde tu Claude, Google cerró el cyber devolviendo 16,9 veces lo invertido, y ya sabes cómo te paga tu clienta</div></div>
+  <div class="slbl">Wins</div>
+  <div class="rn-grid">
+    <div class="rn-c up"><div class="rn-l">Cyber 2026</div><div class="rn-v">Casi igual a 2025</div><div class="rn-s">con 38% menos inversión</div></div>
+    <div class="rn-c up"><div class="rn-l"><span class="brand-mark"><i class="lg lg-google" role="img" aria-label="Google Ads"></i>Google</span></div><div class="rn-v">16,9×</div><div class="rn-s">el canal más rentable del evento</div></div>
+    <div class="rn-c up"><div class="rn-l">Octubre de 2026</div><div class="rn-v">Sobre la meta</div><div class="rn-s">cerrado sin exponer el número interno</div></div>
   </div>
 
-  <div class="alert-box info" style="margin-top:10px">
-    <span class="alert-icon">📅</span>
-    <div><div class="alert-title">El bloque 2 cerró el 16 de noviembre de 2026</div><div class="alert-text">Queda una sesión por usar. El bloque 3 son tres meses con el foco puesto en que la IA haga la parte operativa: el contenido, la edición, la lectura de campañas y el seguimiento por WhatsApp. Lo conversamos en la última sesión del bloque.</div></div>
+  <div class="slbl">Pendientes</div>
+  <div class="rn-grid">
+    <div class="rn-c dn"><div class="rn-l">Contenido</div><div class="rn-v">Redes sin dueño</div><div class="rn-s">no hay una persona responsable de la cadencia</div><a class="res-item" href="https://privatebuild-os.vercel.app/recursos/angulos-y-pilares-contenido/" target="_blank" rel="noopener"><span class="res-ico"><i class="lg lg-claude" role="img" aria-label="Claude"></i></span><div class="res-body"><div class="res-title">Ángulos y pilares</div><div class="res-desc">Abrir recurso del Vault ↗</div></div></a></div>
+    <div class="rn-c dn"><div class="rn-l">Success</div><div class="rn-v">Feedback sin recoger</div><div class="rn-s">faltan fotos, reseñas y una lectura recurrente</div><a class="res-item" href="https://privatebuild-os.vercel.app/recursos/encuestas-success/" target="_blank" rel="noopener"><span class="res-ico"><i class="lg lg-forms" role="img" aria-label="Google Forms"></i></span><div class="res-body"><div class="res-title">Encuestas y mejora</div><div class="res-desc">Abrir recurso del Vault ↗</div></div></a></div>
+    <div class="rn-c dn"><div class="rn-l">Entrega</div><div class="rn-v">Taller sin reemplazo</div><div class="rn-s">el reemplazo todavía no está probado</div></div>
   </div>
 
-  <div class="slbl">Cómo creciste desde junio</div>
-  <div class="gr"><div class="gr-in">
-    <div class="gr-plot">
-      <div class="gr-line meta" style="bottom:200px"><span>10× tu junio</span></div>
-      <div class="gr-line" style="bottom:96px"><span>5×</span></div>
-      <div class="gr-cols">
-        <div class="gr-col"><div class="gr-tot">1×</div><div class="gr-stack"><div class="gr-seg t" style="height:19px"></div></div><div class="gr-x">Junio<br><b>base</b></div></div>
-        <div class="gr-col"><div class="gr-tot">2,5×</div><div class="gr-stack"><div class="gr-seg t" style="height:48px"></div></div><div class="gr-x">Julio</div></div>
-        <div class="gr-col"><div class="gr-tot">3,5×</div><div class="gr-stack"><div class="gr-seg t" style="height:67px"></div></div><div class="gr-x">Agosto</div></div>
-        <div class="gr-col"><div class="gr-tot">4×</div><div class="gr-stack"><div class="gr-seg t" style="height:77px"></div></div><div class="gr-x">Septiembre</div></div>
-        <div class="gr-col"><div class="gr-tot" style="color:var(--teal-dk)">10,4×</div><div class="gr-stack"><div class="gr-seg t meta" style="height:200px"></div></div><div class="gr-x">Octubre<br><b>récord</b></div></div>
-      </div>
-    </div>
-  </div></div>
-  <div class="week-text" style="margin-top:8px">Cada barra es cuántas veces vendiste contra tu propio junio. Octubre fue <b>10,4 veces</b> ese mes — y es el mejor de la historia de Emma Clara.</div>
+  <div class="slbl">Entrar directo</div>
+  <div class="res-item" onclick="sw('roadmap')" role="button" tabindex="0"><span class="res-ico">🗺️</span><div class="res-body"><div class="res-title">Tu recorrido</div><div class="res-desc">Las 24 sesiones y sus grabaciones de Fathom.</div></div></div>
+  <div class="res-item" onclick="sw('contenido')" role="button" tabindex="0"><span class="res-ico">🎬</span><div class="res-body"><div class="res-title">Contenido</div><div class="res-desc">Pilares, públicos y edición con IA.</div></div></div>
+  <div class="res-item" onclick="sw('captura')" role="button" tabindex="0"><span class="res-ico">🧲</span><div class="res-body"><div class="res-title">Captura</div><div class="res-desc">Canales, lobby y tráfico que todavía falta activar.</div></div></div>
+  <div class="res-item" onclick="sw('ventas')" role="button" tabindex="0"><span class="res-ico">🎯</span><div class="res-body"><div class="res-title">Ventas</div><div class="res-desc">Roleplay, objeciones y cierre en tienda.</div></div></div>
+  <div class="res-item" onclick="sw('recompra')" role="button" tabindex="0"><span class="res-ico">♻️</span><div class="res-body"><div class="res-title">Recompra</div><div class="res-desc">Reseñas, referidos y postcompra.</div></div></div>
+  <div class="res-item" onclick="sw('eventos')" role="button" tabindex="0"><span class="res-ico">⚡</span><div class="res-body"><div class="res-title">Eventos</div><div class="res-desc">Plan, presupuesto y proyector del Black.</div></div></div>
+  <div class="res-item" onclick="sw('recursos')" role="button" tabindex="0"><span class="res-ico">📚</span><div class="res-body"><div class="res-title">Recursos</div><div class="res-desc">Las 17 guías del Vault y las plataformas conectadas.</div></div></div>
+  <div class="pb-cta" onclick="sw('roadmap')" role="button" tabindex="0"><div><span class="pb-ctal">Abrir el detalle</span><b>Tu recorrido completo</b><span>Sesión por sesión</span></div><span class="pb-ctaf">→</span></div>
 
   <div class="neck">
     <span class="neck-k">Cuello hoy</span>
     <span class="neck-t"><b>Agendamiento.</b> De cada 100 que escriben, agendan 8. Y la gratis cierra 17% contra 80% la de pago: el volumen entra por el lado que no cierra.</span>
   </div>
 
-  <div class="slbl">Quick wins de septiembre</div>
+  <div class="slbl">Quick wins de septiembre de 2026</div>
   <div class="qws">
     <div class="qw2">
       <div class="qw2-n">01 · Destapa el cuello</div>
@@ -1534,6 +1546,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       <a class="res-cta" href="guia-edicion-video.html" target="_blank" rel="noopener">Abrir la guía ↗</a>
     </div>
   </div>
+  <a class="res-item" href="https://privatebuild-os.vercel.app/recursos/video-ia-higgsfield/" target="_blank" rel="noopener" style="margin-top:10px"><span class="res-ico"><i class="lg lg-higgsfield" role="img" aria-label="Higgsfield"></i></span><div class="res-body"><div class="res-title">Higgsfield · video con IA</div><div class="res-desc">Por integrar · nueva meta de Contenido · abrir recurso del Vault ↗</div></div></a>
   </div></details>
 
   <details class="blk"><summary><span class="blk-n">04</span><span class="blk-t">Lo que falta para que esto corra solo<span class="blk-s">Dos cosas, y ninguna es una herramienta</span></span><span class="blk-x">▼</span></summary>
@@ -1555,11 +1568,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="sec">Captura · dónde entra la gente nueva</div>
   <p class="sub">Nivel 7 de 10, meta 9. Google devolvió 16,9 veces lo invertido y sigue apagado entre evento y evento.</p>
 
-  <details class="blk" open><summary><span class="blk-n">01</span><span class="blk-t">Google contra Meta<span class="blk-s">El hallazgo del cyber de octubre de 2026 · el canal chico fue el que rindió</span></span><span class="blk-x">▼</span></summary>
+  <details class="blk" open><summary><span class="blk-n">01</span><span class="blk-t"><span class="brand-mark"><i class="lg lg-google" role="img" aria-label="Google Ads"></i>Google contra <i class="lg lg-meta" role="img" aria-label="Meta"></i>Meta</span><span class="blk-s">El hallazgo del cyber de octubre de 2026 · el canal chico fue el que rindió</span></span><span class="blk-x">▼</span></summary>
   <div class="blk-b">
 
   <div class="tbl-w"><table class="tbl">
-    <tr><th>&nbsp;</th><th class="tb-y">Google</th><th>Meta</th></tr>
+    <tr><th>&nbsp;</th><th class="tb-y"><span class="brand-mark"><i class="lg lg-google" role="img" aria-label="Google Ads"></i>Google</span></th><th><span class="brand-mark"><i class="lg lg-meta" role="img" aria-label="Meta"></i>Meta</span></th></tr>
     <tr><td class="tb-k">Invertido</td><td class="tb-y">$160.000</td><td>$818.924</td></tr>
     <tr><td class="tb-k">Retorno</td><td class="tb-y">16,9 veces</td><td>bajo el promedio</td></tr>
     <tr><td class="tb-k">Costo por venta</td><td class="tb-y">$10.000</td><td>$40.000</td></tr>
@@ -1634,7 +1647,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <div class="slbl" style="margin-top:0">Métricas globales · última llamada (4 ago 2026)</div>
   <div class="ov-row1">
     <div class="ov-card"><div class="ov-lbl">Cierre en tienda</div><div class="ov-num green">36%</div><div class="ov-sub">71 vestidos · 194 citas jul</div></div>
-    <div class="ov-card"><div class="ov-lbl">Costo por conversación</div><div class="ov-num amber">$586</div><div class="ov-sub">Cifra final de julio</div></div>
+    <div class="ov-card"><div class="ov-lbl">Costo por conversación</div><div class="ov-num amber">$586</div><div class="ov-sub">Cifra final de julio de 2026</div></div>
     <div class="ov-card"><div class="ov-lbl">Citas gratis vs pagadas</div><div class="ov-num green">130 / 64</div><div class="ov-sub">Experiencia + confección + colorimetría</div></div>
   </div>
 
@@ -1937,7 +1950,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="dg-loop">↻ Reactivar cuesta menos que adquirir — vuelve a alimentar Meta Ads</div>
   </div>
 
-  <div class="slbl">Barrido de no-compradoras · junio-julio</div>
+  <div class="slbl">Barrido de no-compradoras · junio-julio de 2026</div>
   <div class="problem-card">
     <div class="prob-icon">♻️</div>
     <div>
@@ -2045,7 +2058,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   <details class="blk" open><summary><span class="blk-n">02</span><span class="blk-t">Qué aprendimos del cyber<span class="blk-s">Cuatro hallazgos y qué cambia cada uno</span></span><span class="blk-x">▼</span></summary>
   <div class="blk-b">
   <div class="rn-grid">
-    <div class="rn-c up"><div class="rn-l">Google · retorno 16,9×</div><div class="rn-v">$2,7M</div><div class="rn-s">con $160.000 invertidos</div></div>
+    <div class="rn-c up"><div class="rn-l"><span class="brand-mark"><i class="lg lg-google" role="img" aria-label="Google Ads"></i>Google · retorno 16,9×</span></div><div class="rn-v">$2,7M</div><div class="rn-s">con $160.000 invertidos</div></div>
     <div class="rn-c"><div class="rn-l">Remarketing · tarde</div><div class="rn-v">Día 3 de 6</div><div class="rn-s">se perdió la mitad del evento</div></div>
     <div class="rn-c"><div class="rn-l">Tienda · bajo</div><div class="rn-v">Sin mensaje</div><div class="rn-s">la comunicación fue 100% web</div></div>
     <div class="rn-c"><div class="rn-l">Devoluciones</div><div class="rn-v">1</div><div class="rn-s">y fue por plazo de entrega, no por producto ni talla</div></div>
@@ -2065,11 +2078,11 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
     <div class="pj-top">
       <div>
         <div class="pj-lb">Presupuesto de los 5 días · 26 al 30 de noviembre de 2026</div>
-        <div class="pj-big" id="bk-total">$1.200.000</div>
-        <input type="range" class="pj-sl" id="bk-slider" min="600000" max="2500000" step="50000" value="1200000">
+        <div class="pj-big" id="bk-total">$1,5M</div>
+        <input type="range" class="pj-sl" id="bk-slider" min="600000" max="2500000" step="50000" value="1500000">
         <div class="pj-mark"><span>$600K</span><span>nov 2024 · $3M</span><span>$2,5M</span></div>
         <div class="pj-lb" style="margin-top:16px">Reparto entre canales</div>
-        <div class="pj-spv"><b id="bk-sm">65%</b> Meta &nbsp;·&nbsp; <b id="bk-sg">35%</b> Google</div>
+        <div class="pj-spv"><span class="brand-mark"><i class="lg lg-meta" role="img" aria-label="Meta"></i><b id="bk-sm">65%</b> Meta</span> &nbsp;·&nbsp; <span class="brand-mark"><i class="lg lg-google" role="img" aria-label="Google Ads"></i><b id="bk-sg">35%</b> Google</span></div>
         <input type="range" class="pj-sl sp" id="bk-split" min="40" max="85" step="5" value="65">
         <div class="pj-mark"><span>40 / 60</span><span>65 / 35 · propuesto</span><span>85 / 15</span></div>
       </div>
@@ -2081,8 +2094,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
       </div>
     </div>
     <div class="pj-kpi">
-      <div class="pj-k"><div class="pj-kv" id="bk-im">—</div><div class="pj-kl">Inversión Meta</div></div>
-      <div class="pj-k"><div class="pj-kv" id="bk-ig">—</div><div class="pj-kl">Inversión Google</div></div>
+      <div class="pj-k"><div class="pj-kv" id="bk-im">—</div><div class="pj-kl"><span class="brand-mark"><i class="lg sm lg-meta" role="img" aria-label="Meta"></i>Inversión Meta</span></div></div>
+      <div class="pj-k"><div class="pj-kv" id="bk-ig">—</div><div class="pj-kl"><span class="brand-mark"><i class="lg sm lg-google" role="img" aria-label="Google Ads"></i>Inversión Google</span></div></div>
       <div class="pj-k hi"><div class="pj-kv" id="bk-vf">—</div><div class="pj-kl">Venta · frío Advantage+</div></div>
       <div class="pj-k hi"><div class="pj-kv" id="bk-vr">—</div><div class="pj-kl">Venta · remarketing</div></div>
       <div class="pj-k hi"><div class="pj-kv" id="bk-vg">—</div><div class="pj-kl">Venta · PMax con tachado</div></div>
@@ -2120,16 +2133,16 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
   </div></details>
 
-  <details class="blk" open><summary><span class="blk-n">05</span><span class="blk-t">Lo que cambia de público en noviembre<span class="blk-s">El mensaje del Black no es el descuento</span></span><span class="blk-x">▼</span></summary>
+  <details class="blk" open><summary><span class="blk-n">05</span><span class="blk-t">Lo que cambia de público en noviembre de 2026<span class="blk-s">El mensaje del Black no es el descuento</span></span><span class="blk-x">▼</span></summary>
   <div class="blk-b">
   <div class="alert-box info" style="margin-top:0">
     <span class="alert-icon">💍</span>
     <div><div class="alert-title">Las galas se terminan, entran matrimonio y fiesta de empresa</div><div class="alert-text">Tus palabras en la sesión: <i>«Este año ya ha venido mucha gente de matrimonio y ha comprado»</i>. Dejó de ser el segmento que descartabas.</div></div>
   </div>
-  <div class="week-sec">El dolor que llega en noviembre, en sus palabras</div>
+  <div class="week-sec">El dolor que llega en noviembre de 2026, en sus palabras</div>
   <div class="week-text"><i>«Tengo guata, tengo brazos anchos, tengo mucha espalda, ¿cómo lo disimulo?»</i></div>
   <div class="week-sec">Por qué importa para la campaña</div>
-  <div class="week-text">Ese es el mensaje del Black, no el descuento. La que llega en noviembre no está buscando precio: está buscando que alguien le resuelva cómo se va a ver. El tachado la trae; lo que la hace comprar es que entienda que acá sí le va a quedar.</div>
+  <div class="week-text">Ese es el mensaje del Black, no el descuento. La que llega en noviembre de 2026 no está buscando precio: está buscando que alguien le resuelva cómo se va a ver. El tachado la trae; lo que la hace comprar es que entienda que acá sí le va a quedar.</div>
 
   <div class="week-sec">Los dos públicos que sí van a campaña</div>
   <div class="week-text"><ul>
@@ -2203,7 +2216,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
   </div>
 
   <div class="tbl-w"><table class="tbl" style="margin-top:12px">
-    <tr><th>&nbsp;</th><th class="tb-y">Google</th><th>Meta</th></tr>
+    <tr><th>&nbsp;</th><th class="tb-y"><span class="brand-mark"><i class="lg lg-google" role="img" aria-label="Google Ads"></i>Google</span></th><th><span class="brand-mark"><i class="lg lg-meta" role="img" aria-label="Meta"></i>Meta</span></th></tr>
     <tr><td class="tb-k">Invertido</td><td class="tb-y">$160.000</td><td>$818.924</td></tr>
     <tr><td class="tb-k">Costo por venta</td><td class="tb-y">$10.000</td><td>$40.000</td></tr>
     <tr><td class="tb-k">Ventas</td><td class="tb-y">17</td><td>el resto</td></tr>
@@ -2473,61 +2486,6 @@ body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--ink);font
 </div>
 
 <script>
-/* ── CYBER · RESPALDOS DE DATA ─────────────────────────────────
-   Para nutrir el tab se edita solo este objeto:
-   diario → facturación del evento por día (null = todavía no pasa)
-   lobby  → una fila por semana de la fase previa
-   log    → un dato por fila, con fecha y fuente. El más nuevo arriba.
-   ──────────────────────────────────────────────────────────────── */
-const CYBER={
-  diario:[
-    {dia:'Vie',nota:'Abre la venta',d25:800000,d26:null,pedidos:null,inversion:null},
-    {dia:'Sáb',nota:'',d25:2000000,d26:null,pedidos:null,inversion:null},
-    {dia:'Dom',nota:'',d25:2000000,d26:null,pedidos:null,inversion:null},
-    {dia:'Lun',nota:'Abre el evento',d25:3000000,d26:null,pedidos:null,inversion:null},
-    {dia:'Mar',nota:'',d25:null,d26:null,pedidos:null,inversion:null},
-    {dia:'Mié',nota:'Cierre',d25:null,d26:null,pedidos:null,inversion:null}
-  ],
-  matriz:{
-    ganadores:[], sidekicks:[], perdedores:[], zombies:[]
-  },
-  lobby:[
-    {semana:'16 – 20 sep 2026',inversion:null,sesiones:null,pdp:null,top:null,lectura:''},
-    {semana:'21 – 27 sep 2026',inversion:null,sesiones:null,pdp:null,top:null,lectura:''}
-  ],
-  log:[
-    {fecha:'15 sep 2026',fuente:'Matriz',dato:'Agosto 2026: $27,3M recaudado (tienda $24,2M · web $0,9M) con $1,8M de pauta',lectura:'La base contra la que se mide la meta de $30M'},
-    {fecha:'15 sep 2026',fuente:'Matriz',dato:'Octubre 2025: web $15,0M, 91 ventas, pauta $2,8M. La venta de tienda de oct 25 a may 26 no está cargada',lectura:'Octubre 2025 completo no se puede comparar hasta llenar ese hueco'},
-    {fecha:'15 sep 2026',fuente:'Matriz',dato:'Octubre 2024: $51,4M recaudado (tienda $47,7M)',lectura:'Octubre es temporada alta de galas'},
-    {fecha:'14 sep 2026',fuente:'Clarity',dato:'3.030 sesiones grabadas, listas para que el agente CRO las segmente',lectura:'Base para leer por qué compran y por qué no'},
-    {fecha:'14 sep 2026',fuente:'Tienda',dato:'Los 10 del lobby salen de la venta del semestre en tienda. Top: Violeta',lectura:'Shopify no ve esta venta: el lobby es la prueba online'},
-    {fecha:'8 sep 2026',fuente:'Skill de evento',dato:'Proyección: conservador $5,6M · esperado $8M · declarado $13M – $15M',lectura:'Con $800K de pauta el piso es $8M'},
-    {fecha:'8 sep 2026',fuente:'Shopify',dato:'Conversión 2026 contra 2025: −41% en julio y −70% en agosto',lectura:'Más tráfico que nunca, menos compra'},
-    {fecha:'8 sep 2026',fuente:'Shopify',dato:'Cyber 2025: 85 piezas y 26.000 sesiones en la semana',lectura:'El tráfico se multiplicó por 5 contra el pre-evento'},
-    {fecha:'8 sep 2026',fuente:'Shopify',dato:'El pre-evento (vie a dom) fue el 40% de la facturación del Cyber 2025',lectura:'Por eso este año la venta abre el viernes 2'},
-    {fecha:'8 sep 2026',fuente:'Shopify',dato:'Conversión por región: RM 0,2% · Arica 2% · Atacama 0,8% · Coquimbo 0,75%',lectura:'80% del tráfico fue a la zona que menos convierte'},
-    {fecha:'8 sep 2026',fuente:'Shopify',dato:'Google: 6.835 sesiones y 20 pedidos (ticket $149K). Redes: 20.000 y 15 (ticket $110K)',lectura:'Google convierte 4 veces mejor'},
-    {fecha:'8 sep 2026',fuente:'Shopify',dato:'El correo aportó 5 sesiones en toda la ventana del cyber',lectura:'No hay base de datos que activar'},
-    {fecha:'8 sep 2026',fuente:'Shopify',dato:'408 de 484 pedidos del último año sin tipo de producto',lectura:'La lectura de ganador y fantasma no es confiable'}
-  ]
-};
-function cyM(v){if(v==null)return null;return v>=1e6?'$'+(v/1e6).toFixed(v%1e6?1:0).replace('.',',')+'M':'$'+Math.round(v/1e3)+'K';}
-function cyC(v,f){const x=f?f(v):v;return x==null||x===''?'<td class="nil">—</td>':'<td class="n">'+x+'</td>';}
-(function(){
-  if(!document.getElementById('cy-lobby'))return;
-  document.getElementById('cy-lobby').innerHTML='<table><thead><tr><th>Semana</th><th>Inversión</th><th>Sesiones lobby</th><th>Entradas a PDP</th><th>Vestido que más jala</th><th>Lectura</th></tr></thead><tbody>'+
-    CYBER.lobby.map(r=>'<tr><td class="n">'+r.semana+'</td>'+cyC(r.inversion,cyM)+cyC(r.sesiones)+cyC(r.pdp)+cyC(r.top)+'<td class="l">'+(r.lectura||'Por cargar')+'</td></tr>').join('')+'</tbody></table>';
-  const Q=[['win','Ganadores','estrella · empujar','ganadores'],['side','Acompañan','suben el ticket en el carro','sidekicks'],['lose','No cierran','traen tráfico y no venden','perdedores'],['dead','Sin movimiento','fuera de la campaña','zombies']];
-  document.getElementById('cy-matriz').innerHTML=Q.map(([k,t,sub,key])=>{
-    const v=(CYBER.matriz&&CYBER.matriz[key])||[];
-    return '<div class="cyg-qc" data-q="'+k+'"><div class="cyg-qh">'+t+'<span>'+sub+'</span></div><div class="cyg-qb">'+
-      (v.length?v.map(x=>'<b>'+x.n+'</b> · '+x.d).join('<br>'):'Se llena con lo que muestre el lobby')+'</div></div>';}).join('');
-})();
-(function(){const g=document.getElementById('cyg-now');if(g){const d=(new Date(new Date().toDateString())-new Date('2026-09-15T00:00:00'))/864e5;
-  if(d<0||d>28){g.remove();}else{g.style.left=(d/28*100)+'%';}}})();
-(function(){const t=document.getElementById('cyv-today');if(!t)return;
-  const d=(new Date(new Date().toDateString())-new Date('2026-09-14T00:00:00'))/864e5;
-  if(d<0||d>29){t.remove();return;} t.style.left=(d/29*100)+'%';})();
 (function(){document.querySelectorAll('[data-desde]').forEach(function(el){
   var d=Math.floor((new Date(new Date().toDateString())-new Date(el.dataset.desde+'T00:00:00'))/864e5);
   var sem=Math.floor(d/7), txt = d<7 ? 'esta semana' : (sem===1?'1 semana abierto':sem+' semanas abierto');
@@ -2626,9 +2584,9 @@ if(document.getElementById('pj-slider')){
 
 /* ── proyector del Black Friday ── */
 const BK_CAMPS=[
-  {n:'Black | Frío | Advantage+',            ca:'Meta',   pct:.62, roas:5.0,  g:0},
-  {n:'Black | Remarketing | Carro y checkout',ca:'Meta',   pct:.38, roas:9.0,  g:0},
-  {n:'Black | PMax | Stock con tachado',      ca:'Google', pct:1,   roas:12.0, g:1}
+  {n:'Black | Frío | Advantage+',            ca:'<span class="brand-mark"><i class="lg sm lg-meta" role="img" aria-label="Meta"></i>Meta</span>',   pct:.62, roas:5.0,  g:0},
+  {n:'Black | Remarketing | Carro y checkout',ca:'<span class="brand-mark"><i class="lg sm lg-meta" role="img" aria-label="Meta"></i>Meta</span>',   pct:.38, roas:9.0,  g:0},
+  {n:'Black | PMax | Stock con tachado',      ca:'<span class="brand-mark"><i class="lg sm lg-google" role="img" aria-label="Google Ads"></i>Google</span>', pct:1,   roas:12.0, g:1}
 ];
 const BK_TICKET=156275;
 function bkRender(){
